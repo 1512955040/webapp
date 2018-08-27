@@ -1,0 +1,137 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-add {
+    width: 12px;
+    height: 12px;
+    background-position: -2px -2px;
+}
+
+.sprite-back {
+    width: 6px;
+    height: 13px;
+    background-position: -18px -2px;
+}
+
+.sprite-date {
+    width: 18px;
+    height: 18px;
+    background-position: -28px -2px;
+}
+
+.sprite-down {
+    width: 12px;
+    height: 12px;
+    background-position: -50px -2px;
+}
+
+.sprite-icon11 {
+    width: 34px;
+    height: 30px;
+    background-position: -66px -2px;
+}
+
+.sprite-icon12 {
+    width: 34px;
+    height: 30px;
+    background-position: -104px -2px;
+}
+
+.sprite-icon13 {
+    width: 34px;
+    height: 30px;
+    background-position: -2px -36px;
+}
+
+.sprite-icon21 {
+    width: 34px;
+    height: 30px;
+    background-position: -40px -36px;
+}
+
+.sprite-icon22 {
+    width: 34px;
+    height: 30px;
+    background-position: -78px -36px;
+}
+
+.sprite-icon23 {
+    width: 34px;
+    height: 30px;
+    background-position: -2px -70px;
+}
+
+.sprite-icon31 {
+    width: 34px;
+    height: 30px;
+    background-position: -40px -70px;
+}
+
+.sprite-icon32 {
+    width: 34px;
+    height: 30px;
+    background-position: -78px -70px;
+}
+
+.sprite-icon33 {
+    width: 34px;
+    height: 30px;
+    background-position: -2px -104px;
+}
+
+.sprite-icon41 {
+    width: 34px;
+    height: 30px;
+    background-position: -40px -104px;
+}
+
+.sprite-icon42 {
+    width: 34px;
+    height: 30px;
+    background-position: -78px -104px;
+}
+
+.sprite-icon43 {
+    width: 34px;
+    height: 30px;
+    background-position: -142px -2px;
+}
+
+.sprite-icon51 {
+    width: 34px;
+    height: 30px;
+    background-position: -116px -36px;
+}
+
+.sprite-icon52 {
+    width: 34px;
+    height: 30px;
+    background-position: -116px -70px;
+}
+
+.sprite-icon53 {
+    width: 34px;
+    height: 30px;
+    background-position: -116px -104px;
+}
+
+.sprite-request {
+    width: 23px;
+    height: 28px;
+    background-position: -154px -36px;
+}
+
+.sprite-sanjiao {
+    width: 10px;
+    height: 26px;
+    background-position: -154px -68px;
+}
+
+.sprite-update {
+    width: 23px;
+    height: 23px;
+    background-position: -154px -98px;
+}

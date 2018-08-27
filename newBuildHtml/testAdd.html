@@ -1,0 +1,224 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测试资源添加</title>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/transparency.min.js"></script>
+<script type="text/javascript">
+/*
+ * 选择一个分类都加载该分类的属性，及所属大类的属性，并需要往所有的下拉选中填充数据
+ * 数据库  文件名，对应的div  id。 
+ */
+ $(function(){
+	 
+	 $("[aaa]").change(function(){
+		 
+		 //大分类id
+		 var categoryId = $("#category_select").val();
+		 //末级分类id
+		 var categorySubId;
+		 //发送一个请求，查询文件名称
+		 $.ajax({
+			 
+         url:"http://localhost:8080/ekuter_web/resourceAjax/showResourceList",
+         type:"post",
+         data:{"categoryId":categoryId,"categorySubId":2},
+         dateType:"json",
+         success:function(result){
+           //请求成功
+        	 $("#loadMsg").load("testAddMin.html",loadMin);
+           $("#loadMsg2").load("testAddMax.html",loadMax); 
+         }		 
+		 });
+	 });
+ });
+</script>
+<script type="text/javascript">
+/*
+ * 加载完分类的属性页面后，往页面上加入所有下拉选,并填充内容。
+ * 加载大类属性
+ */
+ function loadMin(){
+	
+	//从数据库中查找数据
+	 var post,directives;
+	 post = {
+       date1_name:'date1',
+       date2_name:'date2',
+       brand_name:'categoryId',
+	     brand_model_name:'brandModelId',
+			 brand_sel: [ {
+				    value:1,
+			      op: '联想',
+			    }, {
+			    	value:2,
+			      op: '三星'
+			    }
+			  ],
+			  brand_model_sel:[{
+					  value:11,
+				    op:"note1"
+			    },
+			    {
+			    	value:22,
+			      op:"note22"
+			    }
+			  ]
+			};
+	 //绑定name和value属性的值
+    directives = {
+        
+    		date1:{
+    			name:function(){
+    				return this.date1_name;
+    			}
+    		},
+    		date2:{
+    			name:function(){
+    				return this.date2_name;
+    			}
+    		},
+    		brand_sel:{
+    			   name:function(){
+    				   return this.brand_name;
+    			   },
+             op:{
+               value:function(){
+                 return this.value;
+               }
+             }
+         },
+         brand_model_sel:{
+        	   name:function(){
+        		   return this.brand_model_name;
+        	   },
+             op:{
+               value:function(){
+                 return this.value;
+               }
+             }
+         }
+     };
+   
+      //绑定数据品牌名称和品牌id
+			$('#category_div').render(post,directives);
+			//查看下拉选的value值是否绑定
+      $("#selll").change(function(){
+        var i = $("#selll").val();
+        alert("++++");
+        alert(i);
+      });
+}
+ //加载末级类属性
+ function loadMax(){
+	 
+	   var post,directives;
+	   post = {
+         cpu_name:'cpu',
+         mac_name:'mac',
+         brand_sel_name:'brand_id',
+         sel:[
+		           {value:1,op:"专有属性1"},
+		           {value:2,op:"专有属性2"}
+                ]
+	          };
+	   directives = {
+			   
+			        cpu:{
+			          name:function(){
+			            return this.cpu_name;
+			          }
+			        },
+			        mac:{
+			          name:function(){
+			            return this.mac_name;
+			          }
+			        },
+			        sel:{
+					          name:function(){
+					        	  return this.brand_sel_name;
+					          },
+								    op:{
+											   value:function(){
+												   return this.value;
+												 }
+								       }
+				          }
+	              };
+		 $('#category_div2').render(post,directives);
+		 
+		 //查看下拉选的value值是否绑定
+		  $("#ssssss").change(function(){
+		    var i = $("#ssssss").val();
+		    alert("----");
+		    alert(i);
+		  });
+ }
+
+
+</script>
+<script type="text/javascript">
+  $(function(){
+	  
+	  $("#test_sel").click(function(){
+		  alert("---");
+	  });
+  });
+</script>
+</head>
+<body>
+资源基本信息
+资源名称:<input type="text" name="" value=""><br>
+序列号:<input type="text" name="" value=""><br>
+分类:<select id="category_select" name="categoryId" aaa="aaa">
+     <option>请选择</option>
+     <option value="0">笔记本电脑</option>
+     <option value="1">台式电脑</option>
+   </select><br>
+-------------------------------------------------------------------<br>
+<div id="loadMsg"></div>
+<div id="loadMsg2"></div>
+-------------------------------------------------------------------<br>
+分配信息
+部门:<input type="text" name="" value=""><br>
+使用人:<input type="text" name="" value="">
+-------------------------------------------------------------------<br>
+测试下拉选的点击事件
+test:<select id="test_sel">
+</select>
+</body>
+</html>
+<!-- 
+<script type="text/javascript">
+  $(function(){
+    
+    $("#treeLazy").dynatree({
+      onActivate: function(node) {
+        //选中一个树枝后改变样式
+        changeToClick(node.li.parentNode.childNodes,node.li);
+        var mark = node.data.key;
+        $.ajax({
+          url:"http://localhost:8080/ekuter_web/resourceAjax/showResourceList",
+          type:"get",
+          data:{"mark":mark,"page":1,"pagenum":5},
+          dataType:"json",
+          success:function(result){
+            //请求成功.拼接一个table
+            if(result.status == 1){
+              var resource = result.data;
+              console.log(resource);
+              $("#sssss").render(resource);
+              
+            }
+          }
+        });
+        //alert(mark);
+        //changeToClick(node.li.parentNode.childNodes,node.li)
+      }
+      //fx:{ height: "toggle", duration: 200 },
+      //children: data
+    });
+  });
+</script>
+ -->

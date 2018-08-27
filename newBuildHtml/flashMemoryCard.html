@@ -1,0 +1,45 @@
+<!-- 增加或者修改------------------------------ -->
+<div id="addUpFlag">	
+	<p class="centerCon-titel">闪存卡</p>
+	<p class="centerCon3-p1 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt">类型</span>
+		<select class="selectpicker halfSelect" name="cabinetType">
+		  <option data-bind="cabinetType"></option>
+		</select>
+	</p>
+	<p class="centerCon3-p2 centerCon-half di">
+		<span class="centerCon-txt">容量</span>
+		<input type="text" name="vol">
+	</p>
+	<p class="centerCon3-p3 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt">存取速度</span>
+		<input type="text" name="saveSpeed">
+	</p>
+	<p class="centerCon3-p4 centerCon-half di">
+		<span class="centerCon-txt">速度等级</span>
+		<input type="text" name="speedLevel">
+	</p>
+</div>
+<!-- 详情------------------------------ -->
+<div id="detailFlag">
+
+  <p class="conright-infoWrapLeft-itemTitle">闪存卡</p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">类型</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="cabinetType"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">容量</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="vol"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">存取速度</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="saveSpeed"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">速度等级</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="speedLevel"></span>
+  </p>
+</div>

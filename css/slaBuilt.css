@@ -1,0 +1,547 @@
+body {
+	font-size: 16px;
+	background:#f5f4f4;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.w {
+	width: 1232px;
+	margin: 0 auto;
+}
+
+.w:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.dn {
+	display: none;
+}
+
+.di {
+	display: inline-block;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+/*去除选择框的outline*/
+.bootstrap-select .dropdown-toggle:focus{outline:none !important;}
+/*去除选项的outline*/
+a:focus {outline:none !important;}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+	outline: none;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-modify: read-write-plaintext-only;
+}
+
+.slaBuilt {
+	margin-top: 10px;
+}
+
+
+/**sla新建**/
+
+.slaBuilt #container-right {
+	width: 1227px;
+/*	padding-bottom: 30px;*/
+	/*box-shadow: 0 0 10px #d2d2d2;*/
+	background-color: #fff;
+}
+
+.slaBuilt .sla-left {
+	width: 946px;
+	margin: 0;
+	padding-bottom:20px;
+	border-right: 2px solid #ececec;
+	/*height: 860px;*/
+	float: left;
+}
+
+.slaBuilt .sla-left .sla-leftTop {
+	height: 44px;
+	line-height: 44px;
+	border-bottom: 1px solid #e7e7e7;
+	padding-right: 65px;
+	width: 100%;
+	padding-left: 18px;
+}
+
+.slaBuilt .sla-left .sla-leftTop button {
+	padding: 0 15px;
+	line-height: 25px;
+	font-size: 12px;
+	border-radius: 5px;
+	border:none;
+	margin-left: 5px;
+}
+.slaBuilt .sla-left .sla-leftTop button.cancel{
+	border: 1px solid rgb(191,191,191);
+}
+
+.cancel {
+	background: #eee;
+	color: #777;
+}
+
+.save {
+	color: #fff;
+	background-color: #054c9c;
+}
+
+.builtContent {
+	padding: 12px 59px 0 78px;
+}
+
+.container-right-infoWrap:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+.content-title {
+	background: #1f5097;
+	color: #fff;
+	height: 22px;
+	line-height: 22px;
+}
+
+.content-title span {
+	font-size: 14px;
+}
+
+.content-title i {
+	display: inline-block;
+	margin: 7px;
+}
+
+.content-row1:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.content-row1-left {
+	width: 621px;
+}
+
+.title-input,
+.slaTextarea {
+	width: 100%;
+	border: 1px solid #e5e5e5;
+}
+
+.title-input {
+	height: 26px;
+	border-radius: 5px;
+}
+
+.slaTextarea {
+	height: 70px;
+	border-radius: 5px;
+	outline:none;
+}
+
+.content-row1-left .content-row1-word,
+.content-row1-right .content-row1-word {
+	/*padding-left: 10px;*/
+	margin-top: 12px;
+}
+
+.content-row1-right {
+	margin-left: 20px;
+}
+
+.selectedBox {
+	width: 166px;
+	height: 134px;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	position: relative;
+}
+.selectedBox:hover{
+	cursor:pointer;
+}
+
+.selectedLogo {
+	display: inline-block;
+	width: 36px;
+	height: 48px;
+	background: url("../imgs/sla/sla.png") no-repeat -288px -10px;
+}
+
+.boxContent {
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -45px;
+	margin-top: -45px;
+	text-align: center;
+}
+
+.selectedWord {
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+.selectedBoxCaret {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+}
+
+.content-row1-word,
+.content-row2-word {
+	font-size: 12px;
+}
+
+.content-row2-table {
+	width: 810px;
+	padding: 10px 0;
+	/*	height:210px;*/
+	border: 1px solid #e5e5e5;
+}
+
+.content-row2-table ul:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+.content-row2-table ul li {
+	float: left;
+	text-align: center;
+	line-height: 38px;
+	width: 100%;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	line-height: 21px;
+	/*text-align: center;*/
+}
+
+.dropdown-menu>li>a {
+	outline: none;
+}
+
+.bootstrap-select>.dropdown-toggle {
+	padding-right: 0;
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+	right: 5px;
+}
+
+.content-row2-table ul li span,
+.content-row2-table ul li select {
+	font-size: 12px;
+}
+
+.urgentUl li:last-child>div,
+.highUl li:last-child>div,
+.middleUl li:last-child>div,
+.lowUl li:last-child>div {
+	width: 130px!important;
+}
+
+.content-row2-table ul li.content-cell-1 {
+	width: 146px;
+}
+
+.content-row2-table ul li.content-cell-2 {
+	width: 234px;
+}
+
+.content-row2-table ul li.content-cell-3 {
+	width: 230px;
+}
+
+.content-row2-table ul li.content-cell-4 {
+	width: 184px;
+}
+
+
+/**响应解决列**/
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+	width: 70px;
+}
+
+.slaTableInput,
+.slaTableTime {
+	width: 70px;
+	height: 22px;
+	vertical-align: middle;
+}
+
+
+/**类型列**/
+
+.slaTableType {
+	width: 96px;
+}
+
+.slaTableTime,
+.slaTableType {
+	vertical-align: middle;
+}
+
+.content-row3 {
+	margin-top: 10px;
+}
+
+
+/**文化上传**/
+
+.kv-upload-progress{
+	display: none;
+}
+.file-caption-main{
+	
+}
+.container-right-infoWrap :after {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+.sla-right {
+	float: right;
+	width: 281px;
+	/*min-height: 905px;*/
+	min-height:809px;
+	/*border-left: 1px solid #BEBEBE;*/
+}
+
+.fileInputInfo ul li {
+	display: inline-block;
+	width: 24%;
+	margin: 9px 0;
+}
+
+.fileInputInfo ul li i.jpeg,
+.fileInputInfo ul li i.doc,
+.fileInputInfo ul li i.zip,
+.fileInputInfo ul li i.other,
+.fileInputInfo ul li i.exe,
+.fileInputInfo ul li i.ppt {
+	display: inline-block;
+	vertical-align: middle;
+	width: 36px;
+	height: 33px;
+	background: url("../imgs/sla/sla.png") no-repeat;
+}
+
+.fileInputInfo ul li i.jpeg {
+	background-position: -227px -108px;
+}
+
+.fileInputInfo ul li i.doc {
+	background-position: -59px -152px;
+}
+
+.fileInputInfo ul li i.zip {
+	background-position: -103px -152px;
+}
+
+.fileInputInfo ul li i.other {
+	background-position: -147px -152px;
+}
+
+.fileInputInfo ul li i.exe {
+	background-position: -191px -152px;
+}
+
+.fileInputInfo ul li i.ppt {
+	background-position: -235px -152px;
+}
+
+.optionalBox {
+	display: none;
+	padding: 2px 17px;
+	position: absolute;
+	top: 137px;
+	left: -95px;
+	width: 360px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-shadow: 0 0 10px #ddd;
+	z-index: 1;
+	background: #fff;
+}
+
+.optionalBox p {
+	font-size: 12px;
+}
+
+.optionalBox ul {
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid #f3f3f3;
+}
+
+.last {
+	border-bottom: none!important;
+}
+
+.optionalBox ul li {
+	display: inline-block;
+	width: 105px;
+	height: 80px;
+	position: relative;
+}
+
+.optionalBox ul li:hover {
+	background: #abd1ff;
+	cursor: pointer;
+}
+
+.optionalBox ul li p {
+	text-align: center;
+}
+
+.optionalBox ul li p i.check-mark {
+	width: 17px;
+	height: 17px;
+	display: none;
+	vertical-align: middle;
+	background: url(../imgs/sla/sla.png) no-repeat -5px -24px;
+}
+
+.optionalBox ul li div {
+	width: 62px;
+	height: 70px;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -31px;
+	margin-top: -32px;
+}
+
+.jinpai,
+.yinpai,
+.tongpai {
+	display: inline-block;
+	width: 36px;
+	height: 48px;
+	background: url(../imgs/sla/sla.png) no-repeat;
+}
+
+.jinpai {
+	background-position: -288px -10px;
+}
+
+.yinpai {
+	background-position: -276px -66px;
+}
+
+.tongpai {
+	background-position: -284px -121px;
+}
+
+.one,
+.two,
+.three {
+	display: inline-block;
+	width: 36px;
+	height: 41px;
+	background: url(../imgs/sla/sla.png) no-repeat;
+}
+
+.one {
+	background-position: -284px -180px;
+}
+
+.two {
+	background-position: -64px -237px;
+}
+
+.three {
+	background-position: -64px -13px;
+}
+
+.high,
+.middle,
+.low {
+	display: inline-block;
+	width: 36px;
+	height: 37px;
+	background: url(../imgs/sla/sla.png) no-repeat;
+}
+
+.high {
+	background-position: -119px -15px;
+}
+
+.middle {
+	background-position: -175px -15px;
+}
+
+.low {
+	background-position: -231px -15px;
+}
+/**返回**/
+.backBox:hover{
+	cursor: pointer;
+}
+.backText{
+	color:#696969;
+	font-size: 14px;
+	cursor: pointer;
+}
+.backIcon{
+	display: inline-block;
+	width:6px;
+	height:13px;
+	margin-right:5px;
+    vertical-align: middle;
+	background:url('../imgs/sla/sla.png') no-repeat -33px -28px;
+}
+.error{
+	color:#f24848;
+	margin-left: 5px;
+}
+input,textarea,button{
+	font-size: 14px;
+	color:#696969;
+	outline: none!important;
+	
+}

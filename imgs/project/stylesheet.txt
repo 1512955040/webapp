@@ -1,0 +1,239 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-add {
+    width: 12px;
+    height: 12px;
+    background-position: -5px -5px;
+}
+
+.sprite-additional {
+    width: 15px;
+    height: 15px;
+    background-position: -27px -5px;
+}
+
+.sprite-back {
+    width: 6px;
+    height: 13px;
+    background-position: -52px -5px;
+}
+
+.sprite-btnLeftClick {
+    width: 8px;
+    height: 10px;
+    background-position: -68px -5px;
+}
+
+.sprite-btnLeftNoClick {
+    width: 8px;
+    height: 10px;
+    background-position: -86px -5px;
+}
+
+.sprite-btnRightClick {
+    width: 8px;
+    height: 10px;
+    background-position: -104px -5px;
+}
+
+.sprite-btnRightNoClick {
+    width: 8px;
+    height: 10px;
+    background-position: -122px -5px;
+}
+
+.sprite-check {
+    width: 11px;
+    height: 11px;
+    background-position: -140px -5px;
+}
+
+.sprite-check-2 {
+    width: 11px;
+    height: 11px;
+    background-position: -161px -5px;
+}
+
+.sprite-checked {
+    width: 11px;
+    height: 11px;
+    background-position: -68px -26px;
+}
+
+.sprite-clear {
+    width: 13px;
+    height: 13px;
+    background-position: -89px -26px;
+}
+
+.sprite-date {
+    width: 18px;
+    height: 18px;
+    background-position: -112px -26px;
+}
+
+.sprite-delete {
+    width: 14px;
+    height: 15px;
+    background-position: -140px -26px;
+}
+
+.sprite-down {
+    width: 12px;
+    height: 12px;
+    background-position: -164px -26px;
+}
+
+.sprite-downtype {
+    width: 7px;
+    height: 4px;
+    background-position: -5px -48px;
+}
+
+.sprite-export {
+    width: 18px;
+    height: 16px;
+    background-position: -22px -48px;
+}
+
+.sprite-icon1 {
+    width: 24px;
+    height: 24px;
+    background-position: -50px -48px;
+}
+
+.sprite-icon11 {
+    width: 31px;
+    height: 31px;
+    background-position: -140px -51px;
+}
+
+.sprite-icon12 {
+    width: 31px;
+    height: 31px;
+    background-position: -5px -92px;
+}
+
+.sprite-icon13 {
+    width: 31px;
+    height: 31px;
+    background-position: -46px -92px;
+}
+
+.sprite-icon2 {
+    width: 29px;
+    height: 20px;
+    background-position: -87px -92px;
+}
+
+.sprite-icon21 {
+    width: 31px;
+    height: 31px;
+    background-position: -126px -92px;
+}
+
+.sprite-icon22 {
+    width: 31px;
+    height: 31px;
+    background-position: -5px -133px;
+}
+
+.sprite-icon23 {
+    width: 31px;
+    height: 31px;
+    background-position: -46px -133px;
+}
+
+.sprite-icon3 {
+    width: 29px;
+    height: 20px;
+    background-position: -87px -133px;
+}
+
+.sprite-icon4 {
+    width: 28px;
+    height: 18px;
+    background-position: -126px -133px;
+}
+
+.sprite-icon5 {
+    width: 29px;
+    height: 20px;
+    background-position: -126px -161px;
+}
+
+.sprite-import {
+    width: 20px;
+    height: 16px;
+    background-position: -186px -5px;
+}
+
+.sprite-leftClick {
+    width: 18px;
+    height: 18px;
+    background-position: -186px -31px;
+}
+
+.sprite-leftNoClick {
+    width: 17px;
+    height: 18px;
+    background-position: -84px -59px;
+}
+
+.sprite-love-1 {
+    width: 20px;
+    height: 17px;
+    background-position: -181px -59px;
+}
+
+.sprite-love-2 {
+    width: 20px;
+    height: 17px;
+    background-position: -181px -86px;
+}
+
+.sprite-myHeart1 {
+    width: 26px;
+    height: 26px;
+    background-position: -167px -113px;
+}
+
+.sprite-myHeart2 {
+    width: 26px;
+    height: 26px;
+    background-position: -165px -149px;
+}
+
+.sprite-rightClick {
+    width: 19px;
+    height: 18px;
+    background-position: -111px -59px;
+}
+
+.sprite-rightNoClick {
+    width: 18px;
+    height: 18px;
+    background-position: -5px -185px;
+}
+
+.sprite-sanjiao {
+    width: 10px;
+    height: 26px;
+    background-position: -201px -149px;
+}
+
+.sprite-search {
+    width: 14px;
+    height: 14px;
+    background-position: -33px -185px;
+}
+
+.sprite-search1 {
+    width: 31px;
+    height: 25px;
+    background-position: -216px -5px;
+}

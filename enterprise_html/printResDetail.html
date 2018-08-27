@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>打印详情页面</title>
+		<!-- reset -->
+		<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+		<!-- scroll -->
+		<link rel="stylesheet" href="/css/compentCSS/jquery.mCustomScrollbar.css">
+
+		<link rel="stylesheet" href="/css/assetAddform.css" type="text/css">
+		<link rel="stylesheet" href="/css/printDetail.css" type="text/css">
+
+
+	</head>
+	<body>
+		<div class="w">
+			<div class="modal-body-reqCon" id="conright1">
+			  <div class="modal-body-id">
+                  <p>
+                    <span data-bind=""></span>
+                    <span data-bind="resource_name"></span>
+                    <span data-bind="resource_protect"></span>
+                  </p>
+                  <p>资产状态：<span data-bind="resource_usestatus_name"></span>
+                                                       创建时间：<span data-bind="resource_create_time"></span>
+                                                       创建人：<span data-bind="resource_creater"></span>
+                  </p>
+        </div>
+				<!-- 资源信息 -->
+				<div class="infoWrap-resource modal-body-everyItem" id="infoWrap-resource">
+					<div class="conright-infoWrapLeft-item">
+
+						<p class="conright-infoWrapLeft-itemTitle">基础类信息</p>
+
+						<p class="conright-infoWrapLeft-itemRow di">
+							<span class="conright-infoWrapLeft-itemRowTxt1">资源名称</span>
+							<span class="conright-infoWrapLeft-itemRowTxt2" data-bind="resource_name"></span>
+						</p>
+
+						<p class="conright-infoWrapLeft-itemRow di">
+							<span>序列号</span>
+							<span data-bind="resource_sn_number"></span>
+						</p>
+
+						<p class="conright-infoWrapLeft-itemRow di">
+							<span>所属分类</span>
+							<span data-bind="level_3_name"></span>
+						</p>
+						<p class="conright-infoWrapLeft-itemRow di">
+							<span>重要性</span>
+							<span data-bind="resource_importance"></span>
+						</p>
+						<p class="conright-infoWrapLeft-itemRow di">
+							<span>描述</span>
+							<span data-bind="resource_memo"></span>
+						</p>
+					</div>
+					<div class="conright-infoWrapLeft-item">
+		              	<p class="conright-infoWrapLeft-itemTitle">分配信息</p>
+		              	<p class="conright-infoWrapLeft-itemRow di">
+		                	<span>位置</span>
+		                	<span data-bind="resource_deploy_location"></span>
+		              	</p>
+		              	<p class="conright-infoWrapLeft-itemRow di">
+		                	<span>部门</span>
+		                	<span data-bind="department_name"></span>
+		              	</p>
+		              	<p class="conright-infoWrapLeft-itemRow di">
+		                	<span>管理者</span>
+		                	<span data-bind="use_person_id_name"></span>
+		              	</p>
+		              	<p class="conright-infoWrapLeft-itemRow di">
+		                	<span>使用者</span>
+		                	<span data-bind="charge_person_name"></span>
+		              	</p>
+		            </div>
+					<div class="conright-infoWrapLeft-item" id="conright2"></div>
+	     			<div class="conright-infoWrapLeft-item " id="conright3"></div>
+				</div>
+
+				<!--关系-->
+				<div></div>
+
+				<!--合同-->
+				<div class="conPrint" id="res_contract">
+					<p>合同</p>
+					<ul>
+						<li>合同名称</li>
+						<li>起始日期</li>
+						<li>终止日期</li>
+						<li>合同厂商</li>
+						<li>合同编号</li>
+						<li>合同金额</li>
+						<li>合同状态</li>
+					</ul>
+					<ul id="contractUL">
+						<li data-bind="name"></li>
+						<li data-bind="start_time"></li>
+						<li data-bind="end_time"></li>
+						<li data-bind="enterprise_name"></li>
+						<li data-bind="contract_code"></li>
+						<li data-bind="contract_amount"></li>
+						<li data-bind="contract_status"></li>
+					</ul>
+				</div>
+
+				<!--成本-->
+				<div id="res_cost"></div>
+
+				<!--历史-->
+				<div id="res_history"></div>
+
+			</div>
+
+			<div style="text-align: center;"><button id="btnPrint" >打印</button></div>
+
+
+		</div>
+
+
+
+		<!-- jquery  -->
+ 		 <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+     <!-- bootstrap -->
+     <script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+     <script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+     <!-- scroll -->
+     <script type="text/javascript" src="/js/compentJS/jquery.mCustomScrollbar.js"></script>
+     <!--url 常量  -->
+     <script type="text/javascript" src="/js/variable.js"></script>
+     <!-- 绑定数据 -->
+     <script type="text/javascript" src="/js/transparency.min.js"></script>
+        <!--302error-->
+		<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+		<script type="text/javascript" src="/js/printAssert.js"></script>
+		<script type="text/javascript" src="/js/compentJS/jquery.jqprint-0.3.js"></script>
+    <script type="text/javascript" src="/js/compentJS/jquery-migrate-1.2.1.min.js"></script>
+	</body>
+</html>

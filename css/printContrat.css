@@ -1,0 +1,198 @@
+*{
+  margin:0;
+  padding:0;
+  font-size: 16px;
+}
+ol,ul{
+  padding: 0;
+  margin: 0;
+}
+
+
+/*打印弹框*/
+#print,.wrapper{
+  /*width: 1232px;*/
+  width: 100%;
+  margin:20px auto;
+}
+.modal-body-detail{
+  max-width: 1080px;
+  min-width: 760px;
+  width: 100%;
+  margin:20px auto 0px;
+}
+
+#print .modal-box{
+	border-top: 1px dashed #bfbfbf;
+	padding:10px 10px ;
+}
+#print .modal-box:last-child{
+	border-bottom: none;
+	margin-bottom: 20px;
+}
+#print .modal-box .modal-box-title{
+	margin:15px 0 5px;
+	font-size: 20px;
+  vertical-align: top;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+#print .modal-box .modal-box-section-title{
+	padding:10px 0 5px 0;
+  vertical-align: top;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+#print .modal-box .twoLine{
+	display: inline-block;
+	/*width: 600px;*/
+  width: 49%;
+  vertical-align: top;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+#print .modal-box .twoLine>span:first-child{
+	display: inline-block;
+	/*width: 120px;*/
+  width: 32%;
+	text-align: right;
+	color: #9c9c9c;
+  vertical-align: top;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+#print .modal-box .twoLine>span:nth-child(2){
+	display: inline-block;
+	/*width: 310px;*/
+  width: 64%;
+	padding-left: 10px;
+  vertical-align: top;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+#print .modal-box .oneLine>span{
+	display: block;
+	padding-left: 80px;
+  vertical-align: top;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/*打印页 - 资产*/
+#print .conAsset-body{
+	border: 1px solid #bfbfbf;
+  width: 95%;
+  margin: 0 auto;
+}
+#print .conAsset-body ul{
+  text-align: center;
+	border-bottom: 1px solid #e5e5e5;
+	height:40px;
+}
+#print .conAsset-body ul:last-child{
+	border-bottom: none;
+}
+#print .conAsset-body li{
+  display: inline-block;
+  width: 23%;
+	line-height: 40px;
+	color:#696969;
+	font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#print.wrapper .modal-box{
+	border-top: 1px dashed #bfbfbf;
+	border-bottom: none;
+  padding: 10px;
+}
+
+
+
+.slaTactics{
+	margin-top:10px;
+}
+.slaInfoContentInfo{
+	overflow: hidden;
+}
+.slaTactics .slaTacticsTitle,.slaInfoContentInfoTitle{
+	margin-bottom:15px;
+}
+.contentInfoLeft,.contentInfoRight{
+	float: left;
+}
+.slaTacticsTable{
+    width: 95%;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid #bfbfbf;
+    background:#fff;
+}
+.slaTacticsTableBodyUl:last-child{
+	border-bottom:none;
+}
+.slaTacticsTable ul{
+	padding: 0;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.slaTacticsTable ul li{
+	float: left;
+  width: 25%;
+  color: #696969;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.on{
+	background:#f5f5f5;
+}
+.slaTacticsTableBodyUl:hover{
+  background: white;
+}
+
+.slaInfoTitleCaret{
+
+}
+.slaListCaret{
+	background: url('../imgs/contract/slaInfo.png') no-repeat;
+	display:inline-block;
+	vertical-align: middle;
+	width:12px;
+	height:8px;
+	cursor: pointer;
+}
+.slaListCaret{
+	background-position:-8px -109px;
+}
+.active{
+	background-position:-8px -95px;
+}
+ul{
+  list-style: none;
+}
+
+
+.btnPrint{
+  text-align: center;
+}
+button{
+  width: 55px;
+  height: 22px;
+  background-color: #054c9c;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  border: none;
+  margin: 30px auto;
+  outline: none;
+}
+
+#con_list{
+  min-height: 40px;
+}

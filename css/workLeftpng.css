@@ -1,0 +1,86 @@
+.sprite {
+  background-image: url(../imgs/left/workLeft.png);
+  background-repeat: no-repeat;
+  display: block; }
+
+.sprite-icon11 {
+  width: 34px;
+  height: 30px;
+  background-position: -2px -2px; }
+
+.sprite-icon12 {
+  width: 34px;
+  height: 30px;
+  background-position: -40px -2px; }
+
+.sprite-icon13 {
+  width: 34px;
+  height: 30px;
+  background-position: -78px -2px; }
+
+.sprite-icon21 {
+  width: 34px;
+  height: 30px;
+  background-position: -2px -36px; }
+
+.sprite-icon22 {
+  width: 34px;
+  height: 30px;
+  background-position: -40px -36px; }
+
+.sprite-icon23 {
+  width: 34px;
+  height: 30px;
+  background-position: -78px -36px; }
+
+.sprite-icon31 {
+  width: 34px;
+  height: 30px;
+  background-position: -2px -70px; }
+
+.sprite-icon32 {
+  width: 34px;
+  height: 30px;
+  background-position: -40px -70px; }
+
+.sprite-icon33 {
+  width: 34px;
+  height: 30px;
+  background-position: -78px -70px; }
+
+.sprite-icon41 {
+  width: 34px;
+  height: 30px;
+  background-position: -2px -104px; }
+
+.sprite-icon42 {
+  width: 34px;
+  height: 30px;
+  background-position: -40px -104px; }
+
+.sprite-icon43 {
+  width: 34px;
+  height: 30px;
+  background-position: -78px -104px; }
+
+.sprite-icon51 {
+  width: 34px;
+  height: 30px;
+  background-position: -116px -2px; }
+
+.sprite-icon52 {
+  width: 34px;
+  height: 30px;
+  background-position: -116px -36px; }
+
+.sprite-icon53 {
+  width: 34px;
+  height: 30px;
+  background-position: -116px -70px; }
+
+.sprite-sanjiao {
+  width: 10px;
+  height: 26px;
+  background-position: -154px -2px; }
+
+/*# sourceMappingURL=workLeftpng.css.map */

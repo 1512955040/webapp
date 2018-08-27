@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>创建新角色</title>
+		<!--reset-->
+		<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+		<!--bootstrap-->
+    	<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+    	<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap-select.min.css">
+		<!--head-->
+    	<link rel="stylesheet" href="/css/head.css" type="text/css">
+    	<link rel="stylesheet" href="/css/popUp.css" type="text/css">
+    	<!--CSS-->
+    	<link rel="stylesheet" href="../css/createNewRole.css">
+	</head>
+	<body>
+		<div id="header">
+        	<div class="w">
+            	<div class="logo fl"></div>
+            	<ul class="list fr">
+	                <li class="help fl">
+	                    <span class="helpPic"></span>
+	                    帮助</li>
+	                <li class="manager fl">
+	                    <span class="managerPic"></span>
+	                    管理</li>
+	                <li class="notify fl">
+	                    <span class="notifyPic"></span>
+	                    通知
+                    <div class="notify-wrap">
+                        <p class="notify-wrap-up">通知
+                            <button class="notify-wrap-upClear">清空</button>
+                        </p>
+                        <ul class="notify-list">
+                            <li class="notify-wrap-item">
+                                <i></i>
+                                <p>通知1</p>
+                                <p class="notify-wrap-item-date">2016-12-28</p>
+                            </li>
+                            <li class="notify-wrap-item">
+                                <i></i>
+                                <p>通知1</p>
+                                <p class="notify-wrap-item-date">2016-12-28</p>
+                            </li>
+                            <li class="notify-wrap-item">
+                                <i></i>
+                                <p>通知1</p>
+                                <p class="notify-wrap-item-date">2016-12-28</p>
+                            </li>
+                            <li class="notify-wrap-item">
+                                <i></i>
+                                <p>通知1</p>
+                                <p class="notify-wrap-item-date">2016-12-28</p>
+                            </li>
+                            <li class="notify-wrap-item">
+                                <i></i>
+                                <p>通知1</p>
+                                <p class="notify-wrap-item-date">2016-12-28</p>
+                            </li>
+                        </ul>
+                        <p class="notify-wrap-down">
+                            <a href="#">更多>></a>
+                        </p>
+                    </div>
+                </li>
+                <li class="pInfo fl" id="userInfo">
+                    <i class="userName" data-bind="userName"></i>
+                    <span class="userHeader"></span>
+                    <div class="userInfo-wrap">
+
+                        <div class="userInfo">
+                            <!--<img src="" alt=""  class="userHead"/>-->
+                            <span class="fl userHead"></span>
+                            <div class="userInfo-right">
+                                <p data-bind="userName"></p>
+                                <p>
+                                    <span data-bind="position"></span>&nbsp;
+                                    <span data-bind="department"></span>
+                                </p>
+                            </div>
+                            <div class="userInfoOperation">
+                                <p class="userInfoOperationBox">
+                                    <input type="button" value="我的账户" class="myAccout" />
+                                    <a id="logout" class="logout">退出</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+	
+	 <div id="nav" class="facilitator">
+        <div class="w">
+            <ul class="fl">
+                <li class="navlist fl navlist1 navNoChangeList now">
+                    <span class="navlist-img navlist-img1 active"></span>工作台</li>
+                <li class="navlist fl navlist2 navNoChangeList">
+                    <span class="navlist-img navlist-img2"></span>工单</li>
+                <li class="navlist fl navlist3 navNoChangeList">
+                    <span class="navlist-img navlist-img4"></span>合同</li>
+                <li class="navlist fl navlist4 navNoChangeList">
+                    <span class="navlist-img navlist-img3"></span>客户</li>
+
+                <li class="navlist fl navlist5 nav-add-item1 navNoChangeList navChangeList lastNavlist active">
+                    <span class="navlist-img navlist-img6 "></span>管理
+                </li>
+                <!--<li class="navlist fl navlist7 nav-add-item2 navChangeList">
+					<span class="navlist-img navlist-img7"></span>报表
+				</li>-->
+            </ul>
+
+
+            <div id="nav-add-container">
+                <span class="nav-add"></span>
+                <div class="nav-add-wrap">
+                    <div class="nav-add-overHidden">
+                        <ul class="nav-add-list">
+                            <li class="nav-add-item hide" id="nav-add-item1">
+                                <p></p>供应商</li>
+                            <li class="nav-add-item" id="nav-add-item2">
+                                <p></p>报表</li>
+                        </ul>
+                    </div>
+                    <span class="nav-add-trangle nav-add-trangleLeft"></span>
+                    <span class="nav-add-trangle nav-add-trangleRight"></span>
+                </div>
+            </div>
+
+            <div class="fr nav-right-search">
+                <input type="text" class="fr">
+                <div class="dropdownDiv">
+                    <span class="nav-right-selectedWord" id="">所有</span>
+                    <span class="nav-right-searchpng"></span>
+                    <span class="caret nav-right-caret"></span>
+                </div>
+
+                <div class="right-search-wrap dn">
+                    <div class="right-search-container">
+                        <div class="right-search-list">所有</div>
+                        <div class="right-search-list">工单</div>
+                        <div class="right-search-list">合同</div>
+                        <div class="right-search-list">客户</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-right-newAdd fr dn">
+                <span></span>
+                <ul>
+                    <li>
+                        <a href="assetAdd.html">
+                            <span></span>新建资产</a>
+                    </li>
+                    <li>
+                        <a href="newContract.html">
+                            <span></span>新建合同</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>供应商</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>项目</a>
+                    </li>
+                    <li>问题变更</li>
+                </ul>
+            </div>
+
+            <div class="nav-right-recentRecord fr dn">
+                <span></span>
+                <div class="nav-right-reRecordWrap">
+                    <p class="nav-right-reRecordTitle">最近访问的项</p>
+                    <ul id="history"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="moveWrap">
+            <i class="navMove"></i>
+        </div>
+    </div>
+	<!--头部end-->
+    <div id="container" class="w">
+		<!--左部-->
+		<div class="left">
+			<!--返回 保存 取消-->
+			<div class="left-title clearfix">
+				<div class="back clearfix">
+					<i></i>
+					<span>返回</span>
+				</div>
+				<div class="left-title-keepCancel clearfix">
+					<button class="left-title-btn left-btn-cancel" >取消</button>
+					<button class="left-title-btn left-btn-keep">保存</button>
+				</div>
+			</div>
+			<!---->
+			<div class="left-content clearfix">
+				<!--内容部分-->
+				<div class="left-content-page">
+					<!--角色名称 角色描述-->
+					<div class="left-content-newrole">
+						<!--角色名称-->
+						<div class="left-content-newrolename">
+							<p class="left-content-role1">
+							   <span class="left-content-createrole">角色名称</span>
+							   <span class="left-content-star">*</span>
+							   <span class="error">角色名称不能为空</span>
+							</p>
+							<input type="text" class="left-content-input"/>
+						</div>
+						<!--角色描述-->
+						<div class="left-content-describe">
+							<p class="left-content-role1">
+							   <span class="left-content-createrole">角色描述</span>
+							   <span class="left-content-star">*</span>
+							   <span class="error">角色描述不能为空</span>
+							</p>
+							<textarea type="text" class="left-content-input left-content-textarea"/></textarea>
+						</div>
+					</div>
+						<!--资产分配权限-->
+					<div class="left-content-permissions">
+						<p class="left-content-title1">
+							<i></i>资产分配权限
+						</p>
+						<div class="left-content-role2">
+							<p class="left-content-situation">
+								<i class="leftContentSituation"></i>基本功能
+							</p>
+							<div class="left-content-checkone left-content-checkone1">
+								<span><i></i>新建</span>
+								<span><i></i>编辑</span>
+								<span><i></i>删除</span>
+								<span><i></i>复制</span>
+								<span><i></i>指派部门</span>
+								<span><i></i>关联合同</span>
+								<span><i></i>添加附件</span>
+								<span><i></i>打印</span>
+								<span><i></i>关注</span>
+							</div>
+						</div>
+						
+						<div class="left-content-role2">
+							<p class="left-content-situation"><i class="leftContentSituation"></i>高级功能</p>
+							<div class="left-content-checkone left-content-checkone2">
+								<span><i></i>导入</span>
+								<span><i></i>移动</span>
+								<span><i></i>配置折旧</span>
+								<span><i></i>配置关系</span>
+							</div>
+						</div>
+						
+						<div class="left-content-role2">
+							<p class="left-content-situation"><i class="leftContentSituation"></i>管理功能</p>
+							<div class="left-content-checkone left-content-checkone3">
+								<span><i></i>资产分类管理</span>
+								<span><i></i>私有属性配置</span>
+							</div>
+						</div>
+					</div>
+					<!--合同分配权限-->
+					<div class="left-content-permissions">
+						<p class="left-content-title1">
+							<i></i>合同分配权限
+						</p>
+						<div class="left-content-role2">
+							<p class="left-content-situation"><i class="leftContentSituation"></i>基本功能</p>
+							<div class="left-content-checkone left-content-checkone4">
+								<span><i></i>新建</span>
+								<span><i></i>编辑</span>
+								<span><i></i>删除</span>
+								<span><i></i>续签合同</span>
+								<span><i></i>提交审核</span>
+								<span><i></i>撤回</span>
+								<span><i></i>打印</span>
+								<span><i></i>关注</span>
+							</div>
+						</div>
+						
+						<div class="left-content-role2">
+							<p class="left-content-situation"><i class="leftContentSituation"></i>高级功能</p>
+							<div class="left-content-checkone left-content-checkone5">
+								<span><i></i>导入</span>
+								<span><i></i>添加资产</span>
+								<span><i></i>审阅</span>
+							</div>
+						</div>
+						
+						<div class="left-content-role2">
+							<p class="left-content-situation"><i class="leftContentSituation"></i>管理功能</p>
+							<div class="left-content-checkone left-content-checkone6">
+								<span><i></i>资产分类管理</span>
+								<span><i></i>私有属性配置</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+		<!-- jquery -->
+	    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	    <script type="text/javascript" src="/js/compentJS/jquery.cookie.js"></script>
+	    <!-- bootstrap -->
+	    <script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+	    <script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+	    <!--url 常量  -->
+	    <script type="text/javascript" src="/js/variable.js"></script>
+	    <!-- 绑定数据 -->
+	    <script type="text/javascript" src="/js/transparency.min.js"></script>
+	    <script type="text/javascript" src="/js/compentJS/loadListCommon.js"></script>
+	    <!--302error-->
+	    <script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+	    <script src="/js/serviceHead.js"></script>
+	    <!--JS-->
+	    <script type="text/javascript" src="../js/createNewRole.js"></script>
+	</body>
+</html>

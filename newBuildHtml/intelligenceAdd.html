@@ -1,0 +1,78 @@
+<!-- 增加--------------------------------------------------------------- -->
+<div id="addUpFlag">	
+	<p class="centerCon-titel">智能仪器属性</p>
+	<p class="centerCon2-p1 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt"><span class="fl">品牌</span> <span  class="addNewBand addSupplierSpan fr"><i class="addSupplierAddPic"></i>新增</span> </span>
+		<select class="selectpicker halfSelect" name="brand_id" id="brandId">
+			<option data-bind="brand_symbol_r_name" value=""></option>
+		</select>
+	</p>
+	<p class="centerCon2-p2 centerCon-half di">
+		<span class="centerCon-txt"><span class="fl">品牌型号</span> <span class="addNewBandModel addSupplierSpan fr"><i class="addSupplierAddPic"></i>新增</span> </span>
+		<select class="selectpicker halfSelect" name="brand_model_id">
+			<option data-bind="brand_model_name"  value=""></option>
+		</select>
+	</p>
+	<p class="centerCon2-p3 centerCon-half di centerCon-half-first">
+<!-- 		<span class="centerCon-txt">供应商<span class="addSupplierSpan"><i class="addSupplierAddPic fr"></i>新增</span></span>
+ -->
+      <span class="centerCon-txt"><span class="fl">供应商</span><span class="addNewSupplier addSupplierSpan fr"><i class="addSupplierAddPic"></i>新增</span></span>
+   		<select class="selectpicker halfSelect" name="sale_id">
+			<option data-bind="sale_name" value=""></option>
+		</select>
+	</p>
+	<p class="centerCon2-p4 centerCon-half di">
+		<span class="centerCon-txt">状态</span>
+		<select class="selectpicker halfSelect" name="usestatus">
+			<option data-bind="resource_usestatus_name" value=""></option>
+		</select>
+	</p>
+	<p class="centerCon2-p5 centerCon-half di centerCon-half-first">
+		<span class="centerCon-quarter centerCon-quarter-first di">
+			<span class="centerCon-txt">购买日期</span>
+			<input type="date" name="procure_time" data-bind="resource_procure_time">
+		</span>
+		<span class="centerCon-quarter di">
+			<span class="centerCon-txt">质保日期</span>
+			<input type="date" name="warranty" data-bind="warranty">
+		</span>
+	</p>
+	<p class="centerCon2-p6 centerCon-half di">
+		<span class="centerCon-quarter di">
+			<span class="centerCon-txt">报废日期</span>
+			<input type="date" name="retirement_time" data-bind="resource_retirement_time">
+		</span>
+	</p>
+</div>
+ <!--详情 --------------------------------------------------------- -->
+<div id="detailFlag">
+
+  <p class="conright-infoWrapLeft-itemTitle">智能仪器属性</p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">品牌</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="brand_symbol_r_name"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">型号</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="brand_model_name"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">供应商</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="sale_name"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">状态</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="resource_usestatus_name"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">购买日期</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="resource_procure_time"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">质保日期</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="warranty"></span>
+  </p>
+</div>

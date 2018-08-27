@@ -1,0 +1,1396 @@
+body {
+	font-size: 16px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.w {
+	width: 1232px;
+	margin: 0 auto;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.dn {
+	display: none;
+}
+
+.di {
+	display: inline-block;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+.clearfix{zoom: 1}/*IE的专用属性，针对老版本的IE浏览器而写的，为了兼容*/
+.clearfix:after{/*伪对象选择符-在这个对象被浏览器选然后添加一定的内容*/
+	content: ".";/*添加内容卸载这个属性的后面，这个属性是专门配合伪对象滴，必须写，就算值为空也要写*/
+	display: block;
+	visibility: hidden;/*类似于display：none；只不过还是占据一定的物理空间*/
+	height: 0;/*将添加的内容高度设置为0，消除其占位*/
+	clear: both;/*将添加进去的内容作为清除浮动的对象，实现外围容器中有内容存在。因此可以自动判定高度，解决塌陷*/
+}
+/*去除选择框的outline*/
+.bootstrap-select .dropdown-toggle:focus{outline:none !important;}
+/*去除选项的outline*/
+a:focus {outline:none !important;}
+
+.sprite,
+#right .rightTip .rightTipRes .res-countsData-update,
+.rightCont .rigthBottom .update {
+	background-image: url(../imgs/asset/assetLeft/leftTree.png);
+	background-repeat: no-repeat;
+}
+
+.sprite-down {
+	width: 10px;
+	height: 6px;
+	background-position: -5px -5px;
+}
+
+.sprite-icon1 {
+	width: 26px;
+	height: 26px;
+	background-position: -25px -5px;
+}
+
+.sprite-icon1-1 {
+	width: 26px;
+	height: 26px;
+	background-position: -61px -5px;
+}
+
+.sprite-icon11 {
+	width: 23px;
+	height: 23px;
+	background-position: -97px -5px;
+}
+
+.sprite-icon11-2 {
+	width: 23px;
+	height: 23px;
+	background-position: -130px -5px;
+}
+
+.sprite-icon11-3 {
+	width: 23px;
+	height: 23px;
+	background-position: -163px -5px;
+}
+
+.sprite-icon12 {
+	width: 23px;
+	height: 23px;
+	background-position: -97px -38px;
+}
+
+.sprite-icon12-2 {
+	width: 23px;
+	height: 23px;
+	background-position: -130px -38px;
+}
+
+.sprite-icon12-3 {
+	width: 23px;
+	height: 23px;
+	background-position: -163px -38px;
+}
+
+.sprite-icon13 {
+	width: 23px;
+	height: 23px;
+	background-position: -5px -71px;
+}
+
+.sprite-icon13-2 {
+	width: 23px;
+	height: 23px;
+	background-position: -38px -71px;
+}
+
+.sprite-icon13-3 {
+	width: 23px;
+	height: 23px;
+	background-position: -71px -71px;
+}
+
+.sprite-icon14 {
+	width: 23px;
+	height: 23px;
+	background-position: -104px -71px;
+}
+
+.sprite-icon14-2 {
+	width: 23px;
+	height: 23px;
+	background-position: -137px -71px;
+}
+
+.sprite-icon14-3 {
+	width: 23px;
+	height: 23px;
+	background-position: -170px -71px;
+}
+
+.sprite-icon15 {
+	width: 23px;
+	height: 23px;
+	background-position: -5px -104px;
+}
+
+.sprite-icon15-2 {
+	width: 23px;
+	height: 23px;
+	background-position: -38px -104px;
+}
+
+.sprite-icon15-3 {
+	width: 23px;
+	height: 23px;
+	background-position: -71px -104px;
+}
+
+.sprite-icon16 {
+	width: 23px;
+	height: 23px;
+	background-position: -104px -104px;
+}
+
+.sprite-icon16-2 {
+	width: 23px;
+	height: 23px;
+	background-position: -137px -104px;
+}
+
+.sprite-icon16-3 {
+	width: 23px;
+	height: 23px;
+	background-position: -170px -104px;
+}
+
+.sprite-icon2 {
+	width: 26px;
+	height: 26px;
+	background-position: -5px -137px;
+}
+
+.sprite-icon2-2 {
+	width: 26px;
+	height: 26px;
+	background-position: -41px -137px;
+}
+
+.sprite-icon21 {
+	width: 23px;
+	height: 23px;
+	background-position: -77px -137px;
+}
+
+.sprite-icon21-2 {
+	width: 23px;
+	height: 23px;
+	background-position: -110px -137px;
+}
+
+.sprite-icon21-3 {
+	width: 23px;
+	height: 23px;
+	background-position: -143px -137px;
+}
+
+.sprite-icon22 {
+	width: 23px;
+	height: 23px;
+	background-position: -77px -170px;
+}
+
+.sprite-icon22-2 {
+	width: 23px;
+	height: 23px;
+	background-position: -110px -170px;
+}
+
+.sprite-icon22-3 {
+	width: 23px;
+	height: 23px;
+	background-position: -143px -170px;
+}
+
+.sprite-icon23 {
+	width: 23px;
+	height: 23px;
+	background-position: -196px -5px;
+}
+
+.sprite-icon23-2 {
+	width: 23px;
+	height: 23px;
+	background-position: -196px -38px;
+}
+
+.sprite-icon23-3 {
+	width: 23px;
+	height: 23px;
+	background-position: -203px -71px;
+}
+
+.sprite-icon24 {
+	width: 23px;
+	height: 23px;
+	background-position: -203px -104px;
+}
+
+.sprite-icon24-2 {
+	width: 23px;
+	height: 23px;
+	background-position: -176px -137px;
+}
+
+.sprite-icon24-3 {
+	width: 23px;
+	height: 23px;
+	background-position: -176px -170px;
+}
+
+.sprite-lastNode {
+	width: 5px;
+	height: 5px;
+	background-position: -5px -38px;
+}
+
+.sprite-right {
+	width: 5px;
+	height: 6px;
+	background-position: -209px -137px;
+}
+
+.sprite-rightNull {
+	width: 5px;
+	height: 6px;
+	background-position: -209px -153px;
+}
+
+.sprite-up {
+	width: 10px;
+	height: 6px;
+	background-position: -209px -169px;
+}
+
+.sprite,
+#right .rightTip .rightTipRes .res-countsData-update,
+.rightCont .rigthBottom .update {
+	background-image: url(../imgs/asset/asset.png);
+	background-repeat: no-repeat;
+}
+
+.sprite-add {
+	width: 12px;
+	height: 12px;
+	background-position: -2px -2px;
+}
+
+.sprite-ascClick {
+	width: 30px;
+	height: 25px;
+	background-position: -18px -2px;
+}
+
+.sprite-ascNoClick {
+	width: 30px;
+	height: 25px;
+	background-position: -52px -2px;
+}
+
+.sprite-back {
+	width: 6px;
+	height: 13px;
+	background-position: -86px -2px;
+}
+
+.sprite-btnLeftClick {
+	width: 8px;
+	height: 10px;
+	background-position: -96px -2px;
+}
+
+.sprite-btnLeftNoClick {
+	width: 8px;
+	height: 10px;
+	background-position: -108px -2px;
+}
+
+.sprite-btnRightNoClick {
+	width: 8px;
+	height: 10px;
+	background-position: -120px -2px;
+}
+
+.sprite-btnRightClick {
+	width: 8px;
+	height: 10px;
+	background-position: -132px -2px;
+}
+
+.sprite-check {
+	width: 11px;
+	height: 11px;
+	background-position: -96px -16px;
+}
+
+.sprite-checked {
+	width: 11px;
+	height: 11px;
+	background-position: -111px -16px;
+}
+
+.sprite-desClick {
+	width: 31px;
+	height: 25px;
+	background-position: -2px -31px;
+}
+
+.sprite-desNoClick {
+	width: 31px;
+	height: 25px;
+	background-position: -37px -31px;
+}
+
+.sprite-drapDown {
+	width: 7px;
+	height: 4px;
+	background-position: -126px -16px;
+}
+
+.sprite-icon1 {
+	width: 18px;
+	height: 60px;
+	background-position: -126px -24px;
+}
+
+.sprite-icon1-hover {
+	width: 18px;
+	height: 60px;
+	background-position: -148px -2px;
+}
+
+.sprite-icon2 {
+	width: 18px;
+	height: 60px;
+	background-position: -2px -66px;
+}
+
+.sprite-icon2-hover {
+	width: 18px;
+	height: 60px;
+	background-position: -24px -66px;
+}
+
+.sprite-icon3 {
+	width: 18px;
+	height: 60px;
+	background-position: -46px -66px;
+}
+
+.sprite-icon3-hover {
+	width: 18px;
+	height: 60px;
+	background-position: -68px -66px;
+}
+
+.sprite-icon4 {
+	width: 18px;
+	height: 60px;
+	background-position: -90px -66px;
+}
+
+.sprite-icon4-hover {
+	width: 18px;
+	height: 60px;
+	background-position: -148px -66px;
+}
+
+.sprite-import {
+	width: 19px;
+	height: 16px;
+	background-position: -112px -88px;
+}
+
+.sprite-leftClick {
+	width: 18px;
+	height: 18px;
+	background-position: -2px -130px;
+}
+
+.sprite-leftNotClick {
+	width: 18px;
+	height: 18px;
+	background-position: -24px -130px;
+}
+
+.sprite-out {
+	width: 18px;
+	height: 16px;
+	background-position: -46px -130px;
+}
+
+.sprite-rightChange {
+	width: 3px;
+	height: 6px;
+	background-position: -112px -66px;
+}
+
+.sprite-rightClick_03 {
+	width: 18px;
+	height: 18px;
+	background-position: -68px -130px;
+}
+
+.sprite-rightNoClick {
+	width: 18px;
+	height: 18px;
+	background-position: -90px -130px;
+}
+
+.sprite-search {
+	width: 14px;
+	height: 14px;
+	background-position: -112px -130px;
+}
+
+.sprite-staChange {
+	width: 6px;
+	height: 3px;
+	background-position: -130px -130px;
+}
+
+.sprite-staChange-hover {
+	width: 6px;
+	height: 3px;
+	background-position: -140px -130px;
+}
+
+.sprite-titleDown {
+	width: 7px;
+	height: 4px;
+	background-position: -150px -130px;
+}
+
+.sprite-update,
+#right .rightTip .rightTipRes .res-countsData-update,
+.rightCont .rigthBottom .update {
+	width: 23px;
+	height: 23px;
+	background-position: -130px -138px;
+}
+
+.di {
+	display: inline-block;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background:#f5f3f4;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+#container {
+	padding-top: 10px;
+	margin-bottom:20px;
+    background: #f1f1f1;
+    box-shadow: 0 0px 20px #dedddc;
+	/*height: 960px;*/
+}
+#container:after{
+	display:table;
+	content:'';
+	clear:both;
+}
+#left {
+	width: 222px;
+	height: 100%;
+	background-color: #1f5097;
+}
+
+#right {
+	/*height: 1080px;*/
+	padding-top:10px;
+}
+
+#right .rightTitle {
+	/*width: 988px;*/
+	height: 37px;
+	line-height: 37px;
+	border: 1px solid #e5e5e5;
+	font-size: 14px;
+	color: #696969;
+	text-align: center;
+	background-color: #fff;
+}
+
+#right .rightTitle .right-addAsset {
+	float: right;
+	margin: 7px 30px 0 0;
+	width: 75px;
+	height: 21px;
+	line-height: 21px;
+	text-align: center;
+	background-color: #054c9c;
+	color: #fff;
+	font-size: 12px;
+	border: none;
+	border-radius: 3px;
+}
+
+#right .rightTip {
+	width: 990px;
+	height: 126px;
+	border:1px solid #e5e5e5;
+	background-color: #fff;
+	margin-top: 12px;
+	/*padding-top: 23px;*/
+	padding-left: 130px;
+	position: relative;
+}
+
+#right .rightTip .rightTipRes {
+	width: 100%;
+	height: 103px;
+}
+
+#right .rightTip .rightTipRes .res-countsData-update {
+	display: inline-block;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 10;
+	cursor: pointer;
+}
+
+#right .rightTip .rightTipRes ul {
+	width: 100%;
+
+}
+#right .rightTip .rightTipRes ul:after{
+	display:table;
+	content: '';
+	clear:both;
+}
+
+#right .rightTip .rightTipRes ul li {
+	width: 192px;
+	position: relative;
+}
+
+#right .rightTip .rightTipRes ul li .circle {
+	width: 75px;
+	height: 75px;
+	background: #ccc;
+	margin-bottom:5px;
+}
+
+#right .rightTip .rightTipRes ul li .inCircle {
+	width: 45px;
+	height: 45px;
+	text-align: center;
+	line-height: 29px;
+	border: 9px solid #fff;
+	border-radius: 100%;
+	color: #fff;
+	font-size: 12px;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+
+#right .rightTip .rightTipRes ul li .res-countsData-num {
+	/*position: absolute;
+	top: 80px;
+	left: 14px;*/
+	font-size: 16px;
+	color: #696969;
+}
+
+
+/**.btn-group-vertical**/
+
+
+.rightCon-up-left{
+	vertical-align: baseline;
+}
+
+#AssetFind {
+	background-image: url(../imgs/pup/pup.png);
+	background-repeat: no-repeat;
+	display: block;
+	width: 31px;
+	height: 25px;
+	background-position: -85px -61px;
+	position: absolute;
+	right: -1px;
+	top: 0;
+	cursor: pointer;
+}
+
+#likeId {
+	position: static;
+	text-indent: 0;
+}
+
+.rightCon {
+	/*height: 886px;*/
+}
+
+.rightCon .rightCon-bottom .pageChange {
+/*	width: 390px;*/
+}
+
+.rightCon .rightCon-bottom:after {
+	display:table;
+	content:'';
+	clear:both;
+}
+
+#department {
+	width: 172px;
+	height: 23px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#department-menu {
+	width: 172px;
+	background: #fff;
+	margin-left: 34px;
+	overflow: auto;
+	height: 120px;
+	box-shadow: 0 0 10px #ccc;
+	z-index: 10;
+}
+
+.departmenu {
+	position: absolute;
+	background: #fff;
+	margin-left: 34px;
+	overflow: auto;
+	height: 120px;
+	box-shadow: 0 0 10px #ccc;
+	z-index: 10;
+}
+
+.rightCont {
+	height: 723px;
+	width: 990px;
+
+}
+
+.rightCont .r-title {
+	height: 37px;
+    line-height: 37px;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    font-size: 16px;
+    color: #696969;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+}
+.rightCont .rigthBottom .echart-1{
+	margin-right:10px;
+}
+.rightCont .rigthBottom .echart-1,
+.rightCont .rigthBottom .echart-2 {
+	width: 490px;
+	height: 308px;
+	background: #fff;
+	position: relative;
+	border:1px solid #e5e5e5;
+}
+
+.rightCont .rigthBottom .echart-3 {
+	height: 347px;
+	background: #fff;
+	width: 100%;
+	margin-top: 10px;
+	position: relative;
+	border:1px solid #e5e5e5;
+}
+.rightCont .rigthBottom .echart-1{
+	position: relative;
+}
+.rightCont .rigthBottom .echart-1 .takePlace{
+	position: absolute;
+	left:50%;
+	top:50%;
+	text-align: center;
+	margin-left:-123px;
+	margin-top:-95px;
+}
+.rightCont .rigthBottom .echart-1 .takePlace .addButton{
+	display:inline-block;
+	width:52px;
+	height:25px;
+	line-height:25px;
+	margin-left:10px;
+	border-radius:4px;
+	background:#1f5097;
+	color:#fff;
+}
+.rightCont .rigthBottom .echart-1 .takePlace .addButton:hover{
+	text-decoration: none;
+}
+.rightCont .rigthBottom .update {
+	position: absolute;
+	z-index: 10;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+}
+.prevPageSmallId,.nextPageSmallId{
+	 display: inline-block;
+		background-image: url(../imgs/contract/contract.png);
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+
+
+}
+.prevPageSmallId{
+		width:17px;
+		height:18px;
+	 	background-position: -165px -128px;
+}
+.nextPageSmallId{
+		width:19px;
+		height:18px;
+	 	background-position:-65px -177px;
+
+}
+
+.prevPageSmallId.active{
+	 background-position:-166px -100px;
+}
+.nextPageSmallId.active{
+	 background-position:-192px -149px;
+}
+.AssetFindBox{
+	width:100%;
+}
+.flContentBox{
+	width: 75px;
+  height: 100%;
+  text-align: center;
+  margin-top:11px;
+}
+/*解决在IE中 遮挡部分文字问题*/
+button.depart{
+	width: 75px;
+	height: 20px;
+	border: none;
+	outline: none;
+	vertical-align: middle;
+	font-size: 0;
+	background-color: rgba(255, 255, 255, 0);
+}
+button.depart span{
+	display: inline-block;
+	vertical-align: middle;
+}
+button.depart span:first-child{
+	width: 59px;
+	font-size: 12px;
+	line-height: 12px;
+	text-overflow: clip;
+	white-space: nowrap;
+	overflow: hidden;
+}
+button.depart span:last-child{
+	width: 8px;
+}
+
+/*使资产状态和使用人的内容对齐*/
+#tableWrap .btn{
+	font-size: 0;
+	height: 18px;
+}
+#tableWrap .btn>span{
+	font-size: 12px;
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option{
+	color:inherit;
+}
+
+/*资产-主页-第一幅图-无数据时的标题*/
+.echart-1 .title1{
+	position: relative;
+  left: -194px;
+  top: -44px;
+  font-size: 12px;
+}
+
+/**/
+.filter-option{
+	margin-left: 2px !important;
+}
+/**资产列表操作按钮弹窗位置**/
+/**删除**/
+#pupDelete .modal-dialog,
+#errorBtn .modal-dialog{
+	margin-left:-90px!important;
+}
+/**指派部门**/
+#assign .modal-dialog{
+	margin-left:-96px!important;
+}
+/**修改状态**/
+#changeStatus .modal-dialog{
+	margin-left:-96px!important;
+}
+#depreciate .modal-dialog{
+	margin-left:-125px!important;
+}
+#relateAsset .modal-dialog{
+	margin-left:-178px!important;
+	margin-top:-155px!important;
+}
+
+/*设置pointer元素,添加小手*/
+.w .r-title,.w #titleSubId,.w .rightCon-page,.w .disabled,.w .pageChange-span2,.w .txt,.w .takePlace span,.w .rightCon-bottom-operate button,.w .rightCon-sortWarp span.active{
+	cursor: default !important;
+}
+.w p.di span{
+	cursor: default !important;
+}
+.w p.di span.active,.w .rightCon-bottom-operate button.active,.w .rightCon-sortWarp span{
+	cursor: pointer !important;
+}
+/*备件库*/
+#right1{
+	width: 990px;
+	min-height: 366px;
+	/*border: 1px solid black;*/
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+#right1 .right1-title{
+	width: 100%;
+	height: 37px;
+	line-height: 37px;
+    font-size: 16px;
+    color: #696969;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    text-align: center;
+}
+#right1 .right1-content,#right1 .right2-content{
+	width: 100%;
+	height: 803px;
+	border: 1px solid #e5e5e5;
+	margin-top: 10px;
+	background: #fff;
+}
+#right1 .right2-content .right1-content-equipment,
+#right1 .right1-content .right1-content-equipment{
+	width: 930px;
+	height: 731px;
+	border: 2px solid #e5e5e5;
+	margin: 0 auto;
+	border-radius: 3px;
+	margin-top: 30px;
+}
+
+.right1-content-equipment .right1-content-title1,.right1-content-equipment .right1-content-title2{
+	width: 100%;
+	height: 48px;
+	border-bottom: 1px solid #e5e5e5;
+	background: #eef1f8;
+	box-sizing: border-box;
+}
+.right1-content-title1 .right1-content-btn{
+	float: left;
+	display: inline-block;
+	width:236px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	box-sizing: border-box;
+}
+.right1-content-btn button{
+	background-color: #054c9c;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    border: none;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin-left: 10px;
+}
+#addEquipment{
+	width: 80px;
+}
+#equipmentDelivery,#equipmentStorage{
+	width: 50px;
+}
+.right1-content-btn2{
+	float: right;
+	display: inline-block;
+	width: 130px;
+	height: 48px;
+	box-sizing: border-box;
+	font-size: 14px;
+	line-height: 48px;
+}
+/*打印 导出*/
+#contentStape,#contentDelivery{
+	padding-left: 8px;
+}
+#contentStape i,#contentDelivery i{
+	background: url(../imgs/supplier/export.png);
+	background-repeat:no-repeat;
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#contentStape span,#contentDelivery span{
+	padding-left: 3px;
+}
+/**/
+.right1-content-equipment .right1-content-title2{
+	background: #f2f2f2;
+	height: 40px;
+}
+.right1-content-title2 .right1-content-page{
+	width:100%;
+}
+.right1-content-page li,.right1-content-equipments li{
+	float: left;
+	width:130px;
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+}
+.right1-content-page li:last-child,.right1-content-equipments li:last-child{
+	width:140px;
+}
+.right1-content-equipments{
+	background: #FFFFFF;
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #e5e5e5;
+	font-size: 12px;
+}
+.right1-content-equipments:hover{
+	background: #ABD1FE;
+	cursor: pointer;
+}
+li i.icon11,li i.icon12{
+	background: url(../imgs/common.png) no-repeat;
+	display: inline-block;
+    width: 15px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+li i.icon11{
+	background-position: -107px -5px;
+}
+li i.icon12{
+	background-position: -132px -5px;
+}
+.right1-content-equipments li:last-child span.right1-content-ctrol{
+	margin-left: 7px;
+} 
+.right1-content-equipmentctrol{
+	height: 120px;
+	line-height: 120px;
+}
+.right1-content-equipmentctrol li{
+	line-height: 120px;
+}
+.right1-content-equipmentctrol li:nth-child(4) p{
+	box-sizing: border-box;
+	height: 40px;
+	line-height: 40px;
+}
+/*添加新设备弹窗样式*/
+#createNewUserModal .modal-dialog{
+	width: 360px;
+}
+.modal-body-item-type{
+	color: red;
+	margin-left: 5px;
+}
+#createNewUserModal	.modal-body-ctrol{
+	margin-left: -20px;
+}
+#createNewUserModal	.moadl-body-desctibe{
+	height: 90px;
+}
+#createNewUserModal	.modal-body-item-desctibe{
+	position: absolute;
+	left: 25px;
+}
+#createNewUserModal	.modal-body-item textarea{
+	width: 204px;
+	height: 84px;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	position: absolute;
+	left: 67px;
+}
+/*入库弹窗样式*/
+#createStorage .modal-header,
+#createOutStorage .modal-header{
+	padding-left: 15px;
+	height: 32px;
+	line-height: 32px;
+	color: #696969;
+	font-size: 12px;
+	border-bottom: 1px dashed #bfbfbf;
+}
+#createStorage .modal-dialog,
+#createOutStorage .modal-dialog{
+	width: 566px;
+	transform: translate(-50%,-50%);
+    margin-left: 94px;
+}
+#createOutStorage .modal-body .modal-body-allcontent,
+#createStorage .modal-body .modal-body-allcontent{
+	width: 523px;
+	height: 246px;
+	border: 1px solid #e5e5e5;
+	margin: 0 auto;
+}
+#createOutStorage .modal-content-ctrol,
+#createStorage .modal-content-ctrol{
+	height: 216px;
+	overflow: hidden;
+}
+.modal-body-allcontent .modal-body-title{
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	background:#EEEEEE;
+}
+.modal-body-allcontent .modal-body-title li{
+	display: inline-block;
+	height: 30px;
+	float: left;
+	font-size: 12px;
+	text-align: center;
+}
+.modal-body-allcontent .modal-body-title li:after,
+.modal-content-ctrol .modal-body-content li:after{
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	clear: both;
+}
+.modal-body-content:hover{
+	background: #ABD1FE;
+	cursor: pointer;
+}
+.modal-body-allcontent .modal-body-title .modal-body-content1:nth-child(1),
+.modal-content-ctrol .modal-body-content .modal-body-content1:nth-child(1){
+	width:59px;
+	text-align: right;
+}
+.modal-body-allcontent .modal-body-title .modal-body-content1:nth-child(2),
+.modal-content-ctrol .modal-body-content .modal-body-content1:nth-child(2){
+	width: 85px;
+}
+.modal-body-allcontent .modal-body-title .modal-body-content1:nth-child(3),
+.modal-content-ctrol .modal-body-content .modal-body-content1:nth-child(3){
+	width: 68px;
+}
+.modal-body-allcontent .modal-body-title .modal-body-content1:nth-child(4),
+.modal-content-ctrol .modal-body-content .modal-body-content1:nth-child(4){
+	width:96px;
+}
+.modal-body-allcontent .modal-body-title .modal-body-content1:nth-child(5),
+.modal-content-ctrol .modal-body-content .modal-body-content1:nth-child(5){
+	width: 92px;
+}
+.modal-body-allcontent .modal-body-title .modal-body-content1:nth-child(6),
+.modal-content-ctrol .modal-body-content .modal-body-content1:nth-child(6){
+	width: 96px;
+}
+#createOutStorage .modal-content-ctrol,
+#createStorage .modal-content-ctrol{
+	height: 196px;
+}
+#createOutStorage .icon13,#createOutStorage .icon14,
+#createStorage .icon13,#createStorage .icon14{
+	background: url(../imgs/asset/asset.png);
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#createOutStorage .icon13,
+#createStorage .icon13{
+	background-position:-74px -32px;
+}
+#createOutStorage .icon14,
+#createStorage .icon14{
+	background-position:-93px -32px;
+}
+#createOutStorage .modal-content-ctrol .modal-body-content,
+#createStorage .modal-content-ctrol .modal-body-content{
+	height: 44px;
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+}
+#createOutStorage .modal-content-ctrol .modal-body-content li.modal-body-content1,
+#createStorage .modal-content-ctrol .modal-body-content li.modal-body-content1{
+	display: inline-block;
+	float: left;
+	font-size: 12px;
+	text-align: center;
+	height:44px;
+	line-height: 44px;
+}
+.modal-body-select1 .bootstrap-select,.modal-body-select2 .bootstrap-select{
+	width: 78px!important;
+	height: 24px!important;
+}
+.modal-body-select1 .bootstrap-select .dropdown-toggle,
+.modal-body-select2 .bootstrap-select .dropdown-toggle{
+	height: 24px!important;
+}
+.modal-body-select1	.bootstrap-select span.filter-option,
+.modal-body-select2	.bootstrap-select span.filter-option{
+	width: 100%!important;
+}
+ #createOutStorage .modal-body-select1 ul.dropdown-menu,
+ #createOutStorage .modal-body-select2 ul.dropdown-menu,
+ #createStorage .modal-body-select1 ul.dropdown-menu,
+ #createStorage .modal-body-select2 ul.dropdown-menu{
+ 	width: 78px;
+ 	overflow: hidden!important;
+ }
+ #createOutStorage div.dropdown-menu,
+ #createStorage div.dropdown-menu{
+ 	left: -1px;
+ }
+ .modal-body-input1,.modal-body-input2,.modal-body-input3{
+ 	height: 24px;
+ 	border-radius: 5px;
+ 	outline: none;
+ 	border: 1px solid #bfbfbf;
+}
+ .modal-body-input1{
+ 	width: 45px;
+ }
+.modal-body-input2,.modal-body-input3{
+	width: 80px;
+}
+#createOutStorage .modal-footer,
+#createStorage .modal-footer{
+	border-top:none;
+	text-align: center;
+}
+/*入库 出库 滚动条样式*/
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer{
+	background-color: #FFFFFF;
+	border: none;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer{
+	box-shadow: none;
+	-webkit-border-radius:0;
+	border-radius: 0;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	background-color: #cbd3df;
+	box-shadow: none;
+  	width: 9px;
+  	margin: 0;
+}
+#createOutStorage #mCSB_2_scrollbar_vertical,
+#Storagemodal #mCSB_2_scrollbar_vertical{
+	width: 10px;
+}
+#createOutStorage .mCSB_buttonUp,#createOutStorage .mCSB_buttonDown,
+#Storagemodal .mCSB_buttonUp,#Storagemodal .mCSB_buttonDown{
+	background-color: #FFFFFF!important;
+	opacity: 1;
+	right: 1px;
+}
+#createOutStorage .mCS-3d-thick.mCSB_scrollTools_vertical,
+#Storagemodal .mCS-3d-thick.mCSB_scrollTools_vertical
+{
+	box-shadow: none;
+}
+#createOutStorage .mCSB_buttonUp,#createOutStorage .mCSB_buttonDown,
+#Storagemodal .mCSB_buttonUp,#Storagemodal .mCSB_buttonDown{
+	background-image: url(../imgs/mCSB_buttons.png);
+	background-repeat: no-repeat;
+	display: block;
+	width:7px;
+	height: 7px;
+}
+#createOutStorage .mCSB_buttonUp,
+#Storagemodal .mCSB_buttonUp{
+	background-position: -136px -16px;
+	top: 5px;
+	right: -1px;
+}
+#createOutStorage .mCSB_buttonDown,
+#Storagemodal .mCSB_buttonDown{
+	background-position: -127px -16px;
+	right: -2px;
+}
+#createOutStorage #mCSB_2_scrollbar_vertical,
+#Storagemodal #mCSB_2_scrollbar_vertical{
+	width: 5px;
+	right: 0;
+}
+#createOutStorage .mCSB_scrollTools,
+#Storagemodal .mCSB_scrollTools{
+	width: 5px;
+	right: 5px;
+}
+#createOutStorage .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+#Storagemodal .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	margin-top: -9px;
+	margin-bottom: -11px;
+	margin-right: -2px;
+	width: 5px;
+}
+/*出库添加内容*/
+.moadl-body-allcontent1{
+	width: 523px;
+	height:125px;
+	border-left:1px solid #e5e5e5;
+	border-right:1px solid #e5e5e5;
+	border-bottom:1px solid #e5e5e5;
+	margin: 0 auto;
+	background: #f7f7f7;
+}
+.moadl-body-allcontent1 .moadl-body-text1{
+	width: 100%;
+	height:30px;
+	padding-top: 20px;	
+}
+.moadl-body-allcontent1 .moadl-body-title3{
+	padding-left: 8px;
+	font-size: 12px;
+}
+/*.modal-body-select3*/
+.modal-body-select3 .bootstrap-select{
+	width: 425px!important;
+	height: 24px!important;
+}
+.modal-body-select3 .bootstrap-select .dropdown-toggle{
+	height: 24px!important;
+}
+.modal-body-select3	.bootstrap-select span.filter-option{
+	width: 100%!important;
+}
+.modal-body-select3 ul.dropdown-menu{
+ 	width: 425px;
+ 	overflow: hidden!important;
+ }
+#createOutStorage div.dropdown-menu{
+	left: -2px;
+}
+/**/
+#createOutStorage .moadl-body-title4{
+	float: left;
+	margin-top: 30px;
+}
+#createOutStorage .moadl-body-textarea1{
+	width: 425px;
+	height: 57px;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	margin-top: 25px;
+	margin-left: 4px;
+}
+/*入库记录*/
+.right1-content-title1 .right1-content-attachment{
+	height: 48px;
+	line-height: 48px;
+	padding-left: 15px;
+}
+.right1-content-attachment .right1-content-title5{
+	font-size: 12px;
+}
+/*select*/
+.right1-content-attachment .right1-content-select5{
+	padding-left: 5px;
+}
+.right1-content-attachment .right1-content-select5 .bootstrap-select{
+	width: 168px!important;
+	height: 24px!important;
+}
+.right1-content-select5 .bootstrap-select .dropdown-toggle{
+	height: 24px!important;
+}
+.right1-content-select5	.bootstrap-select span.filter-option{
+	width: 100%!important;
+}
+.right1-content-select5 ul.dropdown-menu{
+ 	width: 168px;
+ 	overflow: hidden!important;
+ }
+.right1-content-select5 div.dropdown-menu{
+	left: -1px;
+}
+/*title*/
+.right1-content-title1 .right1-content-Storage{
+	height: 48px;
+	line-height: 48px;
+	padding-left: 50px;
+}
+.right1-content-Storage p{
+	font-size: 12px;
+}
+.right1-content-Storage button {
+	width: 50px;
+    border-radius: 5px;
+    font-size: 12px;
+    border: none;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin-left: 7px;
+    border: 1px solid #054c9c;
+    background-color: #f0effc;
+	color: #054c9c;
+	font-weight: 500;
+}
+.right1-content-Storage button.active{
+	background-color: #054c9c;
+    color: #fff;
+}
+

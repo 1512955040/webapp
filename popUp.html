@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>弹出框</title>
+		<link rel="stylesheet" type="text/css" href="css/compentCSS/bootstrap.min.css">
+		<link rel="stylesheet" href="css/compentCSS/jquery.mCustomScrollbar.css">
+		<link rel="stylesheet" href="css/compentCSS/zTreeStyle.css">
+		<link rel="stylesheet" href="css/compentCSS/bootstrap-select.css" />
+
+		<link rel="stylesheet" href="css/popUp.css" type="text/css">
+	</head>
+
+	<body>
+
+		<button type="button" class="btn btn-primary btn-lg btn1" data-toggle="modal" data-target="#modal-1">
+	  	新增品牌
+	</button>
+
+		<div class="modal fade" id="modal-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">新增品牌
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="di">品牌名称<span class="modal-body-start">*</span></p>
+							<select></select>
+						</div>
+						<div class="modal-body-row">
+							<p class="di">描述<span class="modal-body-start">*</span></p>
+							<textarea></textarea>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg btn2" data-toggle="modal" data-target="#type">
+	  	新增品牌型号
+	</button>
+
+		<div class="modal fade" id="type" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">新增品牌型号
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="di">型号名称<span class="modal-body-start">*</span></p>
+							<select></select>
+						</div>
+						<div class="modal-body-row">
+							<p class="di">描述<span class="modal-body-start">*</span></p>
+							<textarea></textarea>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg btn3" data-toggle="modal" data-target="#pupDelete">
+	  	删除
+	</button>
+
+		<div class="modal fade" id="pupDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<span class="question"></span>是否确定要删除选定资产
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-delete">删除</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg btn3" data-toggle="modal" data-target="#pupDelete2">
+	  	删除二
+	</button>
+
+		<div class="modal fade" id="pupDelete2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<span class="question"></span>是否确定要删除选定资产
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-delete">删除</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg btn3" data-toggle="modal" data-target="#pupDelete3">
+	  	删除三
+	</button>
+
+		<div class="modal fade" id="pupDelete3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<span class="question"></span>是否确定要删除选定资产
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-delete">删除</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg btn3" data-toggle="modal" data-target="#pupDelete4">
+	  	删除四
+	</button>
+
+		<div class="modal fade" id="pupDelete4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<span class="question"></span>是否确定要删除选定资产
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-delete">删除</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg btn3" data-toggle="modal" data-target="#pupDelete5">
+	  	删除五
+	</button>
+
+		<div class="modal fade" id="pupDelete5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<span class="question"></span>是否确定要删除选定资产
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-delete">删除</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--
+    	错误按钮
+    -->
+		<button type="button" class="btn btn-primary btn-lg btn3" data-toggle="modal" data-target="#errorBtn">
+	  	error-500-Info
+
+	</button>
+
+		<div class="modal fade" id="errorBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<p class="modal-body-row"><span class="question"></span><span class="question-info">是否确定要删除选定资产</span></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-delete">删除</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg btn3" data-toggle="modal" data-target="#assign">
+	  	指派
+	</button>
+
+		<div class="modal fade" id="assign" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">指派
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div>
+							<input type="text" placeholder="搜索..." />
+							<span></span>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-delete">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addSupplier">
+	  	新增供应商
+	</button>
+
+		<div class="modal fade" id="addSupplier" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="closeImg fr">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">新增供应商
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="di modal-body-first modal-body-item">
+							<span class="modal-body-group di">
+				      			<span class="modal-body-txt di">厂商名称</span><span class="modal-body-start">*</span>
+							</span>
+							<select class="modal-body-name modal-body-info"></select>
+						</div>
+						<div class="di  modal-body-item">
+							<span class="modal-body-group di">
+				      			<span class="modal-body-txt di">厂商编码</span><span class="modal-body-start">*</span>
+							</span>
+							<input type="text" class="modal-body-code modal-body-info">
+						</div>
+						<div class="di modal-body-first  modal-body-item">
+							<span class="modal-body-group di">
+								<span class="modal-body-txt di">所在地</span><span class="modal-body-start">*</span>
+							</span>
+							<select class="modal-body-address modal-body-info"></select>
+						</div>
+						<div class="di  modal-body-item">
+							<span class="modal-body-group  marRight di"><span class="modal-body-txt di">厂商类型</span>
+							</span>
+							<select class="modal-body-type modal-body-info"></select>
+						</div>
+						<div class="di modal-body-first  modal-body-item">
+							<span class="modal-body-group marRight di">
+								<span class="modal-body-txt di">联系人</span>
+							</span>
+							<input type="text" class="modal-body-user modal-body-info">
+						</div>
+						<div class="di  modal-body-item">
+							<span class="modal-body-group marRight di">
+								<span class="modal-body-txt di">联系电话</span>
+							</span>
+							<input type="text" class="modal-body-tel modal-body-info">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#assign">
+	  	指派资源到部门
+	</button>
+
+		<div class="modal fade" id="assign" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">指派资源到部门
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="di">部门<span class="modal-body-start">*</span></p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#changeStatus">
+	  	修改状态
+	</button>
+
+		<div class="modal fade" id="changeStatus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">修改状态
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="di">修改状态<span class="modal-body-start">*</span></p>
+							<select></select>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#depreciate">
+	  	配置折旧
+	</button>
+
+		<div class="modal fade" id="depreciate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">配置折旧
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="di">折旧方法<span class="modal-body-start">*</span></p>
+							<select></select>
+							<div class="modal-body-radioGroup">
+								<div class="radio di">
+									<input type="radio" name='name'><span>使用寿命</span>
+								</div>
+								<div class="radio di">
+									<input type="radio" name='name'><span>递减百分比</span>
+								</div>
+							</div>
+						</div>
+						<div class="modal-body-row">
+							<p class="di">使用寿命<span class="modal-body-start">*</span></p>
+							<input type="text">
+						</div>
+						<div class="modal-body-row">
+							<p class="di">折残值($)</p>
+							<input type="text">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#relateAsset">
+	  	关联资产到合同
+	</button>
+		<div class="modal fade" id="relateAsset" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">关联资产到合同
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-up">
+							<p class="di modal-body-up-search">合同搜索<input type="text" value="搜索..."><i></i></p>
+						</div>
+						<div class="modal-body-bottom">
+							<div class="modal-body-bottom-title">
+								<p class="modal-body-bottom-titleItem di">合同名称</p>
+								<p class="modal-body-bottom-titleItem di">合同编号</p>
+								<p class="modal-body-bottom-titleItem di">合同厂商</p>
+								<p class="modal-body-bottom-titleItem di">执行部门</p>
+								<p class="modal-body-bottom-titleItem di">签署年月</p>
+							</div>
+							<div id="modal-body-bottom-rowWrap">
+								<div class="modal-body-bottom-row active">
+									<i class="active"></i>
+									<p class="di modal-body-bottom-rowItem">电脑fdewqfwefgeewr</p>
+									<p class="di modal-body-bottom-rowItem">45673623552423</p>
+									<p class="di modal-body-bottom-rowItem">fsgagsgfdshgdh</p>
+									<p class="di modal-body-bottom-rowItem">技术部门</p>
+									<p class="di modal-body-bottom-rowItem">2016-12-14</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#print">
+	  	打印预览
+	</button>
+		<div class="modal fade" id="print" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">打印预览
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-change">
+							<p class="di">选择</p>
+							<p class="di"></p>
+							<p class="di"><button>打印</button></p>
+						</div>
+						<div class="modal-body-id">
+							<p>请求ID-#1</p>
+							<p>优先级：</p>
+						</div>
+						<div class="modal-body-reqDetail">
+							<p>请求明细</p>
+							<div class="modal-body-reqCon">
+								<p class="modal-body-reqDetail-row">
+									<span>状态</span>
+									<span>open</span>
+									<span>模式</span>
+									<span>Web Form</span>
+								</p>
+								<p class="modal-body-reqDetail-row">
+									<span>状态</span>
+									<span>open</span>
+									<span>模式</span>
+									<span>Web Form</span>
+								</p>
+								<p class="modal-body-reqDetail-row">
+									<span>状态</span>
+									<span>open</span>
+									<span>模式</span>
+									<span>Web Form</span>
+								</p>
+								<p class="modal-body-reqDetail-row">
+									<span>状态</span>
+									<span>open</span>
+									<span>模式</span>
+									<span>Web Form</span>
+								</p>
+								<p class="modal-body-reqDetail-row">
+									<span>状态</span>
+									<span>open</span>
+									<span>模式</span>
+									<span>Web Form</span>
+								</p>
+								<p class="modal-body-reqDetail-row">
+									<span>状态</span>
+									<span>open</span>
+									<span>模式</span>
+									<span>Web Form</span>
+								</p>
+								<p class="modal-body-reqDetail-row">
+									<span>状态</span>
+									<span>open</span>
+									<span>模式</span>
+									<span>Web Form</span>
+								</p>
+								<p class="modal-body-reqDetail-row">
+									<span>状态</span>
+									<span>open</span>
+									<span>模式</span>
+									<span>Web Form</span>
+								</p>
+								<p class="modal-body-reqDetail-row">
+									<span>状态</span>
+									<span>open</span>
+									<span>模式</span>
+									<span>Web Form</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer"></div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#conAsset">
+	  	为合同选择资产
+	</button>
+		<div class="modal fade" id="conAsset" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">为合同选择资产
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-up">
+							<button>附加到合同</button>
+							<p class="di modal-body-up-search"><input type="text" value="搜索..."><i></i></p>
+							<p class="modal-body-up-page">显示&nbsp;1-<span>11</span>&nbsp;共&nbsp;<span>2</span>&nbsp;
+								<span class="up-page-left di"></span><span class="up-page-right di"></span>
+							</p>
+						</div>
+						<div class="modal-body-bottom">
+							<div class="modal-body-bottom-title">
+								<p>资产名</p>
+								<p>资产类型</p>
+								<p>品牌</p>
+								<p>是否在合同中</p>
+							</div>
+							<div class="modal-body-bottom-rowWrap">
+								<div class="modal-body-bottom-row active">
+									<i class="active"></i>
+									<p>电脑</p>
+									<p>45673623552423</p>
+									<p>fsgagsgfdshgdh</p>
+									<p>技术部门</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addRemind">
+	  	添加提醒
+	</button>
+		<div class="modal fade" id="addRemind" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">添加提醒
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">提前提醒时间</p>
+							<p class="modal-body-row-right">
+								<input type="date" />
+							</p>
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">日期</p>
+							<p class="modal-body-row-right">
+								<input type="date" />
+							</p>
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">概要</p>
+							<p class="modal-body-row-right">
+								<textarea name="" rows="" cols=""></textarea>
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#markOff">
+	  	标记休假日期
+	</button>
+		<div class="modal fade" id="markOff" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">标记休假日期
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">休假类型</p>
+							<p class="modal-body-row-right">
+								<input type="date" />
+							</p>
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">起始日期</p>
+							<p class="modal-body-row-right">
+								<input type="date" />
+							</p>
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">结束日期</p>
+							<p class="modal-body-row-right">
+								<input type="date" />
+							</p>
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">备注</p>
+							<p class="modal-body-row-right">
+								<textarea name="" rows="" cols=""></textarea>
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#accessory">
+	  	附件
+	</button>
+		<div class="modal fade" id="accessory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">附件
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-up">
+							<p class="modal-body-up-page">显示&nbsp;1-<span>11</span>&nbsp;共&nbsp;<span>2</span>&nbsp;
+								<span class="up-page-left di"></span><span class="up-page-right di"></span>
+							</p>
+						</div>
+						<div class="modal-body-bottom">
+							<div class="modal-body-bottom-title">
+								<p>名称</p>
+								<p>上传时间</p>
+								<p>上传人</p>
+								<p>下载</p>
+							</div>
+							<div class="modal-body-bottom-rowWrap">
+								<div class="modal-body-bottom-row active">
+									<p>电脑</p>
+									<p>45673623552423</p>
+									<p>456736233</p>
+									<p>456736233</p>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#customTime">
+	  	自定义时间
+	</button>
+		<div class="modal fade" id="customTime" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">标记休假日期
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">休假类型</p>
+							<p class="modal-body-row-right">
+								<input type="date" />
+							</p>
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">起始日期</p>
+							<p class="modal-body-row-right">
+								<input type="date" />
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#close">
+	  	关闭
+	</button>
+		<div class="modal fade" id="close" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">关闭
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-title">
+							<span class="question"></span> 您是否确认所选事件关闭，关闭后所有事件活动将全部停止?
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">处理状态</p>
+							<p class="modal-body-row-right">
+								<select class="selectpicker"></select>
+							</p>
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">关闭说明</p>
+							<p class="modal-body-row-right">
+								<textarea></textarea>
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modification">
+	  	修改内容
+	</button>
+		<div class="modal fade" id="modification" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">修改内容
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<textarea>下nsa惨啊怕你重新</textarea>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#publish">
+	  	发布
+	</button>
+		<div class="modal fade" id="publish" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">发布
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">选择服务商</p>
+							<p class="modal-body-row-right">
+								<select class="selectpicker">
+									<option value="">212123</option>
+								</select>
+							</p>
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">期望解决时间</p>
+							<p class="modal-body-row-right">
+								<input type="input" />
+							</p>
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">发布</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#audit">
+	  	审核
+	</button>
+		<div class="modal fade" id="audit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">审核
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">处理状态</p>
+							<p class="modal-body-row-right">
+								<select class="selectpicker"></select>
+							</p>
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left modal-body-rowTxt">审核说明</p>
+							<p class="modal-body-row-right">
+								<textarea></textarea>
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#orderBack">
+	  	请填写退单说明
+	</button>
+		<div class="modal fade" id="orderBack" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">请填写退单说明
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<textarea>退单说明</textarea>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#processState">
+	  	发布
+	</button>
+		<div class="modal fade" id="processState" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">发布
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">处理状态</p>
+							<p class="modal-body-row-right">
+								<select class="selectpicker">
+									<option value="">212123</option>
+								</select>
+							</p>
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">提交</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#allocate">
+	  	分派
+	</button>
+		<div class="modal fade" id="allocate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">分派
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">执行人</p>
+							<p class="modal-body-row-right">
+								<input type="input" />
+							</p>
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">干系人</p>
+							<p class="modal-body-row-right">
+								<input type="input" />
+							</p>
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">发布</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#redeploy">
+	  	转派
+	</button>
+		<div class="modal fade" id="redeploy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">转派
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">执行人</p>
+							<p class="modal-body-row-right">
+								<select class="selectpicker"></select>
+							</p>
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left modal-body-rowTxt">转派说明</p>
+							<p class="modal-body-row-right">
+								<textarea></textarea>
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#selectAsset">
+	  	为事件选择资产
+	</button>
+		<div class="modal fade" id="selectAsset" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">附加到事件
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-up">
+							<p class="di modal-body-up-search"><button class="addEvent">附加到事件</button><input type="text" value="搜索..."><i></i></p>
+						</div>
+						<div class="modal-body-bottom">
+							<div class="modal-body-bottom-title">
+								<p class="modal-body-bottom-titleItem di">资产名</p>
+								<p class="modal-body-bottom-titleItem di">资产类型</p>
+								<p class="modal-body-bottom-titleItem di">品牌</p>
+								<p class="modal-body-bottom-titleItem di">资产管理者</p>
+							</div>
+							<div id="modal-body-bottom-rowWrap">
+								<div class="modal-body-bottom-row active">
+									<i class="active"></i>
+									<p class="di modal-body-bottom-rowItem">电脑fdewqfwefgeewr</p>
+									<p class="di modal-body-bottom-rowItem">45673623552423</p>
+									<p class="di modal-body-bottom-rowItem">fsgagsgfdshgdh</p>
+									<p class="di modal-body-bottom-rowItem">技术部门</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#merge">
+	  	合并
+	</button>
+		<div class="modal fade" id="merge" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">合并
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-up">
+							<div class="modal-body-upScroll">
+								<ul class="first">
+									<li><i></i></li>
+									<li>
+										<p>网速慢，网页经常打不开</p>
+										<p>来自：张三(技术部)&nbsp;&nbsp;&nbsp;响应于：09:18</p>
+									</li>
+								</ul>
+								<ul>
+									<li><i></i></li>
+									<li>
+										<p>网速慢，网页经常打不开</p>
+										<p>来自：张三(技术部)&nbsp;&nbsp;&nbsp;响应于：09:18</p>
+									</li>
+									<li><i></i></li>
+								</ul>
+								<ul>
+									<li><i></i></li>
+									<li>
+										<p>网速慢，网页经常打不开</p>
+										<p>来自：张三(技术部)&nbsp;&nbsp;&nbsp;响应于：09:18</p>
+									</li>
+									<li><i></i></li>
+								</ul>
+							</div>
+						</div>
+						<div class="modal-body-bottom">
+							<div class="modal-body-bottomTools">
+								<select class="selectpicker">
+									<option value="">请求人</option>
+								</select>
+								<p>
+									<input type="text" /><i></i>
+								</p>
+							</div>
+							<div class="modal-body-bottomUl">
+								<ul>
+									<li>
+										<p>网速慢，网页经常打不开</p>
+										<p>来自：张三(技术部)&nbsp;&nbsp;&nbsp;响应于：09:18</p>
+									</li>
+									<li><i></i></li>
+								</ul>
+								<ul>
+									<li>
+										<p>网速慢，网页经常打不开</p>
+										<p>来自：张三(技术部)&nbsp;&nbsp;&nbsp;响应于：09:18</p>
+									</li>
+									<li><i></i></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#batchReply">
+	  	批量回复
+	</button>
+		<div class="modal fade" id="batchReply" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">批量回复
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<textarea>请输入回复内容</textarea>
+					</div>
+					<div class="addFile">
+						<div>
+							<span>添加附件</span>
+							<p><span></span><span>添加文件</span></p>
+						</div>
+						<input type="text" />
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--创建小组-->
+		<button type="button" class="btn btn-primary btn-lg btn2" data-toggle="modal" data-target="#createGroupBtn">
+	  	创建小组
+	    </button>
+
+		<div class="modal fade" id="createGroupBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">创建小组
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p>显示名称<span class="modal-body-start">*</span></p>
+							<input type="text" class='modal-body-name modal-body-info' />
+						</div>
+						<div class="modal-body-row">
+							<p>描述</p>
+							<textarea></textarea>
+						</div>
+						<div class="modal-body-row">
+							<p>主管部门<span class="modal-body-start">*</span></p>
+							<select class="modal-body-department modal-body-info"></select>
+						</div>
+						<div class="modal-body-row">
+							<p>组长<span class="modal-body-start">*</span></p>
+							<input type="text" class='modal-body-headman modal-body-info' />
+						</div>
+						<div class="modal-body-row">
+							<p>成员</p>
+							<select class="modal-body-member  modal-body-info"></select>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--添加组员-->
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addmember ">
+	  			添加组员
+			</button>
+		<div class="modal fade" id="addmember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">添加组员
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+
+						<div class="modal-body-bottom">
+							<div class="modal-body-bottom-title">
+								<p class="modal-body-bottom-titleItem di">姓名</p>
+								<p class="modal-body-bottom-titleItem di">年龄</p>
+								<p class="modal-body-bottom-titleItem di">部门</p>
+								<p class="modal-body-bottom-titleItem di">工龄</p>
+								<p class="modal-body-bottom-titleItem di">手机号码</p>
+							</div>
+							<div class='modal-body-bottom-box'>
+								<div id="modal-body-bottom-rowWrap">
+									<div class="modal-body-bottom-row active">
+										<i class="active"></i>
+										<p class="di modal-body-bottom-rowItem">电脑fdewqfwefgeewr</p>
+										<p class="di modal-body-bottom-rowItem">45673623552423</p>
+										<p class="di modal-body-bottom-rowItem">fsgagsgfdshgdh</p>
+										<p class="di modal-body-bottom-rowItem">技术部门</p>
+										<p class="di modal-body-bottom-rowItem">2016-12-14</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--添加组员-->
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#slideDownList ">
+	  			下拉多选列表
+			</button>
+		<div class="modal fade" id="slideDownList" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">下拉多选列表
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-bottom">
+							<ul>
+								<li><i></i>王小二</li>
+								<li><i></i>王小二</li>
+								<li><i></i>王小二</li>
+								<li><i></i>王小二</li>
+								<li><i></i>王小二</li>
+								<li><i></i>王小二</li>
+							</ul>
+
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--添加工作日志-->
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addWorkOrderModal">
+	  			添加工作日志
+			</button>
+		<div class="modal fade" id="addWorkOrderModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">添加工作日志
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-up">
+							<form action="" class="form-horizontal">
+								<div class="form-group">
+									<label for="staff" class="col-sm-3 control-label"><span class="modal-body-start">*</span>人员</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="staff" placeholder="" disabled>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="" class="col-sm-3 control-label">执行日期</label>
+									<div class="col-sm-4">
+										<input type="date" class="form-control" id="" placeholder="" name="" data-bind="">
+
+									</div>
+									<div class="col-sm-4">
+										<input type="date" class="form-control" id="" placeholder="" name="" data-bind="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="workTime" class="col-sm-3 control-label">工时</label>
+									<div class="col-sm-4">
+										<div class="col-sm-9 workTimeHoursBox">
+											<input type="text" class="form-control" id="workTimeHours" placeholder="">
+										</div>
+										<div class="workHoursBox">
+											<label for="workTimeHours" class="control-label workTimeHours">小时</label>
+										</div>
+
+									</div>
+									<div class="col-sm-4">
+										<div class="col-sm-9 workTimeMinBox">
+											<input type="text" class="form-control" id="workTimeMin" placeholder="">
+										</div>
+										<div class="">
+											<label for="workTimeMin" class="control-label workTimeMin">分钟</label>
+										</div>
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="workUnitPrice" class="col-sm-3 control-label">工作单价（￥）</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="workUnitPrice" placeholder="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="workTotal" class="col-sm-3 control-label">工作总价（￥）</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="workTotal" placeholder="" disabled>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="slipFee" class="col-sm-3 control-label">差率费用（￥）</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="slipFee" placeholder="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="accessoriesCost" class="col-sm-3 control-label">配件费用（￥）</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="accessoriesCost " placeholder="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="otherCharges" class="col-sm-3 control-label">其他费用（￥）</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="otherCharges " placeholder="">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="totalFee" class="col-sm-3 control-label">总费用（￥）</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="totalFee " placeholder="" disabled>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="firstname" class="col-sm-3 control-label">描述</label>
+									<div class="col-sm-8">
+										<textarea class="form-control" rows="3"></textarea>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="modal-body-bottom">
+							<p>备注：</p>
+							<p>1.工时单价：每隔运维人员自定义；</p>
+							<p>2.工时总价=工时单价*工时；</p>
+							<p>3.总费用=工时总价+差旅费用+配件费用+其他费用；</p>
+
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--注册服务条款-->
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#serviceModal">
+	  			服务条款
+			</button>
+		<div class="modal fade" id="serviceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">服务条款
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quam expedita voluptate eius nobis quae adipisci vitae provident sunt aut quibusdam quis non itaque fuga pariatur voluptas eveniet voluptates harum.
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#changeRegistrantModal">
+	  			更换登记人
+			</button>
+		<!--管理 更换登记人-->
+		<div class="modal fade" id="changeRegistrantModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">更换登记人
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="di changeRegistrantName">登记人</p>
+							<select id="statusSelect" class="selectPicker">
+								<option value="20">1</option>
+								<option value="21">2</option>
+								<option value="22">3</option>
+								<option value="23">4</option>
+								<option value="24">5</option>
+							</select>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" id="changeStatusConfirm" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#createNewDepartmentModal">
+	  			创建新部门
+			</button>
+		<!-- 创建新部门,新建子部门,编辑 -->
+		<div class="modal fade" id="createNewDepartmentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header"><span class="modal-name">添加新部门</span>
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">部门名称</p>
+							<p class="modal-body-row-right">
+								<input type="text" data-bind="" id="modalInptu" />
+							</p>
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left modal-body-rowTxt">部门描述</p>
+							<p class="modal-body-row-right">
+								<textarea placeholder="部门描述" class="modalTextArea"></textarea>
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep" id="createNewDepartmentModalSave">保存</button>
+						<button type="button" class="btn btn-cancel " data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#createNewpersonelModal">
+	  			创建新人员
+			</button>
+		<!--创建新人员-->
+		<div class="modal fade" id="createNewpersonelModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">创建新人员
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<div class="modal-body-row-half di">
+								<p class="modal-body-row-leftText di">姓名</p><input type="text" />
+							</div><div class="modal-body-row-half di">
+								<p class="modal-body-row-leftText di">性别</p><select class="selectPicker">
+									<option value="1"></option>
+									<option value="2"></option>
+									<option value="3"></option>
+									<option value="4"></option>
+								</select>
+							</div>
+						</div>
+						<div class="modal-body-row">
+							<div class="modal-body-row-half di">
+								<p class="modal-body-row-leftText di">年龄</p><input type="text" />
+							</div><div class="modal-body-row-half di">
+								<p class="modal-body-row-leftText di">职务</p><input type="text" />
+							</div>
+						</div>
+						<div class="modal-body-row">
+							<div class="modal-body-row-half di">
+								<p class="modal-body-row-leftText di">部门</p><input type="text" />
+							</div><div class="modal-body-row-half di">
+								<p class="modal-body-row-leftText di">电话</p><input type="text" />
+							</div>
+						</div>
+						<div class="modal-body-row">
+							<div class="modal-body-row-half di">
+								<p class="modal-body-row-leftText di">手机</p><input type="text" />
+							</div><div class="modal-body-row-half di">
+								<p class="modal-body-row-leftText di">邮箱</p><input type="text" />
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+
+						<button type="button" class="btn btn-keep" id="createNewpersonelModalSave">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#personalId">
+	  			个人名片
+			</button>
+		<!-- 个人名片 -->
+		<div class="modal fade" id="personalId" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">个人名片
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-head">
+							<i></i>
+							<span>张三</span>
+						</div><!--
+				 --><ul class="modal-body-info">
+							<li>
+								<span>办公职位：</span><span>研发部-软件研发工程师</span>
+							</li>
+							<li>
+								<span>办公电话：</span><span>010-1234567</span>
+							</li>
+							<li>
+								<span>移动电话：</span><span>13000000000</span>
+							</li>
+							<li>
+								<span>邮箱：</span><span>45131vh@qq.com</span>
+							</li>
+							<li>
+								<span>登陆账号：</span><span class="loginNumber">zsewgdf</span>
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<div class="edit">
+							<i></i>
+							<span>编辑</span>
+						</div>
+						<button type="button" class="btn btn-keep">删除</button>
+						<button type="button" class="btn btn-keep" >注销</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#createNewUserModal">
+	  			创建新用户
+			</button>
+		<div class="modal fade" id="createNewUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="closeImg fr">
+	      <div class="modal-dialog">
+	        <div class="modal-content">
+	          <div class="modal-header">创建新用户
+	            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+	          </div>
+	          <form id="userData">
+		          <div class="modal-body">
+	
+		            <div class="di modal-body-item">
+						<p class="di modal-body-item-name">用户名称</p>
+						<input type="text">
+		            </div>
+		            <div class="di modal-body-item">
+		              <p class="di modal-body-item-name">登录密码</p>
+					  <input type="text">
+		            </div>
+		            <div class="modal-body-item">
+		         		<p class="di modal-body-item-name">确认密码</p>
+						<input type="text">
+		            </div>
+		            <div class="modal-body-item">
+		                <p class="di modal-body-item-name">关联企业人员</p>
+						<input type="text"><i class="associatedPersonel"></i>
+		            </div>
+		             <div class="modal-body-item">
+		                <p class="di modal-body-item-name">分配角色权限</p>
+						<input type="text">
+		            </div>
+		             <div class="modal-body-item-last">
+		               <div class="chooseBox di">
+		               	 <i></i><span>启用</span>
+		               </div>
+	
+		            </div>
+	
+	
+		          </div>
+	          </form>
+	
+	          <div class="modal-footer">
+	            <button type="button" class="btn btn-keep addNewUser">保存</button>
+	            <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+	          </div>
+	        </div>
+	      </div>
+    	</div>
+		
+		<p class="successTip" id="tipMsg">关联合同成功</p>
+
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/compentJS/jquery.mCustomScrollbar.js"></script>
+		<script src="js/compentJS/bootstrap-select.min.js"></script>
+		<script type="text/javascript" src="js/compentJS/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/compentJS/jquery.ztree.core.js"></script>
+		<script type="text/javascript" src="js/compentJS/selectTree.js"></script>
+
+		<script>
+			$("#print .modal-body-reqCon").mCustomScrollbar({
+				setHeight: 330,
+				theme: "dark-3"
+			});
+			$("#accessory .modal-body-bottom-rowWrap").mCustomScrollbar({
+				setHeight: 296,
+				theme: "dark-3"
+			});
+			$('.selectPicker').selectpicker({
+   				 noneSelectedText: '--请选择--'
+  			});
+			var department_select = new selectMenu("department-tree", "department-menu", "department", null, null);
+
+			department_select.onSelect('id', 'pId', 'name');
+		</script>
+	</body>
+
+</html>

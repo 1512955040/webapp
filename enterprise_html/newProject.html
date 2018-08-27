@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>新建项目</title>
+		<!-- reset -->
+		<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+
+		<!-- bootstrap -->
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap-select.css">
+		<link rel="stylesheet" type="text/css" media="screen"  href="css/compentCSS/bootstrap-datepicker.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/fileinput.min.css">
+    <link rel="stylesheet" href="/css/popUp.css" type="text/css">
+		<!-- head -->
+		<link rel="stylesheet" type="text/css" href="/css/head.css" type="text/css">
+
+		<link rel="stylesheet" type="text/css" href="/css/assetAddform.css">
+		<link rel="stylesheet" type="text/css" href="/css/newProject.css">
+
+	</head>
+
+	<body>
+
+		<div id="header">
+			<div class="w">
+				<div class="logo fl"></div>
+				<ul class="list fr">
+					<li class="help fl">
+						<span class="helpPic"></span> 帮助
+					</li>
+					<li class="manager fl">
+						<span class="managerPic"></span> 管理
+					</li>
+					<li class="notify fl">
+						<span class="notifyPic"></span> 通知
+						<div class="notify-wrap">
+							<p class="notify-wrap-up">通知
+								<button class="notify-wrap-upClear">清空</button>
+							</p>
+							<ul class="notify-list">
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+							</ul>
+							<p class="notify-wrap-down">
+								<a href="#">更多>></a>
+							</p>
+						</div>
+					</li>
+					<li class="pInfo fl" id="userInfo"><i class="userName" data-bind="userName"></i>
+						<span class="userHeader"></span>
+						<div class="userInfo-wrap">
+
+							<div class="userInfo">
+								<!--<img src="" alt=""  class="userHead"/>-->
+								<span class="fl userHead"></span>
+								<div class="userInfo-right">
+									<p data-bind="userName"></p>
+									<p><span data-bind="position"></span>&nbsp;<span data-bind="department"></span></p>
+								</div>
+								<div class="userInfoOperation">
+									<p class="userInfoOperationBox">
+										<input type="button" value="我的账户" class="myAccout" />
+										<a id="logout" class="logout">退出</a>
+									</p>
+
+								</div>
+							</div>
+
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="nav">
+			<div class="w">
+				<ul class="fl">
+					<li class="navlist fl navlist1 navNoChangeList">
+						<span class="navlist-img navlist-img1"></span>工作台</li>
+					<li class="navlist fl navlist2 navNoChangeList">
+						<span class="navlist-img navlist-img2"></span>事件</li>
+					<li class="navlist fl navlist3 navNoChangeList">
+						<span class="navlist-img navlist-img3"></span>资产</li>
+					<li class="navlist fl navlist4 navNoChangeList">
+						<span class="navlist-img navlist-img4"></span>合同</li>
+					<li class="navlist fl navlist5 navNoChangeList active">
+						<span class="navlist-img navlist-img5"></span>项目</li>
+					<li class="navlist fl navlist6 nav-add-item1 navNoChangeList navChangeList lastNavlist">
+						<span class="navlist-img navlist-img6 "></span>供应商
+					</li>
+					<li class="navlist fl navlist7 nav-add-item2 navChangeList">
+						<span class="navlist-img navlist-img7"></span>管理
+					</li>
+				</ul>
+
+				<div id="nav-add-container">
+					<span class="nav-add"></span>
+					<div class="nav-add-wrap">
+						<div class="nav-add-overHidden">
+							<ul class="nav-add-list">
+								<li class="nav-add-item hide" id="nav-add-item1">
+									<p></p>供应商</li>
+								<li class="nav-add-item" id="nav-add-item2">
+									<p></p>报表</li>
+							</ul>
+						</div>
+						<span class="nav-add-trangle nav-add-trangleLeft"></span>
+						<span class="nav-add-trangle nav-add-trangleRight"></span>
+					</div>
+				</div>
+
+				<div class="fr nav-right-search">
+					<input type="text" class="fr">
+					<div class="dropdownDiv">
+						<span class="nav-right-selectedWord" id="">所有</span>
+						<span class="nav-right-searchpng"></span>
+						<span class="caret nav-right-caret"></span>
+					</div>
+
+					<div class="right-search-wrap dn">
+						<div class="right-search-container">
+							<div class="right-search-list">所有</div>
+							<div class="right-search-list">事件</div>
+							<div class="right-search-list">资产</div>
+							<div class="right-search-list">合同</div>
+							<div class="right-search-list">项目</div>
+							<div class="right-search-list">供应商</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="nav-right-newAdd fr">
+					<span></span>
+					<ul>
+						<li><i class="add-img1"></i>新建事件</li>
+						<li><i class="add-img2"></i>新建资产</li>
+						<li><i class="add-img3"></i>新建合同</li>
+						<li><i class="add-img4"></i>新建项目</li>
+						<li><i class="add-img5"></i>新建供应商</li>
+					</ul>
+				</div>
+
+				<div class="nav-right-recentRecord fr">
+					<span></span>
+					<div class="nav-right-reRecordWrap">
+						<p class="nav-right-reRecordTitle">最近访问的项</p>
+						<ul id="history"></ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="moveWrap"><i class="navMove"></i></div>
+
+		</div>
+
+		<!-- 内容部分 -->
+		<div id="container" class="w">
+			<div id="left">
+				<div class="addTitle">
+					<span class="addTitle-back"><i></i>返回</span>
+					<button class="addTitle-keep addTitle-btn fr" id="saveProjectId">保存</button>
+					<button class="addTitle-delete addTitle-btn fr">取消</button>
+				</div>
+
+				<div class="center" id="projectEditData">
+					<form id="projectForm" method="post" enctype="multipart/form-data">
+						<input type="hidden" id="updatePrivate">
+						<input type="hidden" id="projectIdEdit" name="id">
+
+						<div class="centerCon1 centerCon" id="centerCon1">
+
+							<p class="centerCon-titel"><i></i>项目明细</p>
+
+							<p class="centerCon1-p1 di centerCon-half centerCon-half-first">
+								<span class="centerCon-txt">项目名称<span class="centerCon-start">*</span>
+								<span class="error project_nameE"></span>
+								</span>
+								<input type="text" name="project_name" data-bind="project_name">
+							</p>
+
+							<p class="centerCon1-p5 di centerCon-half">
+								<span class="centerCon-txt">项目编号<span class="centerCon-start">*</span>
+								<span class="error project_codeE"></span>
+								</span>
+								<input type="text" name="project_code" data-bind="project_code">
+							</p>
+
+							<p class="centerCon1-p4 txtarea">
+								<span class="centerCon-txt">项目内容</span>
+								<textarea name="project_content" data-bind="project_content"></textarea>
+							</p>
+
+							<p class="centerCon3-p5 centerCon-half di centerCon-half-first">
+								<span class="centerCon-quarter centerCon-quarter-first di">
+								<span class="centerCon-txt">计划起始日期</span>
+								<!--	<input type="date" name="plan_start_time" data-bind="plan_start_time">-->
+										<input type="text" class="timePicker"  name="plan_start_time" data-bind="plan_start_time" readonly="true">
+								</span>
+								<span class="centerCon-quarter di">
+								<span class="centerCon-txt">计划结束日期</span>
+									<!--<input type="date" name="plan_end_time" data-bind="plan_end_time">-->
+									<input type="text" class="timePicker"  name="plan_end_time" data-bind="plan_end_time" readonly="true">
+								</span>
+							</p>
+
+							<p class="centerCon4-p3 centerCon-half di">
+								<span class="centerCon-txt">项目预算(元)  <span class="error budgetStrE"></span></span>
+								<input type="number" min="0" id="budgetStr" name="budgetStr" data-bind="budget">
+							</p>
+
+							<p class="centerCon1-p2 centerCon-half di centerCon-half-first">
+								<span class="centerCon-txt">设计单位</span>
+								<input type="text" name="designed_by" data-bind="designed_by">
+							</p>
+							<p class="centerCon1-p2 centerCon-half di">
+								<span class="centerCon-txt">资金来源</span>
+								<input type="text" name="source_funding" data-bind="source_funding">
+							</p>
+							<p class="centerCon1-p2 centerCon-half di centerCon-half-first">
+								<span class="centerCon-txt">招标代理</span>
+								<input type="text" name="tender_agent" data-bind="tender_agent">
+							</p>
+
+							<p class="centerCon1-p3 centerCon-half di">
+								<span class="centerCon-txt">项目状态</span>
+								<select class="selectpicker" name="project_status">
+									<option data-bind="project_status_name"></option>
+								</select>
+							</p>
+						</div>
+
+						<div class="centerCon4 centerCon" id="centerCon4">
+
+							<p class="centerCon-titel">中标明细</p>
+
+							<p class="centerCon4-p3 centerCon-half di centerCon-half-first">
+								<span class="centerCon-txt">中标单位</span>
+								<select class="selectpicker selSel" name="win_unit">
+									<option data-bind="win_unit_name" value=""></option>
+								</select>
+							</p>
+							<p class="centerCon4-p3 centerCon-half di">
+								<span class="centerCon-txt">中标金额(元)  <span class="error winAmountE"></span></span>
+								<input type="number" min="0" id="winAmount" name="winAmount" data-bind="win_amount">
+							</p>
+
+							<p class="centerCon3-p5 centerCon-half di centerCon-half-first">
+								<span class="centerCon-quarter centerCon-quarter-first di">
+								<span class="centerCon-txt">实际起始日期</span>
+									<!--<input type="date" name="actual_start_time" data-bind="actual_start_time">-->
+										<input type="text"  class="timePicker" name="actual_start_time" data-bind="actual_start_time" readonly="true">
+								</span>
+								<span class="centerCon-quarter di">
+								<span class="centerCon-txt">实际结束日期</span>
+									<!--<input type="date" name="actual_end_time" data-bind="actual_end_time">-->
+										<input type="text" class="timePicker" name="actual_end_time" data-bind="actual_end_time" readonly="true">
+								</span>
+							</p>
+							<p class="form-group centerCon4-p6" id="fileP">
+								<span class="centerCon-txt">添加文件&nbsp;&nbsp;（文件应小于15M，目前仅支持&nbsp;jpg、png、gif、pdf、ppt、pptx、xls、xlsx、doc、docx、txt、zip、rar）</span>
+
+							</p>
+						</div>
+					</form>
+					<input id="file-1" name="input[]" type="file" multiple class="file">
+					<input id="file_help_id" type="hidden">
+     			<input id="file_help_flag" type="hidden">
+     			<input type="hidden" name="file_url" id="fileHelpId">
+				</div>
+			</div>
+
+			<div id="right">
+
+			</div>
+
+		</div>
+		<!-- 500错误提示框 -->
+		<div class="modal fade" id="errorBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<p class="modal-body-row"><span class="question-info" id="errorInfo"></span></p>
+					</div>
+					<div class="modal-footer">
+						<!-- <button type="button" class="btn btn-delete">删除</button> -->
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="successTip" id="tipMsg"></p>
+		<!-- jquery  -->
+		<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="/js/transparency.min.js"></script>
+
+		<!-- bootstrap -->
+		<script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+		<script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+		<script type="text/javascript"  src="js/compentJS/bootstrap-datepicker.min.js"></script>
+		<script type="text/javascript"  src="js/compentJS/bootstrap-datepicker.zh-CN.js"></script>
+		<script type="text/javascript" src="/js/compentJS/fileinput.min.js"></script>
+		<script type="text/javascript" src="/js/compentJS/zh.js"></script>
+		<!--最近访问的项 -->
+		<script type="text/javascript" src="/tree/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/js/compentJS/history.js"></script>
+		<!--<script type="text/javascript" src="/tree/jquery.dynatree.js"></script>
+		<script type="text/javascript" src="/tree/jquery-ui.custom.js"></script>-->
+		<script type="text/javascript" src="js/variable.js"></script>
+		<!-- head -->
+		<script type='text/javascript' src="/js/head.js"></script>
+
+		<!-- checkInput -->
+		<script type="text/javascript" src="/js/checkRule.js"></script>
+
+		<script type="text/javascript" src="/js/compentJS/fileUpload.js"></script>
+		<script type="text/javascript" src="/js/jquery.form.js"></script>
+		<script type="text/javascript" src="/js/projectAdd.js"></script>
+
+		<script type="text/javascript" src="/js/jquery.form.js"></script>
+		<!--302error-->
+		<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+
+		<script>
+			$('.selectpicker').selectpicker({
+				size: 6
+			});
+			$("#file-1").fileinput({
+				language: 'zh',
+				uploadUrl: 'resourceAddHelp/uploadFile', // you must set a valid URL here else you will get an error
+				allowedFileExtensions: ['jpg', 'png', 'gif', 'pdf', 'ppt', 'pptx', 'xls', 'xlsx', 'doc', 'docx', 'txt', 'zip', 'rar'],
+				showUpload: false, //是否显示上传按钮
+				showRemove: false, //是否显示删除按钮
+				//showCaption: true,//是否显示输入框
+				//showPreview:true,
+				//showCancel:true,
+				//minImageWidth: 50, //图片的最小宽度
+				//minImageHeight: 50,//图片的最小高度
+				//maxImageWidth: 1000,//图片的最大宽度
+				//maxImageHeight: 1000,//图片的最大高度
+				overwriteInitial: false,
+		        uploadExtraData:function () {
+		            var obj = {};
+		            var id = $("#file_help_id").val();
+		            var flag = $("#file_help_flag").val();
+		            obj.id = id;
+		            obj.flag = flag;
+		            return obj;
+		        },
+				uploadAsync: false,
+				maxFileSize: 15360, //15M  15360
+				//	          maxFileCount: 5,
+				dropZoneTitle: "拖放文件",
+				msgFilesTooMany: "文件数量太多",
+				msgInvalidFileExtension: "不支持该文件类型",
+				msgSizeTooLarge: "文件过大",
+				enctype: 'multipart/form-data',
+				validateInitialCount: true,
+				allowedPreviewTypes: ['image'],
+				browseClass: "btn btn-primary", //按钮样式
+				previewFileIcon: '<i class="fileinputImg"></i>',
+				previewFileIconSettings: {
+					'docx': '<i class="fileinputImg docx"></i>',
+					'xlsx': '<i class="fileinputImg xlsx"></i>',
+					'pptx': '<i class="fileinputImg pptx"></i>',
+					'jpg': '<i class="fileinputImg jpg"></i>',
+					'pdf': '<i class="fileinputImg pdf"></i>',
+					'zip': '<i class="fileinputImg zip"></i>',
+					'rar': '<i class="fileinputImg zip"></i>',
+                    'txt':'<i class="fileinputImg other"></i>'
+				},
+				//slugCallback: function(result) {
+				//return filename.replace('(', '_').replace(']', '_');
+			});
+
+			$("input[name='plan_start_time']").datepicker({
+				language: 'zh-CN',
+//								todayBtn: true,
+				todayHighlight:1,
+				autoclose: 1,
+				minView: 2,
+				format: "yyyy-mm-dd",
+				orientation:'bottom',
+				clearBtn:true
+			});
+			$("input[name='plan_end_time']").datepicker({
+				language: 'zh-CN',
+//								todayBtn: true,
+				todayHighlight:1,
+				autoclose: 1,
+				minView: 2,
+				format: "yyyy-mm-dd",
+				orientation:'bottom',
+				clearBtn:true
+			});
+			$("input[name='actual_start_time']").datepicker({
+				language: 'zh-CN',
+//								todayBtn: true,
+				todayHighlight:1,
+				autoclose: 1,
+				minView: 2,
+				format: "yyyy-mm-dd",
+				orientation:'bottom',
+				clearBtn:true
+			});
+			$("input[name='actual_end_time']").datepicker({
+				language: 'zh-CN',
+//								todayBtn: true,
+				todayHighlight:1,
+				autoclose: 1,
+				minView: 2,
+				format: "yyyy-mm-dd",
+				orientation:'bottom',
+				clearBtn:true
+			});
+		</script>
+
+	</body>
+
+</html>

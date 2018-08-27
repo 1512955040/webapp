@@ -1,0 +1,228 @@
+body {
+	font-size: 16px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.w {
+	width: 1232px;
+	margin: 0 auto;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.dn {
+	display: none;
+}
+
+.di {
+	display: inline-block;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	position: fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background: url(../imgs/login/bg1.jpg);
+	
+}
+#containter{
+		position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+#logo {
+	height: 62px;
+	margin: 64px 0 0 18px;
+	background: url(../imgs/login/logo.png) no-repeat;
+	font-size: 24px;
+	color: #fff;
+	text-indent: 140px;
+	padding-top: 6px;
+}
+
+#login-con {
+	width: 290px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-top:-240px;
+	margin-left:-145px;
+	/*margin: 130px auto;*/
+	background: url(../imgs/login/yunwei.png) no-repeat center 0;
+	font-size: 16px;
+	padding-top: 105px;
+}
+
+#login-con p {
+	margin-top: 25px;
+}
+
+#login-con p input {
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	font-size: 16px;
+	outline: none;
+}
+
+#login-con p ::-webkit-input-placeholder {
+	/* WebKit browsers */
+	color: #fff;
+}
+
+#login-con p :-moz-placeholder {
+	/* Mozilla Firefox 4 to 18 */
+	color: #fff;
+}
+
+#login-con p ::-moz-placeholder {
+	/* Mozilla Firefox 19+ */
+	color: #fff;
+}
+
+#login-con p :-ms-input-placeholder {
+	/* Internet Explorer 10+ */
+	color: #fff;
+}
+
+#login-con .login-p1 {
+	width: 290px;
+	height: 40px;
+	background-color: #7d9eba;
+	border-radius: 5px;
+}
+
+#login-con .login-p1 input {
+	width: 245px;
+	margin-right: 5px;
+	float: right;
+	color: #fff;
+	background-color: #7d9eba;
+}
+
+#login-con .login-p1 .userImg {
+	display: inline-block;
+	margin-top: 8px;
+	width: 24px;
+	height: 25px;
+	margin-left: 8px;
+	background: url(../imgs/login/user.png) no-repeat;
+}
+
+#login-con .login-p1 .passImg {
+	display: inline-block;
+	width: 24px;
+	height: 25px;
+	margin-top: 8px;
+	margin-left: 8px;
+	background: url(../imgs/login/password.png) no-repeat;
+}
+
+#login-con .login-p3 {
+	position: relative;
+}
+
+#login-con .login-p3 input.login-p3-tip {
+	display: inline-block;
+	width: 129px;
+	height: 36px;
+	text-align: center;
+	background-color: #7d9eba;
+	color: #fff;
+	border-radius: 5px;
+}
+
+#login-con .login-p3 .login-check {
+	float: right;
+	width: 115px;
+	height: 36px;
+	margin-left: 32px;
+	background-color: #7d9eba;
+	color: #fff;
+	border-radius: 5px;
+}
+
+#login-con .login-p3 span.login-p3-change {
+	color: #fff;
+	position: absolute;
+	right: -55px;
+	top: 12px;
+	cursor: pointer;
+}
+
+#login-con .login-p4 {
+	color: #fff;
+	height: 36px;
+}
+
+#login-con .login-p4 input {
+	vertical-align: middle;
+}
+
+#login-con .login-p4 .login-p4-right {
+	float: right;
+	line-height: 36px;
+}
+
+#login-con .login-p5 input {
+	width: 290px;
+	text-align: center;
+	height: 36px;
+	line-height: 36px;
+	background-color: #1a2e5b;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+#login-con .login-p6 {
+	text-align: right;
+	color: #a9e0fe;
+	margin-top: 10px;
+}
+
+#login-con .login-p6 span {
+	cursor: pointer;
+}
+
+.copyright {
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+}
+
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,433 @@
+.di {
+	display: inline-block;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+.centerCon {
+	width: 812px;
+	padding-top: 13px;
+}
+
+.centerCon4-move {
+	border: 1px dashed #bfbfbf;
+	width: 100%;
+	text-align: center;
+	line-height: 28px;
+	height: 28px;
+	border-radius: 3px;
+	color: #bfbfbf;
+}
+
+.centerCon-half,
+.centerCon-whole {
+	padding-top: 8px;
+}
+
+.centerCon-whole {
+	width: 812px;
+}
+
+.centerCon-half {
+	width: 386px;
+}
+#centerConallon{
+	width: 386px;
+}
+
+.centerCon-quarter {
+	width: 184px;
+}
+
+.centerCon-txt {
+	display: block;
+	font-size: 12px;
+	color: #696969;
+	margin-left: 9px;
+	margin-bottom: 6px;
+}
+.centerCon3-p6 .centerCon-txt{
+	width:200px;
+}
+
+.centerCon-txt:after {
+	display: table;
+	content: '';
+	clear: both;
+}
+.marLeft8{
+	margin-left:8px;
+}
+.centerCon-txt .addSupplierSpan {
+	cursor: pointer;
+}
+
+.centerCon-txt .addSupplierSpan .addSupplierAddPic {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-right: 4px;
+	background: url('../imgs/asset/asset.png') no-repeat -2px -2px;
+}
+
+.centerCon-start {
+	color: #f24848;
+	margin-left: 3px;
+	vertical-align: sub;
+}
+
+.centerCon-titel {
+	/* margin-top: 13px;*/
+	width: 100%;
+	height: 23px;
+	line-height: 23px;
+	background: url(../imgs/contract/downtype.png) no-repeat 10px center;
+	background-color: #1f5097;
+	color: #fff;
+	font-size: 14px;
+	padding-left: 20px;
+}
+
+.centerCon-half-first {
+	margin-right: 32px;
+}
+
+.centerCon-quarter-first {
+	margin-right: 14px;
+}
+
+input,
+select {
+	width: 100%;
+	height: 25px;
+	border: 1px solid #e5e5e5;
+	text-indent: 5px;
+	border-radius: 3px;
+	outline: none;
+}
+
+input.timePicker,
+input.selectTree {
+	cursor: pointer;
+}
+
+.btn {
+	padding: 0;
+}
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+	width: 100%;
+	/*  height: 25px; */
+}
+
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+	margin-left: 10px;
+}
+
+.halfSelect {
+	width: 100%;
+	/*height: 25px;*/
+}
+
+.errorTip,
+.errorTipNull,
+.repeatTip,
+.conterCon-Iphone,
+.conterCon-Iphonemobile,
+.conterCon-elevation,
+.errorNull
+ {
+	color: #ff585f;
+	font-size: 12px;
+	margin-left: 10px;
+	display: none;
+}
+
+.errorB {
+	color: #ff585f;
+}
+
+.communication ul.dropdown-menu.inner{
+	/*max-height: 212px!important;*/
+	overflow-y: hidden!important;
+}
+
+
+/**sla信息表格**/
+
+.slaTableInfo {
+	display: inline-block;
+	margin: 10px 0;
+}
+
+.slaTableInfo.active {
+	background: #F5F5F5;
+}
+
+.slaTableInfo,
+.slaTableTitle,
+.slaTableInfo thead,
+.slaTableInfo tbody {
+	width: 255px;
+}
+
+.slaTableInfo thead tr th,
+.slaTableInfo tbody tr td {
+	padding: 5px 0;
+}
+
+.slaTableInfo thead tr th,
+.slaTableInfo tbody {
+	text-align: center;
+}
+
+.slaTableInfo:nth-child(3n-1) {
+	margin: 10px 20px;
+}
+
+.slaTableTitle {
+	position: relative;
+}
+
+.test {
+	margin-top: 15px;
+}
+
+.serviceLevel {
+	/*width: 26px;
+	  height: 35px;*/
+	display: inline-block;
+	position: absolute;
+	left: 3px;
+	top: 2px;
+	vertical-align: middle;
+}
+
+.jin,
+.yin,
+.tong,
+.high,
+.middle,
+.low,
+.one,
+.two,
+.three {
+	display: inline-block;
+	vertical-align: middle;
+	background: url('../imgs/sla/sla.png') no-repeat;
+}
+
+
+/**方案一（牌等级）**/
+
+.jin,
+.yin,
+.tong {
+	width: 26px;
+	height: 31px;
+}
+
+
+/**金牌**/
+
+.jin {
+	background-position: -147px -66px;
+}
+
+
+/**银牌**/
+
+.yin {
+	background-position: -104px -66px;
+}
+
+
+/**铜牌**/
+
+.tong {
+	background-position: -63px -66px;
+}
+
+
+/**方案二（高中低）**/
+
+.high,
+.middle,
+.low {
+	width: 23px;
+	height: 24px;
+}
+
+
+/**高**/
+
+.high {
+	background-position: -105px -112px;
+}
+
+
+/**中**/
+
+.middle {
+	background-position: -146px -112px;
+}
+
+
+/**低**/
+
+.low {
+	background-position: -188px -112px;
+}
+
+
+/**方案三(1,2,3)**/
+
+.one,
+.two,
+.three {
+	width: 25px;
+	height: 28px;
+}
+
+.one {
+	background-position: -187px -68px;
+}
+
+.two {
+	background-position: -229px -68px;
+}
+
+.three {
+	background-position: -62px -110px;
+}
+
+.agreement_name {
+	margin-left: 30px;
+}
+
+.checkBox {
+	width: 16px;
+	height: 16px;
+	background: url(../imgs/contract/contract.png) no-repeat;
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	vertical-align: middle;
+}
+
+.checkBox {
+	background-position: -5px -55px;
+	;
+}
+
+.checkBox.active {
+	background-position: -28px -55px;
+}
+
+.menus,
+#department-menu {
+	display: none;
+	background: #fff;
+	position: absolute;
+	left: 0;
+	top: 25px;
+	width: 100%;
+	border: 1px solid #d7d7d7;
+	z-index: 2;
+}
+
+
+/**部门**/
+
+#department-menu {
+	top: 54px;
+}
+
+
+/**管理人**/
+
+#eManager-menu {
+	top: 58px;
+}
+
+.selectTreeContainer {
+	position: relative;
+}
+
+.marRight {
+	position: relative;
+	bottom: 2px;
+}
+
+
+/**新建公共样式**/
+
+.file-footer-buttons .kv-file-zoom {
+	display: none;
+}
+
+.input-group-btn button,
+.file-caption-main .btn-file {
+	height: 34px;
+	line-height: 34px;
+	padding: 0 8px;
+}
+
+.file-input .file-preview {
+	margin-bottom: 10px;
+}
+
+.fileinputImg {
+	background-image: url(../imgs/common/common.png);
+	background-repeat: no-repeat;
+	display: block;
+	margin: 0 auto;
+}
+
+.docx {
+	width: 120px;
+	height: 120px;
+	background-position: -5px -5px;
+}
+
+.xlsx {
+	width: 120px;
+	height: 120px;
+	background-position: -135px -5px;
+}
+
+.jpg {
+	width: 120px;
+	height: 120px;
+	background-position: -5px -135px;
+}
+
+.pdf {
+	width: 120px;
+	height: 120px;
+	background-position: -135px -135px;
+}
+
+.pptx {
+	width: 120px;
+	height: 120px;
+	background-position: -265px -5px;
+}
+
+.zip {
+	width: 120px;
+	height: 120px;
+	background-position: -265px -135px;
+}
+.other {
+    width: 120px;
+    height: 120px;
+    background-position: -135px -135px;
+}
+
+
+/*# sourceMappingURL=assetAddform.css.map */

@@ -1,0 +1,36 @@
+body {
+  font-size: 16px; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+.w {
+  width: 1232px;
+  margin: 0 auto; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.dn {
+  display: none; }
+
+.di {
+  display: inline-block; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+/*# sourceMappingURL=common.css.map */

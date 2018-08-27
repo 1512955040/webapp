@@ -1,0 +1,66 @@
+.sprite {
+  background-image: url(../imgs/pup/pup.png);
+  background-repeat: no-repeat;
+  display: block; }
+
+.sprite-add {
+  width: 14px;
+  height: 14px;
+  background-position: -5px -5px; }
+
+.sprite-attachment {
+  width: 12px;
+  height: 12px;
+  background-position: -29px -5px; }
+
+.sprite-change {
+  width: 15px;
+  height: 15px;
+  background-position: -51px -5px; }
+
+.sprite-check {
+  width: 11px;
+  height: 11px;
+  background-position: -76px -5px; }
+
+.sprite-checked {
+  width: 11px;
+  height: 11px;
+  background-position: -76px -26px; }
+
+.sprite-leftClick {
+  width: 18px;
+  height: 18px;
+  background-position: -5px -47px; }
+
+.sprite-leftNoClick {
+  width: 17px;
+  height: 18px;
+  background-position: -33px -47px; }
+
+.sprite-reduce {
+  width: 15px;
+  height: 15px;
+  background-position: -60px -47px; }
+
+.sprite-right {
+  width: 15px;
+  height: 15px;
+  background-position: -60px -72px; }
+
+.sprite-rightClick {
+  width: 19px;
+  height: 18px;
+  background-position: -97px -5px; }
+
+.sprite-rightNoClick {
+  width: 18px;
+  height: 18px;
+  background-position: -97px -33px; }
+
+.sprite-search {
+  width: 31px;
+  height: 25px;
+  background-position: -85px -61px; }
+
+/*# sourceMappingURL=pupPng.css.map */

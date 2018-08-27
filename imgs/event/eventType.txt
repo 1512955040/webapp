@@ -1,0 +1,41 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-accident {
+    width: 18px;
+    height: 58px;
+    background-position: -5px -5px;
+}
+
+.sprite-accident-1 {
+    width: 30px;
+    height: 30px;
+    background-position: -33px -5px;
+}
+
+.sprite-support {
+    width: 18px;
+    height: 58px;
+    background-position: -73px -5px;
+}
+
+.sprite-support-1 {
+    width: 30px;
+    height: 30px;
+    background-position: -33px -45px;
+}
+
+.sprite-systempatrol {
+    width: 18px;
+    height: 58px;
+    background-position: -101px -5px;
+}
+
+.sprite-systempatrol-1 {
+    width: 30px;
+    height: 30px;
+    background-position: -73px -73px;
+}

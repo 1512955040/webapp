@@ -1,0 +1,1004 @@
+#container #right .right-con .right-con-body .right-body-table .right-table-bodybody {
+	font-size: 16px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.w {
+	width: 1232px;
+	margin: 0 auto;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.dn {
+	display: none;
+}
+
+.di {
+	display: inline-block;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+/*去除选择框的outline*/
+.bootstrap-select .dropdown-toggle:focus{outline:none !important;}
+/*去除选项的outline*/
+a:focus {outline:none !important;}
+.right-con-title .bootstrap-select.btn-group .dropdown-toggle .filter-option{
+	line-height:25px!important;
+}
+
+
+.sprite,
+#container #left .left-wrap .left-wrap-title i,
+#container #left .left-wrap .left-wrap-item i,
+#container #left .left-wrap-clear i,
+/*#container #left .left-wrap3 .left-item-check i.active,*/
+#container #right .right-con .right-con-title .right-con-title-down,
+#container #right .right-con .right-con-title .right-con-search i,
+#container #right .right-con .right-con-title .right-con-title-page .title-page,
+#container #right .right-con .right-con-body .right-body-inout i,
+#container #right .right-con .right-con-body .right-body-table .right-table-body i,
+#container #right .right-con .right-con-body .right-body-table .right-table-body i.active {
+	background-image: url(../imgs/contract/contract.png);
+	background-repeat: no-repeat;
+	display: block;
+}
+
+.sprite-add {
+	width: 12px;
+	height: 12px;
+	background-position: -5px -5px;
+}
+
+.sprite-additional {
+	width: 15px;
+	height: 15px;
+	background-position: -27px -5px;
+}
+
+.sprite-back {
+	width: 6px;
+	height: 13px;
+	background-position: -52px -5px;
+}
+
+.sprite-check,
+#container #left .left-wrap3 .left-item-check i,
+#container #right .right-con .right-con-body .right-body-table .right-table-body i {
+	width: 11px;
+	height: 11px;
+	background-position: -68px -5px;
+}
+#container #left .left-wrap3 .left-item-check i{
+	width:16px;
+	height:16px;
+	background: url(../imgs/common.png) no-repeat;
+}
+#container #left .left-wrap3 .left-item-check i{
+	background-position:-5px -5px;
+}
+#container #left .left-wrap3 .left-item-check i.active{
+	width:16px;
+	height:16px;
+	background-position:-28px -5px;
+}
+
+
+.sprite-check-2 {
+	width: 11px;
+	height: 11px;
+	background-position: -89px -5px;
+}
+
+.sprite-checked,
+/*#container #left .left-wrap3 .left-item-check i.active,*/
+#container #right .right-con .right-con-body .right-body-table .right-table-body i.active {
+	/*display: inline-block;*/
+	display: none;
+	width: 11px;
+	height: 11px;
+	background-position: -110px -5px;
+}
+
+.sprite-clear,
+#container #left .left-wrap-clear i {
+	width: 13px;
+	height: 13px;
+	background-position: -131px -5px;
+}
+
+.sprite-date {
+	width: 18px;
+	height: 18px;
+	background-position: -154px -5px;
+}
+
+.sprite-delete {
+	width: 14px;
+	height: 15px;
+	background-position: -5px -33px;
+}
+
+.sprite-down,
+#container #right .right-con .right-con-title .right-con-title-down {
+	width: 12px;
+	height: 12px;
+	background-position: -29px -33px;
+}
+
+.sprite-downtype {
+	width: 7px;
+	height: 4px;
+	background-position: -51px -33px;
+}
+
+.sprite-export,
+#container #right .right-con .right-con-body .right-body-inout .export {
+	width: 18px;
+	height: 16px;
+	background-position: -68px -33px;
+}
+
+.sprite-icon1,
+#container #left .left-wrap3 .left-wrap-title i {
+	width: 26px;
+	height: 26px;
+	background-position: -96px -33px;
+}
+
+.sprite-icon11 {
+	width: 31px;
+	height: 31px;
+	background-position: -132px -33px;
+}
+
+.sprite-icon12 {
+	width: 31px;
+	height: 31px;
+	background-position: -5px -74px;
+}
+
+.sprite-icon13 {
+	width: 31px;
+	height: 31px;
+	background-position: -46px -74px;
+}
+
+.sprite-icon2,
+#container #left .left-wrap3 .left-wrap-item1>i {
+	width: 28px;
+	height: 21px;
+	background-position: -87px -74px;
+}
+
+.sprite-icon21 {
+	width: 31px;
+	height: 31px;
+	background-position: -125px -74px;
+}
+
+.sprite-icon22 {
+	width: 31px;
+	height: 31px;
+	background-position: -5px -115px;
+}
+
+.sprite-icon23 {
+	width: 31px;
+	height: 31px;
+	background-position: -46px -115px;
+}
+
+.sprite-icon3,
+#container #left .left-wrap3 .left-wrap-item2>i {
+	width: 28px;
+	height: 21px;
+	background-position: -87px -115px;
+}
+
+.sprite-icon4,
+#container #left .left-wrap3 .left-wrap-item3>i {
+	width: 30px;
+	height: 21px;
+	background-position: -125px -115px;
+}
+
+.sprite-icon5,
+#container #left .left-wrap3 .left-wrap-item4>i {
+	width: 30px;
+	height: 20px;
+	background-position: -87px -146px;
+}
+
+.sprite-icon6,
+#container #left .left-wrap3 .left-wrap-item5>i {
+	width: 27px;
+	height: 23px;
+	background-position: -127px -146px;
+}
+
+.sprite-import,
+#container #right .right-con .right-con-body .right-body-inout .import {
+	width: 20px;
+	height: 16px;
+	background-position: -166px -74px;
+}
+
+.sprite-leftClick,
+#container #right .right-con .right-con-title .right-con-title-page .title-page-left.active {
+	width: 18px;
+	height: 18px;
+	background-position: -166px -100px;
+}
+
+.sprite-leftNoClick,
+#container #right .right-con .right-con-title .right-con-title-page .title-page-left {
+	width: 17px;
+	height: 18px;
+	background-position: -165px -128px;
+}
+
+.sprite-love-1 {
+	width: 20px;
+	height: 17px;
+	background-position: -5px -156px;
+}
+
+.sprite-love-2 {
+	width: 20px;
+	height: 17px;
+	background-position: -35px -156px;
+}
+
+.sprite-myHeart1,
+#container #left .left-wrap1 .left-wrap-title i {
+	width: 26px;
+	height: 26px;
+	background-position: -182px -5px;
+}
+
+.sprite-myHeart2,
+#container #left .left-wrap1 .left-wrap-title i.active {
+	width: 26px;
+	height: 26px;
+	background-position: -196px -41px;
+}
+
+.sprite-notConcern1,
+#container #left .left-wrap2 .left-wrap-title i {
+	width: 26px;
+	height: 26px;
+	background-position: -196px -77px;
+}
+
+.sprite-notConcern2,
+#container #left .left-wrap2 .left-wrap-title i.active {
+	width: 26px;
+	height: 26px;
+	background-position: -194px -113px;
+}
+
+.sprite-rightClick,
+#container #right .right-con .right-con-title .right-con-title-page .title-page-right.active {
+	width: 19px;
+	height: 18px;
+	background-position: -192px -149px;
+}
+
+.sprite-rightNoClick,
+#container #right .right-con .right-con-title .right-con-title-page .title-page-right {
+	width: 18px;
+	height: 18px;
+	background-position: -65px -177px;
+}
+
+.sprite-sanjiao {
+	width: 10px;
+	height: 26px;
+	background-position: -93px -177px;
+}
+
+.sprite-search {
+	width: 14px;
+	height: 14px;
+	background-position: -164px -177px;
+}
+
+.sprite-search1,
+#container #right .right-con .right-con-title .right-con-search i {
+	width: 31px;
+	height: 25px;
+	background-position: -188px -177px;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f5f4f4;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.di {
+	display: inline-block;
+}
+
+#container {
+	/*height: 960px;*/
+	padding-top:10px;
+	margin-bottom:20px;
+	background: #f1f1f1;
+	box-shadow: 0 0px 20px #dedddc;
+}
+#container:after{
+	display:table;
+	clear:both;
+	content:'';
+}
+#container #left {
+	width: 222px;
+	height:828px;/**企业和服务商合同左侧高度不一样 此处修改需注意**/
+	/*height:716px;
+	min-height:716px;*/
+	overflow: hidden;
+	background-color: #0a3b72;
+	float: left;
+}
+
+#container #left .leftBg {
+	height: 100%;
+	background-color: #1f5097;
+	width: 190px;
+	float: right;
+}
+
+#container #left .left-wrap {
+	height: auto;
+	background-color: #1f5097;
+	width: 190px;
+	float: right;
+}
+
+#container #left .left-wrap li {
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+}
+
+#container #left .left-wrap .left-wrap-title {
+	color: #fff;
+	background-color: #0a3b72;
+	position: relative;
+	font-size: 14px;
+	padding-left: 13px;
+}
+#container #left .left-wrap .left-wrap-title:hover{
+	cursor: pointer;
+}
+#container #left .left-wrap .left-wrap-title i {
+	display: inline-block;
+	position: absolute;
+	left: -29px;
+	top: 4px;
+}
+
+#container #left .left-wrap .left-wrap-item {
+	background-color: #0a3b72;
+	color: #cfe7fe;
+	font-size: 12px;
+	border-top: 1px solid #6384c6;
+	border-bottom: 1px solid #6384c6;
+}
+
+#container #left .left-wrap .left-wrap-item i {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+#container #left .left-wrap1 .left-wrap-title {
+	background-color: #1f5097;
+	color: #cfe7fe;
+	border-bottom: none;
+}
+
+#container #left .left-wrap2 .left-wrap-title {
+	background-color: #1f5097;
+	color: #cfe7fe;
+}
+
+#container #left .left-wrap3 .left-wrap-title {
+	border-top: 1px solid #6384c6;
+}
+
+#container #left .left-wrap3 .left-item-check {
+	color: #cfe7fe;
+	padding-left: 35px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+#container #left .left-wrap3 .left-item-check i {
+	display: inline-block;
+	margin-right: 13px;
+	vertical-align: middle;
+}
+
+#container #left .left-wrap3 .left-item-select {
+	padding-left: 36px;
+}
+
+#container #left .left-wrap3 .left-item-select .btn.dropdown-toggle {
+	width: 100px;
+	height: 21px;
+	padding: 0;
+	padding-left: 5px;
+	font-size: 12px;
+	/*color: #bfbfbf;*/
+	color:#696969;
+	background:#fff;
+}
+#container #left .left-wrap3 .left-item-select .filter-option{
+	margin-left: 0px;
+}
+.btn-default.focus, .btn-default:focus,.btn-default:hover{
+	background:#fff;
+	color:#696969;
+}
+
+#container #left .left-wrap3 .left-item-select .btn-group.bootstrap-select {
+	width: 100px;
+}
+
+#container #left .left-wrap3 .left-item-select .dropdown-menu {
+	padding: 0;
+	width: 100px;
+	overflow: hidden!important;
+}
+
+#container #left .left-wrap3 .left-item-select .dropdown-menu li {
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	outline: none;
+	background-color: #fff;
+	border: none;
+}
+
+#container #left .left-wrap3 .left-item-select .dropdown-menu li a {
+	border: none;
+}
+
+#container #left .left-wrap3 .left-item-select .dropdown-menu li:hover a,
+#container #left .left-wrap3 .left-item-select .dropdown-menu li.selected a {
+	background-color: #1f5097;
+
+}
+#container #left .left-wrap3 .left-item-select .dropdown-menu li:hover a span,
+#container #left .left-wrap3 .left-item-select .dropdown-menu li.selected a span{
+	color:#fff;
+}
+#container #left .left-wrap-clear {
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	background-color: #0a3b72;
+	font-size: 12px;
+	color: #cfe7fe;
+	float: left;
+	padding-left: 48px;
+	cursor: pointer;
+	border-top: 1px solid #6384c6;
+	border-bottom: 1px solid #6384c6;
+}
+
+#container #left .left-wrap-clear i {
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: middle;
+	}
+
+#container #right {
+	height: 100%;
+	width: 1000px;
+	float: right;
+	padding-right: 10px;
+}
+
+#container #right .right-title {
+	background: #fff;
+	height: 37px;
+	line-height: 37px;
+	text-align: center;
+	margin: 10px 0 10px 0;
+	font-size: 16px;
+	color: #696969;
+	border: 1px solid #e5e5e5;
+}
+
+#container #right .right-title button {
+	float: right;
+	margin-right: 30px;
+	margin-top: 8px;
+	width: 75px;
+	height: 21px;
+	line-height: 21px;
+	background-color: #054c9c;
+	color: #fff;
+	border-radius: 3px;
+	font-size: 12px;
+	border: none;
+}
+
+#container #right .right-con {
+	/*height: 893px;*/
+	border:1px solid #e5e5e5;
+	padding: 10px 29px 18px 29px;
+	background-color: #fff;
+}
+
+#container #right .right-con .right-con-title {
+	height: 36px;
+	font-size: 12px;
+	color: #696969;
+}
+
+#container #right .right-con .right-con-title .right-con-title-down {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#container #right .right-con .right-con-title .right-con-search {
+	position: relative;
+	/*margin-left: 235px;*/
+	margin-left:138px;
+	vertical-align: top;
+}
+
+#container #right .right-con .right-con-title .right-con-search input {
+	width: 280px;
+	height: 25px;
+	border: 1px solid #bfbfbf;
+	border-radius: 3px;
+	color: #9c9c9c;
+	text-indent: 10px;
+	outline: none;
+}
+
+#container #right .right-con .right-con-title .right-con-search i {
+	display: inline-block;
+	position: absolute;
+	cursor: pointer;
+	right: 0;
+	top: 0;
+}
+
+#container #right .right-con .right-con-title .right-con-title-page {
+	margin-top:5px;
+	color: #696969;
+}
+
+#container #right .right-con .right-con-title .right-con-title-page .title-page {
+	display: inline-block;
+	vertical-align: bottom;
+	/*cursor: pointer;*/
+}
+
+#container #right .right-con .right-con-body {
+	/*width: 930px;*/
+	/*height: 791px;*/
+	min-height:316px;
+	border-radius: 3px;
+	border: 1px solid #e5e5e5;
+	position: relative;
+}
+
+#container #right .right-con .right-con-body .right-con-body-title {
+	height: 50px;
+	background-color: #eef1f7;
+	padding-left: 24px;
+}
+
+#container #right .right-con .right-con-body .right-con-body-title .right-body-btn {
+	width: 55px;
+	height: 25px;
+	border-radius: 3px;
+	background-color: #054c9c;
+	color: #fff;
+	border: none;
+	margin-right: 16px;
+	margin-top: 14px;
+	font-size: 12px;
+	outline: none;
+}
+/**需求:隐藏删除按钮**/
+#container #right .right-con .right-con-body .right-con-body-title .right-body-btn#deleteCon{
+	display: none;
+}
+
+#container #right .right-con .right-con-body .right-con-body-title .right-body-delete.default {
+	background-color: #eef1f7;
+	color: #9c9c9c;
+	border: 1px solid #9c9c9c;
+}
+
+#container #right .right-con .right-con-body .right-body-inout {
+	float: right;
+	color: #172d5f;
+	font-size: 12px;
+	margin-top: 17px;
+	margin-right: 5px;
+	padding-right: 13px;
+	cursor: pointer;
+}
+
+#container #right .right-con .right-con-body .right-body-inout i {
+	vertical-align: sub;
+	display: inline-block;
+	margin-left: 16px;
+	margin-right: 6px;
+}
+
+#container #right .right-con .right-con-body .right-body-table .right-table-title {
+	height: 44px;
+	line-height: 44px;
+	border-bottom: 1px solid #e5e5e5;
+	padding-left: 30px;
+}
+
+#container #right .right-con .right-con-body .right-body-table .right-table-title li {
+	float: left;
+	width: 125px;
+	text-align: center;
+	color: #696969;
+	font-size: 14px;
+}
+#container #right .right-con .right-con-body  .contractNoData .takePlace{
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    margin-left: -123px;
+    margin-top: -95px;
+}
+#container #right .right-con .right-con-body  .contractNoData .takePlace .addButton{
+	display: inline-block;
+    width: 52px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 10px;
+    border-radius: 4px;
+    background: #1f5097;
+    color: #fff;
+}
+#container #right .right-con .right-con-body  .contractNoData .takePlace .addButton:hover{
+	text-decoration: none;
+}
+
+#container #right .right-con .right-con-body .right-body-table .right-table-body {
+	cursor: pointer;
+	position: relative;
+	/*height: 58px;*/
+	height:44px;
+	border-bottom: 1px solid #e5e5e5;
+	/*padding-left: 30px;*/
+	padding-left:7px;
+}
+/*#container #right .right-con .right-con-body .right-body-table .right-table-body:nth-child(10n){
+	border-bottom:none;
+}*/
+
+#container #right .right-con .right-con-body .right-body-table .right-table-body .right-table-body-item {
+	/*height: 58px;*/
+	width: 125px;
+	/*line-height: 58px;*/
+	height:44px;
+	line-height:44px;
+	color: #696969;
+	font-size: 12px;
+	text-align: center;
+	float: left;
+}
+#container #right .right-con .right-con-body .right-body-table .right-table-body .right-table-body-item>span{
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+}
+#container #right .right-con .right-con-body .right-body-table .right-table-body .right-table-body-item.table-col1{
+	width:23px;
+}
+#container #right .right-con .right-con-body .right-body-table .right-table-body li .tips{
+	display:inline-block;
+	max-width: 120px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#container #right .right-con .right-con-body .right-body-table .right-table-body li .right-table-body-status {
+	display: inline-block;
+	width: 70px;
+	height: 25px;
+	line-height: 25px;
+	border-radius: 3px;
+	margin-top: 7px;
+	color: #fff;
+}
+
+#container #right .right-con .right-con-body .right-body-table .right-table-body li .right-table-body-status.perform {
+	background-color: #7fca8f;
+}
+
+#container #right .right-con .right-con-body .right-body-table .right-table-body li .right-table-body-status.overdue {
+	background-color: #e28181;
+}
+
+#container #right .right-con .right-con-body .right-body-table .right-table-body li .right-table-body-status.unexecuted {
+	background-color: #fac154;
+}
+
+#container #right .right-con .right-con-body .right-body-table .right-table-body li .right-table-body-status.unknown {
+	background-color: #83a6ed;
+}
+/** 拟定中**/
+#container #right .right-con .right-con-body .right-body-table .right-table-body li .right-table-body-status.drawUp {
+	background-color: #fbc154;
+}
+/** 审阅中**/
+#container #right .right-con .right-con-body .right-body-table .right-table-body li .right-table-body-status.underReview{
+	background-color: #eda5bb;
+}
+
+#container #right .right-con .right-con-body .right-body-table .right-table-body i {
+	/*display: inline-block;*/
+	display: none;/**需求：隐藏**/
+	/*position: absolute;
+	left: 16px;
+	top: 16px;*/
+}
+
+#container #right .right-con .right-con-body .right-body-table .right-table-body:hover {
+	background-color: #aad1ff;
+}
+
+#container #right .right-con .right-con-body .right-body-table .right-table-body:hover li {
+	color: #fff;
+}
+.pageChange {
+    /*width: 380px;
+    margin: 0 auto;*/
+    text-align: center;
+    margin-top: 18px;
+}
+
+.pageChange .pageChange-span1, .pageChange .pageChange-span2 {
+    margin-right: 17px;
+}
+
+.pageChange .pageChange-span1, .pageChange .pageChange-span3 {
+    width: 60px;
+    cursor: pointer;
+}
+.pageChange .pageChange-span2, .pageChange .pageChange-span4 {
+   /* vertical-align: middle;*/
+    width: 25px;
+}
+.pageChange .pageChange-span1.disabled, .pageChange .pageChange-span3.disabled{
+	color:#d2d2d2;
+}
+.pageChange .pageChange-span {
+    border: 1px solid #bfbfbf;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    vertical-align: top;
+}
+
+.pageChange .txt {
+    font-size: 12px;
+    margin: 0 8px;
+}
+.pageChange #goPageId {
+    cursor: pointer;
+}
+.pageChange .pageChange-span5 {
+    width: 37px;
+}
+/**tips**/
+#tooltipdiv {
+ position: absolute;
+ z-index:1050;
+ border: 1px solid #333;
+ background: #f7f5d1;
+ padding: 3px 3px 3px 3px;
+ color: #333;
+ display: none;
+}
+/*# sourceMappingURL=contract.css.map */
+
+#container #right .right-con .right-con-title .right-con-title-select {
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+#container #right .right-con .right-con-title .right-con-title-select select {
+		width: 114px;
+		height: 25px;
+		border-radius: 3px;
+		border: 1px solid #bfbfbf;
+		cursor: pointer;
+		-webkit-appearance: none;
+	  	-moz-appearance: none;
+		appearance:none !important;
+		background: url(../imgs/contract/arrow.png) no-repeat scroll 96% center transparent;
+}
+
+#container #right .right-con .right-con-title .right-con-title-select select::-ms-expand{
+	display: none;
+}
+
+ /**表头下拉菜单**/
+#container #right .right-con .right-con-title .right-con-title-select div.bootstrap-select{
+ 	width:114px;
+
+ }
+ #container #right .right-con .right-con-title .right-con-title-select div.bootstrap-select button{
+ 	height:25px;
+ 	line-height:25px;
+ }
+#container #right .right-con .right-con-title .right-con-title-select div.bootstrap-select .dropdown-toggle .filter-option{
+ 	padding-left:8px;
+ 	font-size:12px;
+
+}
+#container #right .right-con .right-con-title .right-con-title-select div.bootstrap-select.btn-group .dropdown-menu li:hover a,
+#container #right .right-con .right-con-title .right-con-title-select div.bootstrap-select.btn-group .dropdown-menu li.selected a{
+	background:#054c9c;
+}
+#container #right .right-con .right-con-title .right-con-title-select div.bootstrap-select.btn-group .dropdown-menu li:hover a span,
+#container #right .right-con .right-con-title .right-con-title-select div.bootstrap-select.btn-group .dropdown-menu li.selected a span{
+	color:#fff;
+}
+
+#container #right .right-con .right-con-title .right-con-sort .right-con-title-leftSort,
+#container #right .right-con .right-con-title .right-con-sort .right-con-title-rightSort,
+.sprite {
+    background-image: url(../imgs/contract/contractSort.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+#container #right .right-con .right-con-title .right-con-sort .right-con-title-rightSort.active,
+.sprite-sortDownAc {
+    width: 31px;
+    height: 25px;
+    background-position: -5px -5px;
+}
+
+#container #right .right-con .right-con-title .right-con-sort .right-con-title-rightSort,
+.sprite-sortDownDe {
+    width: 31px;
+    height: 25px;
+    background-position: -5px -40px;
+}
+
+#container #right .right-con .right-con-title .right-con-sort .right-con-title-leftSort.active,
+.sprite-sortTopAc {
+    width: 30px;
+    height: 25px;
+    background-position: -46px -5px;
+}
+
+#container #right .right-con .right-con-title .right-con-sort .right-con-title-leftSort,
+.sprite-sortTopDe {
+    width: 30px;
+    height: 25px;
+    background-position: -46px -40px;
+}
+
+#container #right .right-con .right-con-title .right-con-sort {
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+#container #right .right-con .right-con-title .right-con-sort .right-con-title-leftSort,
+#container #right .right-con .right-con-title .right-con-sort .right-con-title-rightSort {
+    float: left;
+}
+.pageChange .pageChange-span-up {
+    display: inline-block;
+    margin-right: 4px;
+}
+.pageChange .pageChange-span-down {
+	margin-left: 4px;
+    display: inline-block;
+}
+.sprite-btnLeftNoClick, .pageChange .pageChange-span-up {
+    width: 8px;
+    height: 10px;
+    background-position: -323px -128px;
+}
+.sprite-btnLeftNoClick, .pageChange .pageChange-span-up.active{
+	width: 8px;
+    height: 10px;
+    background-position: -323px -111px;
+}
+.sprite-btnLeftNoClick, .pageChange .pageChange-span-down {
+    width: 8px;
+    height: 10px;
+    background-position: -336px -128px;
+}
+.sprite-btnLeftNoClick, .pageChange .pageChange-span-down.active{
+	width: 8px;
+    height: 10px;
+    background-position: -336px -111px;
+}
+
+.pageChange .pageChange-span-up, .pageChange-span-down{
+ 	background-image: url(../imgs/contract/contract.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+ }
+
+/**弹窗位置**/
+#customTime .modal-dialog{
+	margin-left:-70px!important;
+}
+
+#pupDelete .modal-dialog,
+#errorBtn .modal-dialog{
+	margin-left:-84px!important;
+}
+/*设置下拉框内容的左右间距 */
+.left-wrap .dropdown-menu>li>a{
+	 padding:3px 0px !important;
+ }
+
+/*设置pointer元素,添加小手*/
+ .w .left-wrap-item,.w .right-title,.w .right-con-sort span.active,#contractPage,.w  .right-body-btn.default,.w .right-table-title,.w .pageChange-span.disabled,.w .txt{
+	 cursor: default !important;
+ }
+
+ .w .right-con-sort span,.right-con-title-page,.right-con-title-page .title-page.active,.w .pageChange-span{
+	 cursor: pointer !important;
+ }
+.w .pageChange-span2{
+	cursor: default !important;
+}
+#goPageInput{
+	cursor: text !important;
+}
+#sortSelectDiv span.filter-option{
+	width: 114px!important;
+}

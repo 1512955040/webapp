@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新建合同</title>
+	<!-- reset -->
+	<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap-select.css">
+	<link rel="stylesheet" type="text/css" media="screen"  href="css/compentCSS/bootstrap-datepicker.min.css">
+
+	<link rel="stylesheet" type="text/css" href="/css/compentCSS/fileinput.min.css">
+
+	<!-- head -->
+	<link rel="stylesheet" type="text/css" href="/css/head.css" type="text/css">
+  <link rel="stylesheet" href="/css/popUp.css" type="text/css">
+	<!--表单样式-->
+	<link rel="stylesheet" type="text/css" href="/css/assetAddform.css">
+	<link rel="stylesheet" type="text/css" href="/css/assetAdd.css">
+	<link rel="stylesheet" type="text/css" href="/css/newContract.css">
+
+</head>
+<body>
+
+
+	<div id="header">
+		<div class="w">
+			<div class="logo fl"></div>
+			<ul class="list fr">
+				<li class="help fl">
+					<span class="helpPic"></span>
+					帮助</li>
+				<li class="manager fl">
+					<span class="managerPic"></span>
+					管理</li>
+				<li class="notify fl">
+					<span class="notifyPic"></span>
+					通知
+					<div class="notify-wrap">
+						<p class="notify-wrap-up">通知
+							<button class="notify-wrap-upClear">清空</button>
+						</p>
+						<ul class="notify-list">
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+						</ul>
+						<p class="notify-wrap-down">
+							<a href="#">更多>></a>
+						</p>
+					</div>
+				</li>
+                <li class="pInfo fl" id="userInfo"><i class="userName" data-bind="userName"></i>
+                    <span class="userHeader"></span>
+                    <div class="userInfo-wrap">
+
+                        <div class="userInfo">
+                            <!--<img src="" alt=""  class="userHead"/>-->
+                            <span class="fl userHead"></span>
+                            <div class="userInfo-right">
+                                <p data-bind="userName"></p>
+                                <p><span data-bind="position"></span>&nbsp;<span data-bind="department"></span></p>
+                            </div>
+                            <div class="userInfoOperation">
+                                <p class="userInfoOperationBox">
+                                    <input type="button" value="我的账户" class="myAccout"/>
+                                    <a id="logout" class="logout">退出</a>
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="nav" class="facilitator">
+
+
+		<div class="w">
+			<ul class="fl">
+				<li class="navlist fl navlist1 navNoChangeList now">
+					<span class="navlist-img navlist-img1 active"></span>工作台</li>
+				<li class="navlist fl navlist2 navNoChangeList">
+					<span class="navlist-img navlist-img2"></span>工单</li>
+
+				<li class="navlist fl navlist3 navNoChangeList active">
+					<span class="navlist-img navlist-img4"></span>合同</li>
+				<li class="navlist fl navlist4 navNoChangeList">
+					<span class="navlist-img navlist-img3"></span>客户</li>
+
+				<li class="navlist fl navlist5 nav-add-item1 navNoChangeList navChangeList lastNavlist">
+					<span class="navlist-img navlist-img6 "></span>管理
+				</li>
+				<!--<li class="navlist fl navlist7 nav-add-item2 navChangeList">
+					<span class="navlist-img navlist-img7"></span>报表
+				</li>-->
+			</ul>
+
+
+			<div id="nav-add-container">
+				<span class="nav-add"></span>
+				<div class="nav-add-wrap">
+					<div class="nav-add-overHidden">
+						<ul class="nav-add-list">
+							<li class="nav-add-item hide" id="nav-add-item1">
+								<p></p>供应商</li>
+							<li class="nav-add-item" id="nav-add-item2">
+								<p></p>报表</li>
+						</ul>
+					</div>
+					<span class="nav-add-trangle nav-add-trangleLeft"></span>
+					<span class="nav-add-trangle nav-add-trangleRight"></span>
+				</div>
+			</div>
+
+		<div class="fr nav-right-search">
+				<input type="text"  class="fr">
+				<div class="dropdownDiv">
+					<span class="nav-right-selectedWord" id="">所有</span>
+					<span class="nav-right-searchpng"></span>
+					<span class="caret nav-right-caret"></span>
+				</div>
+
+				<div class="right-search-wrap dn">
+					<div class="right-search-container">
+							<div class="right-search-list">所有</div>
+							<div class="right-search-list">工单</div>
+							<div class="right-search-list">合同</div>
+							<div class="right-search-list">客户</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav-right-newAdd fr dn">
+				<span></span>
+				<ul>
+					<li><a href="assetAdd.html"><span></span>新建资产</a></li>
+					<li><a href="newContract.html"><span></span>新建合同</a></li>
+					<li><a href="#"><span></span>供应商</a></li>
+					<li><a href="#"><span></span>项目</a></li>
+					<li>问题变更</li>
+				</ul>
+			</div>
+
+			<div class="nav-right-recentRecord fr dn">
+				<span></span>
+				<div class="nav-right-reRecordWrap">
+					<p class="nav-right-reRecordTitle">最近访问的项</p>
+					<ul id="history"></ul>
+				</div>
+			</div>
+
+
+		</div>
+		<div class="moveWrap"><i class="navMove"></i></div>
+
+	</div>
+
+
+
+	<!-- 内容部分 -->
+	<div id="container" class="w">
+		<div id="left">
+			<div class="addTitle">
+				<span class="addTitle-back" onClick="javascript :history.back(-1);"><i></i>返回</span>
+				<button class="addTitle-keep addTitle-btn fr" id="serSaveConInfo">保存</button>
+				<button class="addTitle-delete addTitle-btn fr" onClick="javascript :history.back(-1);">取消</button>
+			</div>
+
+			<div class="center" id="resourceEditData">
+				<form id="contractForm" method="post" enctype="multipart/form-data">
+                    <input type="hidden" id="conUpdateFlag">
+                    <input type="hidden" data-bind="id" name="id" id="contractIdEdit">
+					<div class="centerCon1 centerCon" id="centerCon1">
+
+						<p class="centerCon-titel"><i></i>合同明细</p>
+
+						<p class="centerCon1-p1 di centerCon-half centerCon-half-first">
+							<span class="centerCon-txt">合同名
+								<span class="centerCon-start">*</span><span class="error conNameErr"></span>
+							</span>
+							<input type="text" data-bind="name" name="name" id="contractName">
+						</p>
+
+						<p class="centerCon1-p5 di centerCon-half">
+				            <span class="centerCon-txt">合同编号</span>
+				           	<input type="text" data-bind="contract_code" name="contract_code" id="contractNum">
+			            </p>
+
+						<p class="centerCon1-p4 txtarea">
+							<span class="centerCon-txt">描述</span>
+							<textarea name="contract_info" data-bind="contract_info"></textarea>
+						</p>
+
+						<p class="centerCon1-p2 centerCon-half di centerCon-half-first" id="conFirm">
+							<span class="centerCon-txt">合同厂商<span class="centerCon-start">*</span><span class="error conFirmErr"></span></span>
+                            <input type="hidden" data-bind="party_B"/>
+							<select class="selectpicker" id="contractFirm_id" name="party_B">
+                                <option data-bind="enterprise_name"></option>
+							</select>
+						</p>
+						
+                        <p class="centerCon1-p3 centerCon-half di" id="conType">
+                            <span class="centerCon-txt">合同类型</span>
+                            <select class="selectpicker" name="contract_type" id="conTypeInfo">
+                                <option data-bind="contract_type_name" value="28">服务合同</option>
+                            </select>
+                        </p>
+						<p class="centerCon1-p5 txtarea">
+							<span class="centerCon-txt">合同细节</span>
+							<textarea name="content" data-bind="content" id="content"></textarea>
+						</p>
+
+
+					</div>
+
+					<div class="centerCon4 centerCon" id="centerCon4">
+
+						<p class="centerCon-titel">合同期限及金额</p>
+
+						<p class="centerCon3-p5 centerCon-half di centerCon-half-first">
+							<span class="centerCon-quarter centerCon-quarter-first di">
+								<span class="centerCon-txt">起始日期</span>
+								<!--<input type="date" name="start_time" data-bind="start_time" id="start_time">-->
+									<input type="text" class="timePicker" name="start_time" data-bind="start_time" id="start_time" readonly="true">
+							</span>
+							<span class="centerCon-quarter di">
+								<span class="centerCon-txt">有效日期</span>
+								<!--<input type="date" name="end_time" data-bind="end_time" id="end_time">-->
+									<input type="text" class="timePicker" name="end_time" data-bind="end_time" id="end_time" readonly="true">
+							</span>
+						</p>
+
+						<p class="centerCon4-p3 centerCon-half di" id="departmentInfo">
+							<span class="centerCon-txt">合同金额</span><span class="error conPriceErr"></span>
+                            <input type="text" data-bind="contract_amount" name="contract_amount" id="conPrice">
+						</p>
+					</div>
+                    <!--<div class="test" id="slaInfo">
+                        <h3>SLA相关信息</h3>
+                        <input type="radio" name="sla_id" data-bind="sla_id">
+                        <p data-bind="agreement_name">名称：</p>
+                        <table>
+                            <tr>
+                                <td>服务级别</td>
+                                <td>响应时间</td>
+                                <td>解决时间</td>
+                            </tr>
+                            <tbody data-bind="sla_info">
+                            <tr>
+                                <td data-bind="level_name"></td>
+                                <td data-bind="address"></td>
+                                <td data-bind="response"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p>------------------------------------------</p>
+                    </div>-->
+                    <!--修改为新sla信息表格-->
+                    <div class="centerCon5 centerCon">
+	                    <p class="centerCon-titel">SLA信息</p>
+	                    <div class="slaDiv test" id="slaInfo">
+								
+							<table class="table-bordered slaTableInfo">
+								<caption value="" class="slaTableTitle">
+									<i class="serviceLevel" data-bind="sla_logo"></i>
+									<p data-bind="agreement_name" class="agreement_name">名称：</p>
+									<i class="checkBox" data-bind="checkBoxActive"></i>
+									<input type="hidden" data-bind="sla_id" id="sla_id">
+								</caption>
+								<thead>
+									<tr>
+										<th>服务级别</th>
+										<th>响应时间</th>
+										<th>解决时间</th>
+									</tr>
+								</thead>
+								<tbody data-bind="sla_info">
+									<tr>
+										<td data-bind="level_name" width="19%" style="table-layout:fixed"></td>
+										<td data-bind="addressVal" class="timeTips" width="19%" style="table-layout:fixed"></td>
+										<td data-bind="responseVal" class="timeTips" width="19%" style="table-layout:fixed"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<input type="hidden" name="sla_id">
+					<p class="form-group centerCon4-p6" id="addFileArea">
+              			<span class="centerCon-txt">添加文件&nbsp;&nbsp;（文件应小于15M，目前仅支持&nbsp;jpg、png、gif、pdf、ppt、pptx、xls、xlsx、doc、docx、txt、zip、rar）</span>
+            		</p>
+					<input id="file-1" name="input[]" type="file" multiple class="file">
+            		<input id="file_help_id" type="hidden">
+            		<input id="file_help_flag" type="hidden">
+            		<input type="hidden" name="electronic_copy" id="fileHelpId">
+				</form>
+			
+			</div>
+
+            <div id="createSLAButton" class="dn" style="margin-top: 10px;">
+                <button id="createSLA" style="margin-left:68px;width:86%;">创建SLA协议</button>
+            </div>
+		</div>
+
+		<div id="right">
+
+		</div>
+
+	</div>
+  <!-- 500错误提示框 -->
+  <div class="modal fade" id="errorBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <p class="modal-body-row"><span class="question-info" id="errorInfo"></span></p>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-delete">删除</button> -->
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+      </div>
+  </div>
+  <p class="successTip" id="tipMsg"></p>
+
+	<!-- jquery  -->
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="/js/transparency.min.js"></script>
+
+	<!-- bootstrap -->
+	<script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+	<script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+	<script type="text/javascript"  src="js/compentJS/bootstrap-datepicker.min.js"></script>
+	<script type="text/javascript"  src="js/compentJS/bootstrap-datepicker.zh-CN.js"></script>
+
+	<script type="text/javascript" src="/js/compentJS/fileinput.min.js"></script>
+	<!--fileinput汉化-->
+	<script type="text/javascript" src="/js/compentJS/zh.js"></script>
+	<!-- tree -->
+
+	<script type="text/javascript" src="/tree/jquery.cookie.js"></script>
+	<!--<script type="text/javascript" src="/tree/jquery.dynatree.js"></script>
+	<script type="text/javascript" src="/tree/jquery-ui.custom.js"></script>-->
+    <!-- ztree -->
+    <script type="text/javascript" src="/js/compentJS/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="/js/compentJS/selectTree.js"></script>
+
+    <script type="text/javascript" src="/js/newServiceContract.js"></script>
+    <script type="text/javascript" src="js/variable.js"></script>
+	<!-- head -->
+	<script type='text/javascript' src="/js/serviceHead.js"></script>
+    <!--fileUpload-->
+    <script type="text/javascript" src="/js/compentJS/fileUpload.js"></script>
+	<!-- checkInput -->
+	<script type="text/javascript" src="/js/checkRule.js"></script>
+
+	<script type="text/javascript" src="/js/jquery.form.js"></script>
+
+	<!--302error-->
+	<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+	<!-- tips -->
+	<script type="text/javascript" src="/js/tips.js"></script>
+
+	<script>
+		$('.selectpicker').selectpicker({
+		  	size:6
+		});
+//		$("#file-1").fileinput({
+//	        uploadUrl:'../ekuter_web/resourceAddHelp/uploadFile', // you must set a valid URL here else you will get an error
+//	        allowedFileExtensions : ['jpg', 'png','gif','xlsx','.docx'],
+//	        overwriteInitial: false,
+//	        uploadAsync:false,
+//	        maxFileSize: 15360, //15M
+//	        maxFilesNum: 10,
+//        	uploadExtraData:function () {
+//             var obj = {};
+//             var id = $("#file_help_id").val();
+//             var flag = $("#file_help_flag").val();
+//             obj.id = id;
+//             obj.flag = flag;
+//             return obj;
+//         },
+//	        //slugCallback: function(result) {
+//	        //return filename.replace('(', '_').replace(']', '_');
+//
+//		});
+		$("#file-1").fileinput({
+				language:'zh',
+				uploadUrl: 'resourceAddHelp/uploadFile', // you must set a valid URL here else you will get an error
+				allowedFileExtensions: ['jpg', 'png', 'gif', 'psd', 'pdf', 'ppt', 'pptx', 'xls', 'xlsx', 'doc', 'docx', 'txt','zip', 'rar'],
+				showUpload: false, //是否显示上传按钮
+				showRemove: false,//是否显示删除按钮
+			  //showCaption: true,//是否显示输入框
+        	  //showPreview:true,
+         	  //showCancel:true,
+         	  //minImageWidth: 50, //图片的最小宽度
+              //minImageHeight: 50,//图片的最小高度
+              //maxImageWidth: 1000,//图片的最大宽度
+              //maxImageHeight: 1000,//图片的最大高度
+				overwriteInitial: false,
+			    uploadExtraData:function () {
+			            var obj = {};
+			            var id = $("#file_help_id").val();
+			            var flag = $("#file_help_flag").val();
+			            obj.id = id;
+			            obj.flag = flag;
+			            return obj;
+			    },
+				uploadAsync: false,
+				maxFileSize: 15360, //15M
+				overwriteInitial: false,
+				uploadAsync: false,
+				maxFileSize: 15360, //15M  15360
+				dropZoneTitle: "拖放文件",
+				msgFilesTooMany: "文件数量太多",
+				msgInvalidFileExtension: "不支持该文件类型",
+				msgSizeTooLarge: "文件过大",
+				enctype: 'multipart/form-data',
+				validateInitialCount: true,
+				allowedPreviewTypes: ['image'],
+				browseClass: "btn btn-primary", //按钮样式
+				previewFileIcon: '<i class="fileinputImg"></i>',
+				previewFileIconSettings: {
+					'docx': '<i class="fileinputImg docx"></i>',
+					'xlsx': '<i class="fileinputImg xlsx"></i>',
+					'pptx': '<i class="fileinputImg pptx"></i>',
+					'jpg': '<i class="fileinputImg jpg"></i>',
+					'pdf': '<i class="fileinputImg pdf"></i>',
+					'zip': '<i class="fileinputImg zip"></i>',
+					'rar': '<i class="fileinputImg zip"></i>',
+                    'txt':'<i class="fileinputImg other"></i>'
+                       
+				},
+				//	        maxFilesNum: 10
+				//slugCallback: function(result) {
+				//return filename.replace('(', '_').replace(']', '_');
+
+			});
+
+			$("input[name='start_time']").datepicker({
+	                language: 'zh-CN',
+	               //todayBtn: true,
+					todayHighlight:1,
+					autoclose: 1,
+					minView: 2,
+					format: "yyyy-mm-dd",
+					orientation:'bottom',
+					clearBtn:true
+      		});
+
+	       	$("input[name='end_time']").datepicker({
+	                language: 'zh-CN',
+	               //todayBtn: true,
+					todayHighlight:1,
+					autoclose: 1,
+					minView: 2,
+					format: "yyyy-mm-dd",
+					orientation:'bottom',
+					clearBtn:true
+      		});
+	</script>
+
+
+</body>
+</html>

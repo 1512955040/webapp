@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/compentCSS/bootstrap-select.css" />
+	<link rel="stylesheet" href="../css/compentCSS/bootstrap.min.css" />
+	
+	<style>
+		*{
+		  margin: 0;
+		  padding: 0;
+		  font-size: 16px;	
+		}
+		ul>li{
+			list-style: none;
+		}
+		#mydiv{
+			width: 1232px;
+			margin: 0 auto;
+			box-sizing: border-box;
+			border: 1px solid black;
+			background: #F5F4F4;
+		}
+		#left{
+			width: 222px;
+			height: 888px;
+			border: 1px solid black;
+			background: #0a3b72;
+			overflow: hidden;
+			box-sizing: border-box;
+			float: left;
+		}
+		#left1 .icon1,#left1 .icon2,#left1 .ul2 .li2 .icon3,#left1 .ul2 .li4 .icon4,#left1 .ul2 .li5 .icon5,#left1 .ul2 .li6 .icon6,#left1 .ul2 .li10 .icon8,
+		#left1 .ul3 .li12 .icon9,#right .right-one .right-one1 #acceptclick,#right .right-one .right-one1 .page2 .icon11,#right .right-one .right-one1 .page2 .icon12,
+		#prePageId .prepagelast,.nextPageId.active,.nextPageId,#prePageId .prepagelast.active
+		{
+			background-image: url(../imgs/contract/contract.png);
+			display: inline-block;
+			background-repeat: no-repeat;
+		}
+		#left .ul2 .li7 .icon7,#left .ul2 .li8 .icon7,#left .ul2 .li9 .icon7,.ul2 .li11 .icon7{
+			background-image: url(../imgs/common.png);
+			display: inline-block;
+			background-repeat: no-repeat;
+			vertical-align: middle;
+		}
+		#right .right-one .right-one1 .createspan1,#right .right-one .right-one1 .createspan2,
+		#right .right-one .right-one1 .createspan1.active,#right .right-one .right-one1 .createspan2.active
+		{
+			background-image: url(../imgs/contract/contractSort.png);
+			display: inline-block;
+			background-repeat: no-repeat;
+			vertical-align: middle;
+		}
+		#left1{
+			border: 1px solid deepskyblue;
+			height: 100%;
+			float: right;
+			box-sizing: border-box;
+			width: 190px;
+		}
+		/*清除浮动*/
+		.clearfix{zoom: 1}/*IE的专用属性，针对老版本的IE浏览器而写的，为了兼容*/
+		.clearfix:after{
+			content: ".";
+			display: block;
+			visibility: hidden;
+			height: 0;
+			clear: both;
+		}
+		/**/
+		#left1 .icon1{
+			background-position: -194px -113px;
+			width: 26px;
+			height: 26px;
+			position: absolute;
+			left:-30px;
+			top: 5px;
+		}
+		#left1 .ul1{
+			width: 100%;
+			height: 36px;
+			border-bottom: 1px solid #cfe7fe;
+			background: #1f5097;
+			line-height: 36px;
+			position: relative;
+		}
+		#left1 .ul1 li{
+			padding-left: 10px;
+			color:#cfe7fe;
+		}
+		#left1 .ul1:hover,#left1 .ul2{
+			cursor: pointer;
+		}
+		#left1 .ul1 li .active{
+			background-position: -196px -77px;
+			width: 26px;
+			height: 26px;
+		}
+		#left1 .ul2{
+			width: 100%;
+			position: relative;
+		}
+		#left1 .ul2 .li1{
+			border-bottom: 1px solid #cfe7fe;
+		}
+		#left1 .ul2 .icon2{
+			background-position: -96px -33px;
+			width: 26px;
+			height: 26px;
+			position: absolute;
+			left: -30px;
+			top: 5px;
+		}
+		#left1 .ul2 .li1{
+			height: 36px;
+			line-height: 36px;
+			color: #cfe7fe;
+			padding-left: 10px;
+		}
+		#left1 .ul2 .li2,#left1 .ul2 .li4,#left1 .ul2 .li6,#left1 .ul2 .li10{
+			width: 100%;
+			height: 36px;
+			line-height: 36px;
+			color: #cfe7fe;
+			font-size: 14px;
+			padding-left: 10px;
+			border-bottom: 1px solid #cfe7fe;
+		}
+		#left .ul2 .li7,#left .ul2 .li8,#left .ul2 .li9,#left .ul2 .li11{
+			width: 100%;
+			height: 36px;
+			line-height: 36px;
+			color: #cfe7fe;
+			font-size: 14px;
+			padding-left: 30px;
+			cursor: pointer;
+			background:#1f5097;
+		}
+		#left1 .ul2 .li2 .icon3{
+			width: 28px;
+			height: 21px;
+			background-position: -87px -74px;
+			vertical-align: middle;
+		}
+		#left1 .ul2 .li4 .icon4{
+			width: 28px;
+			height: 21px;
+			background-position: -87px -115px;
+			vertical-align: middle;
+		}
+		#left1 .ul2 .li6 .icon6{
+			width: 28px;
+			height: 21px;
+			background-position: -125px -115px;
+			vertical-align: middle;
+		}
+		#left1 .ul2 .li10 .icon8{
+			width: 28px;
+			height: 21px;
+			background-position:-127px -146px;
+			vertical-align: middle;
+		}
+		#left .ul2 .li7 .icon7,#left .ul2 .li8 .icon7,#left .ul2 .li9 .icon7,#left .ul2 .li11 .icon7{
+			width: 15px;
+			height: 15px;
+			background-position: -5px -5px;	
+		}
+		#left .ul2 .li7 .active,#left .ul2 .li8 .active,#left .ul2 .li9 .active,#left .ul2 .li11 .active{
+			width: 15px;
+			height: 15px;
+			background-position: -28px -5px;
+		}
+		#left .ul2 .li3,#left .ul2 .li5{
+			width: 100%;
+			height: 36px;
+			line-height: 36px;
+			padding-left: 30px;
+			border-bottom: 1px solid #cfe7fe;
+		}
+		
+		#left .li3 .btn-group .dropdown-toggle,#left .li5 .btn-group .dropdown-toggle,#right .right-one .right-one1 .btn-group .dropdown-toggle{
+			width: 120px;
+			height: 26px;
+		}	
+		#left .li3 .btn-group .dropdown-toggle .filter-option,#left .li5 .btn-group .dropdown-toggle .filter-option,
+		#right .right-one .right-one1 .btn-group .dropdown-toggle .filter-option{
+			margin-left: 0px;
+			margin-top: -5px;
+			font-size: 14px;
+		}
+		
+		#left .ul2 .li3 div.dropdown-menu,#left .ul2 .li5 div.dropdown-menu{
+			width: 100px;
+			padding: 0;
+			overflow: hidden!important;
+			top: 25px;
+		}
+		#left .ul2 .li3 .btn-group.bootstrap-select,#left .ul2 .li5 .btn-group.bootstrap-select,#right .right-one .right-one1 .btn-group.bootstrap-select{
+			width: 120px;
+		}
+		#left1 .ul2 li{
+			border: none;
+		}
+		#left .ul2 .li3 .dropdown-menu>li>a:hover,#left .ul2 .li5 .dropdown-menu>li>a:hover,#right .right-one .right-one1 .dropdown-menu>li>a:hover{
+			background: #0A3B72;	
+		}
+		#left1 ul #contractStatus div.dropdown-menu.open{
+			max-height: 196px!important;
+			overflow-y: hidden!important;
+		} 
+		#left1 ul #contractStatus ul.dropdown-menu.inner{
+			max-height: 196px!important;
+			text-align: center;
+		}
+		#left1 .ul3{
+			width: 100%;
+			position: relative;
+			top: -10px;
+		}
+		
+		#left1 .ul3 .li12{
+			height: 36px;
+			border-top: 1px solid #cfe7fe;
+			border-bottom: 1px solid #cfe7fe;
+			line-height: 36px;
+			color: white;
+			text-align: center;
+			cursor: pointer;
+		}
+		#left1 .ul3 .li12 .icon9{
+			width: 13px;
+			height: 13px;
+			background-position: -131px -5px;
+			vertical-align: middle;
+		}
+		/*#right*/
+		 #right{
+			height:100%;
+			width: 1000px;
+			float: right;
+			border: 1px solid black;
+			box-sizing: border-box;
+			margin-top: 15px;
+		}
+		#right .right-title{
+			width: 100%;
+			height: 37px;
+			line-height: 37px;
+			text-align: center;
+			background:#FFFFFF ;
+		}
+		#right #addServiceContract{
+			float: right;
+			width: 75px;
+			height: 21px;
+			line-height: 21px;
+			background: #054c9c;
+			font-size: 12px;
+			border: none;
+			border-radius: 3px;
+			margin-right: 30px;
+			margin-top: 10px;
+		}
+		/*右侧右下边合同下面部分*/
+		#right .right-one{
+			width: 100%;
+			border: 1px solid black;
+			margin-top: 12px;
+			box-sizing: border-box;
+			background: #FFFFFF;
+		}
+		#right .right-one1 {
+			width: 100%;
+			box-sizing: border-box;
+			padding-left: 20px;
+			height: 36px;
+			line-height: 48px;
+		}
+		#right .right-one .right-one1 .createspan1{
+			width: 30px;
+			height: 25px;
+			background-position: -46px -40px;
+			margin-left: 10px;
+		}
+		#right .right-one .right-one1 .createspan2.active{
+			width: 31px;
+			height: 25px;
+			background-position: -5px -5px;
+			margin-left: -5px;
+		}
+		/*排序雪碧图*/
+		#right .right-one .right-one1 .createspan1.active{
+			width: 30px;
+			height: 25px;
+			background-position: -46px -5px;
+			margin-left: 10px;
+		}
+		#right .right-one .right-one1 .createspan2{
+			width: 30px;
+			height: 25px;
+			background-position: -5px -40px;
+			margin-left: -5px;
+		}
+		#right .right-one .right-one1 .createspan1,#right .right-one .right-one1 .createspan1.active,
+		#right .right-one .right-one1 .icon11.active,#right .right-one .right-one1 .icon12,.prePageId,.nextPageIdd
+		{
+			cursor: pointer!important;
+		}
+		#right .right-one .right-one1 .createspan1.active,#right .right-one .right-one1 .createspan2,
+		#right .right-one .right-one1 .icon11,#right .right-one .right-one1 .icon11.active,.prePageId.disabled,.nextPageIdd.disabled
+		{
+			cursor: default!important;
+		}
+		/*搜索框*/
+		#right .right-one .right-one1 .page1{
+			display: inline-block;
+			padding-left: 70px;
+		}
+		#right .right-one .right-one1 .page1 #addserchinput{
+			width: 250px;
+			height: 25px;
+			display: inline-block;
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+			outline: none;
+			border: 1px solid #bfbfbf;
+			text-indent:10px;
+		}
+		#right .right-one .right-one1 .page1 #acceptclick{
+			width: 31px;
+			height: 25px;
+			background-position: -188px -177px;
+			vertical-align: middle;
+		}
+		/*page2*/
+		#right .right-one .right-one1 .page2{
+			display: inline-block;
+			padding-left:220px;
+		}
+		#right .right-one .right-one1 .page2 span{
+			font-size: 14px;
+		}
+		/*左右翻页两个三角*/
+		#right .right-one .right-one1 .page2 .icon11{
+			width: 17px;
+    		height: 18px;
+    		background-position: -165px -128px;
+    		vertical-align: middle;
+    		margin-top: -2px;
+    	}
+		#right .right-one .right-one1 .page2 .icon12.active{
+			width: 19px;
+    		height: 18px;
+    		background-position: -192px -149px;
+    		vertical-align: middle;
+    		margin-top: -2px;
+    		margin-left: 3px;
+    	}
+    	/*点击左右两个三角的时候*/
+    	#right .right-one .right-one1 .page2 .icon11.active{
+    		width: 18px;
+    		height: 18px;
+    		background-position: -166px -100px;
+    		vertical-align: middle;
+    		margin-top: -2px;
+    	}
+    	#right .right-one .right-one1 .page2 .icon12{
+    		    width: 18px;
+    			height: 18px;
+   			    background-position: -65px -177px;
+   			    margin-top: -2px;
+    			margin-left: 3px;
+    	}
+    	/*新建合同，导入，导出*/
+    	#right .right-one .right-one2{
+    		width: 940px;
+    		min-height: 316px;
+    		border-radius: 3px;
+			border: 1px solid #e5e5e5;
+			margin-left: 20px;
+			box-sizing: border-box;
+			margin-top: 15px;
+    	}
+    	#right .right-one .right-one2 .righttwo2{
+    		width: 100%;
+    		height: 50px;
+    		background:#eef1f7;
+    		line-height: 50px;
+    	}
+    	#right .right-one .right-one2 .righttwo2 button{
+    		width: 120px;
+    		height: 36px;
+    		border: none;
+    		border-radius: 3px;
+    		border: 1px solid #00C384;
+    		line-height: 36px;
+    		font-size: 14px;
+    	}
+    	/**/
+    	#right .right-one .right-one2 .rightthree{
+    		width: 100%;
+    	}
+    	#right .right-one .right-one2 .rightthree .ul5,#right .right-one .right-one2 .rightthree .ul6{
+    		width: 100%;
+    		height: 44px;
+    		line-height: 44px;
+    		border-bottom: 1px solid #e5e5e5;
+    		padding-left: 15px;
+    	}
+    	#right .right-one .right-one2 .rightthree .ul5 li,#right .right-one .right-one2 .rightthree .ul6 li{
+    		float: left;
+    		width: 125px;
+    		text-align: center;
+    		color: #696969;
+    	}
+    	#right .right-one .right-one2 .rightthree .ul6 input{
+    		width: 23px!important;
+    		height: 32px;
+    	}
+    	/**/
+    	#right .right-one .rightbbbb{
+    		text-align: center;
+    		margin-top: 18px;
+    	}
+    	#prePageId,#nextPageId {
+    		 border: 1px solid #bfbfbf;
+    		 width: 60px;
+   			 height: 25px;
+    		 line-height: 25px;
+    		 text-align: center;
+             font-size: 12px;
+             vertical-align: top;
+             display: inline-block;	
+    	}
+    	/*上一页，下一页雪碧图*/
+    	#prePageId .prepagelast{
+    		width: 8px;
+    		height: 10px;
+   			background-position: -323px -128px;
+   			margin-right: 4px;
+    	}
+    	.nextPageId.active{
+    		width: 8px;
+   			height: 10px;
+    		background-position: -336px -111px;
+   			margin-left: 4px;
+    	}
+    	#prePageId .prepagelast.active{
+    		width: 8px;
+    		height: 10px;
+    		background-position: -323px -111px;
+    	}
+    	.nextPageId{
+    		width: 8px;
+    		height: 10px;
+    		background-position: -336px -128px;
+    	}
+    	#pageInput,#goPageInput{
+    		border: 1px solid #bfbfbf;
+    		width: 25px;
+		    height: 25px;
+		    line-height: 25px;
+		    text-align: center;
+		    font-size: 12px;
+		    vertical-align: top;
+		    display: inline-block;
+    	}
+    	#goPageId{
+    		width: 37px;
+    		border: 1px solid #bfbfbf;
+    		height: 25px;
+    		line-height: 25px;
+    		text-align: center;
+   	 		font-size: 12px;
+    		vertical-align: top;
+    		display: inline-block;
+    	}
+    	/*颜色变化*/
+    	.contractstady{
+    		width:60px;
+    		height: 30px;
+    		line-height:30px;
+    		text-align: center;
+    		display: inline-block;
+    		border-radius: 3px;
+    		color: white;
+    	}
+    	.contractstady.aaaa{
+    		background: #0044CC;
+    	}
+    	.contractstady.bbbb{
+    		background: #00BDFF;
+    	}
+    	.contractstady.cccc{
+    		background: #00B83F;
+    	}
+    	.contractstady.dddd{
+    		background: #1B6D85;
+    	}
+    	.contractstady.eeee{
+    		background: darkgoldenrod;
+    	}
+    	.contractstady.ffff{
+    		background: greenyellow;
+    	}
+ 	</style>
+</head>
+<body>
+	<div id="mydiv" class="clearfix">
+		<div id="left" class="clearfix">
+			<div id="left1" >
+				<ul class="ul1">
+					<li><i class="icon1"></i>与我有关的</li>
+				</ul>
+				<ul class="ul2">
+					<li class="li1"><i class="icon2"></i>筛选合同</li>
+					<li class="li2"><i class="icon3"></i>&nbsp;合同厂商</li>
+					<li class="li3" id="film">
+						<select class="selectpicker firmName" id="firmId">
+							<option data-bind="name" id="firmClick"></option>
+						</select>
+					</li>
+					<li class="li4"><i class="icon4"></i>&nbsp;合同状态</li>
+					
+					<li class="li5" id="contractStatus">
+						<select class="selectpicker" id="firmcontract">
+							<option data-bind="conStatusVal" id=""></option>
+						</select>
+					</li>
+					<li class="li6"><i class="icon6"></i>&nbsp;合同到期时间</li>
+					<li class="li7"><i class="icon7" id="readyexpress"></i>&nbsp;&nbsp;&nbsp;已到期</li>
+					<li class="li8"><i class="icon7" id="expresstoday"></i>&nbsp;&nbsp;&nbsp;今天</li>
+					<li class="li9"><i class="icon7" id="expressthird"></i>&nbsp;&nbsp;&nbsp;30天后到期</li>
+					<li class="li10"><i class="icon8"></i>&nbsp;合同金额</li>
+					<li class="li11"><i class="icon7" id="conpressone"></i>&nbsp;&nbsp;&nbsp;小于100万</li>
+					<li class="li11"><i class="icon7" id="conpresstwo"></i>&nbsp;&nbsp;&nbsp;100万-500万</li>
+					<li class="li11"><i class="icon7" id="conpressthree"></i>&nbsp;&nbsp;&nbsp;500万-1000万</li>
+					<li class="li11"><i class="icon7" id="conpressfour"></i>&nbsp;&nbsp;&nbsp;1000万以上</li>
+				</ul>
+				<ul class="ul3">
+					<li class="li12"><i class="icon9"></i>&nbsp;清除所有项</li>
+				</ul>
+			</div>
+		</div>
+		<div id="right">
+			<div class="right-title clearfix">合同
+				<button id="addServiceContract">添加合同</button>
+			</div>
+			<div class="right-one">
+				<div class="right-one1">
+					<select class="selectpicker" id="CreateTime">
+						 <option value="contract.create_time">创建日期</option>
+                         <option value="contract.c_status">合同状态</option>
+                         <option value="contract.start_time">起始日期</option>
+                         <option value="contract.end_time">终止日期</option>
+                         <option value="contract.contract_amount">合同金额</option>
+					</select>
+					<span class="createspan1" id="createspann"></span>
+					<span class="createspan2 active" id="createspanna"></span>
+					<p class="page1">
+						<input type="text" placeholder="搜索..." id="addserchinput"/><i id="acceptclick"></i>
+					</p>
+					<p class="page2">
+						<input type = "" id="currPage">
+						<input type = "hidden" id="totalPage">
+						<span class="page2-one">显示</span>
+						<span class="" data-bind="beginCount">1</span>
+						<span>-</span>
+						<span class="" data-bind="endCount">10</span>&nbsp;
+						<span class="">,</span>
+						<span>共</span>
+						<span class="" data-bind="totalCount">42</span>&nbsp;
+						<span class="">条</span>&nbsp;&nbsp;
+						<span class="" data-bind="upConPage" id="upConPageId"></span>
+						<span class="icon12 active" data-bind="nextConPage" id="nextConPageId"></span>
+					</p>
+				</div>
+				<!--xinjian-->
+				<div class="right-one2">
+					<div class="righttwo2">
+						<button>新建</button>
+					</div>
+					<div class="rightthree">
+						<ul class="ul5">
+							<li>合同名称</li>
+							<li>起始日期</li>
+							<li>终止日期</li>
+							<li>合同厂商</li>
+							<li>合同编号</li>
+							<li>合同金额</li>
+							<li>合同状态</li>
+						</ul>
+						<ul class="ul6">
+							<li class="table-col1"><i data-bind="IIcon"></i><input type="" data-bind="id"></li>
+                            <li><span data-bind="name"></span></li>
+                            <li><span data-bind="start_time"></span></li>
+                            <li><span data-bind="end_time"></span></li>
+                            <li><span data-bind="partA_enterprise"></span></li>
+                            <li><span data-bind="contract_code"></span></li>
+                            <li><span data-bind="contract_amount"></span></li>
+                            <li>
+                                <span class="contractstady" data-bind="conStatusClass">
+                                	<span data-bind="contract_status"></span>
+                                </span>
+                            </li>
+						</ul>
+					</div>
+					
+				</div>
+				<!--页脚部分-->
+				<div class="rightbbbb" id="pageMsg">
+					<span class="prePageId disabled" id="prePageId">
+						<span class="prepagelast" data-bind="prePage"></span>上一页
+					</span>
+					
+					<span class="" data-bind="currPage" id="pageInput"></span>
+					
+					<span class="nextPageIdd" id="nextPageId">
+						下一页<span class="nextPageId active" data-bind="nextPage"></span>
+					</span>
+					<span class="txt">共<span data-bind="totalPage"></span>页，到第</span>
+					<input type="text" class="" id="goPageInput">
+					<span class="txt">页</span>
+					<span class="" id="goPageId">确定</span>
+					<input type="hidden" data-bind="totalPage" id="totalPageId">
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	 <p class="successTip" id="tipMsg" ></p>
+	 
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script src="../js/compentJS/bootstrap.min.js"></script>
+	<script src="../js/compentJS/bootstrap-select.min.js"></script>
+	<script src="../js/transparency.min.js"></script>
+	<script src="../js/variable.js"></script>
+	<script src="../js/tips.js"></script>
+</body>
+<script>
+	/**
+	 * 加载所有服务商合同
+ 	* */
+	var count = 10;//页面加载条数为10
+function loadServiceContractList(paramObj){
+    $.ajax({
+        traditional:true,
+        url:loadServiceContractDataUrl,
+        dataType:"json",
+        type:'POST',
+        async:true,
+        data:{page:paramObj.currPage,count:count,searchText:paramObj.searchText,careAbout:paramObj.careAbout,
+            aboutMe:paramObj.aboutMe,firmName:paramObj.firmName,expire:paramObj.expire,conStatus:paramObj.conStatus,
+            today_expire:paramObj.today_expire,future_expire:paramObj.future_expire,sortSelect:paramObj.sortSelect,sort:paramObj.sort,
+            wait_confirm:paramObj.wait_confirm,contract_amount_one:paramObj.conPrice_one,contract_amount_two:paramObj.conPrice_two,
+            contract_amount_three:paramObj.conPrice_three,contract_amount_four:paramObj.conPrice_four},
+       		contentType:'application/x-www-form-urlencoded; charset=UTF-8',//防止乱码
+        success:function(data){
+			console.log(data);
+            $(".ul6").show();
+            //分页区域的样式
+            var contractPageClass = {
+                    upConPage:{
+                        class:function(){
+                            if(this.currPage - 1 == 0 || this.currPage == 0){
+                                return "icon11";
+                            }else{
+                                return "icon11 active";
+                            }
+                        }
+                    },
+                    nextConPage:{
+                        class:function(){
+                            if(this.totalPage - 1 == 0 || this.totalPage-this.currPage == 0){
+                                return "icon12 active";
+                            }else{
+                                return "icon12";
+                            }
+                        }
+                    },
+                    nextPage:{
+                    	class:function(){
+                    		if(this.totalPage - 1 == 0 || this.totalPage-this.currPage == 0){
+                    			return "nextPageId";
+                    		}else{
+                    			return "nextPageId active";
+                    		}
+                    	}
+                    },
+                    prePage:{
+                        class:function(){
+                    		if(this.currPage - 1 == 0 || this.currPage == 0){
+                    			return "prepagelast";
+                    		}else{
+                    			return "prepagelast active";
+                    		}
+                    	}
+                    },
+                    
+                    prePageId:{
+            			class:function(){
+            				if(this.currPage - 1 == 0 || this.currPage == 0){
+            					return "prePageId disabled";
+            				}else{
+            					return "prePageId";
+            				}
+            			}
+            		},
+            		nextPageId:{
+            			class:function(){
+            				if(this.totalPage - 1 == 0 || this.totalPage-this.currPage == 0){
+            					return "nextPageIdd disabled";
+            				}else{
+            					return "nextPageIdd";
+            				}
+            			}
+            		},
+            		goPageInput:{
+            			disabled:function(){
+            				if(this.totalPage - 1 == 0 || this.totalPage == 0){
+            					return "suibian";//这里return的不能为""，其余的什么都可以。
+            				}
+            			}
+            		}
+                }
+            var contractPage;
+
+            var len = data.length;
+            //console.log(data);
+            if(len != 0){
+                //right-table-body-status perform
+                //合同状态的样式
+                var conClass = {
+                    conStatusClass:{
+                        class:function(){
+                            if("履行中" == this.contract_status){
+                                return "contractstady aaaa";
+                            }else if("已过期" == this.contract_status){
+                                return "contractstady bbbb";
+                            }else if("未执行" == this.contract_status){
+                                return "contractstady cccc";
+                            }else if("未知状态" == this.contract_status){
+                                return "contractstady dddd";
+                            }else if("拟定中" == this.contract_status){
+                                return "contractstady eeee";
+                            }else if("审阅中" == this.contract_status){
+                                return "contractstady ffff";
+                            }
+                        }
+                    },
+                    IIcon:{
+                        style: function () {
+                            if(this.approval_status == 80 || this.approval_status == 81){
+                                return "display: none";
+                            }else if(this.party_B != this.create_enterprise){
+                                return "display: none";
+                            }
+                        }
+                    }
+                };
+                //绑定合同数据
+                //为啥data-bind能够指向一个id ，paramObj.currPage？？？
+                $(".ul6").render(data,conClass);
+                var len  = data.length;
+                var totalPage = data[0].pagenumbers;
+                var totalNum = data[0].total_numbers;
+				//beginCount从第几条开始
+                var beginCount = (paramObj.currPage-1)*(count)+1;
+            	//endCount到第几条
+                var endCount;
+                if(len - count == 0){
+                    endCount = beginCount-1 + count;
+                }else{
+                    endCount = beginCount-1 + (len)%(count);
+                }
+				
+               contractPage = {
+                    "beginCount":beginCount,
+                    "endCount":endCount,
+                    "totalCount":totalNum,
+                    "currPage":paramObj.currPage,
+                    "totalPage":totalPage
+                }
+            }else{
+            	 contractPage = {
+                         "beginCount":0,
+                         "endCount":0,
+                         "totalCount":0,
+                         "currPage":0,
+                         "totalPage":0
+                     }
+                $(".ul6").hide();
+            }
+            //绑定两个分页区域的数据
+			
+        	$(".page2").render(contractPage,contractPageClass);
+        	$("#pageMsg").render(contractPage,contractPageClass);
+        	//$('#left').css('height',$('#right').outerHeight()+20+'px');
+        },
+        error:function(XMLHttpRequest){
+			error_500(XMLHttpRequest.responseText);
+		}
+    });
+}
+
+	
+function selectServiceConParam(){
+	//合同厂商
+	var paramObj=new Object();
+	var firmName=$("select.firmName option:selected").val();
+	 if(""==firmName || "所有厂商" == firmName){
+        paramObj.firmName = null;
+     }else{
+        paramObj.firmName = firmName;
+    }
+     
+    //排序条件
+    var CreateTime=$("#CreateTime option:selected").val();
+    if(""==CreateTime){
+    	paramObj.sortSelect = "contract.create_time";
+    }else{
+    	paramObj.sortSelect=CreateTime;
+    }
+    
+    //查询条件：排序
+    if($(".createspan1").hasClass("active")){
+        paramObj.sort = "ASC";//升序
+    }
+    if($(".createspan2").hasClass("active")){
+        paramObj.sort = "DESC";//降序
+    }
+    
+     //条件：合同状态
+    var firmcontract = $("#firmcontract option:selected").val();
+    if("" == firmcontract){
+        paramObj.conStatus = null;
+    }else{
+        paramObj.conStatus = firmcontract;
+    }
+    
+    //条件：合同到期时间
+    if($("#readyexpress").hasClass("active")){//已到期
+        paramObj.expire = true;
+    }else{
+        paramObj.expire = false;
+    }
+    if($("#expresstoday").hasClass("active")){//今天到期
+        paramObj.today_expire = true;
+    }else{
+        paramObj.today_expire = false;
+    }
+    if($("#expressthird").hasClass("active")){//30天后到期
+        paramObj.future_expire = true;
+    }else{
+        paramObj.future_expire = false;
+    }
+    
+     //合同金额
+    if($("#conpressone").hasClass("active")){//小于100万
+        paramObj.conPrice_one = true;
+    }else{
+        paramObj.conPrice_one = false;
+    }
+    if($("#conpresstwo").hasClass("active")){//100万-500万
+        paramObj.conPrice_two = true;
+    }else{
+        paramObj.conPrice_two = false;
+    }
+    if($("#conpressthree").hasClass("active")){//500万-1000万
+        paramObj.conPrice_three = true;
+    }else{
+        paramObj.conPrice_three = false;
+    }
+    if($("#conpressfour").hasClass("active")){//1000万以上
+        paramObj.conPrice_four = true;
+    }else{
+        paramObj.conPrice_four = false;
+    }
+    
+    //条件：当前页数
+    var currPage = $("#currPage").val();
+    if("" == currPage || 0 == currPage){
+        paramObj.currPage = 1;
+    }else{
+        paramObj.currPage = currPage;
+    }
+    
+    //获取模糊查询条件
+    var searchText = $("#addserchinput").val();
+    if("" == searchText){
+        paramObj.searchText = null;
+    }else{
+        paramObj.searchText = searchText;
+    }
+    return paramObj;
+}	
+  /**
+ 	* 切换排序条件加载
+ 	* */
+	function loadBySortSelect(){
+    	var CreateTime=$("#CreateTime option:selected").val();
+    	var paramObj = selectServiceConParam();
+    	paramObj.sortSelect = CreateTime;
+    	loadServiceContractList(paramObj);
+	}
+/**
+ * 排序顺序：正序/倒序 加载
+ **/
+function serContractSortClick(){
+    	//点击正序加载
+    $(".createspan1").click(function(){
+        if($(".createspan2").hasClass("active")){
+            $(".createspan1").addClass("active");
+            $(".createspan2").removeClass("active");
+            var paramObj = selectServiceConParam();
+            paramObj.sort = "ASC";
+            loadServiceContractList(paramObj);
+        }
+    });
+    //点击倒序加载
+    $(".createspan2").click(function () {
+        if($(".createspan1").hasClass("active")){
+            $(".createspan2").addClass("active");
+            $(".createspan1").removeClass("active");
+            var paramObj = selectServiceConParam();
+            paramObj.sort = "DESC";
+            loadServiceContractList(paramObj);
+        }
+    });
+}
+/**
+ * 上一页
+ */
+function prePageSerCon() {
+    //从页面获取当前页数
+    var currPage = $("#currPage").val();
+    if(currPage - 1 == 0){
+        $("#tipMsg").addClass("active").html("第一页").show();
+        function hideMsg(){
+            $("#tipMsg").addClass("active").html("第一页").hide()
+        }
+        setTimeout(hideMsg,1500);
+    }else{
+        currPage--;
+	}
+     var paramObj = selectServiceConParam();
+     paramObj.currPage = currPage;
+     loadServiceContractList(paramObj);
+}	
+/**
+ * 下一页
+ */
+function nextPageSerCon() {
+    //从页面获取当前页面和总页数
+    var currPage = $("#currPage").val();
+    var totalPage = $("#totalPage").val();
+    if(totalPage - currPage == 0 || totalPage - 1 == 0){
+        $("#tipMsg").addClass("active").html("最后一页").show();
+        function hideMsg(){
+            $("#tipMsg").addClass("active").html("最后一页").hide()
+        }
+        setTimeout(hideMsg,1500);
+    }else{
+        currPage++;
+    }
+    var paramObj = selectServiceConParam();
+    paramObj.currPage = currPage;
+    loadServiceContractList(paramObj);
+}
+/**
+ * 跳转到某一页
+ */
+function toPageSerCon(){
+	var goPage = $("#goPageInput").val();	/*跳转到第几页*/
+	var totalPage = $("#totalPageId").val(); /*共多少页*/		
+	var fc = selectServiceConParam();
+	if(isNaN(goPage) || "" == goPage || goPage < 1){
+		fc.currPage = 1;
+	}else if(goPage - totalPage > 0){
+		fc.currPage = totalPage;
+	}else{
+		fc.currPage = goPage;
+	}
+	$("#goPageInput").val("");
+	loadServiceContractList(fc);
+}
+/**
+ * 上下页跳转操作
+ * */
+function serviceUpOrNextPage(){
+   //当点击左右翻页的时候
+	$(".icon11").click(function(){
+		prePageSerCon();
+	})
+	$(".icon12").click(function(){
+		nextPageSerCon();
+	})
+}
+/**
+ * 根据合同状态，条件查询
+ * */
+function loadServiceContractDataByConStatus(){
+    $("#contractStatus").change(function () {
+        var conStatusSelect = document.getElementById("firmcontract");
+        var conStatusValueId = conStatusSelect.options[conStatusSelect.selectedIndex].value;
+        
+        $("#firmcontract").selectpicker('val',conStatusValueId);
+        $('#contractStatus .selectpicker').selectpicker('refresh');
+
+        if("" == conStatusValueId){
+            var paramObj = selectServiceConParam();
+            paramObj.conStatus = null;
+            loadServiceContractList(paramObj);
+        }else{
+            var paramObj = selectServiceConParam();
+            paramObj.conStatus = conStatusValueId;
+            loadServiceContractList(paramObj);
+        }
+    })
+}
+
+/**
+ * 根据合同金额查询
+ * */
+function serviceContractPriceLoad(){
+    //小于100万
+    $("#conpressone").click(function () {
+        var paramObj = selectServiceConParam();
+        if($("#conpressone").hasClass("active")){
+            $("#conpressone").removeClass("active");
+            paramObj.conPrice_one = false;
+        }else{
+            $("#conpressone").addClass("active");
+            paramObj.conPrice_one = true;
+        }
+        //console.log(paramObj);
+        loadServiceContractList(paramObj);
+    });
+    //100万-500万
+    $("#conpresstwo").click(function () {
+        var paramObj = selectServiceConParam();
+        if($("#conpresstwo").hasClass("active")){
+            $("#conpresstwo").removeClass("active");
+            paramObj.conPrice_two = false;
+        }else{
+            $("#conpresstwo").addClass("active");
+            paramObj.conPrice_two = true;
+        }
+        //console.log(paramObj);
+        loadServiceContractList(paramObj);
+    });
+    //500万-1000万
+    $("#conpressthree").click(function () {
+        var paramObj = selectServiceConParam();
+        if($("#conpressthree").hasClass("active")){
+            $("#conpressthree").removeClass("active");
+            paramObj.conPrice_three = false;
+        }else{
+            $("#conpressthree").addClass("active");
+            paramObj.conPrice_three = true;
+        }
+        //console.log(paramObj);
+        loadServiceContractList(paramObj);
+    });
+    //1000万以上
+    $("#conpressfour").click(function () {
+        var paramObj = selectServiceConParam();
+        if($("#conpressfour").hasClass("active")){
+
+            $("#conpressfour").removeClass("active");
+            paramObj.conPrice_four = false;
+        }else{
+            $("#conpressfour").addClass("active");
+            paramObj.conPrice_four = true;
+        }
+        //console.log(paramObj);
+        loadServiceContractList(paramObj);
+    });
+}
+/**
+ * 服务商合同列表模糊查询
+ **/
+function serviceConSearch(){
+    //模糊查询:回车查询
+    $("#addserchinput").keydown(function(e){
+        var currKey = 0;e = e||event;
+        currKey = e.keyCode||e.which||e.charCode;
+        //回车搜索
+        if(currKey == 13){
+            //获取模糊查询条件
+            var searchText = document.getElementById("addserchinput").value ;
+            if("" == searchText){
+                $("#tipMsg").addClass("active").html("请输入查询条件").show();
+                function hideMsg(){
+                    $("#tipMsg").addClass("active").html("请输入查询条件").hide()
+                }
+                setTimeout(hideMsg,1500);
+            }else{
+                var paramObj = selectServiceConParam();
+                paramObj.searchText = searchText;
+                //console.log(paramObj);
+                loadServiceContractList(paramObj);
+            }
+        }
+    });
+    //模糊查询:点击查询
+    $("#acceptclick").click(function(){
+        var searchText = document.getElementById("addserchinput").value ;
+        if("" == searchText){
+            $("#tipMsg").addClass("active").html("请输入查询条件").show();
+            function hideMsg(){
+                $("#tipMsg").addClass("active").html("请输入查询条件").hide()
+            }
+            setTimeout(hideMsg,1500);
+        }else{
+            var paramObj = selectServiceConParam();
+            paramObj.searchText = searchText;
+            loadServiceContractList(paramObj);
+        }
+    });
+}
+/**
+ * 清空所有查询条件
+ * */
+function serConClearAllSearch(){
+    $(".li12").click(function () {
+        //$("#firm .filter-option").hide();
+        $("i.active").removeClass("active");
+        var paramObj = new Object();
+        paramObj.careAbout = false;
+        paramObj.aboutMe = false;
+        paramObj.firmName = null;
+        $("#firmId").selectpicker('val',"所有厂商");
+        paramObj.conStatus = "";
+        $("#firmcontract").selectpicker('val',"");
+        paramObj.sortSelect = "contract.create_time";
+        $("#CreateTime").val("contract.create_time");
+        paramObj.sort = "DESC";
+        
+        if($("#createspann").hasClass("active")){
+            $("#createspanna").addClass("active");
+            $("#createspann").removeClass("active");
+        }
+        
+        paramObj.expire = false;
+        paramObj.today_expire = false;
+        paramObj.future_expire = false;
+        paramObj.conPrice_one = false;
+        paramObj.conPrice_two = false;
+        paramObj.conPrice_three = false;
+        paramObj.conPrice_four = false;
+        paramObj.searchText = null;
+        $("#addserchinput").val("");
+        paramObj.currPage = 1;
+        //console.log(paramObj);
+        loadServiceContractList(paramObj);
+    });
+}
+
+
+
+
+
+	//当点击“与我相关的”
+	$(".ul1").click(function(){
+		if($(".icon1").hasClass("active")){
+			$(".icon1").removeClass("active");
+		}else{
+			$(".icon1").addClass("active")
+		}
+	})
+	
+	
+	
+	
+	//加载合同厂商名称
+	function selectional(){
+		 $.ajax({
+            traditional: true,
+            url: loadFirmNameUrl,
+            dataType: "json",
+            type: 'POST',
+            async: true,
+            data: '',
+            contentType: 'application/x-www-form-urlencoded; charset=UTF-8',//防止乱码
+            success: function (data) {
+            	$("#firmId").render(data);
+            	console.log(data);
+            	$("#firmId").selectpicker('val',"所有厂商");
+            	$('#film .selectpicker').selectpicker('refresh');
+            }
+        })
+		 $("#firm .dropdown-menu").click(function () {
+	        //$("#firm .filter-option").show();
+	        var firmName = $("select.firmName option:selected").val();
+	        var paramObj = selectServiceConParam();
+	        if(firmName == "所有厂商"){
+	            paramObj.firmName = null;
+	        }else{
+	            paramObj.firmName = firmName;
+	        }
+	        loadServiceContractList(paramObj);
+    	});
+	}
+	
+	//合同状态
+	var Contractcontant,directives;
+		Contractcontant=[
+	{
+        value:"",
+        conStatusVal:"---选择---"
+    },
+    {
+        value:85,
+        conStatusVal:"拟定中"
+    },
+    {
+        value:86,
+        conStatusVal:"审阅中"
+    },
+    {
+        value:87,
+        conStatusVal:"未执行"
+    },
+    {
+        value:88,
+        conStatusVal:"履行中"
+    },
+    {
+        value:89,
+        conStatusVal:"已过期"
+    },
+    {
+        value:90,
+        conStatusVal:"未知"
+    }
+		]
+	directives={
+		conStatusVal:{
+			value:function(){
+				return this.value; 
+			}
+		}
+	}
+	//Jquery
+	$(function () {
+		//加载合同厂商名称
+		 selectional();
+		$('.selectpicker').selectpicker({
+			size:6
+		});
+	})
+	
+</script>
+</html>
+
+

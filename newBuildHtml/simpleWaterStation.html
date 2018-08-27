@@ -1,0 +1,117 @@
+<!--简易水位站-->
+<div id="addUpFlag">
+	<p class="centerCon-titel">简易水位站</p>
+	<p class="centerCon3-p2 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt">测站编码
+			<span class="centerCon-start">*</span>
+			<span class="errorTip errorB">不超过100个字符</span>
+			<span class="errorTipNull errorB">不能为空</span>
+			<span id="nameError" class="errorB"></span>
+		</span>
+		<input type="text" name="stationCode" class="hasTip notExceed100">
+	</p>
+	<p class="centerCon3-p3 centerCon-half di">
+		<span class="centerCon-txt">安装地点</span>
+		<input type="text" name="position" maxlength="100">
+	</p>
+	<p class="centerCon3-p4 centerCon-half di centerCon-half-first">				
+		<span class="centerCon-txt">经度(度分秒方式)
+			<span class="centerCon-start">*</span>
+			<span class="errorTip errorB">不超过100个字符</span>
+			<span class="errorTipNull errorB">不能为空</span>
+			<span id="nameError" class="errorB"></span>
+		</span>
+		<input type="text" name="longitudeAndLatitude" class="hasTip notExceed100">
+	</p>
+	
+	<p class="centerCon3-p3 centerCon-half di">				
+		<span class="centerCon-txt">纬度(度分秒方式)
+			<span class="centerCon-start">*</span>
+			<span class="errorTip errorB">不超过100个字符</span>
+			<span class="errorTipNull errorB">不能为空</span>
+			<span id="nameError" class="errorB"></span>
+		</span>
+		<input type="text" name="longitudeAndLatitude" class="hasTip notExceed100">
+	</p>
+	
+	<p class="centerCon3-p4 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt">位置说明</span>
+		<input type="text" name="location" maxlength="100">
+	</p>
+	
+	<p class="centerCon3-p3 centerCon-half di">
+		<span class="centerCon-txt">联系人</span>
+		<input type="text" name="contact" maxlength="100">
+	</p>
+	<p class="centerCon3-p4 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt">联系电话
+			<span class="conterCon-Iphone">你输入的电话号有误，请重新输入</span>
+		</span>
+		<input type="text" name="mobilephone2" class="hasaddIphone">
+	</p>
+	
+	<p class="centerCon3-p3 centerCon-half di">
+		<span class="centerCon-txt">观测类型</span>
+		<select  name="observation" >
+			<option  value="">--请选择--</option>
+			<option  value="排尺">排尺</option>
+			<option  value="刻标">刻标</option>
+		</select>
+	</p>
+	<p class="centerCon3-p4 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt">基准高程(m)
+			<span class="conterCon-elevation">请输入纯数字</span>
+		</span>
+		<input type="text" name="datumelevation" class="hasaddamount">
+	</p>
+</div>
+<!-------------------------------详情------------------------------------------------------------------->
+<div id="detailFlag">
+  <p class="conright-infoWrapLeft-itemTitle">简易水位站</p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">测站编码</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="stationCode"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">安装地点</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="position"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">经度(度分秒方式)</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="longitudeAndLatitude"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">纬度(度分秒方式)</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="longitudeAndLatituded"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">位置说明</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="location"></span>
+  </p>
+  
+  
+   <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">联系人</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="contact"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">联系电话</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="mobilephone2"></span>
+  </p>
+  
+   <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">观测类型</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="observation"></span>
+  </p>
+ 
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">基准高程(m)</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="datumelevation"></span>
+  </p>
+ 
+  
+</div> 
+	

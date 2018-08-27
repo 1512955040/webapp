@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>事件详情</title>
+		<!-- reset -->
+		<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap-select.min.css">
+
+		<!-- head -->
+		<link rel="stylesheet" href="/css/head.css" type="text/css">
+
+		<!-- scroll -->
+		<link rel="stylesheet" href="/css/compentCSS/jquery.mCustomScrollbar.css">
+		<link rel="stylesheet" href="/css/popUp.css" type="text/css">
+		<link rel="stylesheet" href="/css/compentCSS/zTreeStyle.css">
+		<!-- 删除 -->
+		<link rel="stylesheet" href="/css/orderWithEvent.css" type="text/css" />
+		<link rel="stylesheet" href="/css/eventDetail.css" type="text/css">
+		<link rel="stylesheet" href="/css/event.css" />
+	</head>
+
+	<body>
+
+
+	<div id="header">
+		<div class="w">
+			<div class="logo fl"></div>
+			<ul class="list fr">
+				<li class="help fl">
+					<span class="helpPic"></span>
+					帮助</li>
+				<li class="manager fl">
+					<span class="managerPic"></span>
+					管理</li>
+				<li class="notify fl">
+					<span class="notifyPic"></span>
+					通知
+					<div class="notify-wrap">
+						<p class="notify-wrap-up">通知
+							<button class="notify-wrap-upClear">清空</button>
+						</p>
+						<ul class="notify-list">
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+						</ul>
+						<p class="notify-wrap-down">
+							<a href="#">更多>></a>
+						</p>
+					</div>
+				</li>
+                <li class="pInfo fl" id="userInfo"><i class="userName" data-bind="userName"></i>
+                    <span class="userHeader"></span>
+                    <div class="userInfo-wrap">
+
+                        <div class="userInfo">
+                            <!--<img src="" alt=""  class="userHead"/>-->
+                            <span class="fl userHead"></span>
+                            <div class="userInfo-right">
+                                <p data-bind="userName"></p>
+                                <p><span data-bind="position"></span>&nbsp;<span data-bind="department"></span></p>
+                            </div>
+                            <div class="userInfoOperation">
+                                <p class="userInfoOperationBox">
+                                    <input type="button" value="我的账户" class="myAccout"/>
+                                    <a id="logout" class="logout">退出</a>
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div id="nav">
+			<div class="w">
+				<ul class="fl">
+					<li class="navlist fl navlist1 navNoChangeList">
+						<span class="navlist-img navlist-img1"></span>工作台</li>
+					<li class="navlist fl navlist2 navNoChangeList">
+						<span class="navlist-img navlist-img2"></span>事件</li>
+					<li class="navlist fl navlist3 navNoChangeList">
+						<span class="navlist-img navlist-img3"></span>资产</li>
+					<li class="navlist fl navlist4 navNoChangeList">
+						<span class="navlist-img navlist-img4 active"></span>合同</li>
+					<li class="navlist fl navlist5 navNoChangeList">
+						<span class="navlist-img navlist-img5"></span>项目</li>
+					<li class="navlist fl navlist6 nav-add-item1 navNoChangeList navChangeList lastNavlist">
+						<span class="navlist-img navlist-img6 "></span>供应商
+					</li>
+					<li class="navlist fl navlist7 nav-add-item2 navChangeList">
+						<span class="navlist-img navlist-img7"></span>管理
+					</li>
+				</ul>
+
+				<div id="nav-add-container">
+					<span class="nav-add"></span>
+					<div class="nav-add-wrap">
+						<div class="nav-add-overHidden">
+							<ul class="nav-add-list">
+								<li class="nav-add-item hide" id="nav-add-item1">
+									<p></p>供应商</li>
+								<li class="nav-add-item" id="nav-add-item2">
+									<p></p>报表</li>
+							</ul>
+						</div>
+						<span class="nav-add-trangle nav-add-trangleLeft"></span>
+						<span class="nav-add-trangle nav-add-trangleRight"></span>
+					</div>
+				</div>
+
+				<div class="fr nav-right-search">
+					<input type="text" value="所有" class="fr">
+					<span class="nav-right-searchpng"></span>
+					<div class="right-search-wrap dn"></div>
+				</div>
+
+				<div class="nav-right-newAdd fr">
+					<span></span>
+					<ul>
+						<li><i class="add-img1"></i>新建事件</li>
+						<li><i class="add-img2"></i>新建资产</li>
+						<li><i class="add-img3"></i>新建合同</li>
+						<li><i class="add-img4"></i>新建项目</li>
+						<li><i class="add-img5"></i>新建供应商</li>
+					</ul>
+				</div>
+
+				<div class="nav-right-recentRecord fr">
+					<span></span>
+					<div class="nav-right-reRecordWrap">
+						<p class="nav-right-reRecordTitle">最近访问的项</p>
+						<ul id="history"></ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="moveWrap"><i class="navMove"></i></div>
+
+		</div>
+
+
+		<div id='container' class="w sla">
+			<div id="container-left" class="fl">
+				<ul class="container-left-wrap">
+					<li class="container-left-item container-left-item1 active">
+						<p></p>SLA协议管理<i></i></li>
+					<li class="container-left-item container-left-item2">
+						<p></p>待定待定的管理<i></i></li>
+					<li class="container-left-item container-left-item3">
+						<p></p>待定待定的管理<i></i></li>
+					<li class="container-left-item container-left-item4">
+						<p></p>待定待定的管理<i></i></li>
+					<li class="container-left-item container-left-item5">
+						<p></p>待定待定的管理<i></i></li>
+					<li class="container-left-item container-left-item6">
+						<p></p>待定待定的管理<i></i></li>
+					<li class="container-left-item container-left-item7">
+						<p></p>待定待定的管理<i></i></li>
+				</ul>
+			</div>
+
+			<div id="container-right" class="fr">
+
+				<div class="container-right-title">
+					<div class="container-right-title-back-box">
+						<span class="container-right-title-back"></span>
+						<span class="back">返回</span>
+					</div>
+
+					<button class="container-right-title-btn btn-edit fr">创建SLA</button>
+				</div>
+				<div class="container-right-body">
+					<!--<table class="slaTable table table-bordered  table-responsive">
+						<tbody>
+						<tr>
+							<td><i></i><span>金牌服务</span><span>服务描述，策略及相关要求</span></td>
+							<td><i></i><span>编辑</span></td>
+							<td><i></i><span>删除</span></td>
+							<td><i></i></td>
+						</tr>
+						<tr>
+							<td><i></i><span>金牌服务</span><span>服务描述，策略及相关要求</span></td>
+							<td><i></i><span>编辑</span></td>
+							<td><i></i><span>删除</span></td>
+							<td><i></i></td>
+						</tr>
+						<tr>
+							<td><i></i><span>金牌服务</span><span>服务描述，策略及相关要求</span></td>
+							<td><i></i><span>编辑</span></td>
+							<td><i></i><span>删除</span></td>
+							<td><i></i></td>
+						</tr>
+						</tbody>
+					</table>-->
+					<div class="slaTable">
+						<ul>
+							<li><i class='fl'></i>
+								<div class='service'>
+									<p class='service-title'>金牌服务</p>
+									<p>服务描述，策略及相关要求
+										<p>
+								</div>
+							</li>
+							<li><i></i><span>编辑</span></li>
+							<li><i></i><span>删除</span></li>
+							<li>
+								<div class="box">
+									<div class="btn" ></div>
+									<div class="bg"></div>
+								</div>
+							</li>
+
+						</ul>
+						<ul>
+							<li><i class='fl'></i>
+								<div class='service'>
+									<p class='service-title'>金牌服务</p>
+									<p>服务描述，策略及相关要求<p>
+								</div>
+							</li>
+							<li><i></i><span>编辑</span></li>
+							<li><i></i><span>删除</span></li>
+							<li><div class="box">
+									<div class="btn" ></div>
+									<div class="bg"></div>
+								</div>
+							</li>
+
+						</ul>
+						<ul>
+							<li><i class='fl'></i>
+								<div class='service'>
+									<p class='service-title'>金牌服务</p>
+									<p>服务描述，策略及相关要求<p>
+								</div>
+							</li>
+							<li><i></i><span>编辑</span></li>
+							<li><i></i><span>删除</span></li>
+							<li><div class="box">
+									<div class="btn" ></div>
+									<div class="bg"></div>
+								</div>
+							</li>
+
+						</ul>
+
+						<ul>
+							<li><i class='fl'></i>
+								<div class='service'>
+									<p class='service-title'>金牌服务</p>
+									<p>服务描述，策略及相关要求
+										<p>
+								</div>
+							</li>
+							<li><i></i><span>编辑</span></li>
+							<li><i></i><span>删除</span></li>
+							<li>
+								<div class="box">
+									<div class="btn" ></div>
+									<div class="bg"></div>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		  <!-- 500错误提示框 -->
+  <div class="modal fade" id="errorBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <p class="modal-body-row"><span class="question-info" id="errorInfo"></span></p>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-delete">删除</button> -->
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+      </div>
+  </div>
+		<p class="successTip" id="tipMsg"></p>
+
+		<!-- 以上是弹框div-------------------------------------------- -->
+		<!-- jquery  -->
+		<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+		<!-- bootstrap -->
+		<script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+		<script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+		<!--url 常量  -->
+		<script type="text/javascript" src="/js/variable.js"></script>
+		<!-- head -->
+		<script type='text/javascript' src="/js/head.js"></script>
+		<script type="text/javascript" src="/js/compentJS/jquery.ztree.core.js"></script>
+		<script type="text/javascript" src="/js/compentJS/zTree.js"></script>
+		<script type="text/javascript" src="/js/compentJS/cookie_util.js"></script>
+		<!-- scroll -->
+		<script type="text/javascript" src="/js/compentJS/jquery.mCustomScrollbar.js"></script>
+
+		<script type="text/javascript" src="/js/compentJS/loadListCommon.js"></script>
+		<script type="text/javascript" src="/js/compentJS/elementController.js"></script>
+		<script type="text/javascript" src="/js/eventDetail.js"></script>
+		<!-- 绑定数据 -->
+		<script type="text/javascript" src="/js/transparency.min.js"></script>
+		<!--302error-->
+		<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+
+		<script>
+
+
+	 		$('.btn').click(function(){
+				$(this).toggleClass('active');
+
+			})
+
+			$('.selectpicker').selectpicker({
+				size: 6,
+			});
+			$('.selectpicker').selectpicker('refresh');
+			$("#print .modal-body-reqCon").mCustomScrollbar({
+				setHeight: 330,
+				theme: "3d-dark"
+			});
+			$(".allContract").mCustomScrollbar({
+				theme: "3d-dark"
+			});
+			$("div.modal-body-bottom,div.event-session-leftDown").mCustomScrollbar({
+				theme: "3d-dark"
+			});
+		</script>
+	</body>
+
+</html>

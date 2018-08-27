@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+
+		<title>最近30天登记的资产</title>
+		<!-- reset -->
+		<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap-select.css">
+		<link rel="stylesheet" href="/css/compentCSS/jquery.mCustomScrollbar.css">
+		<!-- tree -->
+		<link rel="stylesheet" href="/tree/ui.dynatree.css">
+		<!-- head -->
+		<link rel="stylesheet" href="/css/head.css" type="text/css">
+		<!-- leftTree -->
+		<link rel="stylesheet" href="/css/assetLeftTree.css">
+		<!-- pup -->
+		<link rel="stylesheet" href="/css/popUp.css" type="text/css">
+		<!-- zTree -->
+		<link rel="stylesheet" href="/css/compentCSS/zTreeStyle.css">
+		<link rel="stylesheet" href="/css/table.css">
+		<link rel="stylesheet" type="text/css" href="/css/lastThirtyAsset.css" type="text/css">
+	</head>
+	<body>
+		<div id="header">
+			<div class="w">
+				<div class="logo fl"></div>
+				<ul class="list fr">
+					<li class="help fl">
+						<span class="helpPic"></span> 帮助
+					</li>
+					<li class="manager fl">
+						<span class="managerPic"></span> 管理
+					</li>
+					<li class="notify fl">
+						<span class="notifyPic"></span> 通知
+						<div class="notify-wrap">
+							<p class="notify-wrap-up">通知
+								<button class="notify-wrap-upClear">清空</button>
+							</p>
+							<ul class="notify-list">
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+							</ul>
+							<p class="notify-wrap-down">
+								<a href="#">更多>></a>
+							</p>
+						</div>
+					</li>
+					<li class="pInfo fl" id="userInfo"><i class="userName" data-bind="userName"></i>
+						<span class="userHeader"></span>
+						<div class="userInfo-wrap">
+							<div class="userInfo">
+								<!--<img src="" alt=""  class="userHead"/>-->
+								<span class="fl userHead"></span>
+								<div class="userInfo-right">
+									<p data-bind="userName"></p>
+									<p><span data-bind="position"></span>&nbsp;<span data-bind="department"></span></p>
+								</div>
+								<div class="userInfoOperation">
+									<p class="userInfoOperationBox">
+										<input type="button" value="我的账户" class="myAccout" />
+										<a id="logout" class="logout">退出</a>
+									</p>
+
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="nav">
+			<div class="w">
+				<ul class="fl">
+					<li class="navlist fl navlist1 navNoChangeList">
+						<span class="navlist-img navlist-img1"></span>工作台</li>
+					<li class="navlist fl navlist2 navNoChangeList">
+						<span class="navlist-img navlist-img2"></span>事件</li>
+					<li class="navlist fl navlist3 navNoChangeList active">
+						<span class="navlist-img navlist-img3"></span>资产</li>
+					<li class="navlist fl navlist4 navNoChangeList">
+						<span class="navlist-img navlist-img4"></span>合同</li>
+					<li class="navlist fl navlist5 navNoChangeList">
+						<span class="navlist-img navlist-img5"></span>项目</li>
+					<li class="navlist fl navlist6 nav-add-item1 navNoChangeList navChangeList lastNavlist">
+						<span class="navlist-img navlist-img6"></span>供应商
+					</li>
+					<li class="navlist fl navlist7 nav-add-item2 navChangeList">
+						<span class="navlist-img navlist-img7"></span>管理
+					</li>
+				</ul>
+
+				<div id="nav-add-container">
+					<span class="nav-add"></span>
+					<div class="nav-add-wrap">
+						<div class="nav-add-overHidden">
+							<ul class="nav-add-list">
+								<li class="nav-add-item hide" id="nav-add-item1">
+									<p></p>供应商</li>
+								<li class="nav-add-item" id="nav-add-item2">
+									<p></p>报表</li>
+							</ul>
+						</div>
+						<span class="nav-add-trangle nav-add-trangleLeft"></span>
+						<span class="nav-add-trangle nav-add-trangleRight"></span>
+					</div>
+				</div>
+
+				<div class="fr nav-right-search">
+					<input type="text" value="" class="fr">
+					<div class="dropdownDiv">
+						<span class="nav-right-selectedWord" id="">所有</span>
+						<span class="nav-right-searchpng"></span>
+						<span class="caret nav-right-caret"></span>
+					</div>
+
+					<div class="right-search-wrap dn">
+						<div class="right-search-container">
+								<div class="right-search-list">所有</div>
+								<div class="right-search-list">事件</div>
+								<div class="right-search-list">资产</div>
+								<div class="right-search-list">合同</div>
+								<div class="right-search-list">项目</div>
+								<div class="right-search-list">供应商</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="nav-right-newAdd fr">
+					<span></span>
+					<ul>
+						<li><i class="add-img1"></i>新建事件</li>
+						<li><i class="add-img2"></i>新建资产</li>
+						<li><i class="add-img3"></i>新建合同</li>
+						<li><i class="add-img4"></i>新建项目</li>
+						<li><i class="add-img5"></i>新建供应商</li>
+					</ul>
+				</div>
+
+				<div class="nav-right-recentRecord fr">
+					<span></span>
+					<div class="nav-right-reRecordWrap">
+						<p class="nav-right-reRecordTitle">最近访问的项</p>
+						<ul id="history"></ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="moveWrap"><i class="navMove"></i></div>
+
+		</div>
+
+		<div id="container" class="w">
+			<!-- 左侧侧边栏 -->
+			<div class="leftList fl">
+				<!--左侧树形结构容器-->
+				<!--<div id="leftTreeWrap">
+				</div>-->
+				<div id="treeLazyBox" style="height:100%;"><!--ztree父容器-->
+					<div id="treeLazyBox" style="height:100%;"><!--ztree容器-->
+						<div class="leftCol fl"></div><!--左侧条-->
+						<div id="treeLazy">
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 右侧内容 -->
+			<!-- 右侧图表 -->
+			<div class="rightCont fl">
+				<div class="r-title">资产分析</div>
+				<div class="rigthBottom">
+					<div class="echart-1 fl">
+						<div class="takePlace dn">
+							<p class="title1">资产分类占比</p>
+							<img src="../imgs/common/takePlace.png" alt="" />
+							<p><span>目前暂无满足条件的数据，请</span><a href='assetAdd.html' class="addButton" id="">添加</a></p>
+						</div>
+
+						<p id="upClassify" class="update di"></p>
+						<div id="classify" style="width: 100%;height: 100%"></div>
+					</div>
+					<div class="echart-2 fr">
+						<p class="update di"></p>
+						<div id="echart-line" style="width: 100%;height: 100%"></div>
+					</div>
+					<div class="echart-3 fl">
+						<p id="upResource_column" class="update di"></p>
+						<div id="resource_column" style="width: 100%;height: 100%"></div>
+					</div>
+				</div>
+			</div>
+
+			<div id="right" class="fl">
+				<div class="rightTitle"><span id="titleSubId"></span>
+					<button class="right-addAsset" id="createHelp">添加新资产</button>
+				</div>
+				<div class="rightTip">
+					<div class="rightTipRes">
+						<span id="resCountsUp" class="res-countsData-update"></span>
+						<ul id="res_countsData"></ul>
+					</div>
+				</div>
+				<!-- 右侧部分 -->
+				<div class="rightCon rightConData">
+					<div class="rightCon-up">
+						<select class="selectpicker  rightCon-up-left init" id="comparableSel">
+							<option value="data_per.create_time">创建日期</option>
+							<option value="data_per.warranty">到期日期</option>
+							<option value="data_per.modify_time">最后修改日期</option>
+							<option value="data_per.importance">优先级</option>
+							<option value="data_per.usestatus">状态</option>
+						</select>
+						<!-- 排序 -->
+						<div class="rightCon-sortWarp di" id="sort">
+							<span class="rightCon-sort-asc rightCon-sort di" id="sortUp"><input type="hidden" value="ASC"></span><span class="rightCon-sort-des rightCon-sort active di" id="sortDown"><input type="hidden" value="DESC"></span>
+						</div>
+
+						<!-- 搜索 -->
+						<div class="di rightCon-up-center">
+							<div class="input-group  AssetFindBox">
+								<!--<span class="rightCon-up-center-search di"></span>-->
+								<input type="text" class="form-control" placeholder="搜索..." id="likeId">
+								<i id="AssetFind"></i>
+							</div>
+						</div>
+
+						<!-- 页数 -->
+						<div class="di rightCon-page fr" id="pageSmall">
+							<span>显示</span>&nbsp;<span data-bind="firstData"></span>&nbsp;<span>-</span>&nbsp;<span data-bind="lastData"></span>&nbsp;<span>，</span>&nbsp;<span>共</span>&nbsp;<span class="rightCon-page-count" data-bind="totalNums"></span>&nbsp;<span>条</span>&nbsp;&nbsp;<p class="di"><span data-bind="prevPageFlagSmall" id="prevPageSmallId" class="prevPageSmallId"></span><span data-bind="nextPageFlagSmall" id="nextPageSmallId" class="nextPageSmallId"></span></p>
+						</div>
+
+					</div>
+					<div class="rightCon-bottom">
+						<div class="rightCon-bottom-con">
+							<p class="rightCon-bottom-operate">
+								<button id="create" class="bto bto1 active">新建</button>
+								<button id="delete" class="bto bto2 opeBto default">删除</button>
+								<button id="chooseDept" class="bto bto3 opeBto default">指派部门</button>
+								<button id="changeState" class="bto bto4 opeBto default">修改状态</button>
+								<button id="depreciated" class="bto bto5 opeBto default">配置折旧</button>
+								<button id="conn_contract" class="bto bto7 opeBto default">关联合同</button>
+
+								<span class="fr in-out export "><i class="di"></i>导出</span>
+								<span class="fr in-out import "><i class="di"></i>导入</span>
+							</p>
+
+							<!-- pup -->
+							<div class="modal fade" id="pupDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+										</div>
+										<div class="modal-body">
+											<span class="question"></span>是否确定要删除选定资产
+										</div>
+										<div class="modal-footer">
+											<button type="button" id="delConfirm" class="btn btn-delete">删除</button>
+											<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal fade" id="assign" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">指派资源到部门
+											<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+										</div>
+										<div class="modal-body">
+											<div class="modal-body-row">
+												<p class="di">部门<span class="modal-body-start">*</span></p>
+												<!-- <select id="chooseDepartment"></select> -->
+												<input type="text" id="department" readonly>
+												<input type="text" value="" id="departmentCode" style="display: none" />
+												<div id="department-menu" class="menus" style="display: none;">
+													<ul id="department-tree" class="ztree"></ul>
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" id="setDeptConfirm" class="btn btn-keep">保存</button>
+											<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal fade" id="changeStatus" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">修改状态
+											<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+										</div>
+										<div class="modal-body">
+											<div class="modal-body-row">
+												<p class="di changeStatusName">修改状态<span class="modal-body-start">*</span></p>
+												<select id="statusSelect" class="selectpicker">
+													<option value="20">采购</option>
+													<option value="21">库存</option>
+													<option value="22">使用</option>
+													<option value="23">停用</option>
+													<option value="24">报废</option>
+												</select>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" id="changeStatusConfirm" class="btn btn-keep">保存</button>
+											<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal fade" id="depreciate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">配置折旧
+											<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+										</div>
+										<div class="modal-body">
+											<div class="modal-body-row">
+												<p class="di">折旧方法<span class="modal-body-start">*</span></p>
+												<select></select>
+												<div class="modal-body-radioGroup">
+													<div class="radio di">
+														<input type="radio" name='name'><span>使用寿命</span>
+													</div>
+													<div class="radio di">
+														<input type="radio" name='name'><span>递减百分比</span>
+													</div>
+												</div>
+											</div>
+											<div class="modal-body-row">
+												<p class="di">使用寿命<span class="modal-body-start">*</span></p>
+												<input type="text">
+											</div>
+											<div class="modal-body-row">
+												<p class="di">折残值($)</p>
+												<input type="text">
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" id="depreciateConfirm" class="btn btn-keep">保存</button>
+											<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="modal fade" id="relateAsset" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">关联资产到合同
+											<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+										</div>
+										<div class="modal-body">
+											<div class="modal-body-up">
+
+												<p class="di modal-body-up-search">合同搜索<input type="text" placeholder="搜索..." id="contractSearch"></p>
+												<p class="di modal-body-up-page" id="contractPage">
+													<span class="body-up-pageTxt">显示</span>
+													<span class="body-up-pageTxt" data-bind="beginCount"></span>
+													<span class="body-up-pageTxt">-</span>
+													<span class="body-up-pageTxt" data-bind="endCount"></span>
+													<span class="body-up-pageTxt">共</span>
+													<span class="body-up-pageTxt" data-bind="totalCount"></span>
+													<input type="hidden" id="currPage">
+													<input type="hidden" id="totalPage">
+
+													<span data-bind="upConPage" id="upConPageId"></span>
+													<span data-bind="nextConPage" id="nextConPageId"></span>
+
+												</p>
+											</div>
+											<div class="modal-body-bottom">
+												<div class="modal-body-bottom-title">
+													<p class="modal-body-bottom-titleItem di">合同名称</p>
+													<p class="modal-body-bottom-titleItem di">合同编号</p>
+													<p class="modal-body-bottom-titleItem di">合同厂商</p>
+													<p class="modal-body-bottom-titleItem di">签署年月</p>
+													<p class="modal-body-bottom-titleItem di">合同期限</p>
+												</div>
+												<div id="modal-body-bottom-rowWrap"></div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" id="conn_contractConfirm" class="btn btn-keep">保存</button>
+											<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div id="hasNoData">
+							    <!--站位文字和图片-->
+							    <div class="takePlace dn">
+				                  <img src="../imgs/common/takePlace.png" alt="" />
+				                  <p><span>目前暂无满足条件的数据，请</span><a class="addButton">添加</a></p>
+			                  </div>
+              				</div>
+							<div class="tableWrap" id="tableWrap">
+								<div class="tableRow" id="dataHelp">
+									<div class="di tableCol tableCol-1" id="checkBoxId">
+										<span class="checked di">
+						    				<input type="hidden" data-bind="id">
+						  				</span>
+									</div>
+
+									<div class="di tableCol tableCol-2">
+										<p><span class="tableColKey">名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</span><span class="tableColVal" data-bind="resource_name" id="nameClickId"></span></p>
+										<p><span class="tableColKey">资产类型：</span><span class="tableColVal"  data-bind="category_name"></span><span class="hengxian"> - </span><span class="tableColVal"  data-bind="level_2_name"></span><span class="hengxian"> - </span><span class="tableColVal"  data-bind="level_3_name"></span></p>
+										<p><span class="tableColKey">品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌：</span><span class="tableColVal tableColBrand"  data-bind="symbol_name"></span><span class="tableColKey model">型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</span><span class="tableColVal" data-bind="model_name"></span></p>
+									</div>
+
+									<div class="di tableCol tableCol-3">
+										<span data-bind="protect"></span>
+										<span class="" data-bind="categoryImg"></span>
+									</div>
+
+									<div class="di tableCol tableCol-4" id="updateResDiv">
+										<input type="hidden" data-bind="id">
+										<button class="table-asset-status" data-bind="updateBtn">更新</button>
+										<div data-bind="resStatus">
+											<div data-bind="status_id" class="solidWidth">资产状态：</div>
+
+											<select class="selectpicker updateStatusFlag" name="usestatus" data-bind="statusSel">
+												<option data-bind="resource_usestatus_name"> </option>
+											</select>
+										</div>
+										<div class="tableCol4-3" style="position: relative" data-bind="updateResDept">
+											<!-- <span  class="solidWidth">部&ensp;&ensp;&ensp;&ensp;门：</span>
+											<input type="hidden" data-bind="id">
+											<input type="text" readonly data-bind="departmentEditId" class="depart">
+											<span class="caret"></span>
+											<input type="text" value="" style="display: none" data-bind="departmentCodeEditId" /> -->
+
+											<span  class="solidWidth">部&ensp;&ensp;&ensp;&ensp;门：</span>
+											<input type="hidden" data-bind="id">
+											<button type="button" readonly data-bind="departmentEditId" class="depart">
+												<span class="departContent"></span>
+												<span class="caret"></span>
+											</button>
+											<input type="text" value="" style="display: none" data-bind="departmentCodeEditId" />
+
+											<div class="menus depart" style="display: none;" data-bind="sectionMenuId">
+												<ul class="ztree departmenu" data-bind="sectionTreeId"></ul>
+											</div>
+										</div>
+										<div id="resUser">
+											<!-- <span data-bind="user_id"  class="solidWidth">使&nbsp;&nbsp;用&nbsp;&nbsp;人：</span> -->
+											<span data-bind="user_id"  class="solidWidth">使&ensp;用&ensp;人：</span>
+
+											<select class="selectpicker updateUserFlag" name="use_person_id" data-bind="userSel">
+												<option data-bind="use_person_id_name">&ensp;&ensp;</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pageChange" id="pageHelp">
+							<span class="pageChange-span1 pageChange-span di" id="prePageId" data-bind="prevPageDis">
+					<span class="di pageChange-span-up" data-bind="prevPageFlag"></span>上一页</span>
+							<span class="pageChange-span2 pageChange-span di" data-bind="currentPage" id="currentPageId"></span>
+							<span class="pageChange-span3 pageChange-span di" id="nextPageId" data-bind="nextPageDis">
+					下一页<span class="di pageChange-span-down" data-bind="nextPageFlag"></span>
+							</span>
+							<span class="txt">共<span data-bind="totalPage"></span>页，到第</span>
+							<!-- <span class="pageChange-span4 pageChange-span di">1</span> -->
+							<input type="text" class="pageChange-span4 pageChange-span di" id="goPageInput" data-bind="pageInput">
+							<span class="txt">页</span>
+							<span class="pageChange-span5 pageChange-span di" id="goPageId">确定</span>
+							<input type="hidden" data-bind="totalPage" id="totalPageId">
+							<input type="hidden" id="categoryIdHelp">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--备件库-->
+			<div id="right1" class="fl">
+				<!--title-->
+				<div class="right1-title">
+					<span id="librarySpare">备件库</span>
+				</div>
+				<!--content-->
+				<div class="right1-content">
+					<!--内部-->
+					<div class="right1-content-equipment">
+						<div class="right1-content-title1">
+							<p class="right1-content-btn">
+								<button id="addEquipment">添加新设备</button>
+								<button id="equipmentDelivery">出库</button>
+								<button id="equipmentStorage">入库</button>
+							</p>
+							<div class="right1-content-btn2">
+								<span id="contentStape"><i></i><span>打印</span></span>
+								<span id="contentDelivery"><i></i><span>导出</span></span>
+							</div>
+						</div>
+						<div class="right1-content-title2">
+							<ul class="right1-content-page">
+								<li>序号</li>
+								<li>设备名称</li>
+								<li>总数</li>
+								<li>品牌</li>
+								<li>型号</li>
+								<li>数量</li>
+								<li>操作</li>
+							</ul>
+						</div>
+						
+						<ul class="right1-content-equipments">
+							<li>1</li>
+							<li>雷达水位计</li>
+							<li>4</li>
+							<li>徐州维恩</li>
+							<li>WT-3</li>
+							<li>4</li>
+							<li>
+								<span class=""><i class="icon11"></i><span>编辑</span></span>
+								<span class="right1-content-ctrol"><i class="icon12"></i><span>删除</span></span>
+							</li>
+						</ul>
+						<!---->
+						<ul class="right1-content-equipments right1-content-equipmentctrol">
+							<li>2</li>
+							<li>雷达水位计</li>
+							<li>4</li>
+							<li>
+								<p>徐州维恩</p>
+								<p>dsa</p>
+								<p>sadsadsa</p>
+							</li>
+							<li>WT-3</li>
+							<li>4</li>
+							<li>
+								<span class=""><i class="icon11"></i><span>编辑</span></span>
+								<span class="right1-content-ctrol"><i class="icon12"></i><span>删除</span></span>
+							</li>
+						</ul>
+						
+						<ul class="right1-content-equipments">
+							<li>3</li>
+							<li>雷达水位计</li>
+							<li>4</li>
+							<li>徐州维恩</li>
+							<li>WT-3</li>
+							<li>4</li>
+							<li>
+								<span class=""><i class="icon11"></i><span>编辑</span></span>
+								<span class="right1-content-ctrol"><i class="icon12"></i><span>删除</span></span>
+							</li>
+						</ul>
+						<ul class="right1-content-equipments">
+							<li>4</li>
+							<li>雷达水位计</li>
+							<li>4</li>
+							<li>徐州维恩</li>
+							<li>WT-3</li>
+							<li>4</li>
+							<li>
+								<span class=""><i class="icon11"></i><span>编辑</span></span>
+								<span class="right1-content-ctrol"><i class="icon12"></i><span>删除</span></span>
+							</li>
+						</ul>
+						<ul class="right1-content-equipments">
+							<li>5</li>
+							<li>雷达水位计</li>
+							<li>5</li>
+							<li>徐州维恩</li>
+							<li>WT-3</li>
+							<li>5</li>
+							<li>
+								<span class=""><i class="icon11"></i><span>编辑</span></span>
+								<span class="right1-content-ctrol"><i class="icon12"></i><span>删除</span></span>
+							</li>
+						</ul>
+						<ul class="right1-content-equipments">
+							<li>6</li>
+							<li>雷达水位计</li>
+							<li>4</li>
+							<li>徐州维恩</li>
+							<li>WT-3</li>
+							<li>6</li>
+							<li>
+								<span class=""><i class="icon11"></i><span>编辑</span></span>
+								<span class="right1-content-ctrol"><i class="icon12"></i><span>删除</span></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--right2-content-->
+				<div class="right2-content">
+					
+					<!--内部-->
+					<div class="right1-content-equipment">
+						<div class="right1-content-title1">
+							<div class="right1-content-attachment di">
+								<p class="right1-content-title5 di">备件:</p>
+								<div class="right1-content-select5 di">
+									<select class="selectpicker">
+										<option>全部</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+									</select>
+								</div>
+							</div>
+							<div class="right1-content-Storage di">
+								<p class="di">入库期:</p>
+								<button id="RightToday" class="right1-content-twc active">今日</button>
+								<button id="RightWeek" class="right1-content-twc">本周</button>
+								<button id="RightCustom" class="right1-content-twc">自定义</button>
+							</div>
+							<div class="right1-content-btn2">
+								<span id="contentStape"><i></i><span>打印</span></span>
+								<span id="contentDelivery"><i></i><span>导出</span></span>
+							</div>
+						</div>
+						<div class="right1-content-title2">
+							<ul class="right1-content-page">
+								<li>序号</li>
+								<li>设备名称</li>
+								<li>总数</li>
+								<li>品牌</li>
+								<li>型号</li>
+								<li>数量</li>
+								<li>操作</li>
+							</ul>
+						</div>
+						
+						<ul class="right1-content-equipments">
+							<li>1</li>
+							<li>雷达水位计</li>
+							<li>4</li>
+							<li>徐州维恩</li>
+							<li>WT-3</li>
+							<li>4</li>
+							<li>
+								<span class=""><i class="icon11"></i><span>编辑</span></span>
+								<span class="right1-content-ctrol"><i class="icon12"></i><span>删除</span></span>
+							</li>
+						</ul>
+						<!---->
+						<ul class="right1-content-equipments right1-content-equipmentctrol">
+							<li>2</li>
+							<li>雷达水位计</li>
+							<li>4</li>
+							<li>
+								<p>徐州维恩</p>
+								<p>dsa</p>
+								<p>sadsadsa</p>
+							</li>
+							<li>WT-3</li>
+							<li>4</li>
+							<li>
+								<span class=""><i class="icon11"></i><span>编辑</span></span>
+								<span class="right1-content-ctrol"><i class="icon12"></i><span>删除</span></span>
+							</li>
+						</ul>
+						
+						<ul class="right1-content-equipments">
+							<li>3</li>
+							<li>雷达水位计</li>
+							<li>4</li>
+							<li>徐州维恩</li>
+							<li>WT-3</li>
+							<li>4</li>
+							<li>
+								<span class=""><i class="icon11"></i><span>编辑</span></span>
+								<span class="right1-content-ctrol"><i class="icon12"></i><span>删除</span></span>
+							</li>
+						</ul>
+						<ul class="right1-content-equipments">
+							<li>4</li>
+							<li>雷达水位计</li>
+							<li>4</li>
+							<li>徐州维恩</li>
+							<li>WT-3</li>
+							<li>4</li>
+							<li>
+								<span class=""><i class="icon11"></i><span>编辑</span></span>
+								<span class="right1-content-ctrol"><i class="icon12"></i><span>删除</span></span>
+							</li>
+						</ul>
+						<ul class="right1-content-equipments">
+							<li>5</li>
+							<li>雷达水位计</li>
+							<li>5</li>
+							<li>徐州维恩</li>
+							<li>WT-3</li>
+							<li>5</li>
+							<li>
+								<span class=""><i class="icon11"></i><span>编辑</span></span>
+								<span class="right1-content-ctrol"><i class="icon12"></i><span>删除</span></span>
+							</li>
+						</ul>
+						<ul class="right1-content-equipments">
+							<li>6</li>
+							<li>雷达水位计</li>
+							<li>4</li>
+							<li>徐州维恩</li>
+							<li>WT-3</li>
+							<li>6</li>
+							<li>
+								<span class=""><i class="icon11"></i><span>编辑</span></span>
+								<span class="right1-content-ctrol"><i class="icon12"></i><span>删除</span></span>
+							</li>
+						</ul>
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+
+				</div>
+				
+			</div>
+			
+		</div>
+		<!--编辑新设备-->
+		<div class="modal fade" id="createNewUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="closeImg fr">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		          <div class="modal-header">添加(编辑)新设备
+		            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+		          </div>
+		          <form id="addData">
+			          <div class="modal-body">
+			            <div class="di modal-body-item">
+							<p class="di modal-body-item-name">备件类型<span class="modal-body-item-type">*</span></p>
+							<div class="di modal-body-item-selectType modal-body-ctrol">
+								<select class="selectpicker">
+									<option>雨量筒</option>
+									<option>与粮库</option>
+									<option>1234</option>
+									<option>sdadsa</option>
+								</select>
+							</div>
+			            </div>
+			            <div class="modal-body-item moadl-body-desctibe">
+			         		<p class="di modal-body-item-name modal-body-item-desctibe">描述</p>
+			         		<textarea></textarea>
+			          	</div>
+			          </div>
+		          </form>
+		          <div class="modal-footer">
+		            <button type="button" class="btn btn-keep">保存</button>
+		            <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+		          </div>
+		        </div>
+		    </div>
+    	</div>
+    	
+		<!--入库弹窗-->
+		<div class="modal fade" id="createStorage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="closeImg fr">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		          <div class="modal-header">入库
+		            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+		          </div>
+		          <form id="addDataBind">
+			          <div class="modal-body">
+			          	<div class="modal-body-allcontent">
+				           	<ul class="modal-body-title clearfix">
+				           		<li class="modal-body-content1"><i class="icon13"></i><span>添加</span></li>
+				           		<li class="modal-body-content1">备件类型</li>
+				           		<li class="modal-body-content1">数量</li>
+				           		<li class="modal-body-content1">品牌</li>
+				           		<li class="modal-body-content1">型号</li>
+				           		<li class="modal-body-content1">关联合同</li>
+				           	</ul>
+				           	<div class="modal-content-ctrol" id="Storagemodal">
+				           		
+					           	<ul class="modal-body-content">
+					           		<li class="modal-body-content1"><i class="icon14"></i></li>
+					           		<li class="modal-body-select1 modal-body-content1">
+					           			<select class="selectpicker">
+					           				<option>雨量筒0</option>
+					           				<option>雨量筒1</option>
+					           				<option>雨量筒2</option>
+					           				<option>雨量筒3</option>
+					           			</select>
+					           		</li>
+					           		<li class="modal-body-content1 ">
+					           			<input type="text" class="modal-body-input1"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input2"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input3"/>
+					           		</li>
+					           		<li class="modal-body-content1 modal-body-select2">
+					           			<select class="selectpicker">
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           			</select>
+					           		</li>
+					           	</ul>
+					           	
+					           	<ul class="modal-body-content">
+					           		<li class="modal-body-content1"><i class="icon14"></i></li>
+					           		<li class="modal-body-select1 modal-body-content1">
+					           			<select class="selectpicker">
+					           				<option>雨量筒0</option>
+					           				<option>雨量筒1</option>
+					           				<option>雨量筒2</option>
+					           				<option>雨量筒3</option>
+					           			</select>
+					           		</li>
+					           		<li class="modal-body-content1 ">
+					           			<input type="text" class="modal-body-input1"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input2"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input3"/>
+					           		</li>
+					           		<li class="modal-body-content1 modal-body-select2">
+					           			<select class="selectpicker">
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           			</select>
+					           		</li>
+					           	</ul>
+					           	
+					           	<ul class="modal-body-content">
+					           		<li class="modal-body-content1"><i class="icon14"></i></li>
+					           		<li class="modal-body-select1 modal-body-content1">
+					           			<select class="selectpicker">
+					           				<option>雨量筒0</option>
+					           				<option>雨量筒1</option>
+					           				<option>雨量筒2</option>
+					           				<option>雨量筒3</option>
+					           			</select>
+					           		</li>
+					           		<li class="modal-body-content1 ">
+					           			<input type="text" class="modal-body-input1"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input2"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input3"/>
+					           		</li>
+					           		<li class="modal-body-content1 modal-body-select2">
+					           			<select class="selectpicker">
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           			</select>
+					           		</li>
+					           	</ul>
+					           	
+					           	<ul class="modal-body-content">
+					           		<li class="modal-body-content1"><i class="icon14"></i></li>
+					           		<li class="modal-body-select1 modal-body-content1">
+					           			<select class="selectpicker">
+					           				<option>雨量筒0</option>
+					           				<option>雨量筒1</option>
+					           				<option>雨量筒2</option>
+					           				<option>雨量筒3</option>
+					           			</select>
+					           		</li>
+					           		<li class="modal-body-content1 ">
+					           			<input type="text" class="modal-body-input1"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input2"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input3"/>
+					           		</li>
+					           		<li class="modal-body-content1 modal-body-select2">
+					           			<select class="selectpicker">
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           			</select>
+					           		</li>
+					           	</ul>
+					           	
+					           	<ul class="modal-body-content">
+					           		<li class="modal-body-content1"><i class="icon14"></i></li>
+					           		<li class="modal-body-select1 modal-body-content1">
+					           			<select class="selectpicker">
+					           				<option>雨量筒0</option>
+					           				<option>雨量筒1</option>
+					           				<option>雨量筒2</option>
+					           				<option>雨量筒3</option>
+					           			</select>
+					           		</li>
+					           		<li class="modal-body-content1 ">
+					           			<input type="text" class="modal-body-input1"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input2"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input3"/>
+					           		</li>
+					           		<li class="modal-body-content1 modal-body-select2">
+					           			<select class="selectpicker">
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           			</select>
+					           		</li>
+					           	</ul>
+					           	
+					           	<ul class="modal-body-content">
+					           		<li class="modal-body-content1"><i class="icon14"></i></li>
+					           		<li class="modal-body-select1 modal-body-content1">
+					           			<select class="selectpicker">
+					           				<option>雨量筒0</option>
+					           				<option>雨量筒1</option>
+					           				<option>雨量筒2</option>
+					           				<option>雨量筒3</option>
+					           			</select>
+					           		</li>
+					           		<li class="modal-body-content1 ">
+					           			<input type="text" class="modal-body-input1"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input2"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input3"/>
+					           		</li>
+					           		<li class="modal-body-content1 modal-body-select2">
+					           			<select class="selectpicker">
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           			</select>
+					           		</li>
+					           	</ul>
+				           	</div>
+			            </div>
+			          </div>
+		          </form>
+		          <div class="modal-footer">
+		            <button type="button" class="btn btn-keep">入库</button>
+		            <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+		          </div>
+		        </div>
+		    </div>
+    	</div>
+		<!--出库弹窗-->
+		<div class="modal fade" id="createOutStorage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="closeImg fr">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		          <div class="modal-header">出库
+		            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+		          </div>
+		          <form id="addDataoutBind">
+			          <div class="modal-body">
+			          	<div class="modal-body-allcontent">
+				           	<ul class="modal-body-title clearfix">
+				           		<li class="modal-body-content1"><i class="icon13"></i><span>添加</span></li>
+				           		<li class="modal-body-content1">备件类型</li>
+				           		<li class="modal-body-content1">数量</li>
+				           		<li class="modal-body-content1">品牌</li>
+				           		<li class="modal-body-content1">型号</li>
+				           		<li class="modal-body-content1">关联合同</li>
+				           	</ul>
+				           	<div class="modal-content-ctrol" id="StorageOutmodal">
+				           		
+					           	<ul class="modal-body-content">
+					           		<li class="modal-body-content1"><i class="icon14"></i></li>
+					           		<li class="modal-body-select1 modal-body-content1">
+					           			<select class="selectpicker">
+					           				<option>雨量筒0</option>
+					           				<option>雨量筒1</option>
+					           				<option>雨量筒2</option>
+					           				<option>雨量筒3</option>
+					           			</select>
+					           		</li>
+					           		<li class="modal-body-content1 ">
+					           			<input type="text" class="modal-body-input1"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input2"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input3"/>
+					           		</li>
+					           		<li class="modal-body-content1 modal-body-select2">
+					           			<select class="selectpicker">
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           			</select>
+					           		</li>
+					           	</ul>
+					           	
+					           	<ul class="modal-body-content">
+					           		<li class="modal-body-content1"><i class="icon14"></i></li>
+					           		<li class="modal-body-select1 modal-body-content1">
+					           			<select class="selectpicker">
+					           				<option>雨量筒0</option>
+					           				<option>雨量筒1</option>
+					           				<option>雨量筒2</option>
+					           				<option>雨量筒3</option>
+					           			</select>
+					           		</li>
+					           		<li class="modal-body-content1 ">
+					           			<input type="text" class="modal-body-input1"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input2"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input3"/>
+					           		</li>
+					           		<li class="modal-body-content1 modal-body-select2">
+					           			<select class="selectpicker">
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           			</select>
+					           		</li>
+					           	</ul>
+					           	
+					           	<ul class="modal-body-content">
+					           		<li class="modal-body-content1"><i class="icon14"></i></li>
+					           		<li class="modal-body-select1 modal-body-content1">
+					           			<select class="selectpicker">
+					           				<option>雨量筒0</option>
+					           				<option>雨量筒1</option>
+					           				<option>雨量筒2</option>
+					           				<option>雨量筒3</option>
+					           			</select>
+					           		</li>
+					           		<li class="modal-body-content1 ">
+					           			<input type="text" class="modal-body-input1"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input2"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input3"/>
+					           		</li>
+					           		<li class="modal-body-content1 modal-body-select2">
+					           			<select class="selectpicker">
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           			</select>
+					           		</li>
+					           	</ul>
+					           	
+					           	<ul class="modal-body-content">
+					           		<li class="modal-body-content1"><i class="icon14"></i></li>
+					           		<li class="modal-body-select1 modal-body-content1">
+					           			<select class="selectpicker">
+					           				<option>雨量筒0</option>
+					           				<option>雨量筒1</option>
+					           				<option>雨量筒2</option>
+					           				<option>雨量筒3</option>
+					           			</select>
+					           		</li>
+					           		<li class="modal-body-content1 ">
+					           			<input type="text" class="modal-body-input1"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input2"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input3"/>
+					           		</li>
+					           		<li class="modal-body-content1 modal-body-select2">
+					           			<select class="selectpicker">
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           			</select>
+					           		</li>
+					           	</ul>
+					           	
+					           	<ul class="modal-body-content">
+					           		<li class="modal-body-content1"><i class="icon14"></i></li>
+					           		<li class="modal-body-select1 modal-body-content1">
+					           			<select class="selectpicker">
+					           				<option>雨量筒0</option>
+					           				<option>雨量筒1</option>
+					           				<option>雨量筒2</option>
+					           				<option>雨量筒3</option>
+					           			</select>
+					           		</li>
+					           		<li class="modal-body-content1 ">
+					           			<input type="text" class="modal-body-input1"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input2"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input3"/>
+					           		</li>
+					           		<li class="modal-body-content1 modal-body-select2">
+					           			<select class="selectpicker">
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           			</select>
+					           		</li>
+					           	</ul>
+					           	
+					           	<ul class="modal-body-content">
+					           		<li class="modal-body-content1"><i class="icon14"></i></li>
+					           		<li class="modal-body-select1 modal-body-content1">
+					           			<select class="selectpicker">
+					           				<option>雨量筒0</option>
+					           				<option>雨量筒1</option>
+					           				<option>雨量筒2</option>
+					           				<option>雨量筒3</option>
+					           			</select>
+					           		</li>
+					           		<li class="modal-body-content1 ">
+					           			<input type="text" class="modal-body-input1"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input2"/>
+					           		</li>
+					           		<li class="modal-body-content1">
+					           			<input type="text" class="modal-body-input3"/>
+					           		</li>
+					           		<li class="modal-body-content1 modal-body-select2">
+					           			<select class="selectpicker">
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           				<option>雨量筒</option>
+					           			</select>
+					           		</li>
+					           	</ul>
+				           	</div>
+			            </div>
+			            <!---->
+			            <div class="moadl-body-allcontent1">
+			            	<div class="moadl-body-text1">
+			            		<p class="moadl-body-title3 di">关联合同</p>
+			            		<div class="modal-body-select3 di">
+			            			<select class="selectpicker">
+			            				<option>1</option>
+			            				<option>2</option>
+			            				<option>3</option>
+			            			</select>
+			            		</div>
+			            	</div>
+			            	<div class="modal-body-text2">
+			            		<p class="moadl-body-title3 moadl-body-title4 di">出库说明</p>
+			            		<textarea class="moadl-body-textarea1"></textarea>
+			            	</div>
+			            </div>
+			            
+			          </div>
+		          </form>
+		          <div class="modal-footer">
+		            <button type="button" class="btn btn-keep">出库</button>
+		            <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+		          </div>
+		        </div>
+		    </div>
+    	</div>
+		
+		<!-- 500错误提示框 -->
+		<div class="modal fade" id="errorBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<p class="modal-body-row"><span class="question-info" id="errorInfo"></span></p>
+					</div>
+					<div class="modal-footer">
+						<!-- <button type="button" class="btn btn-delete">删除</button> -->
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="successTip" id="tipMsg"></p>
+		
+		<!-- jquery  -->
+		<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="/js/transparency.min.js"></script>
+		<!-- bootstrap -->
+		<script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+		<script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+		<!-- tree -->
+		<script type="text/javascript" src="/tree/jquery-ui.custom.js"></script>
+		<script type="text/javascript" src="/tree/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/js/compentJS/history.js"></script>
+		<script type="text/javascript" src="/tree/jquery.dynatree.js"></script>
+		<!-- leftTree -->
+		<script type="text/javascript" src="/js/assetLeftTree.js"></script>
+		<script type="text/javascript" src="/js/variable.js"></script>
+		<!-- head -->
+		<script type='text/javascript' src="/js/head.js"></script>
+		<!-- selecttree -->
+		<script type="text/javascript" src="/js/compentJS/selectTree.js"></script>
+		<!-- ztree -->
+		<script type="text/javascript" src="/js/compentJS/jquery.ztree.core.js"></script>
+		<script type="text/javascript" src="/js/compentJS/selectTree.js"></script>
+		<!-- Scrollbar -->
+		<script type="text/javascript" src="/js/compentJS/jquery.mCustomScrollbar.js"></script>
+		<!-- echart -->
+		<!--<script type="text/javascript" src="/js/compentJS/echarts.js"></script>-->
+
+		<script type="text/javascript" src="/js/echarts.min.js"></script>
+		<!--cookie-->
+		<script src="/js/compentJS/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/js/compentJS/zTree.js"></script>
+		<!--<script type="text/javascript" src="../js/checkSignInStatus.js"></script>-->
+
+		<!--302error-->
+		<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+		<script type="text/javascript" src="/js/lastThirtyAsset.js"></script>
+		<script type="text/javascript" src="/js/dashboard.js"></script>
+
+		<script>
+//			$(".leftList").mCustomScrollbar({
+//				theme: "3d-dark"
+//			});
+			$("#section-menu").mCustomScrollbar({
+				theme: "3d-dark"
+			});
+			$("#section-menu").mCustomScrollbar({
+				theme: "3d-dark"
+			});
+			//       $("#treeLazy").mCustomScrollbar({
+			//          theme:"3d-dark"
+			//      });
+			//备件库入库弹窗滚动条
+			 $("#Storagemodal").mCustomScrollbar({
+                scrollButtons:{
+                    enable:true,//是否显示上下箭头 注上下箭头的图片在 css/mCSB_buttons.png里面，要和css放一起
+                    //scrollType:"continuous",//点击滚动是否有停顿效果
+                    scrollType:"pixels",//点击滚动是否有停顿效果
+                    scrollSpeed:20,     //点击移动的速度
+                    scrollAmount:100 //点击滚动按钮移动的距离
+                },
+                set_height:"216px",//设置可见内容的高度
+                theme:"3d-thick"
+           	});
+           	//出库滚动条
+           	$("#StorageOutmodal").mCustomScrollbar({
+                scrollButtons:{
+                    enable:true,//是否显示上下箭头 注上下箭头的图片在 css/mCSB_buttons.png里面，要和css放一起
+                    //scrollType:"continuous",//点击滚动是否有停顿效果
+                    scrollType:"pixels",//点击滚动是否有停顿效果
+                    scrollSpeed:20,     //点击移动的速度
+                    scrollAmount:100 //点击滚动按钮移动的距离
+                },
+                set_height:"216px",//设置可见内容的高度
+                theme:"3d-thick"
+           	});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!--自动雨量水电站-->
+<!-- 增加或者修改-------------------------------->
+<div id="addUpFlag">
+	<p class="centerCon-titel">自动雨量站</p>
+	<p class="centerCon3-p2 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt">测站编码
+			<span class="centerCon-start">*</span>
+			<span class="errorTip errorB">不超过100个字符</span>
+			<span class="errorTipNull errorB">不能为空</span>
+			<span id="nameError" class="errorB"></span>
+		</span>
+		<input type="text" name="stationCode" class="hasTip notExceed100" >
+	</p>
+	
+	<p class="centerCon3-p3 centerCon-half di">
+		<span class="centerCon-txt">安装地点</span>
+		<input type="text" name="position" maxlength="100">
+	</p>
+	
+	<p class="centerCon3-p4 centerCon-half di centerCon-half-first">				
+		<span class="centerCon-txt">经度(度分秒方式)
+			<span class="centerCon-start">*</span>
+			<span class="errorTip errorB">不超过100个字符</span>
+			<span class="errorTipNull errorB">不能为空</span>
+			<span id="nameError" class="errorB"></span>
+		</span>
+		<input type="text" name="longitudeAndLatitude" class="hasTip notExceed100">
+	</p>
+	
+	<p class="centerCon3-p3 centerCon-half di">				
+		<span class="centerCon-txt">纬度(度分秒方式)
+			<span class="centerCon-start">*</span>
+			<span class="errorTip errorB">不超过100个字符</span>
+			<span class="errorTipNull errorB">不能为空</span>
+			<span id="nameError" class="errorB"></span>
+		</span>
+		<input type="text" name="longitudeAndLatituded" class="hasTip notExceed100">
+	</p>
+	
+	
+	
+	
+	
+	<p class="centerCon3-p4 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt">位置说明</span>
+		<input type="text" name="location" maxlength="100">
+	</p>
+	
+	<p class="centerCon3-p3 centerCon-half di">
+		<span class="centerCon-txt">联系人</span>
+		<input type="text" name="contact" maxlength="100">
+	</p>
+	
+	<p class="centerCon3-p4 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt">联系电话
+			<span class="conterCon-Iphone">你输入的电话号有误，请重新输入</span>
+		</span>
+		<input type="text" name="mobilephone2" class="hasaddIphone" >
+	</p>
+	
+	<p class="centerCon3-p3 centerCon-half di">
+		<span class="centerCon-txt">SIM卡号
+			<span class="centerCon-start">*</span>
+			<span class="errorTip errorB">不超过100个字符</span>
+			<span class="errorTipNull errorB">不能为空</span>
+			<span class="conterCon-Iphonemobile">你输入的手机号有误，请重新输入</span>
+			<span id="nameError" class="errorB"></span>
+		</span>
+		<input type="text" name="SIMcardnumber" class="hasaddmobilephone hasTip notExceed100">
+	</p>
+	
+	
+	
+	<p class="centerCon3-p4 centerCon-half di centerCon-half-first communication">
+		<span class="centerCon-txt">测控单元型号</span>
+		<input type="text" name="testunitmodel">
+	</p>
+	
+	
+	<p class="centerCon3-p3 centerCon-half di">
+		<span class="centerCon-txt">通讯方式</span>
+		<select class="" name="communicate" id="">
+			<option  value="">--请选择--</option>
+			<option  value="有线">有线</option>
+			<option  value="GPRS">GPRS</option>
+			<option  value="GSM">GSM</option>
+			<option  value="卫星">卫星</option>
+			<option  value="超短波">超短波</option>
+			<option  value="2.4G">2.4G</option>
+			<option  value="GSM/GPRS">GSM/GPRS</option>
+		</select>
+	</p>
+	
+	<p class="centerCon3-p4 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt">雨量计型号</span>
+		<input type="text" name="Typepluviometer" maxlength="100">
+	</p>
+	
+	<p class="centerCon3-p3 centerCon-half di">
+		<span class="centerCon-txt">雨量计类型</span>
+		<select class="" name="pluviometer" id="">
+			<option  value="">--请选择--</option>
+			<option  value="翻斗式">翻斗式</option>
+			<option  value="称重式">称重式</option>
+			<option  value="浮子式">浮子式</option>
+		</select>
+	</p>
+	
+	<p class="centerCon3-p4 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt">雨量计精度</span>
+		<input type="text" name="precisiongauge" maxlength="100">
+	</p>
+	
+	<p class="centerCon3-p3 centerCon-half di">
+		<span class="centerCon-txt">输出信号</span>
+		<select class="" name="outputsingal" id="">
+			<option  value="">--请选择--</option>
+			<option  value="模拟量">模拟量</option>
+			<option  value="脉冲量">脉冲量</option>
+			<option  value="振铉式">振铉式</option>
+			<option  value="智能传感器">智能传感器</option>
+			<option  value="格雷码式">格雷码式</option>
+		</select>
+	</p>
+	
+	<p class="centerCon3-p4 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt">供电方式</span>
+		<select class="" name="supplymode" >
+			<option  value="">--请选择--</option>
+			<option  value="电池">电池</option>
+			<option  value="交流电">交流电</option>
+			<option  value="直流电">直流电</option>
+		</select>
+	</p>
+	
+	<p class="centerCon3-p3 centerCon-half di">
+		<span class="centerCon-txt">太阳能板规格</span>
+		<input type="text" name="solarspecification" maxlength="100">
+	</p>
+	
+	<p class="centerCon3-p4 centerCon-half di centerCon-half-first">
+		<span class="centerCon-txt">蓄电池规格</span>
+		<input type="text" name="batteries" maxlength="100">
+	</p>
+</div>
+
+<!-------------------------------------------------详情------------------------------------------------------->
+<div id="detailFlag">
+  <p class="conright-infoWrapLeft-itemTitle">自动雨量站</p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">测站编码</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="stationCode"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">安装地点</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="position"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">经度(度分秒方式)</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="longitudeAndLatitude"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">纬度(度分秒方式)</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="longitudeAndLatituded"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">位置说明</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="location"></span>
+  </p>
+  
+  
+   <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">联系人</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="contact"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">联系电话</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="mobilephone2"></span>
+  </p>
+  
+   <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">SIM卡号</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="SIMcardnumber"></span>
+  </p>
+ 
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">测控单元型号</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="testunitmodel"></span>
+  </p>
+ 
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">通讯方式</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="communicate"></span>
+  </p>
+ 
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">雨量计型号</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="Typepluviometer"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">雨量计类型</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="pluviometer"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">雨量计精度</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="precisiongauge"></span>
+  </p>
+  
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">输出信号</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="outputsingal"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">供电方式</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="supplymode"></span>
+  </p>
+  
+   <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">太阳能板规格</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="solarspecification"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">蓄电池规格</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="batteries"></span>
+  </p>
+</div> 

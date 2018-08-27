@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>打印详情页面</title>
+		<!-- reset -->
+		<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+		<!-- scroll -->
+		<link rel="stylesheet" href="/css/compentCSS/jquery.mCustomScrollbar.css">
+    <!-- 自定义 -->
+    <link rel="stylesheet" href="/css/assetAddform.css" type="text/css">
+		<link rel="stylesheet" href="/css/printOrdDetail.css" type="text/css">
+	</head>
+	<body>
+		<div class="wrapper">
+      <div class="modal-body-reqCon" id="conright1">
+        <!-- 工单 -->
+        <div class="modal-body-everyItem workOrder">
+          <p class="event-details-title">工单</p>
+          <div class="line">
+						<p class="line-title">工单信息</p>
+            <p class="left-itemTitle">标题</p>
+            <p class="printData" data-bind="title"></p>
+            <p class="right-itemTitle">服务级别</p>
+            <p class="printData" data-bind="service_level_name"></p>
+          </div>
+          <div class="line">
+            <p class="left-itemTitle">执行人</p>
+            <p class="printData" data-bind="executor_name"></p>
+            <p class="right-itemTitle">联系人</p>
+            <p class="printData" data-bind=""></p>
+          </div>
+          <div class="line">
+            <p class="left-itemTitle">创建时间</p>
+            <p class="printData" data-bind="create_date"></p>
+            <p class="right-itemTitle">期望解决时间</p>
+            <p class="printData" data-bind="expect_time"></p>
+          </div>
+          <div class="line">
+            <p class="left-itemTitle">提交时间</p>
+            <p class="printData" data-bind="submit_time"></p>
+            <p class="right-itemTitle">审核时间</p>
+            <p class="printData" data-bind="audit_time"></p>
+          </div>
+
+          <div class="line">
+						<p class="line-title">工作内容</p>
+            <p class="printEventDescribe" data-bind=""></p>
+          </div>
+        </div>
+        <!-- 解决方案 -->
+        <div class="modal-body-everyItem solution">
+					<p class="event-details-title">解决方案</p>
+					<ul>
+						<li class="line">
+							<p class="left-itemTitle">原因分析</p>
+							<p class="printData" data-bind=""></p>
+							<p class="right-itemTitle">处理过程</p>
+							<p class="printData" data-bind=""></p>
+						</li>
+						<li class="line">
+							<p class="left-itemTitle">处理结果</p>
+							<p class="printData" data-bind=""></p>
+						</li>
+					</ul>
+        </div>
+        <!-- 工作日志 -->
+        <div class="modal-body-everyItem workLog">
+          <p class="event-details-title">工作日志</p>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th rowspan="2" class="fitstCol">工作日志</th>
+                <th rowspan="2" class="secondCol">工作耗时</th>
+                <th colspan="5">费用(元)</th>
+              </tr>
+              <tr>
+                <th>人力</th>
+                <th>差旅</th>
+                <th>配件</th>
+                <th>其他</th>
+                <th>总计</th>
+              </tr>
+            </thead>
+            <tbody id="table-bordered">
+	            <tr class="event-log-tableRow">
+	              <td class="firstCol">
+	                <div class="firstCol-left">
+	                  <i></i>
+	                  <p data-bind="person_name"></p>
+                  </div>
+                  <div class="firstCol-right">
+                    <p><span>填写时间：</span><span data-bind="create_time"></span></p>
+                    <p><span>日志内容：</span><span data-bind="content"></span></p>
+                  </div>
+                </td>
+                <td data-bind="time_consuming"></td>
+                <td data-bind="total_price"></td>
+                <td data-bind="mission_fee"></td>
+                <td data-bind="parts_fee"></td>
+                <td data-bind="others_fee"></td>
+                <td data-bind="total_fee"></td>
+	            </tr>
+            </tbody>
+            <tfoot id="workTotalTfoot">
+	            <tr class="event-log-lastTableRow">
+	              <td>总计</td>
+                <td id="workTimeSumP"></td>
+                <td id="perTotalPriceSumP"></td>
+                <td id="slipFeeSumP"></td>
+                <td id="partsFeeSumP"></td>
+                <td id="othersFeeSumP"></td>
+                <td id="totalFeeSumP"></td>
+	            </tr>
+            </tfoot>
+          </table>
+        </div>
+        <!-- 会话 -->
+        <div class="modal-body-everyItem conversition">
+          <p class="event-details-title">会话内容</p>
+          <div class="line conversation">
+							<p class="itemTitle" data-bind="name"></p>
+	            <p class="printData">
+								<span data-bind="content"></span>
+								<span data-bind="conversation_create_time"></span>
+							</p>
+
+          </div>
+        </div>
+        <!-- 历史 -->
+        <div class="modal-body-everyItem history">
+					<p class="event-details-title">历史</p>
+        </div>
+        <div id="personInfo">
+	        <!-- 请求人信息 -->
+	        <div class="modal-body-everyItem application">
+	          <p class="event-details-title">请求人明细</p>
+	          <div class="line">
+	            <p class="left-itemTitle">姓名</p>
+	            <p class="printData" data-bind="application_name"></p>
+	            <p class="right-itemTitle">移动电话</p>
+	            <p class="printData" data-bind="application_mobilephone"></p>
+	          </div>
+	          <div class="line">
+	            <p class="left-itemTitle">邮件</p>
+	            <p class="printData" data-bind="application_email"></p>
+	            <p class="right-itemTitle">部门</p>
+	            <p class="printData" data-bind="application_deportment"></p>
+	          </div>
+	          <div class="line">
+	            <p class="left-itemTitle">职务</p>
+	            <p class="printData" data-bind="application_position"></p>
+	          </div>
+	        </div>
+	        <!-- 管理人信息 -->
+	        <div class="modal-body-everyItem manager">
+	          <p class="event-details-title">管理人明细</p>
+	          <div class="line">
+	            <p class="left-itemTitle">姓名</p>
+	            <p class="printData" data-bind="manager_name"></p>
+	            <p class="right-itemTitle">移动电话</p>
+	            <p class="printData" data-bind="manager_mobilephone"></p>
+	          </div>
+	          <div class="line">
+	            <p class="left-itemTitle">邮件</p>
+	            <p class="printData" data-bind="manager_email"></p>
+	            <p class="right-itemTitle">部门</p>
+	            <p class="printData" data-bind="manager_deportment"></p>
+	          </div>
+	          <div class="line">
+	            <p class="left-itemTitle">职务</p>
+	            <p class="printData" data-bind="manager_position"></p>
+	          </div>
+	        </div>
+	        <!-- 执行人信息 -->
+	        <div class="modal-body-everyItem executor">
+	          <p class="event-details-title">执行人明细</p>
+	          <div class="line">
+	            <p class="left-itemTitle">姓名</p>
+	            <p class="printData" data-bind="executor_name"></p>
+	            <p class="right-itemTitle">移动电话</p>
+	            <p class="printData" data-bind="executor_mobilephone"></p>
+	          </div>
+	          <div class="line">
+	            <p class="left-itemTitle">邮件</p>
+	            <p class="printData" data-bind="executor_email"></p>
+	            <p class="right-itemTitle">部门</p>
+	            <p class="printData" data-bind="executor_deportment"></p>
+	          </div>
+	          <div class="line">
+	            <p class="left-itemTitle">职务</p>
+	            <p class="printData" data-bind="executor_position"></p>
+	          </div>
+	        </div>
+        </div>
+      </div>
+
+			<div class="btnPrint"><button id="btnPrint">打印</button></div>
+		</div>
+
+		<!-- jquery  -->
+ 		 <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+     <!-- bootstrap -->
+     <script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+     <script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+     <script type="text/javascript" src="/js/compentJS/elementController.js"></script>
+     <script type="text/javascript" src="/js/compentJS/jquery.ztree.core.js"></script>
+     <script type="text/javascript" src="/js/compentJS/searchTree.js"></script>
+     <!-- scroll -->
+     <script type="text/javascript" src="/js/compentJS/jquery.mCustomScrollbar.js"></script>
+     <!--url 常量  -->
+     <script type="text/javascript" src="/js/variable.js"></script>
+     <!-- 绑定数据 -->
+     <script type="text/javascript" src="/js/transparency.min.js"></script>
+        <!--302error-->
+		<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+		<script type="text/javascript" src="/js/orderDetail.js"></script>
+		<script type="text/javascript" src="/js/printOrdDetail.js"></script>
+    <script type="text/javascript" src="/js/compentJS/jquery-migrate-1.2.1.min.js"></script>
+	</body>
+</html>

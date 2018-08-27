@@ -1,0 +1,126 @@
+.sprit {
+  background-image: url(../imgs/workOrder/orderDetail/orderDePng.png);
+  background-repeat: no-repeat;
+  display: block; }
+
+.sprit-icon11 {
+  width: 26px;
+  height: 28px;
+  background-position: -5px -5px; }
+
+.sprit-icon12 {
+  width: 26px;
+  height: 28px;
+  background-position: -41px -5px; }
+
+.sprit-icon13 {
+  width: 26px;
+  height: 28px;
+  background-position: -77px -5px; }
+
+.sprit-icon21 {
+  width: 30px;
+  height: 23px;
+  background-position: -113px -5px; }
+
+.sprit-icon22 {
+  width: 30px;
+  height: 23px;
+  background-position: -153px -5px; }
+
+.sprit-icon23 {
+  width: 30px;
+  height: 23px;
+  background-position: -193px -5px; }
+
+.sprit-icon31 {
+  width: 25px;
+  height: 31px;
+  background-position: -233px -5px; }
+
+.sprit-icon32 {
+  width: 25px;
+  height: 31px;
+  background-position: -268px -5px; }
+
+.sprit-icon33 {
+  width: 25px;
+  height: 31px;
+  background-position: -303px -5px; }
+
+.sprit-icon41 {
+  width: 28px;
+  height: 27px;
+  background-position: -338px -5px; }
+
+.sprit-icon42 {
+  width: 28px;
+  height: 27px;
+  background-position: -113px -42px; }
+
+.sprit-icon43 {
+  width: 28px;
+  height: 27px;
+  background-position: -151px -42px; }
+
+.sprit-icon51 {
+  width: 27px;
+  height: 28px;
+  background-position: -189px -42px; }
+
+.sprit-icon52 {
+  width: 27px;
+  height: 28px;
+  background-position: -338px -42px; }
+
+.sprit-icon53 {
+  width: 27px;
+  height: 28px;
+  background-position: -5px -80px; }
+
+.sprit-icon6 {
+  width: 28px;
+  height: 27px;
+  background-position: -42px -80px; }
+
+.sprit-icon61 {
+  width: 29px;
+  height: 25px;
+  background-position: -80px -80px; }
+
+.sprit-icon62 {
+  width: 29px;
+  height: 25px;
+  background-position: -119px -80px; }
+
+.sprit-icon63 {
+  width: 29px;
+  height: 25px;
+  background-position: -158px -80px; }
+
+.sprite-process1 {
+  width: 362px;
+  height: 15px;
+  background-position: -5px -118px; }
+
+.sprite-process2 {
+  width: 362px;
+  height: 15px;
+  background-position: -5px -143px; }
+
+.sprite-process3 {
+  width: 362px;
+  height: 15px;
+  background-position: -5px -168px; }
+
+.sprite-process4 {
+  width: 362px;
+  height: 15px;
+  background-position: -5px -193px; }
+
+.sprite-process5 {
+  width: 362px;
+  height: 15px;
+  background-position: -5px -218px; }
+
+/*# sourceMappingURL=orderDePng.css.map */

@@ -1,0 +1,604 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+body{
+	color:#696969;
+}
+p{
+	margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+ul,ol{
+  list-style: none;
+}
+/*去除选择框的outline*/
+.bootstrap-select .dropdown-toggle:focus{outline:none !important;}
+/*调整select输入框的行内高度*/
+.bootstrap-select.btn-group .dropdown-toggle .filter-option{
+    line-height: 26px;
+}
+.dropdown-menu>li>a{
+    padding: 5px 20px 0;
+    line-height: 1.45;
+}
+/*去除选项的outline*/
+a:focus {outline:none !important;}
+.clearfix{zoom: 1}/*IE的专用属性，针对老版本的IE浏览器而写的，为了兼容*/
+.clearfix:after{/*伪对象选择符-在这个对象被浏览器选然后添加一定的内容*/
+	content: ".";/*添加内容卸载这个属性的后面，这个属性是专门配合伪对象滴，必须写，就算值为空也要写*/
+	display: block;
+	visibility: hidden;/*类似于display：none；只不过还是占据一定的物理空间*/
+	height: 0;/*将添加的内容高度设置为0，消除其占位*/
+	clear: both;/*将添加进去的内容作为清除浮动的对象，实现外围容器中有内容存在。因此可以自动判定高度，解决塌陷*/
+}
+
+/*左侧*/
+#container {
+    min-height: calc(100vh - 150px);
+    margin-bottom: 20px;
+    background: #f1f1f1;
+    box-shadow: 0 0px 20px #dedddc;
+    font-size: 0;
+    position: relative;
+}
+#container:after{
+	display: table;
+	content: '';
+	clear:both;
+}
+.w .left,.w .right{
+    font-size: 14px;
+    vertical-align: top;
+}
+
+/*左侧*/
+.w>.left{
+    width: 188px;
+    background-color: #1f4f97;
+    color: white;
+    text-align: left;
+    padding: 10px 0;
+    position: absolute;
+    top: -10px;
+    bottom: 0;
+}
+.w>.left *{
+    color: white;
+}
+.left li a{
+    text-decoration: none;
+}
+.left ul li.left-title{
+  background-color: #1f4f97;
+  font-size: 16px;
+  cursor: default;
+}
+.left-title a{
+  cursor: default;
+}
+.left li{
+  text-indent: 48px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.left li.left-title{
+	text-indent: 24px;
+}
+.left li.left-title p i{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+	margin-right: 5px;
+	background:url('../imgs/manage/management2-small.png') no-repeat;
+  position: relative;
+  top: -2px;
+}
+.left li.left-item:hover{
+	background-color: #4f6fa1;
+    color: #fff;
+}
+.left li.left-item.active{
+  background-color: #0a3367;
+}
+.left li.left-item.active p{
+	color: #fe7070;
+}
+/*右侧*/
+.w>.right{
+  width: 1024px;
+  margin:0 10px 10px;
+  margin-left: 198px;
+}
+/*title部分(左边部分)*/
+.right-title{
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    font-size: 16px;
+    color: #696969;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+}
+.right-title>.back{
+    float: left;
+    cursor: pointer;
+    padding: 0 15px;
+}
+.right-title>i,.right-title>.back span{
+		margin-left:3px;
+  	color: rgb(28,49,114);
+  	font-size: 12px;
+}
+.right-title>i,.right-title>.back i{
+	display: inline-block;
+	width: 6px;
+  height: 13px;
+  vertical-align: middle;
+  background: url(../imgs/contract/contract.png) no-repeat -52px -5px;
+}
+.right-title::after{
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/*右边部分 */
+.right-content{
+	/*padding: 10px 29px 18px 29px;*/
+	min-height: 480px;
+	background:#fff;
+	border: 1px solid #e5e5e5;
+  cursor: default;
+  position: relative;
+}
+.right-content .right-content-title,.right2-content .right2-content-title{
+	width: 100%;
+	height:42px;
+	line-height: 42px;
+}
+.right-content .right-content-title>span,.right2-content .right2-content-title>span{
+	font-size: 16px;
+	padding-left: 25px;
+}
+.right-content .right-content-title>button{
+	width: 82px;
+	background: #024f99;
+	border: none;
+	color: white;
+	height: 24px;
+	border-radius: 8px;
+	line-height: 24px;
+	margin-left: 26px;
+	font-size: 14px;
+}
+.right-content .right-content-text{
+	width: 100%;
+	min-height: 460px;
+	margin: 0 auto;
+	box-sizing: border-box;
+}
+.right-content-text .right-content-text1{
+	width: 968px;
+	height: 72px;
+	border: 1px solid #dbdbdb;
+	cursor: pointer;
+}
+.right-content-text .right-content-text1:hover{
+	background: #abd1fe;
+}
+.right-content-text .right-content-text1 .right-content-icon1{
+	float: left;
+	width: 40px;
+	height: 40px;
+	background: url(../imgs/manage/Avatar.png) no-repeat;
+	background-size: 40px 40px;
+	display: inline-block;
+	margin-left: 25px;
+	vertical-align: middle;
+	margin-top: 15px;
+}
+.right-content-text .right-content-text1 .right-content-page{
+	float: left;
+	width: 616px;
+	box-sizing: border-box;
+	height:50px;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 14px;
+}
+.right-content-page div{
+	width: 100%;
+	height: 25px;
+}
+.right-content-page .administrator{
+	font-size: 16px;
+}
+.right-content-btn{
+	float: right;
+	line-height: 72px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.right-content-btn>span{
+	margin-left: 10px;
+}
+.right-content-btn .right-content-icon2,
+.right-content-btn .right-content-icon3,
+.right-content-btn .right-content-icon4{
+	background: url(../imgs/manage/manage.png) no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+.right-content-btn .right-content-icon2{
+	width: 22px;
+	height: 22px;
+	background-position: -1px -1px;
+}
+.right-content-btn .right-content-icon3{
+	background-position: -53px -1px;
+	width: 22px;
+	height: 22px;
+}
+.right-content-btn .right-content-icon4{
+	width: 22px;
+	height: 22px;
+	background-position: -27px -1px;
+}
+.right-content-btn .right-content-btn1{
+	vertical-align: middle;
+	margin-left: 2px;
+}
+/*modal弹窗*/
+.modal{
+	top:-300px;
+}
+#Roleassignment .modal-dialog{
+	width: 472px;
+	min-height: 176px;
+}
+.modal-header{
+	padding-left: 15px;
+	height: 32px;
+	line-height: 32px;
+	color: #696969;
+	border-bottom: 1px dashed #bfbfbf;
+}
+.modal-body{
+	width: 100%;
+}
+.mCSB_scrollTools .mCSB_buttonUp{
+	background-position: 0 0;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer{
+	background-color: #FFFFFF;
+	border: none;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer{
+	box-shadow: none;
+	-webkit-border-radius:0;
+	border-radius: 0;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	background-color: #cbd3df;
+	box-shadow: none;
+  width: 8px;
+}
+/*用户管理角色分配滚动条*/
+#CastingAssignments	#mCSB_2_scrollbar_vertical{
+	width: 10px;
+}
+#CastingAssignments .mCSB_buttonUp,#CastingAssignments .mCSB_buttonDown{
+	background-color: #FFFFFF!important;
+	opacity: 1;
+	right: 1px;
+}
+#CastingAssignments .mCS-3d-thick.mCSB_scrollTools_vertical{
+	box-shadow: none;
+}
+#CastingAssignments .mCSB_buttonUp,#CastingAssignments .mCSB_buttonDown{
+	background-image: url(../imgs/mCSB_buttons.png);
+	background-repeat: no-repeat;
+	display: block;
+	width:7px;
+	height: 7px;
+}
+#CastingAssignments .mCSB_buttonUp{
+	background-position: -136px -16px;
+	top: 5px;
+	right: -1px;
+}
+#CastingAssignments .mCSB_buttonDown{
+	background-position: -127px -16px;
+	right: -2px;
+}
+#CastingAssignments #mCSB_2_scrollbar_vertical{
+	width: 5px;
+	right: 5px;
+}
+#CastingAssignments .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	margin-top: -9px;
+	margin-bottom: -11px;
+	margin-right: -2px;
+	width: 5px;
+}
+#CastingAssignments .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	margin-right: 0;
+	margin-left: 0;
+}
+/**/
+.modal-body .modal-body-ul1{
+	width:422px;
+	height:32px;
+	border: 1px solid #d0d5d5;
+	background: #ECEEF0;
+	margin: 0 auto;
+	line-height: 32px;
+	box-sizing: border-box;
+}
+.modal-body-ul1 li,
+.modal-body-ul2 li{
+	display: inline-block;
+	text-align: center;
+}
+.modal-body-ul1 li:nth-child(1){
+	width: 117px;
+	margin-left: 23px;
+}
+.modal-body-ul2 li:nth-child(1){
+	width:140px;
+}
+.modal-body-ul1 li:nth-child(2),
+.modal-body-ul2 li:nth-child(2){
+	width: 70px;
+}
+.modal-body-ul1 li:nth-child(3),
+.modal-body-ul2 li:nth-child(3){
+	width: 124px;
+}
+.modal-body	.modal-body-ul2{
+	width: 422px;
+	height:32px;
+	border-left: 1px solid #d0d5d5;
+	border-right: 1px solid #d0d5d5;
+	border-bottom: 1px solid #d0d5d5;
+	margin: 0 auto;
+	line-height: 32px;
+	box-sizing: border-box;
+}
+.modal-body-icon,.modal-body-ul2 i.active{
+	float: left;
+	background: url(../imgs/common.png);
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-top: 10px;
+	cursor: pointer;
+	margin-left: 10px;
+}
+.modal-body-icon{
+	background-position: -5px -32px;
+}
+.modal-body-ul2 i.active{
+	background-position:-23px -32px;
+}
+.modal-body-ul2	.modal-body-color{
+	color: #8cbc94;
+}
+.modal-footer{
+	border: none;
+}
+.modal-footer .save-quit{
+	margin-bottom: 10px;
+	text-align: center;
+}
+/*用户管理*/
+.right2-content{
+	height: 772px;
+	background:#fff;
+	border: 1px solid #e5e5e5;
+  cursor: default;
+  position: relative;
+}
+.right2 .right2-content .right2-content-search{
+	display: inline-block;
+	position: relative;
+	float: right;
+	margin-right: 60px;
+}
+#situationSearch{
+	width: 179px;
+  height: 25px;
+  border: 1px solid #bfbfbf;
+  /*border-left-top-radius: 3px;*/
+  color: #9c9c9c;
+  text-indent: 10px;
+  outline: none;
+}
+#clickSearch{
+  background-image: url(../imgs/contract/contract.png);
+  background-repeat: no-repeat;
+  width: 31px;
+  height: 25px;
+  background-position: -188px -177px;
+  display: inline-block;
+  position: absolute;
+  right: -31px;
+  top: 9px;
+  cursor: pointer;
+}
+/*962 656*/
+.right2-content .right2-content-text{
+	width: 962px;
+	height: 656px;
+	border: 1px solid #c1c1c1;
+	border-radius: 3px;
+	margin: 0 auto;
+}
+.right2-content-text .right2-content-text-title1,.right2-content-text .right2-content-text-content1{
+	border-bottom:1px solid #C1C1C1;
+	height:40px;
+	line-height: 40px;
+	font-size: 14px;
+}
+.right2-content-text .right2-content-text-content1{
+	font-size: 12px;
+}
+.right2-content-text .right2-content-text-title1>li,.right2-content-text .right2-content-text-content1>li{
+	float: left;
+	height: 100%;
+	/*border: 1px solid black;*/
+	text-align: center;
+}
+
+.right2-content-text .right2-content-text-title1>li:nth-child(1),
+.right2-content-text .right2-content-text-content1>li:nth-child(1){
+	width: 88px;
+}
+.right2-content-text .right2-content-text-title1>li:nth-child(2),
+.right2-content-text .right2-content-text-content1>li:nth-child(2){
+	width: 95px;
+}
+.right2-content-text .right2-content-text-title1>li:nth-child(3),
+.right2-content-text .right2-content-text-content1>li:nth-child(3){
+	width: 140px;
+}
+.right2-content-text .right2-content-text-title1>li:nth-child(4),
+.right2-content-text .right2-content-text-content1>li:nth-child(4){
+	width: 160px;
+}
+.right2-content-text .right2-content-text-title1>li:nth-child(5),
+.right2-content-text .right2-content-text-content1>li:nth-child(5){
+	width: 110px;
+}
+.right2-content-text .right2-content-text-title1>li:nth-child(6),
+.right2-content-text .right2-content-text-content1>li:nth-child(6){
+	width: 80px;
+}
+.right2-content-text .right2-content-text-title1>li:nth-child(7),
+.right2-content-text .right2-content-text-content1>li:nth-child(7){
+	width: 100px;
+}
+.right2-content-text .right2-content-text-title1>li:nth-child(8),
+.right2-content-text .right2-content-text-content1>li:nth-child(8){
+	width: 110px;
+}
+.right2-content-text .right2-content-text-title1>li:nth-child(9),
+.right2-content-text .right2-content-text-content1>li:nth-child(9){
+	width: 60px;
+}
+.right2-content-assignment{
+	cursor: pointer;
+}
+.right2-content-text-content1 .right2-content-text-color1{
+	color:#3562a3;
+}
+.right2-content-text-content1 .right2-content-text-color2{
+	color:#8fd09c;
+}
+.right2-content-icon3{
+	background:url(../imgs/manage/manage.png);
+	background-position: -104px -81px;
+	width: 21px;
+	height: 23px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+.right2-content-ballall{
+	line-height: 50px;
+}
+.right2-content-ballcheck{
+	width:38px;
+	height:19px;
+	border-radius:19px;
+	/*border: 1px solid black;*/
+	display: inline-block;
+	line-height: 19px;
+	position: relative;
+	background: #bcbcbc;
+	line-height: 20px;
+	box-sizing: border-box;
+}
+.right2-content-background{
+	width: 17px;
+	height: 19px;
+	border-radius: 18px;
+	position: absolute;
+	display: inline-block;
+	left: 0px;
+	background: #0b3c70;
+	border: 1px solid #eceffa;
+	box-sizing: border-box;
+}
+.right2-content-ball{
+	width: 18px;
+	height: 19px;
+	border-radius: 50%;
+	border: 1px solid #eceffa;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #eceffa;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+/*角色分配弹窗样式*/
+#CastingAssignments .modal-dialog{
+	width: 392px;
+}
+#CastingAssignments .modal-dialog .modal-content .modal-body .modal-body-user{
+	width: 100%;
+	height: 35px;
+	padding-left: 30px;
+	font-size: 14px;
+}
+.modal-dialog .modal-content .modal-body .modal-body-user	.modal-body-username{
+	padding-left:30px;
+}
+.modal-body .modal-body-content3{
+	width: 100%;
+	height: 148px;
+	border-radius: 3px;
+	position: relative;
+}
+.modal-body-content3 .modal-body-power{
+	padding-left: 30px;
+	position: absolute;
+} 
+.modal-body .modal-body-content3 .modal-body-powername{
+	width: 235px;
+	height: 136px;
+	border-radius: 3px;
+	border: 1px solid #cdcdcd;
+	display: inline-block;
+	position: absolute;
+	left: 130px;
+	overflow: hidden;
+}
+.modal-body-powername .modal-body-powermen li{
+	line-height: 32px;
+	margin-left: 12px;
+}
+.modal-body-powermen li i,.modal-body-powermen li i.active{
+		background: url(../imgs/common.png) no-repeat;
+    display: inline-block;
+    width: 12px;
+    height: 11px;
+    background-position: -5px -32px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+.modal-body-powermen li i.active{
+	background: url(../imgs/common.png);
+  background-position: -23px -32px;
+}
+

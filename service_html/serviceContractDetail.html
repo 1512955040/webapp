@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>合同详情</title>
+		<!-- reset -->
+		<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap-select.min.css">
+
+		<!-- head -->
+		<link rel="stylesheet" href="/css/head.css" type="text/css">
+		<!-- scroll -->
+		<link rel="stylesheet" href="/css/compentCSS/jquery.mCustomScrollbar.css">
+
+		<link rel="stylesheet" href="/css/popUp.css" type="text/css">
+		<!-- zTree -->
+		<link rel="stylesheet" href="/css/compentCSS/zTreeStyle.css">
+		
+		<link rel="stylesheet" href="/css/contractDetail.css" type="text/css">
+	</head>
+
+	<body>
+		<div id="header">
+			<div class="w">
+				<div class="logo fl"></div>
+				<ul class="list fr">
+					<li class="help fl">
+						<span class="helpPic"></span>
+						帮助</li>
+					<li class="manager fl">
+						<span class="managerPic"></span>
+						管理</li>
+					<li class="notify fl">
+						<span class="notifyPic"></span>
+						通知
+						<div class="notify-wrap">
+							<p class="notify-wrap-up">通知
+								<button class="notify-wrap-upClear">清空</button>
+							</p>
+							<ul class="notify-list">
+								<li class="notify-wrap-item">
+									<i></i><p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i><p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i><p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i><p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i><p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+							</ul>
+							<p class="notify-wrap-down">
+								<a href="#">更多>></a>
+							</p>
+						</div>
+					</li>
+		              <li class="pInfo fl" id="userInfo"><i class="userName" data-bind="userName"></i>
+		                  <span class="userHeader"></span>
+		                  <div class="userInfo-wrap">
+
+		                      <div class="userInfo">
+		                          <!--<img src="" alt=""  class="userHead"/>-->
+		                          <span class="fl userHead"></span>
+		                          <div class="userInfo-right">
+		                              <p data-bind="userName"></p>
+		                              <p><span data-bind="position"></span>&nbsp;<span data-bind="department"></span></p>
+		                          </div>
+		                          <div class="userInfoOperation">
+		                              <p class="userInfoOperationBox">
+		                                  <input type="button" value="我的账户" class="myAccout"/>
+		                                  <a id="logout" class="logout">退出</a>
+		                              </p>
+
+		                          </div>
+		                      </div>
+
+		                  </div>
+		              </li>
+				</ul>
+			</div>
+		</div>
+		<div id="nav" class="facilitator">
+
+
+			<div class="w">
+				<ul class="fl">
+					<li class="navlist fl navlist1 navNoChangeList now">
+						<span class="navlist-img navlist-img1 active"></span>工作台</li>
+					<li class="navlist fl navlist2 navNoChangeList">
+						<span class="navlist-img navlist-img2"></span>工单</li>
+
+					<li class="navlist fl navlist3 navNoChangeList active">
+						<span class="navlist-img navlist-img4"></span>合同</li>
+					<li class="navlist fl navlist4 navNoChangeList">
+						<span class="navlist-img navlist-img3"></span>客户</li>
+
+					<li class="navlist fl navlist5 nav-add-item1 navNoChangeList navChangeList lastNavlist">
+						<span class="navlist-img navlist-img6 "></span>管理
+					</li>
+					<!--<li class="navlist fl navlist7 nav-add-item2 navChangeList">
+						<span class="navlist-img navlist-img7"></span>报表
+					</li>-->
+				</ul>
+
+
+				<div id="nav-add-container">
+					<span class="nav-add"></span>
+					<div class="nav-add-wrap">
+						<div class="nav-add-overHidden">
+							<ul class="nav-add-list">
+								<li class="nav-add-item hide" id="nav-add-item1">
+									<p></p>供应商</li>
+								<li class="nav-add-item" id="nav-add-item2">
+									<p></p>报表</li>
+							</ul>
+						</div>
+						<span class="nav-add-trangle nav-add-trangleLeft"></span>
+						<span class="nav-add-trangle nav-add-trangleRight"></span>
+					</div>
+				</div>
+
+				<div class="fr nav-right-search">
+					<input type="text"  class="fr">
+					<div class="dropdownDiv">
+						<span class="nav-right-selectedWord" id="">所有</span>
+						<span class="nav-right-searchpng"></span>
+						<span class="caret nav-right-caret"></span>
+					</div>
+
+					<div class="right-search-wrap dn">
+						<div class="right-search-container">
+								<div class="right-search-list">所有</div>
+								<div class="right-search-list">工单</div>
+								<div class="right-search-list">合同</div>
+								<div class="right-search-list">客户</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="nav-right-newAdd fr dn">
+					<span></span>
+					<ul>
+						<li><a href="assetAdd.html"><span></span>新建资产</a></li>
+						<li><a href="newContract.html"><span></span>新建合同</a></li>
+						<li><a href="#"><span></span>供应商</a></li>
+						<li><a href="#"><span></span>项目</a></li>
+						<li>问题变更</li>
+					</ul>
+				</div>
+
+				<div class="nav-right-recentRecord fr dn">
+					<span></span>
+					<div class="nav-right-reRecordWrap">
+						<p class="nav-right-reRecordTitle">最近访问的项</p>
+						<ul id="history"></ul>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="moveWrap"><i class="navMove"></i></div>
+
+		</div>
+		<!-- 头部end -->
+
+		<div id='container' class="w">
+			<div id="container-left" class="fl">
+				<ul class="container-left-wrap">
+					<li class="container-left-item container-left-item1 active" id="conInfo">
+						<p></p>合同信息<i></i></li>
+					<li class="container-left-item container-left-item2" id="conResource">
+						<p></p>合同资产<i></i></li>
+					<li class="container-left-item container-left-item3" id="operationGroup">
+						<p></p>运维小组<i></i></li>
+					<li class="container-left-item container-left-item4" id="SLAInfo">
+						<p></p>SLA信息<i></i></li>
+					<li class="container-left-item container-left-item5" id="conHistory">
+						<p></p>历史<i></i></li>
+				</ul>
+			</div>
+
+
+            <div class="modal fade" id="createGroupBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">创建运维小组
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-body-row">
+                                <p>显示名称<span class="modal-body-start">*</span><span class="error groupNameErr"></span></p>
+                                <input type="text"  class='modal-body-name modal-body-info' id="groupName"/>
+                            </div>
+                            <div class="modal-body-row">
+                                <p>描述</p>
+                                <textarea id="groupDescribe"></textarea>
+                            </div>
+                            <div class="modal-body-row" id="serConDept">
+                                <p>选择主管部门<span class="modal-body-start">*</span><span class="error deptNameErr"></span></p>
+                                <input type="text" id="department" readonly>
+                                <input type="text" value="" id="departmentCode" style="display: none" />
+                                <div id="department-menu" class="menus" style="display: none;">
+                                    <ul id="department-tree" class="ztree"></ul>
+                                </div>
+                            </div>
+                            <div class="modal-body-row" id="groupLeader">
+                                <p>选择组长<span class="modal-body-start">*</span><span class="error groupLeaderErr"></span></p>
+                                <select class='selectpicker groupLeader' id="groupLeaderSelect">
+                                    <option data-bind="groupLeaderSelectData"></option>
+                                </select>
+                            </div>
+                            <div class="modal-body-row" id="groupMembers">
+                                <p>选择成员</p>
+                                 <!--下拉多选框-->
+                                 <select id="members_list" class='selectpicker' multiple data-bind="groupMembers">
+
+                                 	<option data-bind="groupMembersSelectData">
+
+                                 	</option>
+                                 </select>
+                               <!-- <input type="text"  class='modal-body-name modal-body-info' data-bind="groupMembers" id="groupMembersChoose"/>-->
+
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-keep" id="createGroupConfirm">保存</button>
+                            <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+			<div id="container-right" class="fr">
+				<div class="container-right-title">
+					<span class="container-right-title-back" onClick="javascript :history.back(-1);"></span>
+					<div class="container-right-title-btnBox di">
+						<button class="container-right-title-btn" id="conEditBtn">编辑</button>
+						<button class="container-right-title-btn" id="deleteBtn">删除</button>
+						<button class="container-right-title-btn btn-width" id="submitCheckBtn">提交审阅</button>
+						<button class="container-right-title-btn" id="checkBtn">审阅</button>
+						<button class="container-right-title-btn" id="backBtn">撤回</button>
+						<button class="container-right-title-btn btn-width" id="createGroup">创建小组</button>
+						<button class="container-right-title-btn btn-width" id="viewFirmBtn">查看厂商</button>
+						<button class="container-right-title-btn" id="printBtn">打印</button>
+						<button class="container-right-title-btn btn-width" id="continueConBtn">续签合同</button>
+					</div>
+					<span class="contract_Concern"></span>
+
+					<!--运维小组添加组员-->
+					<div class="modal fade" id="addmember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">添加组员
+									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+								</div>
+								<div class="modal-body">
+
+									<div class="modal-body-bottom">
+										<div class="modal-body-bottom-title">
+											<p class="modal-body-bottom-titleItem di">姓名</p>
+											<p class="modal-body-bottom-titleItem di">年龄</p>
+											<p class="modal-body-bottom-titleItem di">部门</p>
+											<p class="modal-body-bottom-titleItem di">工龄</p>
+											<p class="modal-body-bottom-titleItem di">手机号码</p>
+										</div>
+										<div class='modal-body-bottom-box'>
+											<div id="modal-body-bottom-rowWrap">
+												<div class="modal-body-bottom-row active">
+													<i class="active"></i>
+													<p class="di modal-body-bottom-rowItem">电脑fdewqfwefgeewr</p>
+													<p class="di modal-body-bottom-rowItem">45673623552423</p>
+													<p class="di modal-body-bottom-rowItem">fsgagsgfdshgdh</p>
+													<p class="di modal-body-bottom-rowItem">技术部门</p>
+													<p class="di modal-body-bottom-rowItem">2016-12-14</p>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-keep">保存</button>
+									<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 打印弹窗 -->
+					<div class="modal fade" id="print" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">打印预览
+									<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+								</div>
+								<div class="modal-body">
+									<div class="modal-body-id">
+										<ul>
+											<li class="title">选择</li>
+											<li><i class="classRe active" id="contract_info"></i>信息</li>
+											<li><i class="classRe" id="contract_asset"></i>资产</li>
+											<li><i class="classRe" id="contract_company"></i>厂商</li>
+											<li><i class="classRe" id="contract_sla"></i>SLA</li>
+										</ul>
+										<button type="button" id="openNeWindow">打印</button>
+									</div>
+									<div class="modal-body-detail">
+										<!-- 信息 -->
+										<div class="modal-box contrctInfo">
+											<p class="modal-box-title contrctInfo">信息</p>
+											<div class="modal-box-section">
+												<p class="modal-box-section-title">总信息</p>
+												<p class="twoLine">
+													<span>状态</span>
+													<span data-bind="contract_status"></span>
+												</p>
+												<p class="twoLine">
+													<span>创建时间</span>
+													<span data-bind="create_time_string"></span>
+												</p>
+												<p class="twoLine">
+													<span>创建人</span>
+													<span data-bind="person_name"></span>
+												</p>
+											</div>
+											<div class="modal-box-section">
+												<p class="modal-box-section-title">描述</p>
+												<p class="oneLine">
+													<span data-bind="contract_info"></span>
+												</p>
+											</div>
+											<div class="modal-box-section">
+												<p class="modal-box-section-title">合同细则</p>
+												<p class="oneLine">
+													<span data-bind="content"></span>
+												</p>
+											</div>
+										</div>
+										<!-- 资产 -->
+										<div class="modal-box" style="display:none">
+											<p class="modal-box-title">资产</p>
+											<div class="conAsset-body">
+												<ul class="conAsset-body-title">
+													<li>资产名</li>
+													<li>品牌</li>
+													<li>产品类型</li>
+													<li>购进日期</li>
+												</ul>
+												<div class="conAsset-body-data" id="con_list">
+													<input type="hidden" data-bind="id">
+													<ul class="conAsset-data-item">
+														<li data-bind="resource_name"></li>
+														<li data-bind="symbol_name"></li>
+														<li data-bind="category_name"></li>
+														<li data-bind="procure_time"></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<!-- 厂商 -->
+										<div class="modal-box contractEnterprise" style="display:none">
+											<p class="modal-box-title">厂商</p>
+											<div class="modal-box-section">
+												<p class="twoLine">
+													<span>厂商名</span>
+													<span data-bind="partA_enterprise"></span>
+												</p>
+												<p class="twoLine">
+													<span>合同类型</span>
+													<span data-bind="contract_type_name"></span>
+												</p>
+												<p class="twoLine">
+													<span>联系人</span>
+													<span data-bind="contact_person"></span>
+												</p>
+												<p class="twoLine">
+													<span>电话</span>
+													<span data-bind="contact_tell"></span>
+												</p>
+											</div>
+										</div>
+										<!-- SLA -->
+										<div class="modal-box contractSlaP" style="display:none">
+											<p class="modal-box-title">SLA</p>
+											<p class="modal-box-section-title" data-bind="agreement_name"></p>
+											<div class="modal-box-section">
+												<p class="modal-box-section-title">SLA描述</p>
+												<p class="oneLine">
+													<span data-bind="agreement_describe"></span>
+												</p>
+											</div>
+											<div data-bind="slaInfoContent">
+												<div class="slaTactics">
+													<p class="modal-box-section-title">SLA策略</p>
+													<div class="slaTacticsTable">
+														<ul class="slaTacticsTableTitle">
+															<li>服务级别</li>
+															<li>响应时效</li>
+															<li>解决时效</li>
+															<li>服务时间</li>
+														</ul>
+														<div class="slaTacticsTableBody" data-bind="sla_info">
+															<ul class="slaTacticsTableBodyUl">
+																<li data-bind="level_name"></li>
+																<li data-bind="response"></li>
+																<li data-bind="address"></li>
+																<li data-bind="serviceTimeType"></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 打印 - 无打印项提示 -->
+					<div class="modal fade" id="pupDelete7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			       <div class="modal-dialog">
+			         <div class="modal-content">
+			           <div class="modal-header">
+			             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+			           </div>
+			           <div class="modal-body">
+			                                  您未选择要打印的项
+			           </div>
+			           <div class="modal-footer">
+			             <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+			           </div>
+			         </div>
+			       </div>
+			     </div>
+
+				</div>
+
+				<div class="container-right-infoWrap" id="resourceDetailId">
+
+					<div class="conright-infoWrap-left fl">
+
+						<div class="conright-list conright-list1" id="titleInfo">
+							<input type="hidden" data-bind="id" id="contract_id">
+							<p class="conright-item-title">
+								<i class='title-icon'></i><span class="name" data-bind="name"></span>
+							</p>
+							<p class="conright-item di">
+								<span>状态:</span><span data-bind="contract_status"></span> &nbsp;&nbsp;|&nbsp;&nbsp;
+							</p>
+							<p class="conright-item di">
+								<span>创建时间:</span><span data-bind="create_time_string"></span> &nbsp;&nbsp;|&nbsp;&nbsp;
+							</p>
+							<p class="conright-item di">
+								<span>创建人:</span><span data-bind="person_name"></span>
+							</p>
+						</div>
+
+
+						<!--运维小组-->
+						<div class="operationGroup dn" id="yunweiGroup">
+							<p class="conright-item-title">运维小组列表&nbsp;&nbsp;&nbsp;&nbsp;<i class="addIcon"></i><span class='addmember'>添加组员</span></p>
+							<div class="conright-item" data-bind="contract_info">
+								<div class='conright-item-first' id="groupLeaderInfo">
+									<div class="conright-first-box">
+										<i class='headman-icon'></i>
+										<div class='box-left'>
+											<div class='box-headerName'><img alt="" /><span data-bind="per_name"></span></div>
+										</div>
+										<div class='box-right'>
+                                            <input type="hidden" data-bind="per_id" id="leaderId">
+											<p>年龄：<span data-bind="age"></span>岁</p>
+											<p>工龄：<span data-bind="work_age"></span>年</p>
+											<p>岗位：组长 </p>
+											<p>手机：<span data-bind="tel"></span></p>
+											<p>邮箱：<span data-bind="email"></span></p>
+										</div>
+									</div>
+								</div>
+								<div class='conright-item-oter' id="groupMembersInfo">
+									<div class="conright-other-box">
+										<i class='close-icon' data-bind="delButton"></i>
+                                        <input type="hidden" data-bind="per_id" id="PersonId">
+                                        <input type="hidden" data-bind="member_id" id="memberId">
+										<div class='box-left'>
+											<div class='box-headerName'><img  alt="" /><span data-bind="per_name"></span></div><button>升级为组长</button></div>
+										<div class='box-right'>
+											<p>年龄：<span data-bind="age"></span>岁</p>
+											<p>工龄：<span data-bind="work_age"></span>年</p>
+											<p>岗位：组员 </p>
+											<p>手机：<span data-bind="tel"></span></p>
+											<p>邮箱：<span data-bind="email"></span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+							<!-- 合同详情 -->
+                        <div class="conDetail" id="conDetailLeft">
+                            <div class="conright-list conright-list2">
+                                <p class="conright-item-title">描述</p>
+                                <p class="conright-item-title" data-bind="contract_info"></p>
+                            </div>
+                            <div class="conright-list conright-list3">
+                                <p class="conright-item-title">合同细则</p>
+                                <p class="conright-item-title" data-bind="content"></p>
+                            </div>
+						</div>
+                        <!--添加组员弹框列表-->
+                        <!--<div class="modal fade" id="myConAsset" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="modal-body-bottom">
+                                            <div class="modal-body-bottom-rowWrap" id="members_list">
+                                                <input type="hidden" data-bind="id">
+                                                <div class="modal-body-bottom-row">
+                                                    <i></i>
+                                                    <p data-bind="groupMembersSelectData"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="modal-footer">
+                                        <button type="button" class="btn btn-keep" id="selectConfirm">确认</button>
+                                        <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+
+
+                        <!-- 合同资产 -->
+                        <div class="conAsset dn">
+                            <p class="conright-item-title">合同资产</p>
+                            <div class="conAsset-tool">
+                                <div id="resource_type">
+                                    <input class="selectTree dn" type="text" id="con_category" readonly>
+                                    <input type="text" value="" id="con_categoryCode" style="display: none" />
+                                    <div id="con_category-menu" class="menus">
+                                        <ul id="con_category-tree" class="ztree"></ul>
+                                    </div>
+                                </div>
+								<p class="fr" id="contractPage">
+									<span>显示</span>&nbsp;&nbsp;<span data-bind="beginCount"></span>&nbsp;&nbsp;<span>-</span>&nbsp;&nbsp;<span data-bind="endCount"></span>&nbsp;&nbsp;<span>，</span>&nbsp;&nbsp;<span>共</span>&nbsp;&nbsp;<span data-bind="totalCount"></span>&nbsp;&nbsp;<span>条</span>&nbsp;&nbsp;<input type="hidden" id="currPage"><input type="hidden" id="totalPage"><span class="" data-bind="upConPage" id="upConPageId"></span><span class="" data-bind="nextConPage" id="nextConPageId"></span>
+									<!--显示&nbsp;1-<span>5</span>&nbsp;共&nbsp;<span>5</span>&nbsp;-->
+									<!--<i class="conAsset-left conAsset-img"></i><i class="conAsset-right conAsset-img"></i>-->
+								</p>
+							</div>
+							<div class="conAsset-body">
+								<ul class="conAsset-body-title">
+									<li>资产名</li>
+									<li>品牌</li>
+									<li>产品类型</li>
+									<li>购进日期</li>
+								</ul>
+								<div class="conAsset-body-data" id="con_res_list">
+									<input type="hidden" data-bind="id">
+									<ul class="conAsset-data-item toService">
+										<!--<i></i>-->
+										<li data-bind="resource_name"></li>
+										<li data-bind="symbol_name"></li>
+										<li data-bind="category_name"></li>
+										<li data-bind="procure_time"></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+                        <!--确认更换所选的SLA产品操作-->
+                        <div class="modal fade" id="pupDelete5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <span class="question"></span>是否更换所选的SLA产品？
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" id="changeConfirm" class="btn btn-delete">确认</button>
+                                        <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<!--SLA信息-->
+						<div class="slaInfoBox dn" id="slaList">
+							<div class="slaInfoList">
+
+								<div class="slaInfoTitle serviceSlaInfoTitle">
+                                    <input type="hidden" data-bind="sla_id">
+									<div class="slaInfoTitleName">
+										<i data-bind="slaCheckIcon"></i><span class="slaInfoTitleNameText" data-bind="agreement_name"></span>
+									</div>
+									<div class="slaInfoTitleInfo">
+										<i data-bind="LogoSmallClass"></i>
+                                        <!--<span data-bind="agreement_describe"></span>-->
+									</div>
+									<div class="slaInfoTitleCaret">
+										<div class="slaListCaret">
+
+										</div>
+									</div>
+								</div>
+								<div data-bind="slaInfoContent">
+									<div class="slaInfoContentInfo">
+										<p class="slaInfoContentInfoTitle">SLA描述</p><br>
+										<div class="contentInfoLeft">
+											<i data-bind="LogoBigClass"></i>
+										</div>
+
+										<div class="contentInfoRight">
+											<!--<p data-bind="agreement_name"></p>-->
+											<p data-bind="agreement_describe"></p>
+										</div>
+									</div>
+									<div class="slaTactics">
+										<p class="slaTacticsTitle">SLA策略</p>
+										<div class="slaTacticsTable">
+											<ul class="slaTacticsTableTitle">
+												<li>服务级别</li>
+												<li>响应时效</li>
+												<li>解决时效</li>
+												<li>服务时间</li>
+											</ul>
+											<div class="slaTacticsTableBody" data-bind="sla_info">
+												<ul class="slaTacticsTableBodyUl">
+													<li data-bind="level_name"></li>
+													<li data-bind="response"></li>
+													<li data-bind="address"></li>
+													<li data-bind="serviceTimeType"></li>
+												</ul>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 历史信息 -->
+						<div class="serContractHistoryInfo dn">
+							<div class="conHistory-title">
+								<p>历史</p>
+							</div>
+							<div class="conHistory-content">
+								<div class="conHistory-content-toTop">
+									<i></i><span>置顶</span>
+								</div>
+								<!-- 上一条记录 -->
+								<div class="conHistory-content-right-top active">
+									<i></i>
+								</div>
+									<div class="conHistory-content-dataBind">
+										<ul class="conHistory-content-right">
+											<li class="history-year"><span data-bind="calc_time1"></span></li>
+											<li class="history-point"><i></i><div></div></li>
+											<li><span data-bind="calc_time2"></span></li>
+											<li><span data-bind="status_name">AAAAA</span></li>
+											<li>
+												<a href="#" data-bind="oper_user_name"></a>&nbsp;
+												<span data-bind="action"></span>&nbsp;
+												<span data-bind="name"></span>&nbsp;(<span data-bind="number"></span>)
+											</li>
+										</ul>
+									</div>
+								<!-- 下一条记录 -->
+								<div class="conHistory-content-right-bottom active">
+									<i></i>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="conright-infoWrap-right fl" id="conDetailRight">
+						<div>
+                            <input type="hidden" data-bind="operstion_group_id" id="groupId">
+                            <input type="hidden" data-bind="sla_id" id="con_slaId">
+                            <input type="hidden" data-bind="approval_status" id="status">
+							<p class="conright-infoWrap-rightRow">
+								<span>合同类型</span><span data-bind="contract_type_name"></span>
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>合同ID</span><span data-bind="contract_code"></span>
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>状态</span><span data-bind="contract_status"></span>
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>合同生效日</span><span data-bind="start_time"></span>
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>有效期至</span><span data-bind="end_time"></span>
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>合同金额</span><span data-bind="contract_amount"></span>
+							</p>
+							<p class="conright-infoWrap-rightRow" id="attachment_type">
+								<span>附件</span>
+								<a data-bind="attachment" class="attachCount"></a>
+							</p>
+						</div>
+
+						<div>
+							<p class="conright-infoWrap-rightRow">
+								<span>厂商名</span><span data-bind="partA_enterprise"></span>
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>合同类型</span><span data-bind="contract_type_name"></span>
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>联系人</span><span data-bind="contact_person"></span>
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>电话</span><span data-bind="contact_tell"></span>
+							</p>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+  <!-- 以下是弹框 -->
+  <!-- 提交审阅 -->
+  <div class="modal fade" id="pupDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <span class="question"></span>您确定提交该合同给合同厂商审阅？提交后合同信息将不能更改！
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-delete btn-pupDelete">确定</button>
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+      </div>
+  </div>
+  <!-- 审阅 -->
+  <div class="modal fade" id="pupDelete2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span><tton>
+             </div>
+             <div class="modal-body">
+               <span class="question"></span>您确定同意该合同所有条款及信息？一旦审阅通过合同信息双方均不能更改！
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-delete btn-pupDelete2">审阅通过<button>
+              <button type="button" class="btn btn-cancel btn-pupDelete-no" data-dismiss="modal">审阅不通过<button>
+             </div>
+         </div>
+       </div>
+    </div>
+    <!--合同删除-->
+    <div class="modal fade" id="pupDelete6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+                </div>
+                <div class="modal-body">
+                    <span class="question"></span>是否确定要删除该合同？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="delCon" class="btn btn-delete">删除</button>
+                    <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 撤回 -->
+    <div class="modal fade" id="pupDelete3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span><tton>
+             </div>
+             <div class="modal-body">
+               <span class="question"></span>您确定撤回该合同的审阅请求吗?
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-delete btn-pupDelete3">确定<tton>
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">取消<tton>
+             </div>
+         </div>
+       </div>
+    </div>
+      <!-- 500错误提示框 -->
+  <div class="modal fade" id="errorBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <p class="modal-body-row"><span class="question-info" id="errorInfo"></span></p>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-delete">删除</button> -->
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+      </div>
+  </div>
+    <!-- 附件div -->
+      <div class="modal fade" id="accessory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">附件
+              <button type="button" class="close" data-dismiss="modal">
+              	<span aria-hidden="true" class=" closeImg fr">&times;</span>
+              	<span class="sr-only">Close</span>
+              </button>
+            </div>
+
+            <!-- 无内容时 start-->
+            <div id="modal-none" style="display:none;">
+              <!--站位文字和图片-->
+              <div>
+                <img src="../imgs/common/takePlace.png" alt="" />
+                <p>
+                  <span>目前暂无满足条件的数据，请</span>
+                  <a href="#" class="addButton">添加</a>
+                </p>
+              </div>
+            </div>
+            <!-- 无内容时 end-->
+            <div class="modal-body">
+              <div class="modal-body-bottom">
+                <div class="modal-body-bottom-title">
+                  <p>名称</p>
+                  <p>上传时间</p>
+                  <p>上传人</p>
+                  <p style="display: none;">filePath</p>
+                  <p class="modal-operate">操作</p>
+                </div>
+                <div class="modal-body-bottom-rowWrap contractFile">
+                  <div class="modal-body-bottom-row modal-body-bottom-serviceDelete">
+                    <p data-bind="fileName"></p>
+                    <p data-bind="fileDate"></p>
+                    <p class="filePerson"></p>
+                    <p data-bind="filePath" style="display: none;"></p>
+                    <p>
+                      <a data-bind="fileDownLoad">下载</a>
+                      <a class="rowWrapDelete">删除</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">返回</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--弹出是否删除附件-->
+			<div class="modal fade" id="ServiceContractDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+		        <div class="modal-dialog">
+		            <div class="modal-content">
+		                <div class="modal-header">
+		                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+						</div>
+						<div class="modal-body">
+							<span class="question"></span>是否确定要删除该附件？
+						</div>
+						<div class="modal-footer">
+							<button type="button"  class="btn btn-delete ServiceContractDetail">删除</button>
+							<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+      
+    <!-- 以上是弹框 -->
+		<p class="successTip" id="tipMsg"></p>
+
+		<!-- jquery  -->
+		<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+		<!-- bootstrap -->
+		<script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+		<script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+		<!--url 常量  -->
+		<script type="text/javascript" src="/js/variable.js"></script>
+		<!-- head -->
+		<script type='text/javascript' src="/js/serviceHead.js"></script>
+		<!-- scroll -->
+		<script type="text/javascript" src="/js/compentJS/jquery.mCustomScrollbar.js"></script>
+		<script type="text/javascript" src="/js/compentJS/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/js/compentJS/history.js"></script>
+
+
+		<!-- 分类下拉树 -->
+		<script type="text/javascript" src="/js/compentJS/jquery.ztree.core.js"></script>
+		<script type="text/javascript" src="/js/compentJS/searchTree.js"></script>
+
+		<!-- 绑定数据 -->
+		<script type="text/javascript" src="/js/transparency.min.js"></script>
+		<!--删除附件-->
+		<script type="text/javascript" src="../js/compentJS/deletemodal.js" ></script>
+		<!--302error-->
+		<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+		<script type="text/javascript" src="/js/compentJS/elementController.js"></script>
+		<script type="text/javascript" src="/js/serviceContractDetail.js"></script>
+		<!-- tips -->
+		<script type="text/javascript" src="/js/tips.js"></script>
+
+		<script>
+
+			$('.selectpicker').selectpicker({
+				size: 6
+			});
+//			$('.selectpicker').selectpicker('refresh');
+//			$('.selectpicker').selectpicker('refresh');
+//			$('.selectpicker').selectpicker('refresh');
+			$("#print .modal-body-reqCon").mCustomScrollbar({
+				setHeight: 330,
+				theme: "dark-3"
+			});
+
+			/*打印弹窗 - 添加滚动条*/
+			$('#print .modal-body-detail').mCustomScrollbar({
+				theme: "3d-dark"
+			});
+
+		</script>
+	</body>
+
+</html>

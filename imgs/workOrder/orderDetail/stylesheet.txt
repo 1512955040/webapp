@@ -1,0 +1,149 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-icon11 {
+    width: 26px;
+    height: 28px;
+    background-position: -5px -5px;
+}
+
+.sprite-icon12 {
+    width: 26px;
+    height: 28px;
+    background-position: -41px -5px;
+}
+
+.sprite-icon13 {
+    width: 26px;
+    height: 28px;
+    background-position: -77px -5px;
+}
+
+.sprite-icon21 {
+    width: 30px;
+    height: 23px;
+    background-position: -113px -5px;
+}
+
+.sprite-icon22 {
+    width: 30px;
+    height: 23px;
+    background-position: -153px -5px;
+}
+
+.sprite-icon23 {
+    width: 30px;
+    height: 23px;
+    background-position: -193px -5px;
+}
+
+.sprite-icon31 {
+    width: 25px;
+    height: 31px;
+    background-position: -233px -5px;
+}
+
+.sprite-icon32 {
+    width: 25px;
+    height: 31px;
+    background-position: -268px -5px;
+}
+
+.sprite-icon33 {
+    width: 25px;
+    height: 31px;
+    background-position: -303px -5px;
+}
+
+.sprite-icon41 {
+    width: 28px;
+    height: 27px;
+    background-position: -338px -5px;
+}
+
+.sprite-icon42 {
+    width: 28px;
+    height: 27px;
+    background-position: -113px -42px;
+}
+
+.sprite-icon43 {
+    width: 28px;
+    height: 27px;
+    background-position: -151px -42px;
+}
+
+.sprite-icon51 {
+    width: 27px;
+    height: 28px;
+    background-position: -189px -42px;
+}
+
+.sprite-icon52 {
+    width: 27px;
+    height: 28px;
+    background-position: -338px -42px;
+}
+
+.sprite-icon53 {
+    width: 27px;
+    height: 28px;
+    background-position: -5px -80px;
+}
+
+.sprite-icon6 {
+    width: 28px;
+    height: 27px;
+    background-position: -42px -80px;
+}
+
+.sprite-icon61 {
+    width: 29px;
+    height: 25px;
+    background-position: -80px -80px;
+}
+
+.sprite-icon62 {
+    width: 29px;
+    height: 25px;
+    background-position: -119px -80px;
+}
+
+.sprite-icon63 {
+    width: 29px;
+    height: 25px;
+    background-position: -158px -80px;
+}
+
+.sprite-process1 {
+    width: 362px;
+    height: 15px;
+    background-position: -5px -118px;
+}
+
+.sprite-process2 {
+    width: 362px;
+    height: 15px;
+    background-position: -5px -143px;
+}
+
+.sprite-process3 {
+    width: 362px;
+    height: 15px;
+    background-position: -5px -168px;
+}
+
+.sprite-process4 {
+    width: 362px;
+    height: 15px;
+    background-position: -5px -193px;
+}
+
+.sprite-process5 {
+    width: 362px;
+    height: 15px;
+    background-position: -5px -218px;
+}

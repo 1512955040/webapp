@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测试页面</title>
+<!--
+   js：webapp/js/jquery-3.1.1.min.js
+  now:webapp/test.html
+ -->
+<!-- jquery -->
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+	  $("#show").click(function(){
+		  //alert("--");
+      $.ajax({
+          url:"http://localhost:8080/ekuter_web/resourceAjax/showResourceList",
+          type:"post",
+          data:{"mark":0,"sort":1},
+          dateType:"json",
+          success:function(result){
+        	   //请求成功
+             if(result.status == 1){
+            	 //先清空表格的数据
+            	 //$("tr").html("");
+            	 var data = result.data;
+            	 for(var i=0;i<data.length;i++){
+            		 var tr;
+            		 tr += "<tr>";
+            		 tr += "<td>"+data[i].name+"</td>";
+            		 tr += "<td>"+data[i].use_person_name+"</td>";
+            		 tr += "<td>"+data[i].department+"</td>";
+            		 tr += "<td>"+data[i].name+"</td>";
+            		 tr += "</tr>"
+            		 $("#showData").append(tr);
+            	 }
+             }else{
+            	 alert("请求失败");
+             }
+          }
+        });
+	  });
+  });
+</script>
+</head>
+<body>
+<input id="show" type="button" value="最近30天登记的资产">
+<div>
+  <table border="1" id="showData">
+    <tr>
+      <th>资源名称</th>
+      <th>使用人</th>
+      <th>部门</th>
+      <th>其他</th>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>打印详情页面</title>
+		<!-- reset -->
+		<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+		<!-- scroll -->
+		<link rel="stylesheet" href="/css/compentCSS/jquery.mCustomScrollbar.css">
+    <!-- 自定义 -->
+    <link rel="stylesheet" href="/css/assetAddform.css" type="text/css">
+		<link rel="stylesheet" href="/css/printContrat.css" type="text/css">
+	</head>
+	<body>
+		<div class="wrapper" id="print">
+      <div class="modal-body-detail" id="">
+        <!-- 信息 -->
+        <div class="modal-box contract_info">
+          <p class="modal-box-title">信息</p>
+          <div class="modal-box-section">
+            <p class="modal-box-section-title">总信息</p>
+            <p class="twoLine">
+              <span>状态</span>
+              <span data-bind="contract_status"></span>
+            </p>
+            <p class="twoLine">
+              <span>创建时间</span>
+              <span data-bind="create_time_string"></span>
+            </p>
+            <p class="twoLine">
+              <span>创建人</span>
+              <span data-bind="person_name"></span>
+            </p>
+          </div>
+          <div class="modal-box-section">
+            <p class="modal-box-section-title">描述</p>
+            <p class="oneLine">
+              <span data-bind="contract_info"></span>
+            </p>
+          </div>
+          <div class="modal-box-section">
+            <p class="modal-box-section-title">合同细则</p>
+            <p class="oneLine">
+              <span data-bind="content"></span>
+            </p>
+          </div>
+        </div>
+        <!-- 资产 -->
+        <div class="modal-box contract_asset" style="">
+          <p class="modal-box-title">资产</p>
+          <div class="conAsset-body">
+            <ul class="conAsset-body-title">
+              <li>资产名</li>
+              <li>品牌</li>
+              <li>产品类型</li>
+              <li>购进日期</li>
+            </ul>
+            <div class="conAsset-body-data" id="con_list">
+              <input type="hidden" data-bind="id">
+              <ul class="conAsset-data-item">
+                <li data-bind="resource_name"></li>
+                <li data-bind="symbol_name"></li>
+                <li data-bind="category_name"></li>
+                <li data-bind="procure_time"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 厂商 -->
+        <div class="modal-box contract_company" style="">
+          <p class="modal-box-title">厂商</p>
+          <div class="modal-box-section">
+            <p class="modal-box-section-title"></p>
+            <p class="twoLine">
+              <span>厂商名</span>
+              <span data-bind="partB_enterprise"></span>
+            </p>
+            <p class="twoLine">
+              <span>联系人</span>
+              <span data-bind="contact_person"></span>
+            </p>
+            <p class="twoLine">
+              <span>电话</span>
+              <span data-bind="contact_tell"></span>
+            </p>
+          </div>
+        </div>
+        <!-- SLA -->
+        <div class="modal-box contract_sla" style="">
+          <p class="modal-box-title">SLA</p>
+          <div class="modal-box-section">
+						<p class="modal-box-section-title" data-bind="agreement_name"></p>
+            <p class="modal-box-section-title">SLA描述</p>
+            <p class="oneLine">
+              <span data-bind="agreement_describe"></span>
+            </p>
+          </div>
+          <div  class="modal-box-section" data-bind="slaInfoContent">
+            <div class="slaTactics">
+              <p class="modal-box-section-title">SLA策略</p>
+              <div class="slaTacticsTable">
+                <ul class="slaTacticsTableTitle">
+                  <li>服务级别</li>
+                  <li>响应时效</li>
+                  <li>解决时效</li>
+                  <li>服务时间</li>
+                </ul>
+                <div class="slaTacticsTableBody" data-bind="sla_level">
+                  <ul class="slaTacticsTableBodyUl">
+                    <li data-bind="level_name"></li>
+                    <li data-bind="response_time"><span data-bind="response_time_unit"></span></li>
+                    <li data-bind="address_time"><span data-bind="address_time_unit"></span></li>
+                    <li data-bind="serviceTimeType"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+			<div class="btnPrint"><button id="btnPrint">打印</button></div>
+		</div>
+
+		<!-- jquery  -->
+ 		 <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+     <!--url 常量  -->
+     <script type="text/javascript" src="/js/variable.js"></script>
+     <!-- 绑定数据 -->
+     <script type="text/javascript" src="/js/transparency.min.js"></script>
+        <!--302error-->
+		<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+		<script type="text/javascript" src="/js/compentJS/loadListCommon.js"></script>
+		<script type="text/javascript" src="/js/compentJS/elementController.js"></script>
+		<script type="text/javascript" src="/js/serviceContractDetail.js"></script>
+		<script type="text/javascript" src="/js/printSerContrat.js"></script>
+    <script type="text/javascript" src="/js/compentJS/jquery-migrate-1.2.1.min.js"></script>
+	</body>
+</html>

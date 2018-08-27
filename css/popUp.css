@@ -1,0 +1,2808 @@
+body {
+	font-size: 16px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.w {
+	width: 1232px;
+	margin: 0 auto;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.dn {
+	display: none;
+}
+
+.di {
+	display: inline-block;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.sprite #relateAsset .modal-body .modal-body-up .modal-body-up-page .up-page-left,
+#conAsset .modal-body .modal-body-up .modal-body-up-page .up-page-left,
+#WorkOrderAppendage .modal-body .modal-body-up .modal-body-up-page .up-page-left,
+#accessory .modal-body .modal-body-up .modal-body-up-page .up-page-left,
+#selectAsset .modal-body .modal-body-up .modal-body-up-page .up-page-left,
+#selectAsset .modal-body .modal-body-up .modal-body-up-page .up-page-right,
+#relateAsset .modal-body .modal-body-up .modal-body-up-page .up-page-left,
+#relateAsset .modal-body .modal-body-up .modal-body-up-page .up-page-right,
+#conAsset .modal-body .modal-body-up .modal-body-up-page .up-page-right,
+#WorkOrderAppendage .modal-body .modal-body-up .modal-body-up-page .up-page-right,
+#accessory .modal-body .modal-body-up .modal-body-up-page .up-page-right,
+#relateAsset .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#addmember .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#myConAsset .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#WorkOrderAppendage .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#selectAsset .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#batchReply .addFile div p span:first-of-type,
+#merge .modal-body .modal-body-up div ul li:first-of-type i,
+#merge .modal-body .modal-body-up div ul li:nth-of-type(3) i,
+#merge .modal-body .modal-body-up div ul.first li:first-of-type i,
+#merge .modal-body .modal-body-bottom .modal-body-bottomTools p i,
+#assignFind,
+#merge .modal-body .modal-body-bottom .modal-body-bottomUl ul li:nth-of-type(2) i {
+	background-image: url(../imgs/pup/pup.png);
+	background-repeat: no-repeat;
+	display: block;
+}
+
+.sprite-add,
+#merge .modal-body .modal-body-bottom .modal-body-bottomUl ul li:nth-of-type(2) i {
+	width: 14px;
+	height: 14px;
+	background-position: -5px -5px;
+}
+
+.sprite-attachment,
+#batchReply .addFile div p span:first-of-type {
+	width: 12px;
+	height: 12px;
+	background-position: -29px -5px;
+}
+
+.sprite-change,
+#merge .modal-body .modal-body-up div ul li:first-of-type i {
+	width: 15px;
+	height: 15px;
+	background-position: -51px -5px;
+}
+
+.sprite-check,
+#relateAsset .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#myConAsset .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#WorkOrderAppendage .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#selectAsset .modal-body .modal-body-bottom .modal-body-bottom-row i {
+	width: 11px;
+	height: 11px;
+	background-position: -76px -5px;
+}
+
+.sprite-checked,
+#relateAsset .modal-body .modal-body-bottom .modal-body-bottom-row i.active,
+#addmember .modal-body .modal-body-bottom .modal-body-bottom-row i.active,
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-row i.active,
+#myConAsset .modal-body .modal-body-bottom .modal-body-bottom-row i.active,
+#WorkOrderAppendage .modal-body .modal-body-bottom .modal-body-bottom-row i.active,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-row i.active,
+#selectAsset .modal-body .modal-body-bottom .modal-body-bottom-row i.active {
+	width: 11px;
+	height: 11px;
+	background-position: -76px -26px;
+}
+
+.sprite-leftClick,
+#relateAsset .modal-body .modal-body-up .modal-body-up-page .up-page-left.active,
+#conAsset .modal-body .modal-body-up .modal-body-up-page .up-page-left.active,
+#WorkOrderAppendage .modal-body .modal-body-up .modal-body-up-page .up-page-left.active,
+#accessory .modal-body .modal-body-up .modal-body-up-page .up-page-left.active,
+#selectAsset .modal-body .modal-body-up .modal-body-up-page .up-page-left.active {
+	width: 18px;
+	height: 18px;
+	background-position: -5px -47px;
+}
+
+.sprite-leftNoClick,
+#relateAsset .modal-body .modal-body-up .modal-body-up-page .up-page-left,
+#conAsset .modal-body .modal-body-up .modal-body-up-page .up-page-left,
+#WorkOrderAppendage .modal-body .modal-body-up .modal-body-up-page .up-page-left,
+#accessory .modal-body .modal-body-up .modal-body-up-page .up-page-left,
+#selectAsset .modal-body .modal-body-up .modal-body-up-page .up-page-left {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-position: -33px -47px;
+}
+
+#relateAsset .modal-body .modal-body-up .modal-body-up-page .up-page-left {
+	position: relative;
+	left: 3px;
+}
+
+.sprite-reduce,
+#merge .modal-body .modal-body-up div ul li:nth-of-type(3) i {
+	width: 15px;
+	height: 15px;
+	background-position: -60px -47px;
+}
+
+.sprite-right,
+#merge .modal-body .modal-body-up div ul.first li:first-of-type i {
+	width: 15px;
+	height: 15px;
+	background-position: -60px -72px;
+}
+
+.sprite-rightClick,
+#relateAsset .modal-body .modal-body-up .modal-body-up-page .up-page-right.active,
+#conAsset .modal-body .modal-body-up .modal-body-up-page .up-page-right.active,
+#WorkOrderAppendage .modal-body .modal-body-up .modal-body-up-page .up-page-right.active,
+#accessory .modal-body .modal-body-up .modal-body-up-page .up-page-right.active,
+#selectAsset .modal-body .modal-body-up .modal-body-up-page .up-page-right.active {
+	width: 19px;
+	height: 18px;
+	background-position: -98px -5px;
+}
+
+.sprite-rightNoClick,
+#relateAsset .modal-body .modal-body-up .modal-body-up-page .up-page-right,
+#conAsset .modal-body .modal-body-up .modal-body-up-page .up-page-right,
+#WorkOrderAppendage .modal-body .modal-body-up .modal-body-up-page .up-page-right,
+#accessory .modal-body .modal-body-up .modal-body-up-page .up-page-right,
+#selectAsset .modal-body .modal-body-up .modal-body-up-page .up-page-right {
+	display: inline-block;
+	width: 19px;
+	height: 18px;
+	background-position: -97px -33px;
+}
+
+.sprite-search,
+#merge .modal-body .modal-body-bottom .modal-body-bottomTools p i,
+#assignFind {
+	width: 31px;
+	height: 25px;
+	background-position: -85px -61px;
+}
+
+body {
+	font-size: 14px;
+}
+
+.di {
+	display: inline-block;
+}
+
+.trifg {
+	text-align: right;
+}
+
+input,
+select {
+	outline: none;
+	text-indent: 10px;
+}
+input.pageChange-span{
+	text-indent:0;
+}
+p {
+	margin: 0;
+	padding: 0;
+}
+
+input[type="radio"] {
+	width: auto !important;
+	height: auto !important;
+}
+input.timePicker{
+	cursor: pointer;
+}
+
+.btn {
+	padding: 0;
+	margin: 0;
+}
+
+.modal-backdrop.in {
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+
+.modal-header {
+	min-height: 16.43px;
+	padding: 0;
+	font-size: 12px;
+}
+
+.modal-body {
+	padding: 0;
+	margin: 16px 0;
+}
+
+/*.modal {
+	width: 1232px;
+	margin: 0 auto;
+}*/
+
+.modal-dialog {
+	margin:0;
+	position: absolute;
+	top:50%;
+	left:50%;
+	z-index:1040;
+}
+
+.modal-content {
+	-webkit-box-shadow: 0 5px 20px #dedddc;
+	box-shadow: 0 0px 20px #dedddc;
+	border: none;
+}
+
+#modal-1 .modal-dialog,
+/*#modal-1 .modal-content,*/
+#type .modal-dialog
+/*#type .modal-content */
+{
+	width: 396px;
+	height: 246px;
+	margin-top:-123px;
+	margin-left:-198px;
+}
+
+#modal-1 .modal-header,
+#type .modal-header {
+	padding-left: 15px;
+	height: 32px;
+	line-height: 32px;
+	color: #696969;
+	border-bottom: 1px dashed #bfbfbf;
+}
+
+#modal-1 .modal-body,
+#type .modal-body {
+	height: 135px;
+}
+
+#modal-1 .modal-footer,
+#type .modal-footer {
+	text-align: center;
+	border-top: none;
+}
+
+#modal-1 .modal-body-row p,
+#type .modal-body-row p {
+	width: 83px;
+	color: #696969;
+	font-size: 12px;
+	margin-right: 16px;
+	text-align: right;
+	vertical-align: top;
+	margin-top: 5px;
+}
+
+#modal-1 .modal-body-row select,
+#modal-1 .modal-body-row textarea,
+#type .modal-body-row select,
+#type .modal-body-row textarea {
+	width: 244px;
+	border: 1px solid #bfbfbf;
+	border-radius: 3px;
+	padding-left: 10px;
+	outline: none;
+}
+
+#modal-1 .modal-body-row select,
+#type .modal-body-row select {
+	height: 25px;
+}
+
+#modal-1 .modal-body-row textarea,
+#type .modal-body-row textarea {
+	height: 82px;
+}
+
+#modal-1 .modal-body-row:first-child,
+#type .modal-body-row:first-child {
+	margin-bottom: 10px;
+	margin-top: 22px;
+}
+
+.btn-keep,
+.btn-cancel,
+.btn-delete {
+	/*width: 55px;*/
+	padding: 0 10px!important;
+	height: 22px;
+	line-height: 21px;
+	text-align: center;
+	border-radius: 5px;
+	font-size: 12px;
+}
+
+.btn-keep,
+.btn-delete,
+.btn-delete:hover,
+.btn-keep:hover,
+.btn-keep:active,
+.btn-delete:active {
+	background-color: #054c9c;
+	border: none;
+	color: #fff;
+}
+
+.btn-cancel {
+	background-color: #eeeeee;
+	color: #696969;
+	border: 1px solid #bfbfbf;
+}
+
+.closeImg {
+	margin-right: 10px;
+	margin-top: 6px;
+	outline: none;
+}
+/*#ServiceContractDelete .modal-content*/
+#ServiceContractDelete .modal-content,
+/*#projectDelete .modal-content*/
+#projectDelete .modal-content,
+/*#eventDelete .modal-content*/
+#eventDelete .modal-content,
+/*#assetDelete .modal-content*/
+#assetDelete .modal-dialog,
+/*#pupDelete .modal-content,*/
+#pupDelete .modal-dialog,
+/*#pupDelete2 .modal-content,*/
+#pupDelete2 .modal-dialog,
+/*#pupDelete3 .modal-content,*/
+#pupDelete3 .modal-dialog,
+/*#pupDelete4 .modal-content,*/
+#pupDelete4 .modal-dialog,
+/*#pupDelete5 .modal-content,*/
+#pupDelete5 .modal-dialog,
+/*#pupDelete6 .modal-content,*/
+#pupDelete6 .modal-dialog,
+/*#errorBtn .modal-content,*/
+#errorBtn .modal-dialog,
+/*#assign .modal-content,*/
+#assign .modal-dialog,
+/*#eToManager .modal-content*/
+#eToManager .modal-dialog
+ {
+	/*width: 396px;*/
+	width:386px;
+	/*margin-left:-198px;*/
+	margin-left:-193px;
+	margin-top:-79px;
+}
+
+#pupDelete .modal-content,
+#pupDelete2 .modal-content,
+#pupDelete3 .modal-content,
+#pupDelete4 .modal-content,
+#pupDelete5 .modal-content,
+#pupDelete6 .modal-content,
+#errorBtn .modal-content,
+#assign .modal-content,
+#eToManager .modal-content {
+	/*margin-top: 300px;
+	margin-left: 100px;*/
+}
+#ServiceContractDelete .modal-header,
+#projectDelete .modal-header,
+#eventDelete .modal-header,
+#assetDelete .modal-header,
+#pupDelete .modal-header,
+#pupDelete2 .modal-header,
+#pupDelete3 .modal-header,
+#pupDelete4 .modal-header,
+#pupDelete5 .modal-header,
+#pupDelete6 .modal-header,
+#errorBtn .modal-header,
+#assign .modal-header,
+#eToManager .modal-header {
+	height: 34px;
+	border-bottom: none;
+}
+#ServiceContractDelete .modal-body,
+#projectDelete .modal-body,
+#eventDelete .modal-body,
+#assetDelete .modal-body,
+#pupDelete .modal-body,
+#pupDelete2 .modal-body,
+#pupDelete3 .modal-body,
+#pupDelete4 .modal-body,
+#pupDelete5 .modal-body,
+#pupDelete6 .modal-body,
+#assign .modal-body,
+#eToManager .modal-body {
+	/*height: 42px;*/
+	padding-left: 41px;
+	font-size: 16px;
+	color: #696969;
+}
+
+#inputCheckBox .modal-body {
+	padding-left: 41px;
+	font-size: 12px;
+	color: #696969;
+	height: 100px;
+	overflow-y: scroll;
+}
+
+#errorBtn .modal-body {
+	height: 42px;
+	text-align: center;
+	font-size: 12px;
+	color: #696969;
+}
+#ServiceContractDelete .modal-body .question,
+#projectDelete .modal-body .question,
+#eventDelete .modal-body .question,
+#assetDelete .modal-body .question,
+#pupDelete .modal-body .question,
+#pupDelete2 .modal-body .question,
+#pupDelete3 .modal-body .question,
+#pupDelete4 .modal-body .question,
+#pupDelete5 .modal-body .question,
+#pupDelete6 .modal-body .question,
+#errorBtn .modal-body .question,
+#assign .modal-body .question,
+#eToManager .modal-body .question,
+#close .modal-body .question {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+	/*vertical-align: bottom;*/
+	margin-right: 10px;
+	background: url(../imgs/delete.jpg) no-repeat;
+}
+#pupDelete .modal-footer,
+#pupDelete2 .modal-footer,
+#pupDelete3 .modal-footer,
+#pupDelete4 .modal-footer,
+#pupDelete5 .modal-footer,
+#pupDelete6 .modal-footer,
+#errorBtn .modal-footer,
+#assign .modal-footer,
+#eToManager .modal-footer {
+	/*padding: 30px;*/
+	padding:25px  56px 30px 0px;
+	text-align: right;
+	border-top: none;
+	padding-right: 55px;
+}
+
+#assign .modal-body-row {
+	width: 240px;
+	margin: 0 auto;
+}
+
+#assign .modal-body>div.modal-body-row {
+	margin-left: 50px;
+	width: 208px;
+	height: 26px;
+	position: relative;
+	border-radius: 5px;
+	border: 1px solid #bfbfbf;
+}
+/*#assign .modal-body div{
+	width: 208px;
+	height: 26px;
+	position: relative;
+    box-shadow: 0 0 10px #ccc;
+}*/
+#assign .modal-body>div {
+	margin-left:50px;
+	width: 208px;
+	height: 26px;
+	position: relative;
+	border-radius: 5px;
+	border: 1px solid #bfbfbf;
+}
+
+#assign .modal-body>div input {
+	width: 172px;
+	height: 23px;
+	text-indent: 8px;
+	border: none;
+	border-radius: 5px;
+}
+#assign .modal-body .menus{
+	display: none;
+	width:100%;
+	position: absolute;
+    background-color: #fff;
+    width: 100%;
+    margin-left: 34px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ccc;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.modal-body-txt {
+	font-size: 12px;
+	color: #696969;
+	text-align: right;
+}
+
+.modal-body-start {
+	color: #f24848;
+	vertical-align: sub;
+	margin-left: 2px;
+}
+
+.modal-body-first {
+	margin-right: 35px;
+}
+
+#addSupplier .modal-dialog
+/*#addSupplier .modal-content */
+{
+	width: 578px;
+	margin-left:-289px;
+	margin-top:-128px;
+}
+
+#addSupplier .modal-header {
+	padding-left: 15px;
+	height: 32px;
+	line-height: 32px;
+	color: #696969;
+	border-bottom: 1px dashed #bfbfbf;
+}
+
+#addSupplier .modal-body {
+	height: 175px;
+	padding: 24px 0 0 25px;
+	font-size: 12px;
+	color: #696969;
+}
+
+#addSupplier .modal-body .modal-body-item {
+	margin-bottom: 20px;
+	width: 240px;
+	position: relative;
+	/*padding-bottom: 20px;*/
+}
+
+#addSupplier .modal-body .modal-body-item  input,
+#addSupplier .modal-body .modal-body-item  select {
+	width: 162px;
+	height: 27px;
+	border: 1px solid #bfbfbf;
+	border-radius: 3px;
+	font-size: 12px;
+}
+
+#addSupplier .modal-body .modal-body-item  .modal-body-txt {
+	width: 50px;
+}
+
+#addSupplier .modal-body .modal-body-item  .modal-body-group {
+/*	width: 57px;*/
+}
+#addSupplier .modal-body .modal-body-item .errorJS{
+
+	position: absolute;
+	left:60px;
+	bottom:-20px;
+	color:#f24848;
+}
+#addSupplier .modal-footer {
+	text-align: center;
+	height: 49px;
+	padding: 0;
+	border-top: none;
+}
+
+/*#assign .modal-content,*/
+#assign .modal-dialog,
+/*#changeStatus .modal-content,*/
+#changeStatus .modal-dialog,
+/*#moveRes .modal-content,*/
+
+/*#moveInfo .modal-content,*/
+#moveInfo .modal-dialog
+/*#merge .modal-content,*/
+/*#merge .modal-dialog */
+{
+	width: 396px;
+	margin-left:-198px;
+	margin-top:-90px;
+}
+#moveRes .modal-dialog{
+	width: 396px;
+	margin-left:-304px;
+	margin-top:-90px;
+}
+#assign .modal-content,
+#slideDownList .modal-content,
+#createGroupBtn .modal-content,
+#addmember .modal-content,
+#changeStatus .modal-content,
+#moveRes .modal-content,
+#moveInfo .modal-content,
+#merge .modal-content {
+	/*margin-top: 300px;
+	margin-left: 100px;*/
+}
+
+#inputCheckBox .modal-header,
+#assign .modal-header,
+#changeStatus .modal-header,
+#moveRes .modal-header,
+#moveInfo .modal-header,
+#merge .modal-header {
+	padding-left: 15px;
+	height: 32px;
+	line-height: 32px;
+	color: #696969;
+	border-bottom: 1px dashed #bfbfbf;
+}
+
+#assign .modal-body,
+#changeStatus .modal-body,
+#moveRes .modal-body,
+#moveInfo .modal-body,
+#merge .modal-body {
+	height: 65px;
+	padding-left: 41px;
+	font-size: 12px;
+	color: #696969;
+	padding-top: 22px;
+}
+
+#assign .modal-body select,
+#moveRes .modal-body select,
+#moveInfo .modal-body select,
+#merge .modal-body select{
+
+	width: 210px;
+	height: 27px;
+	border: 1px solid #bfbfbf;
+	border-radius: 3px;
+	margin-left: 15px;
+}
+/**资产修改状态弹窗**/
+#changeStatus .modal-body select,
+#changeStatus .modal-body .bootstrap-select .btn{
+	width: 210px;
+	height: 27px;
+	border: 1px solid #bfbfbf;
+	border-radius: 3px;
+	
+}
+#changeStatus .modal-body .changeStatusName{
+	margin-right:15px;
+}
+
+#assign .modal-footer,
+#changeStatus .modal-footer,
+#moveRes .modal-footer,
+#moveInfo .modal-footer,
+#merge .modal-footer {
+	padding: 30px;
+	text-align: center;
+	border-top: none;
+}
+
+#assign .modal-footer {
+	padding: 30px;
+}
+
+#depreciate .modal-dialog
+/*#depreciate .modal-content */
+{
+	width: 458px;
+	margin-top:-123px;
+	margin-left:-229px;
+}
+
+#depreciate .modal-content {
+	/*margin-top: 300px;
+	margin-left: 95px;*/
+}
+
+#depreciate .modal-header {
+	padding-left: 15px;
+	height: 32px;
+	line-height: 32px;
+	color: #696969;
+	border-bottom: 1px dashed #bfbfbf;
+}
+
+#depreciate .modal-body {
+	height: 167px;
+	font-size: 12px;
+	color: #696969;
+	padding-top: 22px;
+}
+
+#depreciate .modal-body .modal-body-row {
+	height: 50px;
+}
+
+#depreciate .modal-body .modal-body-row p {
+	width: 148px;
+	text-align: right;
+}
+
+#depreciate .modal-body input,
+#depreciate .modal-body select {
+	width: 208px;
+	height: 27px;
+	border: 1px solid #bfbfbf;
+	border-radius: 3px;
+	margin-left: 15px;
+}
+
+#depreciate .modal-body .modal-body-radioGroup {
+	padding-left: 194px;
+	margin-top: 3px;
+}
+
+#depreciate .modal-body .modal-body-radioGroup .radio {
+	margin: 0;
+	padding: 0;
+}
+
+#depreciate .modal-body .modal-body-radioGroup .radio input {
+	margin: 0;
+	left: -14px;
+	top: 2px;
+}
+
+#depreciate .modal-body .modal-body-radioGroup .radio:first-child {
+	margin-right: 25px;
+}
+
+#depreciate .modal-footer {
+	height: 46px;
+	padding: 0;
+	text-align: center;
+	border-top: none;
+}
+
+#relateAsset .modal-dialog,
+/*#relateAsset .modal-content,*/
+#conAsset .modal-dialog,
+/*#conAsset .modal-content,*/
+#WorkOrderAppendage .modal-dialog,
+/*#WorkOrderAppendage .modal-dialog,*/
+#accessory .modal-dialog,
+/*#accessory .modal-content,*/
+#selectAsset .modal-dialog
+/*#selectAsset .modal-content*/
+ {
+	width: 562px;
+	margin-left:-281px;
+	margin-top:-234px;
+}
+#selectAsset .modal-dialog{
+	margin-top:-155px;
+}
+#WorkOrderAppendage .modal-dialog,
+/*#WorkOrderAppendage .modal-dialog,*/
+#accessory .modal-dialog{
+	margin-left:-366px;/**位于详情之间区域居中**/
+}
+
+#myConAsset .modal-content
+{
+	/*width: 440px;*/
+	width:541px;
+}
+
+#relateAsset .modal-content,
+#conAsset .modal-content,
+#accessory .modal-content,
+#selectAsset .modal-content {
+	/*margin-top: 300px;*/
+	/*margin-left: 90px;*/
+}
+
+/*#myConAsset .modal-content {
+	margin-top: 155px;
+	margin-left:-263px;
+
+}*/
+
+#relateAsset .modal-header,
+#addmember .modal-header,
+#conAsset .modal-header,
+#myConAsset .modal-header,
+#WorkOrderAppendage .modal-header,
+#accessory .modal-header,
+#selectAsset .modal-header {
+	padding-left: 15px;
+	height: 32px;
+	line-height: 32px;
+	color: #696969;
+	border-bottom: 1px dashed #bfbfbf;
+}
+
+#relateAsset .modal-body,
+#addmember .modal-body,
+#myConAsset .modal-body
+/*#accessory .modal-body,*/
+ {
+	/*height: 231px;*/
+	font-size: 12px;
+	color: #696969;
+	padding-left: 25px;
+	padding-bottom: 25px;
+}
+#selectAsset .modal-body {
+	font-size: 12px;
+	color: #696969;
+	padding-bottom:25px;
+	padding-left: 25px;
+}
+#conAsset .modal-body{
+	font-size: 12px;
+	color: #696969;
+	padding-left: 25px;
+	padding-bottom:25px;
+}
+#WorkOrderAppendage .modal-body,
+#accessory .modal-body{
+	font-size: 12px;
+	color: #696969;
+	padding-left: 25px;
+}
+
+#myConAsset .modal-body {
+	padding: 0 25px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#relateAsset .modal-body .modal-body-up,
+#conAsset .modal-body .modal-body-up,
+#WorkOrderAppendage .modal-body .modal-body-up,
+#accessory .modal-body .modal-body-up,
+#selectAsset .modal-body .modal-body-up {
+	height: 41px;
+	padding-top: 8px;
+}
+
+#relateAsset .modal-body .modal-body-up .modal-body-up-search,
+#conAsset .modal-body .modal-body-up .modal-body-up-search,
+#accessory .modal-body .modal-body-up .modal-body-up-search,
+#selectAsset .modal-body .modal-body-up .modal-body-up-search {
+	position: relative;
+}
+
+#relateAsset .modal-body .modal-body-up .modal-body-up-search input,
+#conAsset .modal-body .modal-body-up .modal-body-up-search input,
+#accessory .modal-body .modal-body-up .modal-body-up-search input,
+#selectAsset .modal-body .modal-body-up .modal-body-up-search input {
+	width: 209px;
+	height: 25px;
+	border-radius: 3px;
+	border: 1px solid #bfbfbf;
+	text-indent: 12px;
+	margin-left: 13px;
+	color:#bfbfbf;
+}
+#relateAsset .modal-body .modal-body-up .modal-body-up-search input,
+#conAsset .modal-body .modal-body-up .modal-body-up-search input{
+	margin-left:66px;
+}
+
+#relateAsset .modal-body .modal-body-up .modal-body-up-search i,
+#conAsset .modal-body .modal-body-up .modal-body-up-search i,
+#accessory .modal-body .modal-body-up .modal-body-up-search i,
+#selectAsset .modal-body .modal-body-up .modal-body-up-search i {
+	display: inline-block;
+	float: right;
+	width: 31px;
+	height: 25px;
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+	background: url(../imgs/contract/search1.png) no-repeat;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+}
+#selectAsset .modal-body .modal-body-up .modal-body-up-search i{
+	top:1px;
+}
+
+#relateAsset .modal-body .modal-body-up .modal-body-up-page,
+#conAsset .modal-body .modal-body-up .modal-body-up-page,
+#accessory .modal-body .modal-body-up .modal-body-up-page,
+#selectAsset .modal-body .modal-body-up .modal-body-up-page {
+	margin-right: 23px;
+	margin-top: 5px;
+	float: right;
+}
+/**合同附加到资产弹窗改为滚动条**/
+#conAsset .modal-body .modal-body-up .modal-body-up-page{
+	display:none;
+}
+#relateAsset .modal-body .modal-body-up .modal-body-up-page .body-up-pageTxt,
+#conAsset .modal-body .modal-body-up .modal-body-up-page .body-up-pageTxt,
+#accessory .modal-body .modal-body-up .modal-body-up-page .body-up-pageTxt,
+#selectAsset .modal-body .modal-body-up .modal-body-up-page .body-up-pageTxt {
+	vertical-align: super;
+}
+
+#relateAsset .modal-body .modal-body-bottom,
+#addmember .modal-body .modal-body-bottom,
+#WorkOrderAppendage .modal-body .modal-body-bottom,
+#accessory .modal-body .modal-body-bottom{
+	width: 513px;
+	height: auto;
+	border: 1px solid #bfbfbf;
+}
+#selectAsset .modal-body .modal-body-bottom{
+	width: 513px;
+	border: 1px solid #bfbfbf;
+}
+#conAsset .modal-body .modal-body-bottom,#selectAsset .modal-body .modal-body-bottom{
+	width:513px;
+}
+#conAsset .modal-body .modal-body-bottom-rowWrap{
+	width: 513px;
+	border: 1px solid #bfbfbf;
+	max-height:299px;/**超出10行有滚动条**/
+}
+#conAsset .modal-body .modal-body-bottom-rowWrap .mCSB_inside > .mCSB_container{
+	margin-right:-15px;
+}
+#relateAsset .modal-body .modal-body-bottom .modal-body-bottom-title,
+#addmember .modal-body .modal-body-bottom .modal-body-bottom-title,
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-title,
+#WorkOrderAppendage .modal-body .modal-body-bottom .modal-body-bottom-title,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-title{
+	padding-left: 14px;
+	height: 32px;
+	background-color: #eeeeee;
+}
+#selectAsset .modal-body .modal-body-bottom .modal-body-bottom-title{
+	padding-left: 25px;
+	height: 32px;
+	background-color: #eeeeee;
+}
+#selectAsset .table-scroll{
+	max-height: 200px;
+}
+#selectAsset .modal-body .modal-body-bottom .modal-body-bottom-body{
+	width:511px;
+	max-height: 292px;
+}
+#relateAsset .modal-body .modal-body-bottom .modal-body-bottom-title .modal-body-bottom-titleItem,
+#addmember .modal-body .modal-body-bottom .modal-body-bottom-title .modal-body-bottom-titleItem,
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-title .modal-body-bottom-titleItem,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-title .modal-body-bottom-titleItem,
+#selectAsset .modal-body .modal-body-bottom .modal-body-bottom-title .modal-body-bottom-titleItem {
+	width: 97px;
+	text-align: center;
+	line-height: 32px;
+}
+
+#relateAsset .modal-body .modal-body-bottom .modal-body-bottom-row,
+#addmember .modal-body .modal-body-bottom .modal-body-bottom-row,
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-row,
+#myConAsset .modal-body .modal-body-bottom .modal-body-bottom-row,
+#WorkOrderAppendage .modal-body .modal-body-bottom .modal-body-bottom-row,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-row{
+	border-bottom: 1px solid #f1f1f1;
+	text-align: center;
+	/*width:505px;*/
+	height: 29px;
+	line-height: 29px;
+	padding-left: 20px;
+	position: relative;
+}
+
+#relateAsset .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#addmember .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#myConAsset .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#WorkOrderAppendage .modal-body .modal-body-bottom .modal-body-bottom-row i,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-row i{
+	position: absolute;
+	top: 7px;
+	left: 7px;
+}
+
+#selectAsset .modal-body .modal-body-bottom .modal-body-bottom-row {
+	border-bottom: 1px solid #f1f1f1;
+	text-align: center;
+	width:503px;
+	height: 29px;
+	line-height: 29px;
+	padding-left:7px;
+}
+#selectAsset .modal-body-bottom-row .checkBox{
+	width:24px;
+	height:28px;
+	text-align: center;
+	float:left;
+}
+#selectAsset .modal-body .modal-body-bottom .modal-body-bottom-row .checkBox i{
+	display:inline-block;
+}
+
+#relateAsset .modal-body .modal-body-bottom .modal-body-bottom-row .modal-body-bottom-rowItem,
+#addmember .modal-body .modal-body-bottom .modal-body-bottom-row .modal-body-bottom-rowItem,
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-row .modal-body-bottom-rowItem,
+#myConAsset .modal-body .modal-body-bottom .modal-body-bottom-row .modal-body-bottom-rowItem,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-row .modal-body-bottom-rowItem,
+#selectAsset .modal-body .modal-body-bottom .modal-body-bottom-row .modal-body-bottom-rowItem {
+	/*float: left;*/
+	display: inline-block;
+	/*width: 97px;*/
+	width:94px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+#relateAsset .modal-body .modal-body-bottom .modal-body-bottom-row:hover,
+#relateAsset .modal-body .modal-body-bottom .modal-body-bottom-row.active,
+#addmember .modal-body .modal-body-bottom .modal-body-bottom-row:hover,
+#addmember .modal-body .modal-body-bottom .modal-body-bottom-row.active,
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-row:hover,
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-row.active,
+#myConAsset .modal-body .modal-body-bottom .modal-body-bottom-row:hover,
+#myConAsset .modal-body .modal-body-bottom .modal-body-bottom-row.active,
+#WorkOrderAppendage .modal-body .modal-body-bottom .modal-body-bottom-row:hover,
+#WorkOrderAppendage .modal-body .modal-body-bottom .modal-body-bottom-row.active,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-row:hover,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-row.active,
+#selectAsset .modal-body .modal-body-bottom .modal-body-bottom-row:hover,
+#selectAsset .modal-body .modal-body-bottom .modal-body-bottom-row.active {
+	background-color: #aad1ff;
+	color: #fff;
+	cursor: pointer;
+}
+
+#relateAsset .modal-footer,
+#addmember .modal-footer,
+#conAsset .modal-footer,
+#WorkOrderAppendage .modal-footer,
+#accessory .modal-footer,
+#selectAsset .modal-footer {
+	height: 46px;
+	padding: 0;
+	text-align: center;
+	
+}
+
+#myConAsset .modal-footer {
+	padding: 15px;
+	text-align: center;
+	border-top: none;
+}
+
+#selectAsset .modal-body .modal-body-bottom .modal-body-bottom-title .modal-body-bottom-titleItem {
+	width: 118px;
+	text-align: center;
+}
+
+#selectAsset .modal-body-bottom-rowItem {
+	width: 115px !important;
+	height:100%;
+}
+
+#selectAsset .addEvent {
+	padding: 5px 7px;
+	background-color: #044d9c;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	margin-right: 66px;
+}
+
+#conAsset .modal-body {
+	/*height: 390px;*/
+}
+
+#conAsset .modal-body .modal-body-up button {
+	border: none;
+	width: 71px;
+	height: 21px;
+	background-color: #054c9c;
+	color: #fff;
+	border-radius: 3px;
+}
+
+#conAsset .modal-body .modal-body-up p.modal-body-up-page {
+	float: right;
+}
+
+/*#conAsset .modal-body .modal-body-bottom {
+	height: 330px;
+}*/
+
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-title {
+	padding-left: 20px;
+	border:1px solid #bfbfbf;
+	border-bottom:none;
+}
+
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-title p {
+	width: 120px;
+	display: inline-block;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+}
+
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-rowWrap .modal-body-bottom-row {
+	position: relative;
+	padding-left: 20px;
+}
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-rowWrap .modal-body-bottom-row:hover{
+	cursor: pointer;
+}
+#conAsset .modal-body .modal-body-bottom .modal-body-bottom-rowWrap .modal-body-bottom-row p {
+	display: inline-block;
+	width: 120px;
+}
+
+#conAsset .up-page-left,
+#conAsset .up-page-right {
+	vertical-align: bottom;
+}
+
+#conAsset #addToContract.default {
+	background-color: #eef1f7;
+	color: #9c9c9c;
+}
+
+#accessory .modal-body {
+	/*height: 350px;*/
+}
+#WorkOrderAppendage .modal-body .modal-body-up button,
+#accessory .modal-body .modal-body-up button {
+	border: none;
+	width: 71px;
+	height: 21px;
+	background-color: #054c9c;
+	color: #fff;
+	border-radius: 3px;
+}
+#WorkOrderAppendage .modal-body .modal-body-up p,
+#accessory .modal-body .modal-body-up p {
+	float: right;
+}
+#WorkOrderAppendage .modal-body .modal-body-bottom,
+#accessory .modal-body .modal-body-bottom {
+	/*	height: 330px;*/
+	max-height: 266px;/**超出则出现滚动条**/
+	/*margin-top: 20px;*/
+}
+#WorkOrderAppendage .modal-body .modal-body-bottom .modal-body-bottom-title,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-title {
+	padding-left: 0;
+}
+#WorkOrderAppendage .modal-body .modal-body-bottom .modal-body-bottom-title p,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-title p {
+	width: 125px;
+	display: inline-block;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+}
+#WorkOrderAppendage .modal-body .modal-body-bottom .modal-body-bottom-rowWrap .modal-body-bottom-row,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-rowWrap .modal-body-bottom-row {
+	padding-left: 0;
+}
+/**附件表格弹窗**/
+#WorkOrderAppendage .modal-body .modal-body-bottom .modal-body-bottom-rowWrap .modal-body-bottom-row p,
+#accessory .modal-body .modal-body-bottom .modal-body-bottom-rowWrap .modal-body-bottom-row p {
+	display: inline-block;
+	width: 125px;
+	text-align: center;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#WorkOrderAppendage .up-page-left,
+#WorkOrderAppendage .up-page-right,
+#accessory .up-page-left,
+#accessory .up-page-right {
+	vertical-align: bottom;
+}
+#WorkOrderAppendage .mCSB_inside>.mCSB_container,
+#accessory .mCSB_inside>.mCSB_container {
+	margin-right: 0;
+}
+
+#print {
+	color: #696969;
+}
+
+#print .modal-dialog
+/*#print .modal-content*/
+{
+	width: 828px;
+	margin-left:-414px;
+	margin-top:-280px;
+}
+
+#print .modal-dialog {
+/*	margin-top: 180px;*/
+}
+
+#print .modal-header {
+	padding-left: 15px;
+	height: 32px;
+	line-height: 32px;
+	border-bottom: 1px dashed #bfbfbf;
+}
+
+#print .modal-body {
+	height: 527px;
+	padding-left: 20px;
+	font-size: 14px;
+}
+
+#print .modal-body .modal-body-reqDetail {
+	height: 482px;
+	overflow: auto;
+}
+
+#print .modal-body .modal-body-reqDetail .modal-body-id {
+	border-bottom: 1px solid #e3e3e3;
+}
+
+#print .modal-body .modal-body-reqDetail .modal-body-id p {
+	height: 33px;
+	line-height: 33px;
+}
+
+#print .modal-footer {
+	padding: 0;
+	border-top: none;
+}
+
+.successTip {
+	display: none;
+	background: url(../imgs/asset/error.png) no-repeat 20px center;
+	background-color: #054c9c;
+	font-size: 14px;
+	color: #fff;
+	padding-right: 20px;
+	height: 37px;
+	line-height: 37px;
+	text-indent: 43px;
+	position: fixed;
+	top: 98px;
+	left: 50%;
+	border-radius: 5px;
+	z-index: 50;
+}
+
+.successTip.active {
+	background: url(../imgs/asset/success.png) no-repeat 20px center;
+	background-color: #054c9c;
+	font-size: 14px;
+	color: #fff;
+	padding-right: 20px;
+	height: 37px;
+	line-height: 37px;
+	text-indent: 43px;
+	position: fixed;
+	top: 98px;
+	left: 50%;
+	border-radius: 5px;
+	z-index: 50;
+}
+
+#move {
+	width: 210px;
+	height: 27px;
+	margin-left: 15px;
+	border-radius: 3px;
+	border: 1px solid #bfbfbf;
+}
+
+/*#addRemind .modal-content,*/
+#addRemind .modal-dialog,
+/*#markOff .modal-content,*/
+#markOff .modal-dialog,
+/*#customTime .modal-content,*/
+#customTime .modal-dialog,
+/*#close .modal-content,*/
+#close .modal-dialog,
+/*#publish .modal-content,*/
+#publish .modal-dialog,
+/*#audit .modal-content,*/
+#audit .modal-dialog,
+/*#processState .modal-content,*/
+/*#allocate .modal-content,*/
+#allocate .modal-dialog,
+/*#redeploy .modal-content,*/
+#redeploy .modal-dialog,
+#createNewDepartmentModal .modal-dialog{/**添加新部门**/
+	width: 362px;/*348px*/
+	margin-left:-181px;
+	margin-top:-137px;
+}
+
+#processState .modal-dialog{
+	width: 362px;/*348px*/
+	margin-left:-80px;
+	margin-top:-60px;
+}
+#publish .modal-dialog{
+	margin-top:-97px;
+}
+#processState .modal-dialog{
+	margin-top:-60px;
+}
+#redeploy .modal-dialog{
+	margin-top:-120px;
+}
+#allocate .modal-dialog{
+	margin-top:-96px;
+	margin-left:-70px;
+}
+#addRemind .modal-content,
+#markOff .modal-content,
+#customTime .modal-content,
+#close .modal-content,
+#publish .modal-content,
+#audit .modal-content,
+#processState .modal-content,
+#allocate .modal-content,
+#redeploy .modal-content {
+	/*margin-top: 300px;
+	margin-left: 100px;*/
+}
+
+#addRemind .modal-header,
+#markOff .modal-header,
+#customTime .modal-header,
+#close .modal-header,
+#publish .modal-header,
+#audit .modal-header,
+#processState .modal-header,
+#allocate .modal-header,
+#redeploy .modal-header,
+#createNewDepartmentModal .modal-header {
+	padding-left: 15px;
+	height: 32px;
+	line-height: 32px;
+	color: #696969;
+	border-bottom: 1px dashed #bfbfbf;
+}
+
+#addRemind .modal-body,
+#markOff .modal-body,
+#customTime .modal-body,
+#close .modal-body,
+#publish .modal-body,
+#audit .modal-body,
+#processState .modal-body,
+#redeploy .modal-body {
+	height: 205px;
+	font-size: 12px;
+	color: #696969;
+	padding-top: 16px;
+}
+
+#allocate .modal-body {
+	font-size: 12px;
+	color: #696969;
+	padding: 16px 0;
+}
+
+#addRemind .modal-body .modal-body-row p,
+#markOff .modal-body .modal-body-row p,
+#customTime .modal-body .modal-body-row p,
+#close .modal-body .modal-body-row p,
+#publish .modal-body .modal-body-row p,
+#audit .modal-body .modal-body-row p,
+#processState .modal-body .modal-body-row p,
+#allocate .modal-body .modal-body-row p,
+#redeploy .modal-body .modal-body-row p,
+#createNewDepartmentModal .modal-body-row p {
+	display: inline-block;
+}
+
+#addRemind .modal-body .modal-body-row .modal-body-row-left,
+#markOff .modal-body .modal-body-row .modal-body-row-left,
+#customTime .modal-body .modal-body-row .modal-body-row-left,
+#close .modal-body .modal-body-row .modal-body-row-left,
+#publish .modal-body .modal-body-row .modal-body-row-left,
+#audit .modal-body .modal-body-row .modal-body-row-left,
+#processState .modal-body .modal-body-row .modal-body-row-left,
+#redeploy .modal-body .modal-body-row .modal-body-row-left,
+#createNewDepartmentModal .modal-body-row .modal-body-row-left {
+	text-align: right;
+	color: #696969;
+	font-size: 12px;
+	line-height: 30px;
+	width: 100px;
+	margin-right: 8px;
+}
+
+#allocate .modal-body .modal-body-row .modal-body-row-left {
+	text-align: right;
+	color: #696969;
+	font-size: 12px;
+	line-height: 30px;
+	margin-right: 8px;
+}
+
+#addRemind .modal-body .modal-body-row .modal-body-row-right input,
+#addRemind .modal-body .modal-body-row .modal-body-row-right textarea,
+#markOff .modal-body .modal-body-row .modal-body-row-right input,
+#markOff .modal-body .modal-body-row .modal-body-row-right textarea,
+#customTime .modal-body .modal-body-row .modal-body-row-right input,
+#customTime .modal-body .modal-body-row .modal-body-row-right textarea,
+#close .modal-body .modal-body-row .modal-body-row-right input,
+#close .modal-body .modal-body-row .modal-body-row-right textarea,
+#publish .modal-body .modal-body-row .modal-body-row-right input,
+#publish .modal-body .modal-body-row .modal-body-row-right textarea,
+#audit .modal-body .modal-body-row .modal-body-row-right input,
+#audit .modal-body .modal-body-row .modal-body-row-right textarea,
+#processState .modal-body .modal-body-row .modal-body-row-right input,
+#processState .modal-body .modal-body-row .modal-body-row-right textarea,
+#allocate .modal-body .modal-body-row .modal-body-row-right input,
+#allocate .modal-body .modal-body-row .modal-body-row-right textarea,
+#redeploy .modal-body .modal-body-row .modal-body-row-right input,
+#redeploy .modal-body .modal-body-row .modal-body-row-right textarea,
+#createNewDepartmentModal .modal-body .modal-body-row .modal-body-row-right input,
+#createNewDepartmentModal .modal-body .modal-body-row .modal-body-row-right textarea {
+	width: 211px;
+	border-radius: 3px;
+	border: 1px solid #bfbfbf;
+	outline:none;
+}
+
+#addRemind .modal-body .modal-body-row .modal-body-row-right input,
+#markOff .modal-body .modal-body-row .modal-body-row-right input,
+#customTime .modal-body .modal-body-row .modal-body-row-right input,
+#close .modal-body .modal-body-row .modal-body-row-right input,
+#publish .modal-body .modal-body-row .modal-body-row-right input,
+#audit .modal-body .modal-body-row .modal-body-row-right input,
+#processState .modal-body .modal-body-row .modal-body-row-right input,
+#allocate .modal-body .modal-body-row .modal-body-row-right input,
+#redeploy .modal-body .modal-body-row .modal-body-row-right input,
+#createNewDepartmentModal .modal-body-row .modal-body-row-right input {
+	height: 26px;
+	margin-bottom: 16px;
+}
+
+#addRemind .modal-body .modal-body-row .modal-body-row-right textarea,
+#markOff .modal-body .modal-body-row .modal-body-row-right textarea,
+#customTime .modal-body .modal-body-row .modal-body-row-right textarea,
+#close .modal-body .modal-body-row .modal-body-row-right textarea,
+#publish .modal-body .modal-body-row .modal-body-row-right textarea,
+#audit .modal-body .modal-body-row .modal-body-row-right textarea,
+#processState .modal-body .modal-body-row .modal-body-row-right textarea,
+#allocate .modal-body .modal-body-row .modal-body-row-right textarea,
+#redeploy .modal-body .modal-body-row .modal-body-row-right textarea,
+#createNewDepartmentModal .modal-body-row .modal-body-row-right textarea {
+	height: 81px;
+}
+
+#addRemind .modal-body .modal-body-row .modal-body-row-right .bootstrap-select,
+#markOff .modal-body .modal-body-row .modal-body-row-right .bootstrap-select,
+#customTime .modal-body .modal-body-row .modal-body-row-right .bootstrap-select,
+#close .modal-body .modal-body-row .modal-body-row-right .bootstrap-select,
+#publish .modal-body .modal-body-row .modal-body-row-right .bootstrap-select,
+#audit .modal-body .modal-body-row .modal-body-row-right .bootstrap-select,
+#processState .modal-body .modal-body-row .modal-body-row-right .bootstrap-select,
+#allocate .modal-body .modal-body-row .modal-body-row-right .bootstrap-select,
+#redeploy .modal-body .modal-body-row .modal-body-row-right .bootstrap-select {
+	width: 211px;
+	height: 26px;
+}
+
+#addRemind .modal-body .modal-body-row .modal-body-rowTxt,
+#markOff .modal-body .modal-body-row .modal-body-rowTxt,
+#customTime .modal-body .modal-body-row .modal-body-rowTxt,
+#close .modal-body .modal-body-row .modal-body-rowTxt,
+#publish .modal-body .modal-body-row .modal-body-rowTxt,
+#audit .modal-body .modal-body-row .modal-body-rowTxt,
+#processState .modal-body .modal-body-row .modal-body-rowTxt,
+#allocate .modal-body .modal-body-row .modal-body-rowTxt,
+#redeploy .modal-body .modal-body-row .modal-body-rowTxt,
+#createNewDepartmentModal .modal-body .modal-body-row .modal-body-rowTxt{
+	vertical-align: top;
+}
+
+#addRemind .modal-footer,
+#markOff .modal-footer,
+#customTime .modal-footer,
+#close .modal-footer,
+#publish .modal-footer,
+#audit .modal-footer,
+#processState .modal-footer,
+#allocate .modal-footer,
+#redeploy .modal-footer,
+#createNewDepartmentModal .modal-footer {
+	height: 37px;
+	padding: 0;
+	text-align: center;
+	border-top: none;
+}
+
+#markOff .modal-body {
+	height: 250px;
+}
+
+#customTime .modal-body {
+	height: 120px;
+}
+
+#publish .modal-body {
+	height: 125px;
+}
+
+#publish .modal-body .modal-body-row {
+	margin-bottom: 12px;
+}
+
+#close .modal-body {
+	height: 205px !important;
+	/*padding: 16px 3px 0px 3px;*/
+}
+
+#close .modal-body div:first-child {
+	margin-bottom: 16px;
+	text-align: center;
+}
+
+#close .modal-body .modal-body-title {
+	padding: 0 15px;
+}
+
+#close .modal-body .modal-body-row .modal-body-row-left {
+	text-align: right;
+	color: #696969;
+	font-size: 12px;
+	line-height: 30px;
+	width: 86px !important;
+	margin-right: 8px;
+}
+
+#close .modal-body .modal-body-row .modal-body-row-right .bootstrap-select {
+	width: 221px;
+	height: 26px;
+}
+
+#close .modal-body .modal-body-row .modal-body-row-right textarea {
+	width: 221px;
+	height: 82px;
+}
+
+#audit .modal-body,
+#redeploy .modal-body,
+#createNewDepartmentModal .modal-body{
+	height: 170px !important;
+}
+
+#audit .modal-body .modal-body-row,
+#redeploy .modal-body .modal-body-row,
+#createNewDepartmentModal .modal-body-row{
+	margin-bottom: 12px;
+}
+#createNewDepartmentModal  .modal-body-row textarea{
+    min-height: 100px;
+}
+#processState .modal-header {
+	border-bottom: none;
+}
+
+#processState .modal-body {
+	height: 50px;
+	padding-top: 0;
+}
+
+#allocate .modal-body .modal-body-row-left {
+	text-align: right;
+}
+
+/*#modification .modal-content,*/
+#modification .modal-dialog,
+/*#orderBack .modal-content,*/
+#orderBack .modal-dialog,
+/*#batchReply .modal-content,*/
+#batchReply .modal-dialog {
+	width: 384px;
+	margin-left:-192px;
+	margin-top:-99px;
+}
+#orderBack .modal-dialog{
+	margin-left:-82px;
+}
+#batchReply .modal-dialog {
+	margin-top:-131px;
+}
+
+#modification .modal-content,
+#orderBack .modal-content,
+#batchReply .modal-content {
+	/*margin-top: 300px;
+	margin-left: 100px;*/
+}
+
+
+/*弹窗头部*/
+
+#slideDownList .modal-header,
+#modification .modal-header,
+#orderBack .modal-header,
+#batchReply .modal-header,
+#addWorkOrderModal .modal-header {
+	padding-left: 15px;
+	height: 32px;
+	line-height: 32px;
+	color: #696969;
+	border-bottom: 1px dashed #bfbfbf;
+}
+
+#modification .modal-body,
+#orderBack .modal-body,
+#batchReply .modal-body {
+	height: 125px;
+	font-size: 12px;
+	color: #696969;
+	padding-top: 16px;
+}
+
+#modification .modal-body textarea,
+#orderBack .modal-body textarea,
+#batchReply .modal-body textarea {
+	display: block;
+	width: 334px;
+	height: 80px;
+	margin: 0 auto;
+	border: 1px solid #bfbfbf;
+	border-radius: 3px;
+	padding: 7px 12px;
+	resize: none;
+	outline: none;
+}
+
+#modification .modal-footer,
+#orderBack .modal-footer,
+#batchReply .modal-footer {
+	height: 40px;
+	padding: 0;
+	text-align: center;
+	border-top: none;
+}
+
+#batchReply .addFile {
+	height: 65px;
+	padding-left: 18px;
+	padding-right: 18px;
+	font-size: 12px;
+}
+
+#batchReply .addFile div {
+	color: #9c9c9c;
+}
+
+#batchReply .addFile div p {
+	float: right;
+	cursor: pointer;
+}
+
+#batchReply .addFile div p span {
+	float: left;
+}
+
+#batchReply .addFile div p span:first-of-type {
+	margin-right: 2px;
+}
+
+#batchReply .addFile input {
+	margin-top: 5px;
+	width: 350px;
+	height: 27px;
+	border: 1px dashed #bfbfbf;
+}
+
+/*#merge .modal-content,*/
+#merge .modal-dialog {
+	width: 478px;
+	margin-top:-303px;
+	margin-left:-239px;
+}
+
+#merge .modal-body {
+	height: 491px;
+	font-size: 12px;
+	color: #696969;
+	padding-top: 17px;
+	padding-left: 15px;
+}
+
+#merge .modal-body .modal-body-up {
+	height: 164px;
+	border-bottom: 1px dashed #bfbfbf;
+}
+
+#merge .modal-body .modal-body-up div.modal-body-upTable {
+	width: 443px;
+	height: 147px;
+	border: 1px solid #bfbfbf;
+}
+
+#merge .modal-body .modal-body-up div.modal-body-upScroll ul {
+	height: 48px;
+	border-bottom: 1px solid #bfbfbf;
+	margin-bottom: 0;
+}
+
+#merge .modal-body .modal-body-up div.modal-body-upScroll ul li {
+	float: left;
+}
+
+#merge .modal-body .modal-body-up div.modal-body-upScroll ul li:first-of-type {
+	width: 33px;
+	height: 48px;
+}
+
+#merge .modal-body .modal-body-up div.modal-body-upScroll ul li:first-of-type i {
+	margin-left: 8px;
+	margin-top: 16px;
+	cursor: pointer;
+}
+
+#merge .modal-body .modal-body-up div.modal-body-upScroll ul li:nth-of-type(2) {
+	width: 380px;
+}
+
+#merge .modal-body .modal-body-up div.modal-body-upScroll ul li:nth-of-type(2) p {
+	line-height: 24px;
+	font-size: 12px;
+}
+
+#merge .modal-body .modal-body-up div.modal-body-upScroll ul li:nth-of-type(2) p:first-of-type {
+	color: #1f5097;
+}
+
+#merge .modal-body .modal-body-up div.modal-body-upScroll ul li:nth-of-type(3) i {
+	margin-top: 16px;
+	cursor: pointer;
+}
+
+#merge .modal-body .modal-body-up div.modal-body-upScroll ul:last-of-type {
+	border-bottom: none;
+}
+
+#merge .modal-body .modal-body-bottom {
+	height: 300px;
+}
+
+#merge .modal-body .modal-body-bottom .modal-body-bottomTools {
+	padding-top: 12px;
+	height: 48px;
+}
+
+#merge .modal-body .modal-body-bottom .modal-body-bottomTools .bootstrap-select {
+	width: 90px;
+	height: 25px;
+	vertical-align: bottom;
+	margin-left: 83px;
+}
+
+#merge .modal-body .modal-body-bottom .modal-body-bottomTools .bootstrap-select button {
+	height: 25px;
+}
+
+#merge .modal-body .modal-body-bottom .modal-body-bottomTools p {
+	display: inline-block;
+	position: relative;
+	width: 211px;
+	height: 26px;
+	margin-left: 14px;
+	border: 1px solid #bfbfbf;
+	border-radius: 8px;
+}
+
+#merge .modal-body .modal-body-bottom .modal-body-bottomTools p i,
+#assignFind {
+	position: absolute;
+	right: -1px;
+	top: 0;
+	cursor: pointer;
+}
+
+#merge .modal-body .modal-body-bottom .modal-body-bottomTools p input {
+	width: 180px;
+	height: 100%;
+	border: none;
+	border-radius: 8px;
+}
+
+#merge .modal-body .modal-body-bottom .modal-body-bottomTable {
+	width: 443px;
+	height: 248px;
+	border: 1px solid #bfbfbf;
+}
+
+#merge .modal-body .modal-body-bottom .modal-body-bottomUl ul {
+	height: 48px;
+	border-bottom: 1px solid #bfbfbf;
+	margin-bottom: 0;
+}
+
+#merge .modal-body .modal-body-bottom .modal-body-bottomUl ul li {
+	float: left;
+}
+
+#merge .modal-body .modal-body-bottom .modal-body-bottomUl ul li:first-of-type {
+	width: 412px;
+	padding-left: 10px;
+}
+
+#merge .modal-body .modal-body-bottom .modal-body-bottomUl ul li:first-of-type p {
+	line-height: 24px;
+	font-size: 12px;
+}
+
+#merge .modal-body .modal-body-bottom .modal-body-bottomUl ul li:first-of-type p:first-of-type {
+	color: #1f5097;
+}
+
+#merge .modal-body .modal-body-bottom .modal-body-bottomUl ul li:nth-of-type(2) i {
+	margin-top: 16px;
+	cursor: pointer;
+}
+
+
+/*创建小组模态框*/
+
+#createGroupBtn .modal-header {
+	padding: 0px 20px;
+	height: 32px;
+	line-height: 32px;
+}
+
+.modal-body-name,
+#createGroupBtn .modal-body-row input,
+#createGroupBtn .modal-body-row select,
+#createGroupBtn .modal-body-row button,
+#createGroupBtn .modal-body-row .modal-body-headman {
+	width: 100%;
+	height: 27px;
+	border: 1px solid #bfbfbf;
+	border-radius: 4px;
+	outline: none;
+}
+#createGroupBtn .modal-body-row button{
+	padding-left:10px;
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option{
+  margin-left:8px;
+  line-height: 21px;
+  color:#696969;
+  text-overflow: clip;
+  width: 172px;
+  font-size:12px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.bootstrap-select.btn-group .dropdown-menu li a span.text{
+	max-width: 120px;
+	color:#696969;
+	/*下拉框内容,超出省略文字*/
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.bootstrap-select.btn-group .dropdown-menu{
+	top:25px;
+}
+
+#createGroupBtn .modal-body {
+	font-size: 12px;
+	color: #696969;
+	padding: 15px 30px 20px 30px;
+}
+
+#createGroupBtn .modal-body-row textarea {
+	width: 100%;
+	height: 100px;
+	border: 1px solid #bfbfbf;
+	border-radius: 4px;
+	padding-left: 10px;
+}
+#createGroupBtn .modal-footer{
+	border:none;
+	padding:25px 0;
+	text-align: center!important;
+}
+
+
+/**弹层底部**/
+
+#addmember .modal-footer {
+	border-top: none;
+	padding: 30px;
+	text-align: center;
+}
+
+#addmember .modal-footer .btn-keep {
+	margin-right: 5px;
+}
+
+#addmember .modal-header {
+	margin: 0;
+}
+
+#addmember .modal-body,
+#slideDownList .modal-body-bottom {
+	padding: 15px;
+}
+
+#addmember .modal-body-bottom-box {
+	height: 145px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#addmember .modal-body .modal-body-bottom .modal-body-bottom-row .modal-body-bottom-rowItem {
+	width: 95px;
+}
+
+#addmember .modal-body .modal-body-bottom {
+	border: 1px solid #bfbfbf;
+}
+
+#addmember .modal-body-bottom-title {
+	background: #eee;
+}
+
+
+/**创建小组成员**/
+
+#myConAsset .modal-body .modal-body-bottom .modal-body-bottom-row {
+	text-align: left;
+	text-indent: 5px;
+}
+
+#createGroupBtn .modal-body-row {
+	margin-bottom: 10px;
+}
+
+.dropdown-menu {
+	/*top: 20px!important;此处不能设置*/
+	left: 0;
+	bottom: auto!important;
+}
+
+
+/**创建运维小组**/
+#createGroupBtn .modal-dialog{
+	width:600px;
+	margin-left:-300px;
+	margin-top:-239px;
+}
+/**添加组员**/
+#addmember .modal-dialog{
+	width:600px;
+	margin-left:-300px;
+	margin-top:-162px;
+}
+/**下拉多选**/
+#slideDownList .modal-dialog{
+	width:600px;
+	margin-left:-300px;
+	margin-top:-123px;
+}
+/*#createGroupBtn .modal-content {
+	margin-top: 148px;
+}*/
+
+
+/**分派样式**/
+
+#allocate .left-item-select {
+	list-style: none;
+	display: inline-block;
+}
+
+#allocate .modal-body-row {
+	width: 272px;
+	margin: 10px auto;
+}
+
+#inputCheckBox .modal-dialog {
+	margin-top: 400px;
+	width: 220px;
+}
+
+.inputCheckBox .modal-content {
+	width: 220px;
+	margin-left: 80px;
+}
+
+
+/**修改附加到事件附加资产弹窗样式**/
+
+#selectAsset .mCSB_inside>.mCSB_container {
+	margin-right: -15px;
+}
+
+
+/**修改附加到合并弹窗样式**/
+
+#merge .modal-body-up .mCSB_inside>.mCSB_container {
+	margin-right: 13px;
+}
+
+#merge .modal-body-bottom .mCSB_inside>.mCSB_container {
+	margin-right: 15px;
+}
+
+
+/**添加添加工作日志**/
+
+@media (min-width: 768px) {
+	#addWorkOrderModal .modal-dialog {
+		/*width: 590px;
+		margin: 100px auto;*/
+		width:600px;
+		margin-left:-300px;
+		margin-top:-365px;
+	}
+	#addWorkOrderModal .workTimeHoursBox,
+	#addWorkOrderModal .workTimeMinBox {
+		padding: 0;
+	}
+}
+#addWorkOrderModal #startTime,
+#addWorkOrderModal #endTime,
+#addWorkOrderModal #workTimeHours,
+#addWorkOrderModal #workTimeMin{
+	cursor: pointer;
+
+}
+#addWorkOrderModal .modal-body-start {
+	margin-right: 5px;
+}
+
+#addWorkOrderModal .workTimeHours,
+#addWorkOrderModal .workTimeMin {
+	margin-left: 10px;
+}
+
+#addWorkOrderModal .modal-body-up {
+	margin-top: 20px;
+	padding-left: 35px;
+}
+
+#addWorkOrderModal .modal-body-bottom {
+	padding-left: 180px;
+	margin-top: 20px;
+}
+
+#addWorkOrderModal .modal-footer {
+	text-align: left;
+	padding: 20px;
+	padding-left: 180px;
+	border-top: none;
+}
+
+
+/**注册服务条款模态框**/
+
+@media (min-width: 768px) {
+	/*#serviceModal {
+		width: 80%;
+	}*/
+	#serviceModal .modal-dialog {
+		/*width: 100%;
+		margin: 30px auto;*/
+		width:600px;
+		margin-left:-300px;
+		margin-top:-206px;
+	}
+	#serviceModal .modal-header {
+		padding-left: 15px;
+		height: 32px;
+		line-height: 32px;
+		color: #696969;
+		border-bottom: 1px dashed #bfbfbf;
+	}
+	#serviceModal .modal-content .modal-body {
+		padding: 10px;
+		max-height: 360px;
+	}
+
+}
+
+.supplierType {
+	width: 162px!important;
+	border:none;
+    font-size: 12px;
+}
+.marRight{
+	margin-right:7px;
+}
+#addSupplier .btn-group>.btn:first-child{
+
+    height: 27px;
+
+}
+#pupAcceptWorkOrder .modal-dialog{
+	width:386px;
+	margin-left:-90px;
+
+}
+#pupAcceptWorkOrder .modal-header{
+	padding-left: 15px;
+    color: #696969;
+    border-bottom:none;
+}
+#pupAcceptWorkOrder .modal-body{
+	font-size: 12px;
+    color: #696969;
+    padding-top:10px;
+    padding-left:42px;
+}
+#pupAcceptWorkOrder .modal-footer{
+    /*height: 37px;*/
+   	padding:30px 0;
+    text-align: right;
+    margin-right:52px;
+    border-top: none;
+}
+/*#pupAcceptWorkOrder .modal-footer button{
+	height:22px!important;
+	width:56px!important;
+}
+#pupAcceptWorkOrder .modal-footer button#unTreat{
+	margin-left:10px;
+	border:1px solid #d7d7d7;
+	background-color:#eee!important;
+	color:#696969;
+}*/
+
+#pupAcceptWorkOrder .question{
+	display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: bottom;
+    margin-right: 10px;
+    background: url(../imgs/delete.jpg) no-repeat;
+}
+#groupMembers .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark,
+#groupMembers .bootstrap-select.btn-group .dropdown-menu li a span.check-mark{
+	position: absolute;
+	left:15px;
+	display:inline-block;
+	width:11px;
+	height:11px;
+	margin-top:8px;
+}
+#groupMembers .bootstrap-select.btn-group .dropdown-menu li a span.check-mark{
+	background:url(../imgs/pup/pup.png) no-repeat -76px -5px;
+}
+#groupMembers .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark{
+	background:url(../imgs/pup/pup.png) no-repeat -76px -26px;
+}
+
+
+#groupMembers .bootstrap-select.btn-group.show-tick .dropdown-menu li a span.glyphicon-ok:before{
+	content:'';
+
+}
+
+#groupMembers .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.glyphicon-ok:before{
+	content:'';
+}
+/*#createGroupBtn #groupMembers .dropdown-menu{
+	overflow-y: hidden!important;
+}*/
+#groupMembers .dropdown-menu>li>a{
+	padding-left:40px;
+}
+
+/**弹窗样式**/
+#createNewUserModal .modal-dialog{
+	width:390px;
+	height:330px;
+	transform: translate(-50%,-50%);
+	margin-left:94px;
+	
+}
+#createNewUserModal .modal-header{
+	  padding-left: 15px;
+    height: 32px;
+    line-height: 32px;
+    color: #696969;
+    font-size: 12px;
+    border-bottom: 1px dashed #bfbfbf;
+}
+#createNewUserModal .modal-body {
+    padding: 0;
+    margin: 16px 30px 10px 30px;
+    font-size: 12px;  
+}
+#createNewUserModal .modal-footer{
+	border-top:none;
+	text-align: center;
+}
+#createNewUserModal .modal-body-item{
+	line-height: 28px;
+	margin-bottom:17px;
+}
+
+#createNewUserModal .modal-body-item .modal-body-item-name{
+	 width:83px;
+}
+#createNewUserModal .modal-body-item input{
+	  width: 208px;
+    height: 27px;
+	 	border: 1px solid #bfbfbf;
+    border-radius: 3px;
+}
+#createNewUserModal .modal-body-item i.associatedPersonel{
+	  display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-left:8px;
+    vertical-align: middle;
+    cursor: pointer;
+    background: url(../imgs/manage/manage.png) no-repeat -103px -81px;
+}
+#createNewUserModal .modal-body-item-last{
+	  margin-left:85px;
+}
+#createNewUserModal .modal-body-item-last .chooseBox{
+	cursor: pointer;
+}
+#createNewUserModal .modal-body-item-last i{
+	  display: inline-block;
+    width: 11px;
+    height: 11px;
+    vertical-align: middle;
+    background: url(../imgs/common.png) no-repeat;
+	  margin-right:6px;
+}
+#createNewUserModal .modal-body-item-last i{
+	background-position:-5px -32px;
+}
+
+#createNewUserModal .modal-body-item-last i.active{
+	background-position:-23px -32px;
+}
+
+
+/**更换登记人弹窗样式**/
+#changeRegistrantModal .modal-dialog{
+	width:386px;
+	height:142px;
+	transform: translate(-50%,-50%);
+	margin-left:94px;
+}
+#changeRegistrantModal .modal-header{
+	  padding-left: 15px;
+    height: 32px;
+    line-height: 32px;
+    color: #696969;
+    font-size: 12px;
+    border-bottom: 1px dashed #bfbfbf;
+}
+#changeRegistrantModal .modal-body{
+	text-align: center;
+	margin-top:21px;
+	margin-bottom:0;
+}
+#changeRegistrantModal .modal-body .changeRegistrantName{
+	margin-right:5px;
+	font-size: 12px;
+	color:#696969;
+}
+#changeRegistrantModal .modal-footer{
+	border-top: none;
+	padding:21px 0;
+	text-align: center;
+}
+
+/**创建新人员弹窗样式**/
+#createNewpersonelModal .modal-dialog{
+	width:578px;
+	height:270px;
+	transform: translate(-50%,-50%);
+	margin-left:94px;
+}
+#createNewpersonelModal .modal-header{
+	  padding-left: 15px;
+    height: 32px;
+    line-height: 32px;
+    color: #696969;
+    font-size: 12px;
+    border-bottom: 1px dashed #bfbfbf;
+}
+#createNewpersonelModal .modal-body{
+	text-align: center;
+	margin:20px 60px;
+}
+#createNewpersonelModal .modal-body .modal-body-row{
+	margin-bottom:16px;
+}
+#createNewpersonelModal .modal-body .modal-body-row-half{
+	width:200px;
+	margin-right:29px;
+	font-size: 12px;
+	color:#696969;
+}
+#createNewpersonelModal .modal-body .modal-body-row-half .modal-body-row-leftText{
+    margin-right:14px;
+    position: relative;
+}
+#createNewpersonelModal .modal-body .modal-body-row-half .modal-body-row-leftText>i{
+    color: red;
+    font-size: 16px;
+    position: absolute;
+    left: -10px;
+}
+/*人员管理里面第一栏*/
+#createNewpersonelModal .modal-body .modal-body-row-position{
+	position: relative;
+}
+/*人员管理里面姓名不能为空*/
+#createNewpersonelModal .modal-body .Namenull{
+	visibility: hidden;
+	
+}
+#createNewpersonelModal .modal-body .active{
+	visibility: visible;
+	color: red;
+}
+
+/*人员管理里面新添加*号，名字必须是填写的*/
+#createNewpersonelModal .modal-body .positionname{
+	position: absolute;
+	left: 27px;
+	top: 22px;
+	color: red;
+}
+
+#createNewpersonelModal .modal-body .modal-body-row-half input{
+	width:162px;
+	height:26px;
+	border: 1px solid #e5e5e5;
+    text-indent: 5px;
+    border-radius: 3px;
+    outline: none;
+}
+
+#createNewpersonelModal .modal-body .modal-body-row-half  .bootstrap-select{
+	width:162px;
+	height:26px;
+	text-indent: 5px;
+	outline: none;
+}
+#createNewpersonelModal .modal-body .modal-body-row-half  .bootstrap-select button{
+	height:26px;
+	line-height: 26px;
+}
+
+/*#createNewpersonelModal .modal-body .modal-body-row-half:nth-of-type(1){
+	margin-right:52px;
+}*/
+#createNewpersonelModal .modal-footer{
+	border-top: none;
+	padding:21px 0;
+	text-align: center;
+}
+
+
+/*人员管理-弹窗*/
+#personalId .modal-dialog{
+  width: 362px;
+  margin-left: -110px;
+  margin-top: -137px;
+}
+#personalId .modal-content{
+  width: 404px;
+  cursor: default;
+}
+#personalId .modal-body-head,
+#personalId .modal-body-info{
+  display: inline-block;
+  vertical-align: top;
+  height: 125px;
+}
+#personalId .modal-body-head{
+  width: 105px;
+  text-align: center;
+}
+#personalId .modal-body-info{
+  width: 295px;
+}
+#personalId .modal-body-head>i{
+  display: block;
+  width: 62px;
+  height: 62px;
+  margin: 23px auto 10px;
+  background: url(../imgs/header/header.png) no-repeat -272px -5px;
+}
+#personalId .modal-body-info>li:first-child{
+  margin: 0 0 12px;
+}
+#personalId .modal-body-info>li:last-child{
+  margin: 12px 0 0;
+}
+#personalId .modal-body-info>li{
+  margin: 0 0 3px;
+}
+#personalId .modal-body-info .loginNumber{
+    color: rgb(31,79,151);
+    display: inline-block;
+    width: 200px;
+}
+
+#personalId .modal-footer{
+    text-align: left;
+    border-top: none;
+    padding: 8px 20px 20px 30px;
+}
+#personalId .modal-footer .edit,
+#personalId .modal-footer .save-quit,
+#personalId .modal-footer .delete-signout{
+    display: inline-block;
+    vertical-align: middle;
+}
+#personalId .modal-footer .edit{
+    cursor: pointer;
+    float: left;
+}
+#personalId .modal-footer .edit>i{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../imgs/common.png) no-repeat -107px -5px;
+  vertical-align: middle;
+}
+#personalId .modal-footer .edit>span{
+  display: inline-block;
+  vertical-align: middle;
+}
+#personalId .modal-footer .save-quit{
+    display: none;
+}
+#personalId .modal-footer .delete-signout{
+    float: right;
+}
+
+/*附件弹窗高度*/
+#ServiceContractDelete .modal-content,
+#projectDelete .modal-content,
+#eventDelete .modal-content,
+#assetDelete .modal-content{
+	height: 150px;
+}
+#CreateSvScheme .modal-dialog .modal-content .modal-footer,
+#CreateScheme .modal-dialog .modal-content .modal-footer,
+#ServiceContractDelete .modal-dialog .modal-footer,
+#projectDelete .modal-dialog .modal-footer,
+#eventDelete .modal-dialog .modal-footer,
+#assetDelete .modal-dialog .modal-footer{
+	border: none;
+}
+/*附件弹窗删除按钮*/
+#ServiceContractDelete.modal-dialog .modal-footer .ServiceContractDetail,
+#projectDelete .modal-dialog .modal-footer .projectDetail,
+#eventDelete .modal-dialog .modal-footer .eventDetail,
+{
+	margin-right: 40px;
+}
+
+/*附件弹窗取消按钮*/
+#ServiceContractDelete .modal-dialog .modal-footer .btn-cancel,
+#projectDelete .modal-dialog .modal-footer .btn-cancel,
+#eventDelete .modal-dialog .modal-footer .btn-cancel
+{
+	margin-right: 30px;
+}
+/*工单解决方案里面创建新方案弹窗*/
+/*弹窗标题*/
+#ServiceOrder_solved .CreateNewSvScheme,
+#workOrder_solved  .CreateNewScheme{
+	cursor: pointer;
+}
+/*解决方案添加框*/
+#workOrder_log .conAssetNodata,
+#ServiceOrder_solved ul .conAssetNodata,
+#workOrder_solved ul .conAssetNodata{
+	min-height:210px;
+	border: 1px solid #e5e5e5;
+	position: relative;
+}
+#workOrder_log .conAssetNodata .takePlace,
+#ServiceOrder_solved ul .conAssetNodata .takePlace,
+#workOrder_solved ul .conAssetNodata .takePlace{
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    margin-left: -123px;
+    margin-top: -95px;
+}
+#workOrder_log .conAssetNodata .takePlace .addButton,
+#ServiceOrder_solved ul .conAssetNodata .takePlace .addButton, 
+#workOrder_solved ul .conAssetNodata .takePlace .addButton{
+	display: inline-block;
+   /* width: 52px;*/
+  	padding:0 5px;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 10px;
+    border-radius: 4px;
+    background: #1f5097;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+#workOrder_solved ul .event-solve-firstRow i{
+	display: inline-block;
+	vertical-align: middle;
+}
+#workOrder_solved ul .event-solve-firstRow p{
+	display: inline-block;
+	padding-left: 10px;
+	line-height: 25px;
+	font-size: 14px;
+}
+#workOrder_solved ul .event-solve-outil p{
+	line-height: 25px;
+}
+
+/*工单解决方案里面创建新方案弹窗*/
+#ServiceOrder_solved .CreateNewScheme,
+#workOrder_solved  .CreateNewScheme{
+	cursor: pointer;
+}
+/*弹窗大小以及位置*/
+#CreateSvScheme,
+#CreateScheme{
+	min-width: 1200px;
+}
+#CreateSvScheme .modal-body,
+#CreateScheme .modal-body{
+	margin-top: -20px;
+	width: 94%;
+	margin-left: 3%;
+}
+#CreateSvScheme .modal-dialog .modal-content .modal-body .jqte_editor,
+#CreateScheme .modal-dialog .modal-content .modal-body .jqte_editor{
+	height: 350px!important;
+	border: 1px solid #E1E1E1;
+}
+#CreateSvScheme .modal-dialog .modal-content,
+#CreateScheme .modal-dialog .modal-content{
+	width: 810px;
+	margin-left: -510px;
+	margin-top: -170px;
+}
+/*搜索知识库按钮*/
+#workOrder_solved .KnolegeBase,
+#ServiceOrder_solved .KnolegeBase{
+	width: 85px;
+	height: 30px;
+	background: #094a9b;
+	color: white;
+	border-radius: 5px;
+	text-align:center;  
+    padding-left:-10px; 
+    /*border:0px;*/
+   	margin: 0;
+    margin-left: 610px;
+    position: absolute;
+    margin-top: -4px;
+}
+/*弹窗标题*/
+#CreateSvScheme .modal-dialog .modal-content .modal-header,
+#CreateScheme .modal-dialog .modal-content .modal-header {
+	padding-left: 15px;
+	height: 32px;
+	line-height: 32px;
+	color: #696969;
+	border-bottom: 1px solid #bfbfbf;
+}
+/*提交知识库*/
+#CreateSvScheme .modal-dialog .modal-content .modal-body ul .SubmittingBase,
+#CreateScheme .modal-dialog .modal-content .modal-body ul .SubmittingBase{
+	position: absolute;
+	right: 20px;
+	line-height: 30px;
+	cursor: pointer;
+} 
+/*添加图片*/
+#CreateSvScheme .modal-dialog .modal-content .modal-body ul .SubmittingImage,
+#CreateScheme .modal-dialog .modal-content .modal-body ul .SubmittingImage {
+	position: absolute;
+	bottom: -30px;
+	right: 70px;
+	cursor: pointer;
+}
+/*添加回复*/
+#CreateSvScheme .modal-dialog .modal-content .modal-body ul .SubmittingReply,
+#CreateScheme .modal-dialog .modal-content .modal-body ul .SubmittingReply{
+	position: absolute;
+	bottom: -30px;
+	right: 17px;
+	cursor: pointer;
+}
+/*保存按钮*/
+
+#CreateSvScheme .modal-dialog .modal-content .modal-footer ,
+#CreateNewImage .modal-dialog .modal-content .modal-footer ,
+#CreateScheme .modal-dialog .modal-content .modal-footer {
+	text-align: center;
+}
+/*解决方案添加图片弹窗*/
+#CreateNewImage{
+	min-width: 800px;
+}
+#CreateNewImage .modal-body{
+	width: 94%;
+	margin-left: 3%;
+}
+#CreateNewImage .modal-dialog .modal-content{
+	width: 810px;
+	margin-left: -400px;
+	margin-top: -150px;
+}
+
+/*工作日志弹窗样式*/
+#addWorkOrderModal{
+	min-width: 1200px;
+}
+#addWorkOrderModal .modal-dialog .modal-content{
+	width: 610px;
+	margin-left: -100px;
+	margin-top: 200px;
+}
+.formhorizontal .formmodalbody .modal-body-jobtime{
+	width: 180px!important;
+	z-index: 1000;
+}
+.formhorizontal .formmodalbody .workTimeHours,
+.formhorizontal .formmodalbody .workTimeMinites{
+	width: 75px;
+	border-radius: 3px;
+	border: 1px solid #d1d1d1;
+}
+.formhorizontal .formmodalbody .workTimeHoursMinites{
+	padding-left: 10px ;
+}
+.formmodalbody1 {
+	margin-top: 20px;
+}
+.formmodalbody1 .taContent{
+	width: 480px;
+	height: 150px;
+	z-index: 1000;
+	margin-left: 70px;
+	margin-top: -20px;
+}
+#addWorkOrderModal .modal-dialog .modal-content .modal-footer {
+	padding-left: 260px;
+}
+/*工单里面工作日志样式*/
+/*添加日志按钮*/
+#workOrder_log .addeventul .event-drop-firstRow{
+	/*border: 1px solid blue;*/
+	padding-top: 20px;
+}
+#workOrder_log .workDetailRow{
+	width: 80px;
+	height: 28px;
+	background: #094a9b;
+	color: white;
+	border-radius: 5px;
+	text-align:center;  
+    padding-left:-10px; 
+    /*border:0px;*/
+   	margin: 0;
+    margin-left: 120px;
+    position: absolute;
+    margin-top: -42px;
+    font-size: 14px;
+}
+#workOrder_log ul .event-drop-firstRow span{
+	font-weight: 700;
+}
+
+#workOrder_log ul .event-drop-fourRow,
+#workOrder_log ul .event-drop-secondRow{
+	margin-top: 25px;
+	padding-left: 30px;
+	width: 100%;
+	padding-left: 40px;
+	font-size: 14px;
+}
+#workOrder_log ul .event-drop-fourRow .event-executor_name,
+#workOrder_log ul .event-drop-secondRow .event-executor_name{
+	font-size: 16px;
+	font-weight: 700;
+} 
+ #workOrder_log  ul .event-drop-secondRow p{
+ 	display: inline-block;
+ 	padding-left:350px;
+ 	cursor: pointer;
+ }
+#workOrder_log ul .event-drop-fourRow span,
+#workOrder_log  ul .event-drop-secondRow span{
+	line-height: 40px;
+}
+#workOrder_log .event-log-leftDown ul .event-drop-fourRow i,
+ .event-log-leftDown ul .event-drop-secondRow i{
+	width: 30px;
+	height: 30px;
+	background-position: -276px -237px;
+	display: inline-block!important;
+	vertical-align: middle;
+}
+.event-log-leftDown ul .event-drop-secondRow .model{
+	padding-left: 5px;
+}
+.event-log-leftDown ul .event-drop-fiveRow,
+.event-log-leftDown ul .event-drop-thirdRow{
+	width: 100%;
+	margin-top: 5px;
+}
+.event-log-leftDown ul .event-drop-fiveRow p,
+.event-log-leftDown ul .event-drop-thirdRow p{
+	padding-left: 77px;
+	padding-top: 5px;
+}
+
+/*.modal .bootstrap-select.btn-group .dropdown-menu li:hover a,
+.modal .bootstrap-select.btn-group .dropdown-menu li.selected a{
+	background-color: #1f5097;
+}
+.modal .bootstrap-select.btn-group .dropdown-menu li:hover a span,
+.modal .bootstrap-select.btn-group .dropdown-menu li.selected a span{
+	color:#fff;
+}*/
+/*# sourceMappingURL=popUp.css.map */
+
+.oneline{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+}

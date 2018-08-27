@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script> 
+<script type="text/javascript" src="/js/compentJS/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="/js/variable.js"></script>
+<script type="text/javascript" src="/js/compentJS/jquery.ztree.all.min.js"></script>
+
+<link rel="stylesheet" href="/css/compentCSS/zTreeStyle.css"> 
+<style type="text/css">  
+.title{  
+     margin: 30px 30px;  
+  font-size:15px;  
+}  
+#tree{  
+ 	margin: 30px 30px;  
+}  
+.ztree li span.button.add {  
+	margin-left:2px;   
+	margin-right: -1px;   
+	background-position:-144px 0;  
+	vertical-align:top;   
+	*vertical-align:middle  
+}  
+</style>  
+</head>  
+<script>  
+    var zTree;  
+    var selectNode;  
+    var load = false;  
+    $(function(){  
+        zTree = $.fn.zTree.init($("#treeDemo"), setting);  
+    })  
+      
+    var setting = {  
+            async : {  
+                enable : true,   
+                dataType : "text",  
+                type : "post",  
+                url :  loadDepartmentListUrl, //请求节点生成的servlet  
+                autoParam : ['']   //每次异步加载传给服务器的参数  
+            },  
+            view:{  
+                dblClickExpand : true,  
+                selectedMulti:false,  
+                addHoverDom: addHoverDom,        //添加按钮  
+                removeHoverDom: removeHoverDom  
+            },   
+            edit:{                 
+                enable: true,                       //编辑节点必须设置该字段，并且编辑状态包括修改和删除，所以如果设置true  
+                editNameSelectAll : true,           //删除按钮和修改按钮都会出现，添加按钮需要自己额外添加  
+                showRenameBtn : true,               // 默认值就是true,可以不写的  
+                showRemoveBtn: showRemoveBtn,       //选做，可以删除这一行  
+                //高级用法就是为showRemoveBtn 设置函数，函数体内判断节点来为某一些节点禁用删除按钮,比如这里禁止删除跟节点。  
+            },  
+            data : {  
+                key : {  
+                    name : "name",// 取后台传过来的json数据中 nodeName字段值作为节点名称
+                },  
+                simpleData : {  
+                    enable : true,  
+                    idKey : "id",       //节点的id,注意此处要对应你后台传过来的节点的属性名id  
+                    pIdKey : "pId",     //节点的pId,注意此处要对应你后台传过来的节点的属性名pId  
+                    rootPId : 0         //根节点的pId = 0  
+                }  
+            },  
+            callback : {  
+                beforeRemove : beforeRemove,   //删除前的回调函数  
+                beforeRename : beforeRename,  //修改前的回调函数  
+                onAsyncSuccess: zTreeOnAsyncSuccess  //异步加载完毕的回调函数  
+            }  
+        };  
+  
+    function showRemoveBtn(treeId,treeNode){  
+        return !treeNode.level==0;             //跟节点返回false,所以跟节点不显示删除按钮。  
+    }  
+      
+    function beforeRemove(treeId, treeNode){    
+        if(treeNode.pId==0){                //如果删除的是根节点，也提示无法删除  
+            alert("根节点无法删除！")  
+            return false;                    //返回false 就会使前端的节点还保持存在，  
+                                            //  如果是true,则会在前端界面删除，但数据库中还会有，刷新一下即可再次出现  
+        }  
+        if(confirm("是否删除？")){  // 询问是否删除，若删除，则利用Ajax 技术异步删除，同是返回json格式数据，告知前台是否删除成功！  
+            $.post('${path}/DeleteCityServlet?ids='+treeNode.id,function(data){ // 从数据库中删除  
+                if(data.success){                   // data  为 json 格式数据  
+                    zTree.removeNode(treeNode);     // z-Tree 的api ，从视角上 删除  
+                    alert(data.msg);                // 要在后台删除成功后再进行视角上删除，这样就真正意义实现了删除。  
+                }else{  
+                    alert(data.msg);  
+                    return false;  
+                }  
+             });  
+        }  
+        return ;  
+    }  
+      
+      
+    function beforeRename(treeId, treeNode, newName, isCancel){  
+        var oldName = treeNode.name;    //首先取原始的节点值  
+        if(newName==""){                  // 新名称为空的情况  
+            var node = treeNode.getParentNode();  //获取父节点  
+            zTree.reAsyncChildNodes(node, "refresh");  //重新访问数据库更新父节点，即可回到旧名称  
+            alert("名称不能为空");  
+        }  
+        else if(newName!=treeNode.name){     // 如果新名称与就名称一致，什么也不做  
+            $.ajax({  
+                url:createDepartmentNewUrl,     //更改请求  
+                data : {id:treeNode.id,name:newName,pId:treeNode.pId},  
+                cache : false,  
+                dataType : 'JSON',  
+                type:'post',  
+                success: function(data){  
+                        if(data.success){  
+                            alert(data.msg);   //提示更改成功!  
+                        }else{                    //修改失败，即同一父类型下不能名称相同（我自己加的限制条件，你可以根据需要修改）                        
+                             var node = treeNode.getParentNode();    
+                             zTree.reAsyncChildNodes(node, "refresh");  //回到旧名称  
+                             alert(data.msg);  
+                        }  
+                }  
+            });  
+        }  
+    }  
+ 
+    
+    function addHoverDom(treeId, treeNode) {  
+        var sObj = $("#" + treeNode.tId + "_span"); //获取删除修改span  
+        if (treeNode.editNameFlag || $("#addBtn_"+treeNode.tId).length>0) return;  
+        var addStr = "<span class='button add' id='addBtn_" + treeNode.tId  
+            + "' title='add node' onfocus='this.blur();'></span>";  //添加add  span  
+        sObj.after(addStr);          // 把删除修改 span 放到 add 后面  
+        var btn = $("#addBtn_"+treeNode.tId);  
+        if (btn) btn.bind("click", function(){  
+            var nodes = zTree.addNodes(treeNode, {pId:treeNode.id, name:"新建文件夹",id:treeNode.pId});//前端添加成功  
+            $.ajax({    //后端添加！！！！   必须有，要不数据库还是没添加，否则刷新页面后节点就会消失！  
+                url:"${path}/AddCityServlet",  
+                data : {parentId:nodes[0].pId,name:nodes[0].name,id:},  //传给后台当前节点的父Id和名称  
+                cache : false,  
+                dataType : 'JSON',  
+                type:'post',  
+                success: function(data){  
+                        if(data.success){  
+                           alert(data.msg);  
+                        }else{  
+                            zTree.updateNode(nodes[0]);   //如果失败，则返回原始状态！  
+                            alert(data.msg);  
+                        }  
+                    }  
+                });  
+              return false;  
+            });  
+        };  
+    function removeHoverDom(treeId, treeNode) {   // 去除  
+        $("#addBtn_"+treeNode.tId).unbind().remove();  
+    };  
+  
+    function zTreeOnAsyncSuccess(event, treeId, treeNode, msg){// 这个函数仅仅是为了 初始化时展开 1级菜单
+        if(!load){              
+            var zNode='';
+			    zNode="[";
+			    if(null != result.data){
+			        for(var i=0;i<result.data.length;i++){
+			            if(result.data[i].parent_id==null){
+			                zNode += "{id:"+result.data[i].id+",pId:0,name:'"+result.data[i].name+"',title:'"+result.data[i].id+"'},";
+			            }else{
+			                zNode += "{id:"+result.data[i].id+",pId:"+result.data[i].parent_id+",name:'"+result.data[i].name+"',title:'"+result.data[i].id+"'},";
+			            }
+			        }
+			        if(result.data.length > 1 )
+			            zNode = zNode.substring(0, zNode.length-1);
+			        zNode += "]";
+			        var testOne = eval("(" + zNode + ")");
+			        return testOne; 
+			    }
+        }  
+    }  
+    
+</script>  
+<style type="text/css">  
+.title{  
+     margin: 30px 30px;  
+  	 font-size:15px;  
+}  
+#tree{  
+ margin: 30px 30px;  
+}  
+</style>  
+<body>  
+<div class="title">jsp/servelt 目录树的添加、删除和修改（请不要删除根节点）</div>  
+<div id="tree">  
+            <ul id="treeDemo" class="ztree"></ul>  
+        </div>  
+</body>  
+</html>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//点击创建新部门按钮创建，只能创建父节点
+    $("#createNewDepartment").on("click", function(){
+    		$('#createNewDepartmentModalSave').off().on("click",function(){
+    			 var name=$("#modalInptu").val();//添加name这个节点的值
+         	 var function1 =$(".modalTextArea").val();//添加描述内容
+         	var	Ztreea=zTree.addNodes(treeNode, {id:treeNode.id, pId:null, name:name}); //页面上添加节点
+			    $.ajax({
+							url:createDepartmentNewUrl,
+							type:"post",
+							data:{parent_id:0,name:name,function:function1},
+							dataType:"json",
+							success:function(result){
+								//登录信息失效，ajax请求静态页面拦截
+					      onComplete(result);
+								if(1 == result.status){
+									$("#tipMsg").addClass("active").html("添加成功").show();
+										function tipHide(){
+											$("#tipMsg").hide();
+										}
+											setTimeout(tipHide,2000);
+								}
+								
+								//重新载入部门管理
+									Maintained();		
+			          $('#createNewDepartmentModal').modal('hide');		
+							},
+						error:function(XMLHttpRequest){
+								error_500(XMLHttpRequest.responseText);
+						}
+				});
+ 			})
+    });

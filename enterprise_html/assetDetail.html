@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>资产详情</title>
+		<!-- reset -->
+		<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap-select.min.css">
+		<!-- tree -->
+		<link rel="stylesheet" href="/tree/ui.dynatree.css" type="text/css">
+		<!-- zTree -->
+		<link rel="stylesheet" href="/css/compentCSS/zTreeStyle.css">
+		<!-- head -->
+		<link rel="stylesheet" href="/css/head.css" type="text/css">
+		<!-- scroll -->
+		<link rel="stylesheet" href="/css/compentCSS/jquery.mCustomScrollbar.css">
+		<link rel="stylesheet" href="/css/table.css" type="text/css">
+		<link rel="stylesheet" href="/css/popUp.css" type="text/css">
+		<link rel="stylesheet" href="/css/assetAddform.css" type="text/css">
+		<link rel="stylesheet" href="/css/assetDetail.css" type="text/css">
+	</head>
+
+	<body>
+
+		<div id="header">
+			<div class="w">
+				<div class="logo fl"></div>
+				<ul class="list fr">
+					<li class="help fl">
+						<span class="helpPic"></span> 帮助
+					</li>
+					<li class="manager fl">
+						<span class="managerPic"></span> 管理
+					</li>
+					<li class="notify fl">
+						<span class="notifyPic"></span> 通知
+						<div class="notify-wrap">
+							<p class="notify-wrap-up">通知
+								<button class="notify-wrap-upClear">清空</button>
+							</p>
+							<ul class="notify-list">
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+							</ul>
+							<p class="notify-wrap-down">
+								<a href="#">更多>></a>
+							</p>
+						</div>
+					</li>
+					<li class="pInfo fl" id="userInfo"><i class="userName" data-bind="userName"></i>
+						<span class="userHeader"></span>
+						<div class="userInfo-wrap">
+
+							<div class="userInfo">
+								<!--<img src="" alt=""  class="userHead"/>-->
+								<span class="fl userHead"></span>
+								<div class="userInfo-right">
+									<p data-bind="userName"></p>
+									<p><span data-bind="position"></span>&nbsp;<span data-bind="department"></span></p>
+								</div>
+								<div class="userInfoOperation">
+									<p class="userInfoOperationBox">
+										<input type="button" value="我的账户" class="myAccout" />
+										<a id="logout" class="logout">退出</a>
+									</p>
+								</div>
+							</div>
+
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="nav">
+			<div class="w">
+				<ul class="fl">
+					<li class="navlist fl navlist1 navNoChangeList">
+						<span class="navlist-img navlist-img1"></span>工作台</li>
+					<li class="navlist fl navlist2 navNoChangeList">
+						<span class="navlist-img navlist-img2"></span>事件</li>
+					<li class="navlist fl navlist3 navNoChangeList active">
+						<span class="navlist-img navlist-img3"></span>资产</li>
+					<li class="navlist fl navlist4 navNoChangeList">
+						<span class="navlist-img navlist-img4"></span>合同</li>
+					<li class="navlist fl navlist5 navNoChangeList">
+						<span class="navlist-img navlist-img5"></span>项目</li>
+					<li class="navlist fl navlist6 nav-add-item1 navNoChangeList navChangeList lastNavlist">
+						<span class="navlist-img navlist-img6 "></span>供应商
+					</li>
+					<li class="navlist fl navlist7 nav-add-item2 navChangeList">
+						<span class="navlist-img navlist-img7"></span>管理
+					</li>
+				</ul>
+
+				<div id="nav-add-container">
+					<span class="nav-add"></span>
+					<div class="nav-add-wrap">
+						<div class="nav-add-overHidden">
+							<ul class="nav-add-list">
+								<li class="nav-add-item hide" id="nav-add-item1">
+									<p></p>供应商</li>
+								<li class="nav-add-item" id="nav-add-item2">
+									<p></p>报表</li>
+							</ul>
+						</div>
+						<span class="nav-add-trangle nav-add-trangleLeft"></span>
+						<span class="nav-add-trangle nav-add-trangleRight"></span>
+					</div>
+				</div>
+
+				<div class="fr nav-right-search">
+					<input type="text" class="fr">
+					<div class="dropdownDiv">
+						<span class="nav-right-selectedWord" id="">所有</span>
+						<span class="nav-right-searchpng"></span>
+						<span class="caret nav-right-caret"></span>
+					</div>
+
+					<div class="right-search-wrap dn">
+						<div class="right-search-container">
+							<div class="right-search-list">所有</div>
+							<div class="right-search-list">事件</div>
+							<div class="right-search-list">资产</div>
+							<div class="right-search-list">合同</div>
+							<div class="right-search-list">项目</div>
+							<div class="right-search-list">供应商</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="nav-right-newAdd fr">
+					<span></span>
+					<ul>
+						<li><i class="add-img1"></i>新建事件</li>
+						<li><i class="add-img2"></i>新建资产</li>
+						<li><i class="add-img3"></i>新建合同</li>
+						<li><i class="add-img4"></i>新建项目</li>
+						<li><i class="add-img5"></i>新建供应商</li>
+					</ul>
+				</div>
+
+				<div class="nav-right-recentRecord fr">
+					<span></span>
+					<div class="nav-right-reRecordWrap">
+						<p class="nav-right-reRecordTitle">最近访问的项</p>
+						<ul id="history"></ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="moveWrap"><i class="navMove"></i></div>
+
+		</div>
+
+		<div id='container' class="w">
+			<div id="container-left" class="fl">
+				<ul class="container-left-wrap">
+					<li class="container-left-item container-left-item1 active">
+						<p></p>属性<i></i></li>
+					<li class="container-left-item container-left-item2">
+						<p></p>软件<i></i></li>
+					<li class="container-left-item container-left-item3">
+						<p></p>关系<i></i></li>
+					<li class="container-left-item container-left-item4">
+						<p></p>事件<i></i></li>
+					<li class="container-left-item container-left-item5">
+						<p></p>成本<i></i></li>
+					<li class="container-left-item container-left-item6">
+						<p></p>历史<i></i></li>
+				</ul>
+			</div>
+			<div id="container-right" class="fl">
+				<div class="container-right-title">
+					<span class="container-right-title-back"></span>
+					<span class="di container-right-title-txt"><i class="container-right-icon" data-bind="category"></i></span><span id="resource_name"></span>
+					<div class="container-right-title-btnBox di">
+
+
+						<button class="container-right-title-btn" id="editId">编辑</button>
+						<button class="container-right-title-btn" id="delResDetail">删除</button>
+						<!--删除资产弹窗-->
+						<div class="modal fade" id="pupDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+									</div>
+									<div class="modal-body">
+										<span class="question"></span>是否确定要删除选定资产
+									</div>
+									<div class="modal-footer">
+										<button type="button" id="delConfirm" class="btn btn-delete">删除</button>
+										<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="container-right-title-btn" id="res_move">移动</button>
+
+						<div class="modal fade" id="moveRes" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">移动
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+									</div>
+									<div class="modal-body">
+										<div class="modal-body-row">
+											<p class="di">移动<span class="modal-body-start">*</span></p>
+											<!-- <select id="chooseDepartment"></select> -->
+											<input type="text" id="move" readonly>
+											<input type="text" value="" id="moveCode" style="display: none" />
+											<div id="move-menu" class="menus">
+												<ul id="move-tree" class="ztree"></ul>
+											</div>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" id="setClassifyConfirm" class="btn btn-keep">保存</button>
+										<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="modal fade" id="moveInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+									</div>
+									<div class="modal-body">移动分类将导致该资产专有属性删除！确定要移动吗？ </div>
+									<div class="modal-footer">
+										<button type="button" id="moveClassifyConfirm" class="btn btn-keep">保存</button>
+										<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<button class="container-right-title-btn" id="resourceCopyId">复制</button>
+						<button class="container-right-title-btn" id="printBtn">打印</button>
+
+						<div class="dropdown di">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+	                        附加
+	                        <span class="caret"></span>
+	                    </button>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+								<li role="presentation">
+									<a role="menuitem" tabindex="-1" href="#">添加附件</a>
+								</li>
+								<li role="presentation">
+									<a role="menuitem" tabindex="-1" href="#">配属资产</a>
+								</li>
+								<li role="presentation">
+									<a role="menuitem" tabindex="-1" href="#">附件组件</a>
+								</li>
+								<li role="presentation">
+									<a role="menuitem" tabindex="-1" href="#">配置折旧</a>
+								</li>
+								<li role="presentation">
+									<a role="menuitem" tabindex="-1" href="#">添加文档</a>
+								</li>
+								<li role="presentation">
+									<a role="menuitem" tabindex="-1" href="#">添加关联合同</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="dropdown di">
+							<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
+	                        创建
+	                        <span class="caret"></span>
+	                    </button>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+								<li role="presentation">
+									<a role="menuitem" tabindex="-1" href="#">创建事件</a>
+								</li>
+								<li role="presentation">
+									<a role="menuitem" tabindex="-1" href="#">创建请求</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<span class="asset_Concern"></span>
+				</div>
+
+
+				<!-- 资源信息 -->
+				<div class="container-right-infoWrap" id="resourceDetailId">
+
+					<input type="hidden" id="resourceId" data-bind="id">
+					<div class="conright-infoWrap-left fl">
+
+						<div class="conright-infoWrapLeft-title">
+							<span data-bind="level_1_name"></span>
+							<i></i>
+							<span data-bind="level_2_name"></span>
+							<i></i>
+							<span data-bind="level_3_name"></span>
+						</div>
+						<div class="infoWrap-resource a-left-dn">
+							<div class="conright-infoWrapLeft-item">
+
+								<p class="conright-infoWrapLeft-itemTitle">基础类信息</p>
+
+								<p class="conright-infoWrapLeft-itemRow di">
+									<span class="conright-infoWrapLeft-itemRowTxt1">资源名称</span>
+									<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="resource_name"></span>
+								</p>
+
+								<p class="conright-infoWrapLeft-itemRow di">
+									<span class="conright-infoWrapLeft-itemRowTxt1">序列号</span>
+									<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="resource_sn_number"></span>
+								</p>
+
+								<p class="conright-infoWrapLeft-itemRow di">
+									<span class="conright-infoWrapLeft-itemRowTxt1">所属分类</span>
+									<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="level_name"></span>
+								</p>
+								<p class="conright-infoWrapLeft-itemRow di">
+									<span class="conright-infoWrapLeft-itemRowTxt1">重要性</span>
+									<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="resource_importance_name"></span>
+								</p>
+								<p class="conright-infoWrapLeft-itemRow describeRow di">
+									<span class="conright-infoWrapLeft-itemRowTxt1">描述</span>
+									<span class="conright-infoWrapLeft-itemRowTxt2 noTips" data-bind="resource_memo"></span>
+								</p>
+							</div>
+							<div class="conright-infoWrapLeft-item">
+								<p class="conright-infoWrapLeft-itemTitle">分配信息</p>
+								<p class="conright-infoWrapLeft-itemRow di">
+									<span class="conright-infoWrapLeft-itemRowTxt1">位置</span>
+									<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="resource_deploy_location"></span>
+								</p>
+								<p class="conright-infoWrapLeft-itemRow di">
+									<span class="conright-infoWrapLeft-itemRowTxt1">部门</span>
+									<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="department_name"></span>
+								</p>
+								<p class="conright-infoWrapLeft-itemRow di">
+									<span class="conright-infoWrapLeft-itemRowTxt1">管理者</span>
+									<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="charge_person_name"></span>
+								</p>
+								<p class="conright-infoWrapLeft-itemRow di">
+									<span class="conright-infoWrapLeft-itemRowTxt1">使用者</span>
+									<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="use_person_id_name"></span>
+								</p>
+							</div>
+							<div class="conright-infoWrapLeft-item" id="centerCon2"></div>
+							<div class="conright-infoWrapLeft-item" id="centerCon3"></div>
+						</div>
+
+						<!-- 软件 -->
+						<div class="infoWrap-software  a-left-dn dn">
+							<div class="infoWrap-software-title">
+								<select>
+									<option value="">所有软件</option>
+									<option value="">1</option>
+									<option value="">2</option>
+									<option value="">3</option>
+								</select>
+								<p class="di"><i class="software-add di"></i>添加软件</p>
+								<p class="di"><i class="software-delete di"></i>删除</p>
+								<p class="software-page fr">
+									显示&nbsp;1-<span>5</span>&nbsp;共&nbsp;<span>4</span>&nbsp;
+									<i class="software-page-left"></i><i class="software-page-right active"></i>
+								</p>
+							</div>
+
+							<div class="infoWrap-software-body">
+								<div class="software-body-title">
+									<p>软件</p>
+									<p>版本</p>
+									<p>使用情况</p>
+									<p>产品ID</p>
+									<p>类型</p>
+									<p>分类</p>
+								</div>
+								<div class="software-body-list">
+									<div class="software-body-item">
+										<i></i>
+										<p>软件</p>
+										<p>版本</p>
+										<p>使用情况</p>
+										<p>产品ID</p>
+										<p>类型</p>
+										<p>分类</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 关系 -->
+						<div class="infoWrap-relation a-left-dn dn"></div>
+
+						<!-- 事件 -->
+						<div class="infoWrap-event a-left-dn dn" class="">
+							<div class="infoWrap-event-title">
+								<i></i>关联的事件(1/2)
+							</div>
+							<div class="infoWrap-event-body">
+								<div class="infoWrap-event-item">
+									<p>服务器CPU使用100%</p>
+									<p><span class="normol">正常</span></p>
+									<p>处理中</p>
+									<p>08-06 10:26</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- 成本 -->
+						<div class="infoWrap-cost a-left-dn dn">
+							<div class="infoWrap-cost-item">
+								<div class="infoWrap-cost-item-tool">
+									<i class="cost-add"></i>添加合同
+									<i class="cost-delete"></i>删除
+									<p class="fr cost-tool-page">
+										显示&nbsp;0-<span>5</span>&nbsp;共&nbsp;<span>5</span>&nbsp;
+										<i class="cost-tool-pageLeft"></i><i class="cost-tool-pageRight active"></i>
+									</p>
+								</div>
+								<div class="infoWrap-cost-item-body">
+									<div class="cost-item-first-title">
+										<p>日期</p>
+										<p>成本因子</p>
+										<p>描述</p>
+										<p>成本</p>
+									</div>
+									<div class="cost-item-first-wrap">
+										<div class="cost-item-first-item"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="infoWrap-cost-item">
+								<div class="infoWrap-cost-item-tool">
+									<i class="cost-add"></i>添加合同
+									<i class="cost-delete"></i>删除
+									<p class="fr cost-tool-page">
+										显示&nbsp;0-<span>5</span>&nbsp;共&nbsp;<span>5</span>&nbsp;
+										<i class="cost-tool-pageLeft"></i><i class="cost-tool-pageRight active"></i>
+									</p>
+								</div>
+								<div class="infoWrap-cost-item-body">
+									<div class="cost-item-second-title">
+										<p>定购成本($)</p>
+										<p>购进日期</p>
+										<p>折残值</p>
+										<p>折旧方法</p>
+										<p>使用寿命</p>
+									</div>
+									<div class="cost-item-second-wrap">
+										<div class="cost-item-second-item"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- 历史 -->
+						<div class="infoWrap-history a-left-dn dn">
+							<div class="conHistory-title">
+								<p>历史</p>
+							</div>
+							<div class="conHistory-content">
+								<div class="conHistory-content-toTop">
+									<i></i><span>置顶</span>
+								</div>
+								<!-- 上一条记录 -->
+								<div class="conHistory-content-right-top active">
+									<i></i>
+								</div>
+									<div class="conHistory-content-dataBind">
+										<ul class="conHistory-content-right">
+											<li class="history-year"><span data-bind="calc_time1"></span></li>
+											<li class="history-point"><i></i><div></div></li>
+											<li><span data-bind="calc_time2"></span></li>
+											<li><span data-bind="status_name">AAAAA</span></li>
+											<li>
+												<a href="#" data-bind="oper_user_name"></a>&nbsp;
+												<span data-bind="action"></span>&nbsp;
+												<span data-bind="name"></span>&nbsp;(<span data-bind="number"></span>)
+											</li>
+										</ul>
+									</div>
+								<!-- 下一条记录 -->
+								<div class="conHistory-content-right-bottom active">
+									<i></i>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="conright-infoWrap-right fl">
+						<div class="infoWrap-right-frist">
+							<p class="conright-infoWrap-rightRow">
+								<span>产品名</span><span class="rightRowFristVal" data-bind="resource_name"></span>
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>质保到期</span><span class="rightRowFristVal" data-bind="warranty"></span>
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>成本</span><span class="rightRowFristVal"></span>
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>资产</span><span class="rightRowFristVal" data-bind="resource_usestatus_name"></span>
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>附件</span>
+								<a data-bind="resFileCount"></a>
+								<input type="hidden" id="accessoryLen"/>
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>供应商</span>
+								<a data-bind="sale_name"></a>
+								<input type="hidden" data-bind="resource_sale_id">
+							</p>
+							<p class="conright-infoWrap-rightRow">
+								<span>合同</span>
+								<a data-bind="contract_name"></a>
+								<input type="hidden" data-bind="resource_contract_id">
+							</p>
+						</div>
+
+						<div class="infoWrap-right-second" id="updateResCon">
+							<div class="infoWrap-right-secondRow infoWrap-right-secondRow1">
+								<div class="infoWrap-right-secondRow1-half" id="importDiv">
+									<span class="rightSecondTitle">影响</span>
+									<select class="selectpicker" name="importance" id="importanceId">
+										<option data-bind="resource_importance_name" value=""></option>
+									</select>
+								</div>
+								<div class="infoWrap-right-secondRow1-half" id="resUseStaDiv">
+									<span class="rightSecondTitle">资产状态</span>
+									<select class="selectpicker" name="resource_usestatus" id="resource_useStatus">
+										<option data-bind="resource_usestatus_name" value=""></option>
+									</select>
+								</div>
+							</div>
+							<div class="infoWrap-right-secondRow">
+								<span class="rightSecondTitle">地点</span>
+								<input type="text" data-bind="resource_deploy_location" id="resource_deploy_location">
+							</div>
+
+							<div class="infoWrap-right-secondRow" id="dept">
+								<span class="rightSecondTitle">部门</span>
+								<input type="text" id="department" readonly>
+								<input type="text" value="" id="departmentCode" style="display: none" />
+								<div id="department-menu" class="menus" style="display: none;">
+									<ul id="department-tree" class="ztree"></ul>
+								</div>
+							</div>
+							<div class="infoWrap-right-secondRow" id="resUser">
+								<span>使用者</span>
+								<select class="selectpicker" name="use_person_id" id="resDetailUser">
+									<option data-bind="use_person_id_name" value=""></option>
+								</select>
+							</div>
+							<div class="infoWrap-right-secondRow" id="resManager">
+								<span>管理者</span>
+								<select class="selectpicker" name="charge_person_id" id="resDetailManager">
+									<option data-bind="charge_person_name" value=""></option>
+								</select>
+							</div>
+
+							<button class="infoWrap-right-update" id="resDetailPageUpdate">更新</button>
+						</div>
+						<!-- 与资源有关的事件 -->
+						<div class="infoWrap-right-three">
+							<div class="infoWrap-right-three-title">
+								<span class="infoWrap-right-three-title-button">关联的事件</span>
+							</div>
+							<div class="echatsBox">
+								<ul id="res_event"></ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<p class="successTip" id="tipMsg"></p>
+			<!-- 附件文档div -->
+			<div class="modal fade" id="accessory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">附件
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+						</div>
+						<div class="modal-body">
+							<div class="modal-body-top">
+								<div class="di rightCon-page fr" id="modalpPageSmall">
+									显示 <span data-bind="firstData">1</span>
+									<span>-</span>
+									<span data-bind="lastData">10</span>
+									<span>，</span>
+									<span>共</span>
+									<span class="rightCon-page-count" data-bind="totalNums">14</span>
+									<span>条</span>
+									<p class="di">
+										<span data-bind="modalPrevPageSmallId" id="modalPrevPageSmallId" class="rightCon-page-left di"></span><span data-bind="modalNextPageSmallId" id="modalNextPageSmallId" class="rightCon-page-right di active"></span>
+									</p>
+								</div>
+							</div>
+
+							<div class="modal-body-bottom">
+
+								<div class="modal-body-bottom-title">
+									<p>名称</p>
+									<p>上传时间</p>
+									<p>上传人</p>
+									<p style="display: none;">filePath</p>
+									<p class="modal-operate">操作</p>
+								</div>
+
+								<div class="modal-body-bottom-rowWrap resFile">
+									<div class="modal-body-bottom-row">
+										<p data-bind="fileName"></p>
+										<p data-bind="fileDate"></p>
+										<p data-bind="filePerson"></p>
+										<p data-bind="filePath" style="display: none;"></p>
+										<p>
+											<a data-bind="fileDownLoad">下载</a>
+											<a class="rowWrapDelete">删除</a>
+										</p>
+										
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<!--<button type="button" class="btn btn-cancel" data-dismiss="modal">返回</button>-->
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--弹出是否删除附件-->
+			<div class="modal fade" id="assetDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+		        <div class="modal-dialog">
+		            <div class="modal-content">
+		                <div class="modal-header">
+		                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+						</div>
+						<div class="modal-body">
+							<span class="question"></span>是否确定要删除该附件？
+						</div>
+						<div class="modal-footer">
+							<button type="button"  class="btn btn-delete assetDetail">删除</button>
+							<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 500错误提示框 -->
+			<div class="modal fade" id="errorBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+						</div>
+						<div class="modal-body">
+							<p class="modal-body-row"><span class="question-info" id="errorInfo"></span></p>
+						</div>
+						<div class="modal-footer">
+							<!-- <button type="button" class="btn btn-delete">删除</button> -->
+							<button type="button" class="btn btn-cancel" data-dismiss="modal">确定</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 打印弹窗 -->
+			<div class="modal fade" id="print" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">打印预览
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+						</div>
+						<div class="modal-body">
+							<div class="modal-body-change">
+								<ul class="di modal-body-choose">
+									<li class="first">选择：</li>
+									<li class="modal-body-chooseItem"><i class="active classRe" id="res_info"></i>信息</li>
+									<!-- <li class="modal-body-chooseItem"><i class="classRe" id="res_belong"></i>归属</li> -->
+									<li class="modal-body-chooseItem"><i class="classRe" id="res_relation"></i>关系</li>
+									<li class="modal-body-chooseItem"><i class="classRe" id="res_contract"></i>合同</li>
+									<li class="modal-body-chooseItem"><i class="classRe" id="res_cost"></i>成本</li>
+									<li class="modal-body-chooseItem last"><i class="classRe" id="res_history"></i>历史</li>
+								</ul>
+								<button id="printDetail">打印</button>
+							</div>
+
+							<div class="modal-body-reqDetail" id="conright1">
+								<div class="modal-body-id">
+									<p>
+									  <span class="di container-right-title-txt" data-bind=""><i></i></span>
+									  <span data-bind="resource_name"></span>
+									  <span data-bind="resource_protect" class="modal-body-id-button status-paul"></span>
+									</p>
+									<p>资产状态：<span data-bind="resource_usestatus_name"></span>&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;
+									        创建时间：<span data-bind="resource_create_time"></span>&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;
+									        创建人：<span data-bind="resource_creater"></span>
+									</p>
+								</div>
+
+								<div class="modal-body-reqCon">
+									<!-- 资源信息 -->
+									<div class="modal-body-everyItem infoWrap-resource">
+										<p class="modal-body-everyItem-title">信息</p>
+										<div class="conright-infoWrapLeft-item">
+											<p class="conright-infoWrapLeft-itemTitle">基础类信息</p>
+
+											<p class="conright-infoWrapLeft-itemRow di">
+												<span class="conright-infoWrapLeft-itemRowTxt1">资源名称</span>
+												<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="resource_name"></span>
+											</p>
+
+											<p class="conright-infoWrapLeft-itemRow di">
+												<span class="conright-infoWrapLeft-itemRowTxt1">序列号</span>
+												<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="resource_sn_number"></span>
+											</p>
+
+											<p class="conright-infoWrapLeft-itemRow di">
+												<span class="conright-infoWrapLeft-itemRowTxt1">所属分类</span>
+												<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="level_3_name"></span>
+											</p>
+											<p class="conright-infoWrapLeft-itemRow di">
+												<span class="conright-infoWrapLeft-itemRowTxt1">重要性</span>
+												<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="resource_importance_name"></span>
+											</p>
+											<p class="conright-infoWrapLeft-itemRow describeRow di">
+												<span class="conright-infoWrapLeft-itemRowTxt1">描述</span>
+												<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="resource_memo"></span>
+											</p>
+										</div>
+										<div class="conright-infoWrapLeft-item">
+											<p class="conright-infoWrapLeft-itemTitle">分配信息</p>
+											<p class="conright-infoWrapLeft-itemRow di">
+												<span class="conright-infoWrapLeft-itemRowTxt1">位置</span>
+												<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="resource_deploy_location"></span>
+											</p>
+											<p class="conright-infoWrapLeft-itemRow di">
+												<span class="conright-infoWrapLeft-itemRowTxt1">部门</span>
+												<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="department_name"></span>
+											</p>
+											<p class="conright-infoWrapLeft-itemRow di">
+												<span class="conright-infoWrapLeft-itemRowTxt1">管理者</span>
+												<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="use_person_id_name"></span>
+											</p>
+											<p class="conright-infoWrapLeft-itemRow di">
+												<span class="conright-infoWrapLeft-itemRowTxt1">使用者</span>
+												<span class="conright-infoWrapLeft-itemRowTxt2 tips" data-bind="charge_person_name"></span>
+											</p>
+										</div>
+										<div class="conright-infoWrapLeft-item" id="conright2"></div>
+										<div class="conright-infoWrapLeft-item " id="conright3"></div>
+									</div>
+
+									<!--归属-->
+									<!-- <div class="modal-body-everyItem"></div> -->
+
+									<!--关系-->
+									<div class="modal-body-everyItem relatioPrint">
+										<p class="modal-body-everyItem-title">关系</p>
+									</div>
+
+									<!--合同-->
+									<div class="modal-body-everyItem conPrint">
+										<p class="modal-body-everyItem-title">合同</p>
+										<div class="conPrintContent">
+											<ul class="contractTitle">
+												<li>合同名称</li>
+												<li>起始日期</li>
+												<li>终止日期</li>
+												<li>合同厂商</li>
+												<li>合同编号</li>
+												<li>合同金额</li>
+												<li>合同状态</li>
+											</ul>
+											<ul id="contractUL">
+												<li data-bind="name"></li>
+												<li data-bind="start_time"></li>
+												<li data-bind="end_time"></li>
+												<li data-bind="enterprise_name"></li>
+												<li data-bind="contract_code"></li>
+												<li data-bind="contract_amount"></li>
+												<li data-bind="contract_status"></li>
+											</ul>
+										</div>
+
+									</div>
+
+									<!--成本-->
+									<div class="modal-body-everyItem costPrint">
+										<p class="modal-body-everyItem-title">成本</p>
+									</div>
+
+									<!--历史-->
+									<div class="modal-body-everyItem historyPrint">
+										<p class="modal-body-everyItem-title">历史</p>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer"></div>
+					</div>
+				</div>
+			</div>
+			<!-- 未选择打印项提醒 -->
+   <div class="modal fade" id="pupDelete2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+          </div>
+          <div class="modal-body">
+                                 您未选择要打印的项
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
+			<!-- jquery  -->
+			<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+			<script type="text/javascript" src="/js/compentJS/jquery.cookie.js"></script>
+			<script type="text/javascript" src="/js/compentJS/history.js"></script>
+			<!-- bootstrap -->
+			<script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+			<script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+			<!--url 常量  -->
+			<script type="text/javascript" src="/js/variable.js"></script>
+			<!-- 绑定数据 -->
+			<script type="text/javascript" src="/js/transparency.min.js"></script>
+			<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+
+			<!-- scroll -->
+			<script type="text/javascript" src="/js/compentJS/jquery.mCustomScrollbar.js"></script>
+			<!-- ztree -->
+			<script type="text/javascript" src="/js/echarts.min.js"></script>
+			<script type="text/javascript" src="/js/compentJS/jquery.ztree.core.js"></script>
+			<script type="text/javascript" src="/js/compentJS/selectTree.js"></script>
+			<!--删除附件-->
+			<script type="text/javascript" src="../js/compentJS/deletemodal.js" ></script>
+			<!-- head -->
+			<script type='text/javascript' src="/js/head.js"></script>
+			<script type="text/javascript" src="/js/assetDetail.js"></script>
+			<script src="/js/compentJS/zTree.js"></script>
+
+
+			<!--302error-->
+
+			<script type="text/javascript" src="/js/compentJS/jquery.jqprint-0.3.js"></script>
+			<script type="text/javascript" src="/js/compentJS/jquery-migrate-1.2.1.min.js"></script>
+			<!--tips-->
+			<script type='text/javascript' src="/js/tips.js"></script>
+			<script>
+				$(".modal-body-reqDetail").mCustomScrollbar({
+					theme: "dark-3"
+				});
+				$("#move-menu").mCustomScrollbar({
+					theme: "dark-3"
+				});
+
+				//需求：动态设置附件的高度为行数的高度，超出最大高度则出现滚动条
+				$('#accessory').on('show.bs.modal', function () {
+
+					var  accessoryLen=$('#accessoryLen').val();
+					var accessoryTableTop=$('.modal-body-bottom-title').height();
+					var accessoryTableHeight=accessoryLen*29+accessoryTableTop+'px';
+					$("#accessory .modal-body-bottom").css('height',accessoryTableHeight);
+					var accessoryTableMaxHeight=parseInt($('.modal-body-bottom').css('max-height'));
+
+					if(accessoryLen*29+accessoryTableTop>=accessoryTableMaxHeight){
+						$("#accessory .modal-body-bottom").mCustomScrollbar({
+							theme: "dark-3"
+						});
+					}
+
+				});
+
+
+//
+			</script>
+	</body>
+
+</html>

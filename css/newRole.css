@@ -1,0 +1,161 @@
+.w {
+    width: 1232px;
+    margin: 0 auto;
+}
+#container {
+    background-color: #fff;
+    box-shadow: 0 0px 20px #dedddc;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    /* padding-bottom: 50px; */
+}
+#container:after{
+	display: table;
+	content: '';
+	clear:both;
+}
+#container #left {
+    width: 951px;
+    padding-bottom: 20px;
+    /* height: 98%; */
+    float: left;
+    /* padding: 0 60px 0 80px; */
+    overflow: hidden;
+    border-right: 2px solid #ececec;
+}
+#container #left .addTitle .addTitle-back {
+    display: inline-block;
+    height: 43px;
+    line-height: 43px;
+    font-size: 12px;
+    color: #172d5f;
+    cursor: pointer;
+}
+#container #left .addTitle .addTitle-back i{
+	display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 6px;
+    height: 13px;
+    background: url(../imgs/contract/contract.png) no-repeat -52px -5px;;
+}
+
+#container #left .addTitle .addTitle-keep {
+    background-color: #054c9c;
+    color: #fff;
+    margin-right: 65px;
+}
+#container #left .addTitle .addTitle-btn {
+    width: 53px;
+    height: 20px;
+    border-radius: 3px;
+    font-size: 12px;
+    border: none;
+    margin-top: 11px;
+}
+#container #left .addTitle .addTitle-delete {
+    border: 1px solid #bfbfbf;
+    text-align: center;
+    color: #696969;
+    margin-right: 5px;
+}
+#container #left .addTitle {
+    height: 43px;
+    border-bottom: 2px solid #efefef;
+    padding-left: 16px;
+}
+#container #left .center {
+    width: 812px;
+    margin: 0 auto;
+}
+#container #left .center form {
+    font-size: 12px;
+}
+.centerCon {
+    width: 812px;
+    padding-top: 13px;
+}
+.centerCon-txt {
+    display: block;
+    font-size: 12px;
+    color: #696969;
+    margin-left: 9px;
+    margin-bottom: 6px;
+}
+input, select {
+    width: 100%;
+    height: 25px;
+    border: 1px solid #e5e5e5;
+    text-indent: 5px;
+    border-radius: 3px;
+    outline: none;
+}
+#container #left .center form .txtarea {
+    padding-top: 8px;
+}
+#container #left .center form .txtarea textarea {
+    width: 100%;
+    height: 75px;
+    border: 1px solid #e5e5e5;
+    text-indent: 5px;
+    border-radius: 3px;
+    outline: none;
+}
+.centerCon-titel {
+    /* margin-top: 13px; */
+    width: 100%;
+    height: 23px;
+    line-height: 23px;
+    background: url(../imgs/contract/downtype.png) no-repeat 10px center;
+    background-color: #1f5097;
+    color: #fff;
+    font-size: 14px;
+    padding-left: 20px;
+}
+.centerCon-start {
+    color: #f24848;
+    margin-left: 3px;
+    vertical-align: sub;
+}
+.choose{
+	width:100%;
+	border:1px solid #e5e5e5;
+	border-radius: 3px;
+	padding-left:18px;
+}
+.choose li {
+	width:88px;
+    float: left;
+    line-height: 30px;
+    color:#696969;
+    cursor: pointer;
+}
+.choose li i,
+.centerCon-txt i {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 3px;
+    background-image: url(../imgs/common.png);
+    background-repeat: no-repeat;
+    background-position: -5px -32px;
+}
+ .choose li i.active ,
+ .centerCon-txt i.active{
+    background-position: -23px -32px;
+}
+.marTop6{
+	margin-top:6px;
+}
+.checkAll{
+	cursor: pointer;
+}
+.errorTip, .errorTipNull, .repeatTip {
+    color: #ff585f;
+    font-size: 12px;
+    margin-left: 10px;
+    display: none;
+}
+.errorB {
+    color: #ff585f;
+}

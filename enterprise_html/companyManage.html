@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>公司管理</title>
+	<!-- reset -->
+	<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap-select.css">
+	<!-- head -->
+	<link rel="stylesheet" href="/css/head.css" type="text/css">
+	<link rel="stylesheet" href="/css/popUp.css" type="text/css">
+	<!-- scroll -->
+	<link rel="stylesheet" href="/css/compentCSS/jquery.mCustomScrollbar.css">
+	<!-- tree -->
+	<link rel="stylesheet" type="text/css" href="/tree/ui.dynatree.css">
+	<!-- zTree -->
+	<link rel="stylesheet" href="/css/compentCSS/zTreeStyle.css">
+	<link rel="stylesheet" href="/css/companyManage.css">
+	
+</head>
+
+<body>
+	<div id="header">
+		<div class="w">
+			<div class="logo fl"></div>
+			<ul class="list fr">
+				<li class="help fl">
+					<span class="helpPic"></span> 帮助
+				</li>
+				<li class="manager fl">
+					<span class="managerPic"></span> 管理
+				</li>
+				<li class="notify fl">
+					<span class="notifyPic"></span> 通知
+					<div class="notify-wrap">
+						<p class="notify-wrap-up">通知
+							<button class="notify-wrap-upClear">清空</button>
+						</p>
+						<ul class="notify-list">
+							<li class="notify-wrap-item">
+								<i></i>
+								<p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i>
+								<p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i>
+								<p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i>
+								<p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i>
+								<p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+						</ul>
+						<p class="notify-wrap-down">
+							<a href="#">更多>><br /></a>
+						</p>
+					</div>
+				</li>
+				<li class="pInfo fl" id="userInfo"><i class="userName" data-bind="userName"></i>
+					<span class="userHeader"></span>
+					<div class="userInfo-wrap">
+
+						<div class="userInfo">
+							<!--<img src="" alt=""  class="userHead"/>-->
+							<span class="fl userHead"></span>
+							<div class="userInfo-right">
+								<p data-bind="userName"></p>
+								<p><span data-bind="position"></span>&nbsp;<span data-bind="department"></span></p>
+							</div>
+							<div class="userInfoOperation">
+								<p class="userInfoOperationBox">
+									<input type="button" value="我的账户" class="myAccout" />
+									<a id="logout" class="logout">退出</a>
+								</p>
+
+							</div>
+						</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="w">
+			<ul class="fl">
+				<li class="navlist fl navlist1 navNoChangeList">
+					<span class="navlist-img navlist-img1"></span>工作台</li>
+				<li class="navlist fl navlist2 navNoChangeList">
+					<span class="navlist-img navlist-img2"></span>事件</li>
+				<li class="navlist fl navlist3 navNoChangeList">
+					<span class="navlist-img navlist-img3"></span>资产</li>
+				<li class="navlist fl navlist4 navNoChangeList">
+					<span class="navlist-img navlist-img4"></span>合同</li>
+				<li class="navlist fl navlist5 navNoChangeList">
+					<span class="navlist-img navlist-img5"></span>项目</li>
+				<li class="navlist fl navlist6 nav-add-item1 navNoChangeList navChangeList lastNavlist">
+					<span class="navlist-img navlist-img6 "></span>供应商
+				</li>
+				<li class="navlist fl navlist7 nav-add-item2 navChangeList active">
+					<span class="navlist-img navlist-img7"></span>管理
+				</li>
+			</ul>
+
+			<div id="nav-add-container">
+				<span class="nav-add"></span>
+				<div class="nav-add-wrap">
+					<div class="nav-add-overHidden">
+						<ul class="nav-add-list">
+							<li class="nav-add-item hide" id="nav-add-item1">
+								<p></p>供应商</li>
+							<li class="nav-add-item" id="nav-add-item2">
+								<p></p>报表</li>
+						</ul>
+					</div>
+					<span class="nav-add-trangle nav-add-trangleLeft"></span>
+					<span class="nav-add-trangle nav-add-trangleRight"></span>
+				</div>
+			</div>
+
+			<div class="fr nav-right-search">
+				<input type="text" class="fr">
+				<div class="dropdownDiv">
+					<span class="nav-right-selectedWord" id="">所有</span>
+					<span class="nav-right-searchpng"></span>
+					<span class="caret nav-right-caret"></span>
+				</div>
+
+				<div class="right-search-wrap dn">
+					<div class="right-search-container">
+						<div class="right-search-list">所有</div>
+						<div class="right-search-list">事件</div>
+						<div class="right-search-list">资产</div>
+						<div class="right-search-list">合同</div>
+						<div class="right-search-list">项目</div>
+						<div class="right-search-list">供应商</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav-right-newAdd fr">
+				<span></span>
+				<ul>
+					<li><i class="add-img1"></i>新建事件</li>
+					<li><i class="add-img2"></i>新建资产</li>
+					<li><i class="add-img3"></i>新建合同</li>
+					<li><i class="add-img4"></i>新建项目</li>
+					<li><i class="add-img5"></i>新建供应商</li>
+				</ul>
+			</div>
+
+			<div class="nav-right-recentRecord fr">
+				<span></span>
+				<div class="nav-right-reRecordWrap">
+					<p class="nav-right-reRecordTitle">最近访问的项</p>
+					<ul id="history"></ul>
+				</div>
+			</div>
+
+		</div>
+		<div class="moveWrap"><i class="navMove"></i></div>
+
+	</div>
+	<!-- 头部end -->
+
+	<div id="container" class="w">
+		<div class="left">
+			<ul>
+				<li class="left-title"><p><i></i>公司管理</p></li>
+				<li class="left-item left-item1 active"><p>公司信息管理</p></li>
+				<li class="left-item left-item2"><p>部门管理</p></li>
+        		<li class="left-item left-item3"><p>人员管理</p></li>
+				<li class="left-item left-item4"><p>办公时间管理</p></li>
+			</ul>
+		</div>
+		<div class="right">
+			<div class="right-title">
+				<div class="back">
+					<i></i>
+					<span>管理主页</span>
+					<span class="addCompanyName" style="display: none;"></span>
+					<span class="addCompanyid" style="display: none;"></span>
+				</div>
+
+				<span class="title-name">公司信息管理</span>
+			</div>
+			<div class="right-content right-content1">
+        		<div class="right-content1-list right-content1-list1">
+        			<p class="right-content1-list-title" id="enterpriseTitle">
+        				<span class="fl title-left">企业信息</span>
+        				<span class="fr title-right" id="enterpriseInfoEdit"><i></i><span>编辑</span></span>
+        				<span class="fr title-right" id="editOpeartion">
+        					<button class="editTitle-save title-btn fl" id="saveConInfo">保存</button>
+        					<button id="enterpriseInfoCancel" class="editTitle-cancel title-btn fr">取消</button>
+        				</span>
+        			</p>
+        			<div class="right-content1-info right-content1-info-item1">
+        				<form method="post" id="enterpriseInformation">
+	        				<div class="right-content1-info-item item-half di" style="display: none;">
+	        					<span class="item-left"></span><span data-bind="" class="item-right"><span class="item-right-text" data-bind="id"></span><input type="text" class="editInput dn" name="id"/></span>
+	        				</div>
+	        				<div class="right-content1-info-item item-half di">
+	        					<span class="item-left">企业名称</span><span data-bind="" class="item-right"><span class="" data-bind="name" name="name"></span></span>
+	        				</div><div class="right-content1-info-item item-half di">
+	        					<span class="item-left">企业代码</span><span data-bind="" class="item-right"><span class="" data-bind="code_name" name="code_name"></span></span>
+	        				</div><div class="right-content1-info-item item-half di">
+	        					<span class="item-left">企业法人</span><span data-bind="" class="item-right"><span class="item-right-text" data-bind="business_corporation"></span><input type="text" class="editInput dn"/ name="business_corporation"></span>
+	        				</div><div class="right-content1-info-item item-half di">
+	        					<span class="item-left">企业所在地</span><span data-bind="" class="item-right"><span class="item-right-text" data-bind="location"></span><input type="text" class="editInput dn" name="location"/></span>
+	        				</div><div class="right-content1-info-item item-half di right-content1-info-item2">
+	        					<span class="item-left">企业注册类型</span><span data-bind="" class="item-right"><span class="item-right-text" data-bind="register_type"></span><input type="text" class="editInput dn" name="register_type"/></span>
+	        				</div><div class="right-content1-info-item item-half di right-content1-info-item2">
+	        					<span class="item-left">企业注册地址</span><span data-bind="" class="item-right"><span class="item-right-text" data-bind="register_address"></span><input type="text" class="editInput dn" name="register_address"/></span>
+	        				</div><div class="right-content1-info-item right-content1-info-item2">
+	        					<span class="item-left">企业经营范围</span><span data-bind="" class="item-right"><span class="item-right-text" style="min-height:80px;" data-bind="business_scope"></span><textarea type="text" class="editTextArea editInput dn" style="min-height:50px;" name="business_scope"></textarea></span>
+	        				</div><div class="right-content1-info-item">
+	        					<span class="item-left item-left1">企业关键字</span><span data-bind="" class="item-right"><span class="item-right-text" data-bind="keyword"></span><input type="text" class="editInput dn" name="keyword"/></span>
+	        				</div><div class="right-content1-info-item">
+	        					<span class="item-left item-left1">企业描述</span><span data-bind="" class="item-right"><span class="item-right-text"  style="min-height:80px;" data-bind="memo"></span>
+	        					<textarea type="text" class="editTextArea editInput dn" style="min-height:110px;" name="memo"></textarea></span>
+	        				</div>
+        				</form>
+        			</div>
+        		</div>
+        		
+        		<div class="right-content1-list right-content1-list2">
+        			<p class="right-content1-list-title marTop15">
+        				<span class="fl title-left">登记人信息</span>
+        				<span class="fr title-right" id="changeRegistrant"><i></i><span>更换登记人</span></span>
+        			</p>
+        			<div class="right-content1-info">
+        				<div class="right-content1-info-item item-half di">
+        					<span class="item-left">姓名</span><span data-bind="" class="item-right"><span class="item-right-text RegisteredName" data-bind="name"></span></span>
+        				</div><div class="right-content1-info-item item-half di">
+        					<span class="item-left">性别</span><span data-bind="" class="item-right"><span class="item-right-text" data-bind="sex"></span>
+        				</div><div class="right-content1-info-item item-half di">
+        					<span class="item-left">移动电话</span><span data-bind="" class="item-right"><span class="item-right-text" data-bind="mobilephone"></span></span>
+        				</div><div class="right-content1-info-item item-half di">
+        					<span class="item-left">邮箱</span><span data-bind="" class="item-right"><span class="item-right-text" data-bind="email"></span>
+        				</div><div class="right-content1-info-item item-half di" style="display: none;">
+        					<span class="item-right-text" data-bind="id" id="registerId"></span>
+        				</div>
+        			</div>
+        		</div>
+
+			</div>
+			
+			<!--session2-->
+			<div class="right-content right-content2 dn">
+        		<div class="right-content2-left di">
+        			<div class="right-content2-left-title">
+        				<span class="fl Company-department-management"></span>
+        				<span id="createNewDepartmentName" style="display: none;"></span>
+        				<span class="createNewDepartmentBox fr di">
+        					<button id="createNewDepartment" class="createNewDepartment">创建新部门</button>
+        				</span>
+        			</div>
+        			<!--ztree-->
+        			<div class="right-content2-left-menus">
+        				 <ul id="tree" class="ztree"></ul>
+        			</div>
+        		</div>
+        		<div class="right-content2-right di">
+								
+        		</div>
+			</div>
+			<!--sesson3-->
+		  <div class="right-content right-content3 dn">
+				<div class="right-content3-left">
+					<div class="right-content3-left-title">
+						<span class="">部门信息</span>
+					</div>
+					<!--ztree-->
+					<div class="right-content3-left-menus">
+						 <ul id="tree3" class="ztree ztree3"></ul>
+					</div>
+				</div><!--此注释防止inline-block空格
+		 --><div class="right-content3-right">
+		 			<!-- 右侧头部 -->
+					<div class="right-content3-title">
+						<div class="right-content3-title-left di">
+							<span>人员信息</span>
+							<button id="createNewUser" class="right-content3-title-btn">创建新人员</button>
+						</div>
+						<div class="right-content3-title-middle fr di">
+							<p class="di right-con-search">
+								<input type='hidden' id="SearchDefalut"/>
+								<input type="text" placeholder="输入姓名、邮箱、办公电话、手机..." id="likeId"><i class="likeClass"></i>
+							</p>
+						</div>
+					</div>
+					<!-- 右侧内容 -->
+					<div class="right-content3-body">
+						<ul class="right-content3-body-title">
+							<li><span>姓名</span></li>
+							<li><span>年龄</span></li>
+							<li><span>职务</span></li>
+							<li><span>所属部门</span></li>
+							<li><span>办公室电话</span></li>
+							<li><span>邮箱</span></li>
+							<li><span>手机</span></li>
+						</ul>
+						<div class="RightContentBody">
+							<ul class="right-content3-body-content dn">					
+								<li class="personalId"><i></i><span data-bind="person_name"></span></li>
+								<li><span data-bind="age"></span></li>
+								<li><span data-bind="position"></span></li>
+								<li><span data-bind="department_name"></span></li>
+								<li><span data-bind="tel"></span></li>
+								<li><span data-bind="email"></span></li>
+								<li><span data-bind="mobilephone"></span></li>
+								<input type="hidden" data-bind='id' class="updateEmployeeId"/>
+								<!--<input type="" data-bind='user_id' class=""/>-->
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+		    <div class="right-content right-content4 dn">
+		    	<div class="right-content4-list right-content4-list1">
+			       <p class="right-content4-list-title">
+	        			<span class="fl title-left">默认工作时间</span>
+	        			<span class="fr title-right" id=""><button class="title-update title-btn fl" id="update">更新</button><button id="answer" class="title-answer title-btn fr">回复默认</button></span>
+	        		</p>
+	    			<div class="right-content4-info">
+	    				<div class="right-content4-info-item right-content4-info-item1">
+        					<span class="item-left di">名称</span><span data-bind="" class="item-right di"><input type="text"/></span>
+        				</div>
+        				<div class="right-content4-info-item right-content4-info-item2">
+        					<span class="item-left di">描述</span><span data-bind="" class="item-right di"><input type="text"/></span>
+        				</div>
+        				<div class="right-content4-info-item right-content4-info-item3">
+        					<span class="item-left di">工作时间</span><span data-bind="" class="item-right workTimeRight di"><i></i><span class="workTimeText">24X7天</span></span>
+        				</div>
+        				<div class="right-content4-info-item right-content4-info-item4">
+        					<span class="item-left di"></span><span data-bind="" class="item-right di">
+        						<ul class="item-right-ul"><li class="item-right-li di"><i></i><span class="userDefined">自定义工作日及小时</span></li></ul>
+        						<div class="checkBox">
+        							<p class="checkPara">
+        								<i></i><span class="checkDays">周一</span>
+        								<select name="" id="" class="selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+										<span class="checkMiddle">至</span>
+										<select name="" id="" class="selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+
+        							</p>
+        							<p class="checkPara">
+        								<i></i><span class="checkDays">周二</span>
+        								<select name="" id="" class=" selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+										<span class="checkMiddle">至</span>
+										<select name="" id="" class="selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+        							</p>
+        							<p class="checkPara">
+        								<i></i><span class="checkDays">周三</span>
+        								<select name="" id="" class=" selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+										<span class="checkMiddle">至</span>
+										<select name="" id="" class=" selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+        							</p>
+        							<p class="checkPara">
+        								<i></i><span class="checkDays">周四</span>
+        								<select name="" id="" class="selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+										<span class="checkMiddle">至</span>
+										<select name="" id="" class="selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+        							</p>
+        							<p class="checkPara">
+        								<i></i><span class="checkDays">周五</span>
+        								<select name="" id="" class=" selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+										<span class="checkMiddle">至</span>
+										<select name="" id="" class=" selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+        							</p>
+        							<p class="checkPara">
+        								<i></i><span class="checkDays">周六</span>
+        								<select name="" id="" class=" selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+										<span class="checkMiddle">至</span>
+										<select name="" id="" class=" selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+        							</p>
+        							<p class="checkPara">
+        								<i></i><span class="checkDays">周日</span>
+        								<select name="" id="" class=" selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+										<span class="checkMiddle">至</span>
+										<select name="" id="" class=" selectpicker">
+											<option data-bind="" class=""></option>
+										</select>
+        							</p>
+        						</div>
+        					</span>
+        				</div>
+					</div>
+				</div>
+				<div class="right-content4-list right-content4-list2">
+			       <p class="right-content4-list-title">
+	        				<span class="fl title-left">全年节假日信息</span>
+	        				<span class="fr title-right" id=""><button class="title-update title-btn fl" id="add">添加假日</button><button id="importHoliday" class="title-importHoliday title-btn fr">导入假日</button></span>
+	        		</p>
+	    			<div class="right-content4-info right-content4-list2-info">
+	    				<ul class="right-content4-list2-ul">
+	    					<li class="right-content4-list2-ulLeft di"><i></i><span>元旦（3天）</span></li>
+	    					<li class="right-content4-list2-ulRight di"><span class="month di">1月</span><span class="daysInput di">31</span><span class="daysInput di">1</span><span class="daysInput di">2</span></li>
+	    				</ul>
+	    				<ul class="right-content4-list2-ul">
+	    					<li class="right-content4-list2-ulLeft di"><i></i><span>春节（7天）</span></li>
+	    					<li class="right-content4-list2-ulRight di"><span class="month di">2月</span><span class="daysInput di">27</span><span class="daysInput di">28</span><span class="daysInput di">29</span><span class="daysInput di">30</span><span class="daysInput di">31</span><span class="daysInput di">1</span><span class="daysInput di">2</span></li>
+	    				</ul>
+	    				<ul class="right-content4-list2-ul">
+	    					<li class="right-content4-list2-ulLeft di"><i></i><span>清明（3天）</span></li>
+	    					<li class="right-content4-list2-ulRight di"><span class="month di">4月</span><span class="daysInput di">2</span><span class="daysInput di">3</span><span class="daysInput di">4</span></li>
+	    				</ul>
+					</div>
+				</div>
+	</div>
+
+	<!--弹窗-->
+		<div class="modal fade" id="changeRegistrantModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">更换登记人
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="di changeRegistrantName">登记人</p>
+							<select id="statusSelect" class="selectPicker" name="name">
+								<option data-bind="person_name"></option>
+							</select>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" id="changeStatusConfirm" class="btn btn-keep">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 创建新部门,新建子部门,编辑 -->
+		<div class="modal fade" id="createNewDepartmentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header"><span class="modal-name">添加新部门</span>
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-row">
+							<p class="modal-body-row-left">部门名称</p>
+							<p class="modal-body-row-right">
+								<input type="text" data-bind="name" id="modalInptu"/>
+								<!--<input type="hidden" data-bind='parent_id' id="parent_Id">-->
+							</p>
+						</div>
+						<div class="modal-body-row">
+							<p class="modal-body-row-left modal-body-rowTxt">部门描述</p>
+							<p class="modal-body-row-right">
+								<textarea placeholder="部门描述" class="modalTextArea" data-bind="function"></textarea>
+								<!--<input type="text" data-bind="id">-->
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep" id="createNewDepartmentModalSave">保存</button>
+						<button type="button" class="btn btn-cancel " data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="pupDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<span class="question"></span>是否确定要删除该节点
+					</div>
+					<div class="modal-footer">
+						<button type="button" id="delConfirm" class="btn btn-delete">删除</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--创建新人员-->
+		<div class="modal fade" id="createNewpersonelModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">创建新人员
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<form id="Createnewpeoples" method="post">
+							<div class="modal-body-row">
+								<div class="modal-body-row-half di modal-body-row-position">
+									<p class="Namenull">姓名不能为空</p>
+									<p class="modal-body-row-leftText di">姓名</p><span class="positionname">*</span><input type="text" name="name" class="positioninputs modal-body-row-leftText1 person_name" data-bind="person_name"/>
+								</div><div class="modal-body-row-half di">
+									<p class="modal-body-row-leftText di">性别</p><select class="selectpicker" id="SexualDistinction" name="sex" data-bind='sex'>
+										<option value="39">男</option>
+										<option value="38">女</option>
+									</select>
+								</div>
+							</div>
+							<div class="modal-body-row">
+								<div class="modal-body-row-half di">
+									<p class="modal-body-row-leftText di">年龄</p><input type="text" name="age" class="modal-body-row-leftText1 age" data-bind='age'/>
+								</div><div class="modal-body-row-half di">
+									<p class="modal-body-row-leftText di">职务</p><input type="text" name="position" class="modal-body-row-leftText1 jobposition" data-bind="position"/>
+								</div>
+							</div>
+							<div class="modal-body-row">
+								<div class="modal-body-row-half di">
+									<p class="modal-body-row-leftText di">部门</p><span class="departmentname">*</span><input class="selectTree" type="text" id="department"  readonly>
+										<input type="text" value="" id="departmentCode" class="oarchitecture_id" name="oarchitecture_id" style="display: none;"/>
+										<div id="department-menu" class="menus">
+											<ul id="department-tree" class="ztree"></ul>
+										</div>
+								</div><div class="modal-body-row-half di">
+									<p class="modal-body-row-leftText di">电话</p><input type="text" name='tel' class="modal-body-row-leftText1 telphone" data-bind='tel'/>
+								</div>
+							</div>
+							<div class="modal-body-row">
+								<div class="modal-body-row-half di">
+									<p class="modal-body-row-leftText di">手机</p><input type="text" name="mobilephone" class="modal-body-row-leftText1 mobilephone" data-bind="mobilephone"/>
+								</div><div class="modal-body-row-half di">
+									<p class="modal-body-row-leftText di">邮箱</p><input type="text" name='email' class="modal-body-row-leftText1 email" data-bind="email"/>
+								</div>
+								<span data-bind='personId' style="display: none;" class="departId"></span>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-keep" id="createNewpersonelModalSave">保存</button>
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 个人名片 -->
+		<div class="modal fade" id="personalId" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">个人名片
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<div class="modal-body-head">
+							<i></i>
+							<span data-bind="person_name" class="item-right3-text personNames"></span>
+							<!--<input type="text" class="item-right3-text2 person_name"/>-->
+						</div>
+				 		<ul class="modal-body-info">
+							<li>
+								<span>办公职位：</span>
+								<span data-bind="department_name" class=""></span>
+								<!--<input class="selectTree" type="text" id="departmentry" readonly >
+								<input type="text" id="departmentCoder" style="display: none" class="oarchitecture_id" name='oarchitecture_id'/>
+								<div id="departmentMenu" class="menus">
+									<ul id="departmentree" class="ztree"></ul>
+								</div>-->
+								<span class="">-</span>
+								<span data-bind="position" class="item-right3-text  "></span>
+								<!--<input type="text" class="item-right3-text2 jobposition"/>-->
+							</li>
+							<li>
+								<span>办公电话：</span>
+								<span data-bind="tel" class="item-right3-text "></span>
+								<!--<input type="text" class="  telphone item-right3-text2 telphone">-->
+							</li>
+							<li>
+								<span>移动电话：</span>
+								<span data-bind="mobilephone" class="item-right3-text "></span>
+								<!--<input type="text" class="  mobilephone item-right3-text2 mobilephone"/>-->
+							</li>
+							<li>
+								<span>邮箱：</span>
+								<span data-bind="email" class="item-right3-text "></span>
+								<!--<input type="text" class=" item-right3-text3 position_email item-right3-text2 email"/>-->
+							</li>
+							<li>
+								<input type="hidden" data-bind="user_id" class="menUserId">
+							</li>
+							<li>
+								<span class="signAccounts">注册账号</span><span class="loginAccounts dn">登录账号：</span><span data-bind="user_name" class="manAccounts"></span>
+							</li>
+							<li>
+								<input type="hidden" class="activeValue" data-bind="locked">
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<div class="edit">
+							<i></i>
+							<span>编辑</span>
+						</div>
+						<!--<span class="fr title-right" id="editOpearnation">
+							<button class="editTitle-save title-btn fl" id="editorkeep">保存</button>
+							<button id="editorcancel" class="editTitle-cancel title-btn fr">取消</button>
+						</span>	-->
+						<button type="button" class="btn btn-keep" id="editordelete">删除</button>
+						<button type="button" class="btn btn-keep dn" id="editorwithdraw">注销</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--注册账号-->
+		<div class="modal fade" id="createNewUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="closeImg fr">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		          <div class="modal-header">
+		          	<span>为</span> <span class="personname" data-bind="person_name"></span> <span>注册账号</span>
+		            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+		          </div>
+		          <form id="userData">
+			          <div class="modal-body">
+			            <div class="di modal-body-item">
+							<p class="di modal-body-item-name">登录名称</p>
+							<span class="loginNumbers" data-bind="personId" style="display: none;"></span>
+							<span data-bind="department_id" class="departmentId" style="display: none;"></span>
+							<input type="text" class="usersName">
+							<span class="iconerror1"></span>
+			            </div>
+			            <div class="di modal-body-item">	
+			              <p class="di modal-body-item-name">登录密码</p>
+						  <input type="password" class="usersPassword0 usersPassword">
+						  <span class="iconerror2 "></span>
+			            </div>
+			            <div class="modal-body-item">
+			         		<p class="di modal-body-item-name">确认密码</p>
+							<input type="password" class="usersPassword1 usersPassword2">
+							<span class="iconerror3"></span>
+							<p class="di errorPassword "></p>
+			          	</div>
+			          </div>
+		          </form>
+		          <div class="modal-footer">
+		            <button type="button" class="btn btn-keep addNewUser">注册</button>
+		            <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+		          </div>
+		        </div>
+		    </div>
+    	</div>
+		<!-- 500错误提示框 -->
+		<div class="modal fade" id="errorBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<p class="modal-body-row"><span class="question-info" id="errorInfo"></span></p>
+					</div>
+					<div class="modal-footer">
+						<!-- <button type="button" class="btn btn-delete">删除</button> -->
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="successTip" id="tipMsg"></p>
+		
+	<!-- jquery -->
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="/js/compentJS/jquery.cookie.js"></script>
+	<!-- bootstrap -->
+	<script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+	<script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+	
+	<script type="text/javascript" src="/js/compentJS/jquery.ztree.core.js"></script>
+	<!--url 常量  -->
+	<script type="text/javascript" src="/js/variable.js"></script>
+	<!-- 绑定数据 -->
+	<script type="text/javascript" src="/js/transparency.min.js"></script>
+	<script type="text/javascript" src="/js/compentJS/loadListCommon.js"></script>
+	<!--302error-->
+	<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+	<script src="/js/head.js"></script>
+  	<script type="text/javascript" src="/js/compentJS/jquery.ztree.all.min.js"></script>
+	<script src="/js/companyManage.js"></script>
+	<!-- tips -->
+	<script type="text/javascript" src="/js/tips.js"></script>
+
+	<script type="text/javascript" src="/js/compentJS/ztree1.js"></script>
+	<!-- ajax提交表单 -->
+	<script type="text/javascript" src="/js/jquery.form.js"></script>
+	<!-- scroll -->
+	<script type="text/javascript" src="/js/compentJS/jquery.mCustomScrollbar.js"></script>
+	<script>
+	$("#department-menu").mCustomScrollbar({
+		theme: "3d-dark"
+	});
+	$("#departmentMenu").mCustomScrollbar({
+		theme: "3d-dark"
+	})
+	</script>
+</body>
+
+</html>

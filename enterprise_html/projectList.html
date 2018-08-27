@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>项目</title>
+    <link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+	<link rel="stylesheet" href="/css/compentCSS/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap-select.css">
+	<link rel="stylesheet" type="text/css" media="screen"  href="css/compentCSS/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" href="/css/head.css">
+	<link rel="stylesheet" href="/css/popUp.css" type="text/css">
+	<link rel="stylesheet" href="/css/project.css">
+</head>
+<body>
+
+
+	<div id="header">
+		<div class="w">
+			<div class="logo fl"></div>
+			<ul class="list fr">
+				<li class="help fl">
+					<span class="helpPic"></span>
+					帮助</li>
+				<li class="manager fl">
+					<span class="managerPic"></span>
+					管理</li>
+				<li class="notify fl">
+					<span class="notifyPic"></span>
+					通知
+					<div class="notify-wrap">
+						<p class="notify-wrap-up">通知
+							<button class="notify-wrap-upClear">清空</button>
+						</p>
+						<ul class="notify-list">
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+						</ul>
+						<p class="notify-wrap-down">
+							<a href="#">更多>></a>
+						</p>
+					</div>
+				</li>
+                <li class="pInfo fl" id="userInfo"><i class="userName" data-bind="userName"></i>
+                    <span class="userHeader"></span>
+                    <div class="userInfo-wrap">
+
+                        <div class="userInfo">
+                            <!--<img src="" alt=""  class="userHead"/>-->
+                            <span class="fl userHead"></span>
+                            <div class="userInfo-right">
+                                <p data-bind="userName"></p>
+                                <p><span data-bind="position"></span>&nbsp;<span data-bind="department"></span></p>
+                            </div>
+                            <div class="userInfoOperation">
+                                <p class="userInfoOperationBox">
+                                    <input type="button" value="我的账户" class="myAccout"/>
+                                    <a id="logout" class="logout">退出</a>
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div id="nav">
+			<div class="w">
+				<ul class="fl">
+					<li class="navlist fl navlist1 navNoChangeList">
+						<span class="navlist-img navlist-img1"></span>工作台</li>
+					<li class="navlist fl navlist2 navNoChangeList">
+						<span class="navlist-img navlist-img2"></span>事件</li>
+					<li class="navlist fl navlist3 navNoChangeList">
+						<span class="navlist-img navlist-img3"></span>资产</li>
+					<li class="navlist fl navlist4 navNoChangeList">
+						<span class="navlist-img navlist-img4"></span>合同</li>
+					<li class="navlist fl navlist5 navNoChangeList active">
+						<span class="navlist-img navlist-img5"></span>项目</li>
+					<li class="navlist fl navlist6 nav-add-item1 navNoChangeList navChangeList lastNavlist">
+						<span class="navlist-img navlist-img6 "></span>供应商
+					</li>
+					<li class="navlist fl navlist7 nav-add-item2 navChangeList">
+						<span class="navlist-img navlist-img7"></span>管理
+					</li>
+				</ul>
+
+				<div id="nav-add-container">
+					<span class="nav-add"></span>
+					<div class="nav-add-wrap">
+						<div class="nav-add-overHidden">
+							<ul class="nav-add-list">
+								<li class="nav-add-item hide" id="nav-add-item1">
+									<p></p>供应商</li>
+								<li class="nav-add-item" id="nav-add-item2">
+									<p></p>报表</li>
+							</ul>
+						</div>
+						<span class="nav-add-trangle nav-add-trangleLeft"></span>
+						<span class="nav-add-trangle nav-add-trangleRight"></span>
+					</div>
+				</div>
+
+				<div class="fr nav-right-search">
+					<input type="text"  class="fr">
+					<div class="dropdownDiv">
+						<span class="nav-right-selectedWord" id="">所有</span>
+						<span class="nav-right-searchpng"></span>
+						<span class="caret nav-right-caret"></span>
+					</div>
+
+					<div class="right-search-wrap dn">
+						<div class="right-search-container">
+								<div class="right-search-list">所有</div>
+								<div class="right-search-list">事件</div>
+								<div class="right-search-list">资产</div>
+								<div class="right-search-list">合同</div>
+								<div class="right-search-list">项目</div>
+								<div class="right-search-list">供应商</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="nav-right-newAdd fr">
+					<span></span>
+					<ul>
+						<li><i class="add-img1"></i>新建事件</li>
+						<li><i class="add-img2"></i>新建资产</li>
+						<li><i class="add-img3"></i>新建合同</li>
+						<li><i class="add-img4"></i>新建项目</li>
+						<li><i class="add-img5"></i>新建供应商</li>
+					</ul>
+				</div>
+
+				<div class="nav-right-recentRecord fr">
+					<span></span>
+					<div class="nav-right-reRecordWrap">
+						<p class="nav-right-reRecordTitle">最近访问的项</p>
+						<ul id="history"></ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="moveWrap"><i class="navMove"></i></div>
+
+		</div>
+
+
+	<!-- 内容部分 -->
+	<div id="container" class="w">
+		<div id="left">
+		    <div class="leftBg">
+		    	<!--<ul class="left-wrap left-wrap1">
+					<li class="left-wrap-title"><i></i>我关注的</li>
+				</ul>-->
+
+				<ul class="left-wrap left-wrap2">
+					<li class="left-wrap-title"><i></i>筛选项目</li>
+
+					<li class="left-wrap-item left-wrap-item1"><i></i>项目中标人</li>
+					<li class="left-item-select">
+						<select class="selectpicker proSuppliers">
+							<option data-bind="win_unit_name" value=""></option>
+						</select>
+					</li>
+
+					<li class="left-wrap-item left-wrap-item2"><i></i>项目承建中</li>
+					<li class="left-item-select">
+						<select class="selectpicker proBuild">
+						   <option data-bind="proBuild" value=""></option>
+						</select>
+					</li>
+
+					<li class="left-wrap-item left-wrap-item3"><i></i>项目预算</li>
+
+					<li class="left-item-check"><i class="proPlan0"></i> >5000万</li>
+					<li class="left-item-check"><i class="proPlan1"></i>1 000万-5000万 </li>
+					<li class="left-item-check"><i class="proPlan2"></i> 500万-1000万 </li>
+					<li class="left-item-check"><i class="proPlan3"></i> 100万-500万 </li>
+					<li class="left-item-check"><i class="proPlan4"></i> < 100万 </li>
+
+					<li class="left-wrap-item left-wrap-item4"><i></i>项目状态</li>
+					<li class="left-item-check"><i class="proStatus0"></i>计划中</li>
+					<li class="left-item-check"><i class="proStatus1"></i>执行中</li>
+					<li class="left-item-check"><i class="proStatus2"></i>已完工</li>
+
+				</ul>
+
+				<p class="left-wrap-clear"><i></i>清除所选项</p>
+		    </div>
+
+		</div>
+	<!-- 自定义时间 -->
+	<div class="modal fade" id="customTime" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">自定义时间
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-body-row">
+                <p class="modal-body-row-left">起始日期</p>
+                <p class="modal-body-row-right">
+                  <!--<input type="date" name="startDate"/>-->
+                  <input type="text" class="timePicker" name="startDate" readonly="true"/>
+                </p>
+              </div>
+              <div class="modal-body-row">
+                <p class="modal-body-row-left">结束日期</p>
+                <p class="modal-body-row-right">
+                  <!--<input type="date" name="endDate"/>-->
+                   <input type="text" class="timePicker"  name="endDate" readonly="true"/>
+                </p>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-keep">保存</button>
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+      </div>
+  </div>
+		<div id="right">
+			<div class="right-title">项目
+				<button class="projectAdd">添加项目</button>
+			</div>
+			<div class="right-con">
+				<div class="right-con-title">
+					<p class="di right-con-search">
+						<input type="text" placeholder="搜索..." id="likeId"><i class="likeClass"></i></p>
+					<p class="right-con-title-page fr" id="pageMsgHelp">
+						<span>显示</span>&nbsp;<span data-bind="firstData"></span>&nbsp;<span>-</span>&nbsp;<span data-bind="lastData"></span>&nbsp;<span>，</span>&nbsp;<span>共</span>&nbsp;<span data-bind="totalNum"></span>&nbsp;<span>条</span>&nbsp;&nbsp;<span data-bind="prePageHelp" id="prePageHelp" class="title-page-left title-page" ></span><span data-bind="nextPageHelp" id="nextPageHelp" class="title-page-right title-page"></span>
+						<!-- class="title-page-left title-page"  class="title-page-right title-page" -->
+					</p>
+				</div>
+				<div class="right-con-body">
+					<div class="right-con-body-title">
+						<button class="right-body-btn projectAdd">新建</button>
+						<button class="right-body-btn proDelete default">删除</button>
+						<p class="right-body-inout">
+							<i class="import"></i>导入
+							<i class="export"></i>导出
+						</p>
+					</div>
+
+					<!-- 删除div -->
+				<div class="modal fade" id="pupDelete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			      <div class="modal-dialog">
+			        <div class="modal-content">
+			          <div class="modal-header">
+			              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span><tton>
+			            </div>
+			            <div class="modal-body">
+			              <span class="question"></span>是否确定要删除选定项目
+			            </div>
+			            <div class="modal-footer">
+			              <button type="button" class="btn btn-delete" id="test">删除<tton>
+			              <button type="button" class="btn btn-cancel" data-dismiss="modal">取消<tton>
+			            </div>
+			        </div>
+			      </div>
+			  </div>
+					<div class="proListNoData dn">
+							<!--站位文字和图片-->
+						    <div class="takePlace">
+			                  <img src="../imgs/common/takePlace.png" alt="">
+			                  <p><span>目前暂无满足条件的数据，请</span><a class="addButton" href="newProject.html">添加</a></p>
+		                    </div>
+					</div>
+
+					<div class="right-body-table">
+						<ul class="right-table-title">
+							<li class="right-table-title-item">项目名称</li>
+							<li class="right-table-title-item">计划开工日期</li>
+							<li class="right-table-title-item">计划完工日期</li>
+							<li class="right-table-title-item">项目编号</li>
+							<li class="right-table-title-item">中标人</li>
+							<li class="right-table-title-item">中标金额</li>
+							<li class="right-table-title-item">项目状态</li>
+						</ul>
+
+						<div class="proList">
+						  <input type="hidden" data-bind="id">
+							<ul class="right-table-body">
+								<li class="right-table-body-item table-col1"><i class="projectPro"></i></li>
+								<li class="right-table-body-item"><span data-bind="project_name"></span></li>
+								<li class="right-table-body-item"><span data-bind="plan_start_time"></span></li>
+								<li class="right-table-body-item"><span data-bind="plan_end_time"></span></li>
+								<li class="right-table-body-item"><span data-bind="project_code"></span></li>
+								<li class="right-table-body-item"><span data-bind="win_unit_name"></span></li>
+								<li class="right-table-body-item"><span data-bind="win_amount"></span></li>
+								<li class="right-table-body-item"><!-- right-table-body-status perform -->
+									<span class="" data-bind="proStatusClass"><span data-bind="project_status_name"></span></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="pageChange" id="pageMsg">
+					<span class="pageChange-span1 pageChange-span di" data-bind="" id="prePageId">
+					<!-- class="di pageChange-span-up" class="di pageChange-span-down active"  -->
+						<span data-bind="prePage" data-bind="prevPageFlag"></span>上一页
+					</span>
+
+					<span class="pageChange-span2 pageChange-span di" data-bind="currentPage" id="pageInput"></span>
+
+					<span class="pageChange-span3 pageChange-span di" id="nextPageId">
+						下一页<span data-bind="nextPage" data-bind="nextPageFlag"></span>
+					</span>
+
+					<span class="txt">共<span data-bind="totalPage"></span>页，到第</span>
+					<input type="text" class="pageChange-span4 pageChange-span di" id="goPageInput">
+					<span class="txt">页</span>
+					<span class="pageChange-span5 pageChange-span di" id="goPageId">确定</span>
+					<input type="hidden" data-bind="totalPage" id="totalPageId">
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+	 <!-- 500错误提示框 -->
+  <div class="modal fade" id="errorBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <p class="modal-body-row"><span class="question-info" id="errorInfo"></span></p>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-delete">删除</button> -->
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+      </div>
+  </div>
+	<!-- 操作提示信息 -->
+  <p class="successTip" id="tipMsg"></p>
+	<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="/js/compentJS/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/js/compentJS/history.js"></script>
+	<script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+	<script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+	<script type="text/javascript"  src="js/compentJS/bootstrap-datepicker.min.js"></script>
+	<script type="text/javascript"  src="js/compentJS/bootstrap-datepicker.zh-CN.js"></script>
+	<script type="text/javascript" src="/js/compentJS/backward.js"></script>
+	<script type="text/javascript" src="/js/variable.js"></script>
+	<script type="text/javascript" src="/js/head.js"></script>
+	<!--302error-->
+ 	<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+	<!-- 数据绑定 -->
+	<script type="text/javascript" src="/js/transparency.min.js"></script>
+	<script type="text/javascript" src="js/projectList.js"></script>
+	<!-- tips -->
+	<script type="text/javascript" src="/js/tips.js"></script>
+
+	<script>
+		$('.selectpicker').selectpicker({
+		  	size:6,
+		});
+		$("input[name='startDate']").datepicker({
+				language: 'zh-CN',
+//								todayBtn: true,
+				todayHighlight:1,
+				autoclose: 1,
+				minView: 2,
+				format: "yyyy-mm-dd",
+				orientation:'bottom'
+			});
+			$("input[name='endDate']").datepicker({
+				language: 'zh-CN',
+//								todayBtn: true,
+				todayHighlight:1,
+				autoclose: 1,
+				minView: 2,
+				format: "yyyy-mm-dd",
+				orientation:'bottom'
+			});
+	</script>
+</body>
+</html>

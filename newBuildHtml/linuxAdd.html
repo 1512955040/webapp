@@ -1,0 +1,85 @@
+<!-- 增加或者修改------------------------------------- -->
+<div id="addUpFlag">
+<p class="centerCon-titel">Linux服务器属性</p>
+<p class="centerCon3-p1 centerCon-half di centerCon-half-first">
+	<span class="centerCon-txt">机箱规格</span>
+	<select class="selectpicker halfSelect" name="boxModel">
+    	<option data-bind="boxModel"></option>
+	</select>
+</p>
+<p class="centerCon3-p2 centerCon-half di">
+	<span class="centerCon-txt">CPU</span>
+	<input type="text" name="cpu">
+	
+</p>
+<p class="centerCon3-p3 centerCon-half di centerCon-half-first">
+	<span class="centerCon-txt">内存容量</span>
+	<input type="text" name="EMS">
+	
+</p>
+<p class="centerCon3-p4 centerCon-half di">
+	<span class="centerCon-txt">磁盘容量</span>
+	<input type="text"  name="disc">
+	
+</p>
+<p class="centerCon3-p5 centerCon-half di centerCon-half-first">
+	<span class="centerCon-txt">操作系统版本</span>
+	<input type="text" name="OSversion">
+	
+</p>
+<p class="centerCon3-p6 centerCon-half di">
+	<span class="centerCon-txt">主机名称</span>
+	<input type="text" name="masterName">
+	
+</p>
+<p class="centerCon3-p7 centerCon-half di centerCon-half-first">
+	<span class="centerCon-txt">MAC地址</span>
+	<input type="text" name="MAC">
+	
+</p>
+<p class="centerCon3-p8 centerCon-half di">
+	<span class="centerCon-txt">IP地址  <span id="IPError" class="errorB"></span></span>
+	<input type="text" name="IP">
+</p>
+</div>
+
+<!-- 详情------------------------------------- -->
+<div id="detailFlag">
+
+  <p class="conright-infoWrapLeft-itemTitle">Linux服务器属性</p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">机箱规格</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="boxModel"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">CPU</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="cpu"></span>
+  </p>
+  
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">内存容量</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="EMS"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">磁盘容量</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="disc"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">操作系统版本</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="OSversion"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">主机名称</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="masterName"></span>
+  </p>
+  <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">MAC地址</span>
+    <span  class="conright-infoWrapLeft-itemRowTxt2" data-bind="MAC"></span>
+  </p>
+   <p class="conright-infoWrapLeft-itemRow di">
+    <span class="conright-infoWrapLeft-itemRowTxt1">IP地址</span>
+    <span class="conright-infoWrapLeft-itemRowTxt2" data-bind="IP"></span>
+  </p>
+</div>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>权限管理</title>
+		<!--reset-->
+		<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+		<!--bootstrap-->
+    	<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+    	<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap-select.min.css">
+		<!--head-->
+    	<link rel="stylesheet" href="/css/head.css" type="text/css">
+    	<link rel="stylesheet" href="/css/popUp.css" type="text/css">
+    	 <!-- scroll -->
+		<link rel="stylesheet" href="/css/compentCSS/jquery.mCustomScrollbar.css">
+    	<!--CSS-->
+    	<link rel="stylesheet" href="/css/authorizationMagament.css">
+	</head>
+	<body>
+	<div id="header">
+        <div class="w">
+            <div class="logo fl"></div>
+            <ul class="list fr">
+                <li class="help fl">
+                    <span class="helpPic"></span>
+                    帮助</li>
+                <li class="manager fl">
+                    <span class="managerPic"></span>
+                    管理</li>
+                <li class="notify fl">
+                    <span class="notifyPic"></span>
+                    通知
+                    <div class="notify-wrap">
+                        <p class="notify-wrap-up">通知
+                            <button class="notify-wrap-upClear">清空</button>
+                        </p>
+                        <ul class="notify-list">
+                            <li class="notify-wrap-item">
+                                <i></i>
+                                <p>通知1</p>
+                                <p class="notify-wrap-item-date">2016-12-28</p>
+                            </li>
+                            <li class="notify-wrap-item">
+                                <i></i>
+                                <p>通知1</p>
+                                <p class="notify-wrap-item-date">2016-12-28</p>
+                            </li>
+                            <li class="notify-wrap-item">
+                                <i></i>
+                                <p>通知1</p>
+                                <p class="notify-wrap-item-date">2016-12-28</p>
+                            </li>
+                            <li class="notify-wrap-item">
+                                <i></i>
+                                <p>通知1</p>
+                                <p class="notify-wrap-item-date">2016-12-28</p>
+                            </li>
+                            <li class="notify-wrap-item">
+                                <i></i>
+                                <p>通知1</p>
+                                <p class="notify-wrap-item-date">2016-12-28</p>
+                            </li>
+                        </ul>
+                        <p class="notify-wrap-down">
+                            <a href="#">更多>></a>
+                        </p>
+                    </div>
+                </li>
+                <li class="pInfo fl" id="userInfo">
+                    <i class="userName" data-bind="userName"></i>
+                    <span class="userHeader"></span>
+                    <div class="userInfo-wrap">
+
+                        <div class="userInfo">
+                            <!--<img src="" alt=""  class="userHead"/>-->
+                            <span class="fl userHead"></span>
+                            <div class="userInfo-right">
+                                <p data-bind="userName"></p>
+                                <p>
+                                    <span data-bind="position"></span>&nbsp;
+                                    <span data-bind="department"></span>
+                                </p>
+                            </div>
+                            <div class="userInfoOperation">
+                                <p class="userInfoOperationBox">
+                                    <input type="button" value="我的账户" class="myAccout" />
+                                    <a id="logout" class="logout">退出</a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="nav" class="facilitator">
+        <div class="w">
+            <ul class="fl">
+                <li class="navlist fl navlist1 navNoChangeList now">
+                    <span class="navlist-img navlist-img1 active"></span>工作台</li>
+                <li class="navlist fl navlist2 navNoChangeList">
+                    <span class="navlist-img navlist-img2"></span>工单</li>
+                <li class="navlist fl navlist3 navNoChangeList">
+                    <span class="navlist-img navlist-img4"></span>合同</li>
+                <li class="navlist fl navlist4 navNoChangeList">
+                    <span class="navlist-img navlist-img3"></span>客户</li>
+
+                <li class="navlist fl navlist5 nav-add-item1 navNoChangeList navChangeList lastNavlist active">
+                    <span class="navlist-img navlist-img6 "></span>管理
+                </li>
+                <!--<li class="navlist fl navlist7 nav-add-item2 navChangeList">
+					<span class="navlist-img navlist-img7"></span>报表
+				</li>-->
+            </ul>
+
+
+            <div id="nav-add-container">
+                <span class="nav-add"></span>
+                <div class="nav-add-wrap">
+                    <div class="nav-add-overHidden">
+                        <ul class="nav-add-list">
+                            <li class="nav-add-item hide" id="nav-add-item1">
+                                <p></p>供应商</li>
+                            <li class="nav-add-item" id="nav-add-item2">
+                                <p></p>报表</li>
+                        </ul>
+                    </div>
+                    <span class="nav-add-trangle nav-add-trangleLeft"></span>
+                    <span class="nav-add-trangle nav-add-trangleRight"></span>
+                </div>
+            </div>
+
+            <div class="fr nav-right-search">
+                <input type="text" class="fr">
+                <div class="dropdownDiv">
+                    <span class="nav-right-selectedWord" id="">所有</span>
+                    <span class="nav-right-searchpng"></span>
+                    <span class="caret nav-right-caret"></span>
+                </div>
+
+                <div class="right-search-wrap dn">
+                    <div class="right-search-container">
+                        <div class="right-search-list">所有</div>
+                        <div class="right-search-list">工单</div>
+                        <div class="right-search-list">合同</div>
+                        <div class="right-search-list">客户</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-right-newAdd fr dn">
+                <span></span>
+                <ul>
+                    <li>
+                        <a href="assetAdd.html">
+                            <span></span>新建资产</a>
+                    </li>
+                    <li>
+                        <a href="newContract.html">
+                            <span></span>新建合同</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>供应商</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span></span>项目</a>
+                    </li>
+                    <li>问题变更</li>
+                </ul>
+            </div>
+
+            <div class="nav-right-recentRecord fr dn">
+                <span></span>
+                <div class="nav-right-reRecordWrap">
+                    <p class="nav-right-reRecordTitle">最近访问的项</p>
+                    <ul id="history"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="moveWrap">
+            <i class="navMove"></i>
+        </div>
+    </div>
+    <!--头部end-->
+    <div id="container" class="w">
+		<div class="left">
+			<ul>
+				<li class="left-title"><p><i></i>权限管理</p></li>
+				<li class="left-item left-item1 active"><p>角色管理</p></li>
+				<li class="left-item left-item2"><p>用户管理</p></li>
+			</ul>
+		</div>
+		<div class="right">
+			<div class="right1 rightindex">
+				<div class="right-title">
+					<div class="back">
+						<i></i>
+						<span>管理主页</span>
+					</div>
+					<span class="title-name">角色管理</span>
+	           </div>
+	            <div class="right-content">
+	        		<p class="right-content-title">
+	        			<span>管理列表</span>
+	        			<button id="rolePart">创建新角色</button>
+	        		</p>
+	        		<div class="right-content-text">
+	        			<ul class="right-content-text1 clearfix">
+	        				<li class="right-content-icon1 clearfix"></li>
+	        				<li class="right-content-page clearfix">
+	        					<div class="administrator">企业管理员</div>
+	        					<div class="administrator-content">啥的撒啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
+	        				</li>
+	        				<li class="right-content-btn clearfix">
+	        					<span class="castingAssignment"><i class="right-content-icon2"></i><span class="right-content-btn1">角色分配</span></span>
+	        					<span><i class="right-content-icon3"></i><span class="right-content-btn1">编辑</span></span>
+	        					<span><i class="right-content-icon4"></i><span class="right-content-btn1">删除</span></span>
+	        				</li>
+	        			</ul>
+	        			<ul class="right-content-text1 clearfix">
+	        				<li class="right-content-icon1 clearfix"></li>
+	        				<li class="right-content-page clearfix">
+	        					<div class="administrator">企业管理员</div>
+	        					<div class="administrator-content">啥的撒啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
+	        				</li>
+	        				<li class="right-content-btn clearfix">
+	        					<span class="castingAssignment"><i class="right-content-icon2"></i><span class="right-content-btn1">角色分配</span></span>
+	        					<span><i class="right-content-icon3"></i><span class="right-content-btn1">编辑</span></span>
+	        					<span><i class="right-content-icon4"></i><span class="right-content-btn1">删除</span></span>
+	        				</li>
+	        			</ul>
+	        			<ul class="right-content-text1 clearfix">
+	        				<li class="right-content-icon1 clearfix"></li>
+	        				<li class="right-content-page clearfix">
+	        					<div class="administrator">企业管理员</div>
+	        					<div class="administrator-content">啥的撒啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
+	        				</li>
+	        				<li class="right-content-btn clearfix">
+	        					<span class="castingAssignment"><i class="right-content-icon2"></i><span class="right-content-btn1">角色分配</span></span>
+	        					<span><i class="right-content-icon3"></i><span class="right-content-btn1">编辑</span></span>
+	        					<span><i class="right-content-icon4"></i><span class="right-content-btn1">删除</span></span>
+	        				</li>
+	        			</ul>
+	        			<ul class="right-content-text1 clearfix">
+	        				<li class="right-content-icon1 clearfix"></li>
+	        				<li class="right-content-page clearfix">
+	        					<div class="administrator">企业管理员</div>
+	        					<div class="administrator-content">啥的撒啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</div>
+	        				</li>
+	        				<li class="right-content-btn clearfix">
+	        					<span class="castingAssignment"><i class="right-content-icon2"></i><span class="right-content-btn1">角色分配</span></span>
+	        					<span><i class="right-content-icon3"></i><span class="right-content-btn1">编辑</span></span>
+	        					<span><i class="right-content-icon4"></i><span class="right-content-btn1">删除</span></span>
+	        				</li>
+	        			</ul>
+	        		</div>
+            	</div>
+           </div>
+           <!--用户管理-->
+           <div class="right2 dn rightindex">
+           		<!--title-->
+           		<div class="right-title">
+					<div class="back">
+						<i></i>
+						<span>管理主页</span>
+					</div>
+					<span class="title-name">用户管理</span>
+	           </div>
+	           <!--用户信息-->
+	           <div class="right2-content">
+	        		<div class="right2-content-title">
+	        			<span>用户信息</span>
+	        			<p class="right2-content-search clearfix">
+	        				<input type="text" placeholder="搜索..." id="situationSearch"/><i id="clickSearch"></i>
+	        			</p>
+	        		</div>
+	        		<div class="right2-content-text">
+	        			<ul class="right2-content-text-title1">
+	        				<li>姓名</li>
+	        				<li>创建日期</li>
+	        				<li>电话</li>
+	        				<li>邮箱</li>
+	        				<li>所属角色组</li>
+	        				<li>用户状态</li>
+	        				<li>最近登陆时间</li>
+	        				<li></li>
+	        				<li></li>
+	        			</ul>
+	        			<ul class="right2-content-text-content1">
+	        				<li class="right2-content-text-color1">王小三</li>
+	        				<li>2017.06.14</li>
+	        				<li class="right2-content-text-color1">18632986433</li>
+	        				<li class="right2-content-text-color1">1512955040@163.com</li>
+	        				<li>企业管理员</li>
+	        				<li class="right2-content-text-color2">启用中</li>
+	        				<li>2017.05.21</li>
+	        				<li class="right2-content-assignment"><i class="right2-content-icon3"></i>角色分配</li>
+	        				<li class="right2-content-ballall">
+	        					<div class="right2-content-ballcheck active">
+	        						<div class="right2-content-background"></div>
+	        						<div class="right2-content-ball"></div>
+	        					</div>
+	        				</li>
+	        			</ul>
+	        			
+	        			<ul class="right2-content-text-content1">
+	        				<li class="right2-content-text-color1">王小三</li>
+	        				<li>2017.06.14</li>
+	        				<li class="right2-content-text-color1">18632986433</li>
+	        				<li class="right2-content-text-color1">1512955040@163.com</li>
+	        				<li>企业管理员</li>
+	        				<li class="right2-content-text-color2">启用中</li>
+	        				<li>2017.05.21</li>
+	        				<li class="right2-content-assignment"><i class="right2-content-icon3"></i>角色分配</li>
+	        				<li class="right2-content-ballall">
+	        					<div class="right2-content-ballcheck active">
+	        						<div class="right2-content-background"></div>
+	        						<div class="right2-content-ball"></div>
+	        					</div>
+	        				</li>
+	        			</ul>
+	        			
+	        			<ul class="right2-content-text-content1">
+	        				<li class="right2-content-text-color1">王小三</li>
+	        				<li>2017.06.14</li>
+	        				<li class="right2-content-text-color1">18632986433</li>
+	        				<li class="right2-content-text-color1">1512955040@163.com</li>
+	        				<li>企业管理员</li>
+	        				<li class="right2-content-text-color2">启用中</li>
+	        				<li>2017.05.21</li>
+	        				<li class="right2-content-assignment"><i class="right2-content-icon3"></i>角色分配</li>
+	        				<li class="right2-content-ballall">
+	        					<div class="right2-content-ballcheck active">
+	        						<div class="right2-content-background"></div>
+	        						<div class="right2-content-ball"></div>
+	        					</div>
+	        				</li>
+	        			</ul>
+	        			
+	        			<ul class="right2-content-text-content1">
+	        				<li class="right2-content-text-color1">王小三</li>
+	        				<li>2017.06.14</li>
+	        				<li class="right2-content-text-color1">18632986433</li>
+	        				<li class="right2-content-text-color1">1512955040@163.com</li>
+	        				<li>企业管理员</li>
+	        				<li class="right2-content-text-color2">启用中</li>
+	        				<li>2017.05.21</li>
+	        				<li class="right2-content-assignment"><i class="right2-content-icon3"></i>角色分配</li>
+	        				<li class="right2-content-ballall">
+	        					<div class="right2-content-ballcheck active">
+	        						<div class="right2-content-background"></div>
+	        						<div class="right2-content-ball"></div>
+	        					</div>
+	        				</li>
+	        			</ul>
+	        		</div>
+	        	</div>	
+           </div>
+       </div>
+    </div>
+    <!--角色分配-->
+    <div class="modal fade" id="Roleassignment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">角色分配
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+				</div>
+				<div class="modal-body" id="modalBody">
+					<ul class="modal-body-ul1">
+						<li>姓名</li>
+						<li>创建时间</li>
+						<li>关联人员</li>
+						<li>用户状态</li>
+					</ul>
+					<ul class="modal-body-ul2">
+						<li><i class="modal-body-icon  clearfix"></i>李四</li>
+						<li>2017.05.12</li>
+						<li >张小六</li>
+						<li class="modal-body-color">启用中</li>
+					</ul>
+					<ul class="modal-body-ul2">
+						<li><i class="modal-body-icon clearfix"></i>李四</li>
+						<li>2017.05.12</li>
+						<li >张小六</li>
+						<li class="modal-body-color">启用中</li>
+					</ul>
+					<ul class="modal-body-ul2">
+						<li><i class="modal-body-icon clearfix"></i>李四</li>
+						<li>2017.05.12</li>
+						<li >张小六</li>
+						<li class="modal-body-color">启用中</li>
+					</ul>
+					<ul class="modal-body-ul2">
+						<li><i class="modal-body-icon clearfix"></i>李四</li>
+						<li>2017.05.12</li>
+						<li >张小六</li>
+						<li>已注销</li>
+					</ul>
+					<ul class="modal-body-ul2">
+						<li><i class="modal-body-icon clearfix"></i>李四</li>
+						<li>2017.05.12</li>
+						<li >张小六</li>
+						<li class="modal-body-color">启用中</li>
+					</ul>
+					<ul class="modal-body-ul2">
+						<li><i class="modal-body-icon clearfix"></i>李四</li>
+						<li>2017.05.12</li>
+						<li >张小六</li>
+						<li class="modal-body-color">启用中</li>
+					</ul>
+					<ul class="modal-body-ul2">
+						<li><i class="modal-body-icon clearfix"></i>李四</li>
+						<li>2017.05.12</li>
+						<li >张小六</li>
+						<li class="modal-body-color">启用中</li>
+					</ul>
+					<ul class="modal-body-ul2">
+						<li><i class="modal-body-icon clearfix"></i>李四</li>
+						<li>2017.05.12</li>
+						<li >张小六</li>
+						<li class="modal-body-color ">启用中</li>
+					</ul>
+					<ul class="modal-body-ul2">
+						<li><i class="modal-body-icon clearfix"></i>李四</li>
+						<li>2017.05.12</li>
+						<li >张小六</li>
+						<li class="modal-body-color">启用中</li>
+					</ul>
+					<ul class="modal-body-ul2">
+						<li><i class="modal-body-icon clearfix"></i>李四</li>
+						<li>2017.05.12</li>
+						<li >张小六</li>
+						<li class="modal-body-color">启用中</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+                    <div class="save-quit">
+                        <button type="button" class="btn btn-keep save">保存</button>
+                        <button type="button" class="btn btn-cancel quit">取消</button>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <!--角色分配-->
+    <div class="modal fade" id="CastingAssignments" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">角色分配
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class="closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+				</div>
+				<div class="modal-body">
+					<p class="modal-body-user">
+						<span>用户名称:</span>
+						<span class="modal-body-username">王小三</span>
+					</p>
+					<div class="modal-body-content3">
+						<span class="modal-body-power">分配角色权限:</span>
+						<div class="modal-body-powername" id="modalPowerName">
+							<ul class="modal-body-powermen">
+								<li><i class="active"></i>普通用户</li>
+								<li><i class="active"></i>企业管理员</li>
+								<li><i></i>超级管理员</li>
+								<li><i></i>超级管理员</li>
+								<li><i></i>超级管理员</li>
+								<li><i></i>超级管理员</li>
+								<li><i></i>超级管理员</li>
+								<li><i></i>超级管理员</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+                    <div class="save-quit">
+                        <button type="button" class="btn btn-keep save">保存</button>
+                        <button type="button" class="btn btn-cancel quit">取消</button>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <!-- jquery -->
+    <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/compentJS/jquery.cookie.js"></script>
+    <!-- bootstrap -->
+    <script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+    <script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+    <!--url 常量  -->
+    <script type="text/javascript" src="/js/variable.js"></script>
+    <!-- 绑定数据 -->
+    <script type="text/javascript" src="/js/transparency.min.js"></script>
+    <script type="text/javascript" src="/js/compentJS/loadListCommon.js"></script>
+    <!--302error-->
+    <script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+    <script src="/js/serviceHead.js"></script>
+    <!-- scroll -->
+	<script type="text/javascript" src="/js/compentJS/jquery.mCustomScrollbar.js"></script>
+	<!--JS-->
+	<script type="text/javascript" src="../js/authorizationMagament.js" ></script>
+	<script>
+		//这段代码以后要写在交互里面
+		if($(".modal-body-ul2").length>9){
+		 	$("#modalBody").addClass('menus');
+		 	$(".menus").mCustomScrollbar({
+                scrollButtons:{
+                    enable:false,//是否显示上下箭头 注上下箭头的图片在 css/mCSB_buttons.png里面，要和css放一起
+                    //scrollType:"continuous",//点击滚动是否有停顿效果
+                    scrollType:"pixels",//点击滚动是否有停顿效果
+                    scrollSpeed:20,     //点击移动的速度
+                    scrollAmount:100 //点击滚动按钮移动的距离
+                },
+                set_height:"320px",//设置可见内容的高度
+                theme:"3d-thick",
+           });
+		}
+		 //角色分配滚动条
+		 $("#modalPowerName").mCustomScrollbar({
+                scrollButtons:{
+                    enable:true,//是否显示上下箭头 注上下箭头的图片在 css/mCSB_buttons.png里面，要和css放一起
+                    //scrollType:"continuous",//点击滚动是否有停顿效果
+                    scrollType:"pixels",//点击滚动是否有停顿效果
+                    scrollSpeed:20,     //点击移动的速度
+                    scrollAmount:100 //点击滚动按钮移动的距离
+                },
+                set_height:"136px",//设置可见内容的高度
+                theme:"3d-thick",
+           	});
+           
+		 //点击小球后左翻转
+		 $(".right2-content-ball").off().on('click',function(){
+//		 	console.log($(this).css('left'))
+		 	if($(this).parent().hasClass('active')){
+		 		$(this).animate(
+		 			{left:'19.5px'},
+		 			{queue:true,duration:1000}
+		 		)
+		 		$(this).prev().animate(
+		 			{width:'38px'},
+		 			{queue:true,duration:1000}
+		 		)
+		 		$(this).parent().removeClass('active');
+		 	}else{
+		 		$(this).parent().addClass('active');
+		 		$(this).animate(
+		 			{left:'-0.5px'},
+		 			{queue:true,duration:1000}
+		 		)
+		 		$(this).prev().animate(
+		 			{width:'17px'},
+		 			{queue:true,duration:1000}
+		 		)
+		 	}
+		 })
+		 
+	</script>
+</body>
+</html>

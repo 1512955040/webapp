@@ -1,0 +1,46 @@
+<div id="category_div">
+品牌:<select data-bind="brand_sel">
+   <option data-bind="op"></option>
+  </select><br>
+型号:<select data-bind="brand_model_sel">
+     <option data-bind="op"></option>
+   </select><br>
+购买日期:<input type="date" data-bind="date1"><br>
+保质期:<input type="date" data-bind="date2"><br>
+</div>
+--------------------------------------<br>
+
+<!--
+js 
+ var post = {
+  sel1: [ {
+      op: 'John',
+      op: 'That rules'
+    }, {
+      op: 'Arnold',
+      op: 'Great post!'
+    }
+  ],
+  sel2:[
+    {op:11,
+     op:12
+    },
+    {
+     op:21,
+     op:22
+    }
+  ]
+};
+$('#id').render(post);
+
+html
+<div id="id">
+  <select class="sel1">
+    <option class="op"></option>
+  </select>
+  <select class="sel2">
+    <option class="op"></option>
+  </select>
+  
+</div>
+ -->

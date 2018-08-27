@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>工作台</title>
+	<!-- reset -->
+	<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+	<!--<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap-select.min.css"/>-->
+	<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap-select.css">
+	<!-- head -->
+	<link rel="stylesheet" href="/css/head.css" type="text/css">
+	<link rel="stylesheet" href="/css/serworkbench.css" type="text/css">
+	<!--日程表-->
+	<link rel="stylesheet" href="/css/compentCSS/fullcalendar.css" type="text/css"/>
+	<link rel="stylesheet" href="/css/popUp.css" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div class="w">
+			<div class="logo fl"></div>
+			<ul class="list fr">
+				<li class="help fl">
+					<span class="helpPic"></span>
+					帮助</li>
+				<li class="manager fl">
+					<span class="managerPic"></span>
+					管理</li>
+				<li class="notify fl">
+					<span class="notifyPic"></span>
+					通知
+					<!--<div class="notify-wrap">
+						<p class="notify-wrap-up">通知
+							<button class="notify-wrap-upClear">清空</button>
+						</p>
+						<ul class="notify-list">
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+						</ul>
+						<p class="notify-wrap-down">
+							<a href="#">更多>></a>
+						</p>
+					</div>-->
+				</li>
+                <li class="pInfo fl" id="userInfo"><i class="userName" data-bind="userName"></i>
+                    <span class="userHeader"></span>
+                    <div class="userInfo-wrap">
+                        <div class="userInfo">
+                            <!--<img src="" alt=""  class="userHead"/>-->
+                            <span class="fl userHead"></span>
+                            <div class="userInfo-right">
+                                <p data-bind="userName"></p>
+                                <p><span data-bind="position"></span>&nbsp;<span data-bind="department"></span></p>
+                            </div>
+                            <div class="userInfoOperation">
+                                <p class="userInfoOperationBox">
+                                    <input type="button" value="我的账户" class="myAccout"/>
+                                    <a id="logout" class="logout">退出</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="nav" class="facilitator">
+		<div class="w">
+			<ul class="fl">
+				<li class="navlist fl navlist1 navNoChangeList active">
+					<span class="navlist-img navlist-img1"></span>工作台
+				</li>
+				<li class="navlist fl navlist2 navNoChangeList">
+					<span class="navlist-img navlist-img2"></span>工单
+				</li>
+				<li class="navlist fl navlist3 navNoChangeList">
+					<span class="navlist-img navlist-img4"></span>合同
+				</li>
+				<li class="navlist fl navlist4 navNoChangeList nav-add-item1">
+					<span class="navlist-img navlist-img3"></span>客户
+				</li>
+				<li class="navlist fl navlist5  navNoChangeList navChangeList lastNavlist">
+					<span class="navlist-img navlist-img6"></span>管理
+				</li>
+				<!--<li class="navlist fl navlist7 nav-add-item2 navChangeList">
+					<span class="navlist-img navlist-img7"></span>报表
+				</li>-->
+			</ul>
+
+			<div id="nav-add-container">
+				<span class="nav-add"></span>
+				<div class="nav-add-wrap">
+					<div class="nav-add-overHidden">
+						<ul class="nav-add-list">
+							<li class="nav-add-item hide" id="nav-add-item1">
+								<p></p>供应商</li>
+							<li class="nav-add-item" id="nav-add-item2">
+								<p></p>报表</li>
+						</ul>
+					</div>
+					<span class="nav-add-trangle nav-add-trangleLeft"></span>
+					<span class="nav-add-trangle nav-add-trangleRight"></span>
+				</div>
+			</div>
+
+			<div class="fr nav-right-search">
+				<input type="text"  class="fr">
+				<div class="dropdownDiv">
+					<span class="nav-right-selectedWord" id="">所有</span>
+					<span class="nav-right-searchpng"></span>
+					<span class="caret nav-right-caret"></span>
+				</div>
+
+				<div class="right-search-wrap dn">
+					<div class="right-search-container">
+							<div class="right-search-list">所有</div>
+							<div class="right-search-list">工单</div>
+							<div class="right-search-list">合同</div>
+							<div class="right-search-list">客户</div>
+					</div>
+				</div>
+			</div>
+			<!--服务商最近访问的项目和右侧的+号下拉框暂时隐藏-->
+			<div class="nav-right-newAdd fr ">
+				<span></span>
+				<!--<ul>-->
+					<ul>
+						<li><i class="add-img1"></i>新建事件</li>
+						<li><i class="add-img2"></i>新建资产</li>
+						<li><i class="add-img3"></i>新建合同</li>
+						<li><i class="add-img4"></i>新建项目</li>
+						<li><i class="add-img5"></i>新建供应商</li>
+					</ul>
+					<!--<li><a href="assetAdd.html"><span></span>新建工单</a></li>
+					<li><a href="newContract.html"><span></span>新建合同</a></li>
+					<li><a href="#"><span></span>新建客户</a></li>
+					<li><a href="#"><span></span>项目</a></li>
+					<!--<li>问题变更</li>-->
+				<!--</ul>-->
+			</div>
+
+			<div class="nav-right-recentRecord fr">
+				<span></span>
+				<div class="nav-right-reRecordWrap">
+					<p class="nav-right-reRecordTitle">最近访问的项</p>
+					<ul id="history"></ul>
+				</div>
+			</div>
+			
+		</div>
+		<div class="moveWrap"><i class="navMove"></i></div>
+	</div>
+	
+	<div id='container' class="w">
+		<div id="container-left" class="fl">
+			<ul class="container-left-wrap">
+				<li class="container-left-item container-left-item1 active">
+					<p></p><i></i>个人视图
+				</li>
+				<li class="container-left-item container-left-item2">
+					<p></p>总览视图<i></i>
+				</li>
+				<!--<p></p>个人视图<i></i></li>-->
+				<!--<li class="container-left-item container-left-item2"><p></p>我的关注<i></i></li>-->
+				<!--<li class="container-left-item container-left-item3"><p></p>我的日程<i></i></li>-->
+				<li class="container-left-item container-left-item3">
+					<p></p>我的信息<i></i>
+				</li>
+				<!--<li class="container-left-item container-left-item5"><p></p>我的信息<i></i></li>-->
+			</ul>
+		</div>
+
+		<div id="container-right" class="fr">
+			<!--<div class="container-right-title1 dn">
+				<span class="title-update di" id="resCountsUp"></span>
+				<p class="di">请求摘要<span class="fr"></span></p>
+				<ul id="res_countsData"></ul>
+			</div>
+			<div class="container-right-title2 dn">
+				我的日程表
+			</div>-->
+			
+			<!--个人视图-->
+			<div class="container-right1">
+				<!--已逾期-->
+				<div class="container-right-title2">
+					<div class="container-right1-title">
+						<p>
+							<span>已逾期</span><span>( 3 )</span>
+						</p>
+					</div>
+				<ul>
+					<li>
+						<span class="container-right1-time">02:12</span>
+						<span class="container-right1-cpu">电脑CPU使用100%</span>
+						<span class="container-right1-status">处理中</span>
+						<i class="icon"></i><span class="container-right1-name">张小三</span>
+					</li>
+					<li>
+						<span class="container-right1-time">02:12</span>
+						<span class="container-right1-cpu">电脑CPU使用100%</span>
+						<span class="container-right1-status">处理中</span>
+						<i class="icon"></i><span class="container-right1-name">张小三</span>
+					</li>
+					<li>
+						<span class="container-right1-time">02:12</span>
+						<span class="container-right1-cpu">电脑CPU使用100%</span>
+						<span class="container-right1-status">处理中</span>
+						<i class="icon"></i><span class="container-right1-name">张小三</span>
+					</li>
+					<li>
+						<span class="container-right1-time">02:12</span>
+						<span class="container-right1-cpu">电脑CPU使用100%</span>
+						<span class="container-right1-status">处理中</span>
+						<i class="icon"></i><span class="container-right1-name">张小三</span>
+					</li>
+					<li>
+						<span class="container-right1-time">02:12</span>
+						<span class="container-right1-cpu">电脑CPU使用100%</span>
+						<span class="container-right1-status">处理中</span>
+						<i class="icon"></i><span class="container-right1-name">张小三</span>
+					</li>
+					<li>
+						<span class="container-right1-time">02:12</span>
+						<span class="container-right1-cpu">电脑CPU使用100%</span>
+						<span class="container-right1-status">处理中</span>
+						<i class="icon"></i><span class="container-right1-name">张小三</span>
+					</li>
+				</ul>
+			</div>
+			<!--本周代办-->
+			<div class="container-right-title2 container-right2-title1">
+				<div class="container-right1-title">
+					<p>
+						<span>本周待办</span><span>( 8 )</span>
+					</p>
+				</div>
+				<ul>
+					<li>
+						<span class="container-right1-time">02:12</span>
+						<span class="container-right1-cpu">电脑CPU使用100%</span>
+						<span class="container-right1-status">待接单</span>
+						<i class="icon"></i><span class="container-right1-name">张小三</span>
+					</li>
+					<li>
+						<span class="container-right1-time">02:12</span>
+						<span class="container-right1-cpu">电脑CPU使用100%</span>
+						<span class="container-right1-status">待接单</span>
+						<i class="icon"></i><span class="container-right1-name">张小三</span>
+					</li>
+					<li>
+						<span class="container-right1-time">02:12</span>
+						<span class="container-right1-cpu">电脑CPU使用100%</span>
+						<span class="container-right1-status">待接单</span>
+						<i class="icon"></i><span class="container-right1-name">张小三</span>
+					</li>
+					<li>
+						<span class="container-right1-time">02:12</span>
+						<span class="container-right1-cpu">电脑CPU使用100%</span>
+						<span class="container-right1-status">待接单</span>
+						<i class="icon"></i><span class="container-right1-name">张小三</span>
+					</li>
+					<li>
+						<span class="container-right1-time">02:12</span>
+						<span class="container-right1-cpu">电脑CPU使用100%</span>
+						<span class="container-right1-status">待接单</span>
+						<i class="icon"></i><span class="container-right1-name">张小三</span>
+					</li>
+					<li>
+						<span class="container-right1-time">02:12</span>
+						<span class="container-right1-cpu">电脑CPU使用100%</span>
+						<span class="container-right1-status">待接单</span>
+						<i class="icon"></i><span class="container-right1-name">张小三</span>
+					</li>
+				</ul>
+			</div>
+			<!--近12个月执行情况-->
+			<div class="container-right-title3">
+				<span id="containersation">近12个月工单执行情况</span>
+				<div id="containerSituation" style="width: 100%;height: 100%;"></div>
+			</div>
+			<!--工单统计-->
+			<div class="container-right-title3 container-right2-title2">
+				<span id="Workorderstac">工单统计</span><span id="WorkorderNum"> 18 </span>
+				<div id="WorkorderStatistics">
+					<p class="Workorderstac1">
+						<span>执行工单</span>
+						<span class="WorkorderChange">10</span>
+						<p id="WorkorderNum1"></p>
+						<p id="WorkorderColor1"></p>
+					</p>
+					<p class="Workorderstac2">
+						<span>工单完成率</span>
+						<span class="WorkorderChange1"> 5 </span>
+						<p id="WorkorderNum2"></p>
+						<p id="WorkorderColor2"></p>
+					</p>
+					<p class="Workorderstac3">
+						<span>工单逾期率</span>
+						<span class="WorkorderChange2"> 3 </span>
+						<p id="WorkorderNum3"></p>
+						<p id="WorkorderColor3"></p>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--总览视图-->
+		<div id="container-right2" class="container-right2 dn">
+			<!--工单数量-->
+			<div class="container-right2-tag1">
+				<p class="container-right2-taget1 container-right2-taget2"><span>工单数量</span><span>&nbsp;182</span></p>
+				<p class="container-right2-taget1 container-right2-taget3">
+					<span class="container-right2-span"><span>新增:</span><span>12</span></span>
+					<span class="container-right2-span"><span>处理:</span><span>37</span></span>
+					<span class="container-right2-span"><span>审核:</span><span>15</span></span>
+					<span class="container-right2-span"><span>关闭:</span><span>118</span></span>
+				</p>
+			</div>
+			<!--SLA达标率-->
+			<div class="container-right2-tag2">
+				<div class="container-right2-taget4">
+					<p class="container-right2-tagetSla1"><span>SLA达标率</span><span>&nbsp;91%</span></p>
+					<p class="container-right2-tagetSla2 ">
+						<span class=""><span>响应达标率:</span><span>98%</span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;<span class=""><span>解决达标率:</span><span>92%</span></span>
+					</p>
+				</div>
+			</div>
+			<!--工单解决率-->
+			<div class="container-right2-tag3">
+				<div class="container-right2-taget4">
+					<p class="container-right2-tagetSla1"><span>工单解决率</span><span>&nbsp;95%</span></p>
+					<p class="container-right2-tagetSla2 ">
+						<span class="">
+							<span>已解决:</span><span>90%</span></span>&nbsp;&nbsp;
+							<span class=""><span>不予解决:</span><span>92%</span>&nbsp;&nbsp;
+							<span class=""><span>合并处理:</span><span>92%</span>
+						</span>
+					</p>
+				</div>
+			</div>
+			<!--工单执行柱状图-->
+			<div class="container-right2-tag4">
+				<p>
+					<span class="container-right2-workolder">工单执行柱状图</span>
+					<span class="container-right2-workolder1">
+						<select class="selectpicker">
+							<option data-bind="" class="">近7天</option>
+							<option data-bind="" class="">近5天</option>
+							<option data-bind="" class="">近3天</option>
+						</select>
+						<select class="selectpicker">
+							<option data-bind="" class="">按部门统计</option>
+						</select>
+						<button id="WorkorderFresh">刷新</button>
+					</span>
+				</p>
+				<div id="containerWorkorder" style="width: 1137px;height: 420px;"></div>
+			</div>
+		</div>
+		<!--我的信息-->
+		<div id="container-right3" class="container-right3 dn">
+			<p class="container-right3-title1">我的信息</p>
+			<div class="container-right3-title2">
+				<div class="container-right3-sorting">
+					<select class="selectpicker">
+						<option data-bind="" class="">创建日期</option>
+						<option data-bind="" class="">时间</option>
+					</select>
+					<span class="container-right3-sorting-span">
+						<span class="container-right3-sorting-leftSort active"></span>
+						<span class="container-right3-sorting-rightSort"></span>
+					</span>
+					<span class="container-right3-sorting-btn">
+						<button id="containermarked">全部标记为已读</button>
+					</span>
+				</div>
+				<div class="container-right3-information">
+					<div class="container-right3-information1">
+						<span class="container-right3-ball"></span>
+						<span class="container-right3-icon1"></span>
+						<span class="container-right3-page">
+							<p class="container-right3-page1">
+								<span class="container-right3-page1-color">张工</span>
+								<span>接收工单</span>&nbsp;
+								<span class="container-right3-page1-color">服务器CPU使用率100%</span>&nbsp;
+								<span>指派给</span>
+								<span class="container-right3-page1-color">李四</span>
+								<span>执行</span>
+							</p>
+							<p class="container-right3-page2">
+								<span>一天前  11-02 09:45</span>&nbsp;
+							</p>
+						</span>
+					</div>
+					
+					<div class="container-right3-information1">
+						<span class="container-right3-ball"></span>
+						<span class="container-right3-icon2"></span>
+						<span class="container-right3-page">
+							<p class="container-right3-page1">
+								<span class="container-right3-page1-color">王工</span>
+								<span>更新了请求</span>&nbsp;
+								<span class="container-right3-page1-color">服务器CPU使用率100%</span>&nbsp;
+							</p>
+							<p class="container-right3-page2">
+								<span>三天前  11-02 09:45</span>&nbsp;
+							</p>
+						</span>
+					</div>
+					
+					<div class="container-right3-information1">
+						<span class="container-right3-ball"></span>
+						<span class="container-right3-icon2"></span>
+						<span class="container-right3-page">
+							<p class="container-right3-page1">
+								<span class="container-right3-page1-color">王工</span>
+								<span>更新了请求</span>&nbsp;
+								<span class="container-right3-page1-color">服务器CPU使用率100%</span>&nbsp;
+							</p>
+							<p class="container-right3-page2">
+								<span>11-05 09:45</span>&nbsp;
+							</p>
+						</span>
+					</div>
+					
+					<div class="container-right3-information1">
+						<span class="container-right3-ball"></span>
+						<span class="container-right3-icon2"></span>
+						<span class="container-right3-page">
+							<p class="container-right3-page1">
+								<span class="container-right3-page1-color">王工</span>
+								<span>更新了请求</span>&nbsp;
+								<span class="container-right3-page1-color">服务器CPU使用率100%</span>&nbsp;
+							</p>
+							<p class="container-right3-page2">
+								<span>11-02 09:45</span>&nbsp;
+							</p>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	 <!-- 500错误提示框 -->
+  <div class="modal fade" id="errorBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <p class="modal-body-row"><span class="question-info" id="errorInfo"></span></p>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-delete">删除</button> -->
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+      </div>
+  </div>
+
+	<!-- jquery -->
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script src="/js/compentJS/jquery.cookie.js" type="text/javascript"></script>
+	<script type = "text/javascript" src="/js/variable.js"></script>
+	<script src="/js/serviceHead.js" type="text/javascript"></script>
+
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+	<script type="text/javascript" src="/js/transparency.min.js"></script>
+	<!--bootstrap-->
+	<script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+	<script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="/js/compentJS/situation.js"></script>
+	
+	<script src="/js/compentJS/moment.min.js"></script>
+	<script src="/js/compentJS/fullcalendar.js"></script>
+	<script src="/js/compentJS/zh-cn.js"></script>
+	
+	<!--302error-->
+	<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+	<script type="text/javascript" src="/js/serviceHead.js"></script>
+	<!--<script type="text/javascript" src="/js/workbench.js"></script>-->
+	<script type="text/javascript" src="/js/worbenchSer.js"></script>
+	<!-- tips -->
+	<script type="text/javascript" src="/js/tips.js"></script>
+	<script>
+		$('.selectpicker').selectpicker({
+            size: 6
+        });
+	</script>
+</body>
+</html>

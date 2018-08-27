@@ -1,0 +1,233 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+body{
+	color: #6f6f6f;
+}
+p{
+	margin: 0;
+  	padding: 0;
+}
+a{
+  text-decoration: none;
+}
+ul,ol{
+  list-style: none;
+}
+/*去除选择框的outline*/
+.bootstrap-select .dropdown-toggle:focus{outline:none !important;}
+/*调整select输入框的行内高度*/
+.bootstrap-select.btn-group .dropdown-toggle .filter-option{
+    line-height: 26px;
+}
+.dropdown-menu>li>a{
+    padding: 5px 20px 0;
+    line-height: 1.45;
+}
+/*去除选项的outline*/
+a:focus {outline:none !important;}
+.clearfix{zoom: 1}/*IE的专用属性，针对老版本的IE浏览器而写的，为了兼容*/
+.clearfix:after{/*伪对象选择符-在这个对象被浏览器选然后添加一定的内容*/
+	content: ".";/*添加内容卸载这个属性的后面，这个属性是专门配合伪对象滴，必须写，就算值为空也要写*/
+	display: block;
+	visibility: hidden;/*类似于display：none；只不过还是占据一定的物理空间*/
+	height: 0;/*将添加的内容高度设置为0，消除其占位*/
+	clear: both;/*将添加进去的内容作为清除浮动的对象，实现外围容器中有内容存在。因此可以自动判定高度，解决塌陷*/
+}
+/*下部分*/
+#container{
+	width: 1235px;
+	height: 818px;
+	margin: 0 auto;
+	background: #FFFFFF;
+	box-shadow: 0 0px 20px #dedddc; 
+  background: #fff;
+  margin-bottom:60px; 
+}
+#container .left{
+	width: 951px;
+	height: 100%;
+	
+}
+#container .left .left-title{
+	border:3px solid #f1f1f1;
+	height: 47px;
+	float: left;
+	width: 100%;
+	margin-top:7px;
+	line-height: 47px;
+}
+#container .left .left-title .back{
+    float: left;
+    cursor: pointer;
+    padding: 0 15px;
+}
+#container .left .left-title .back span{
+		margin-left:3px;
+  	color: rgb(28,49,114);
+  	font-size: 12px;
+}
+#container .left .left-title .back i{
+  	display: inline-block;
+		width: 6px;
+  	height: 13px;
+  	vertical-align: middle;
+  	background: url(../imgs/contract/contract.png) no-repeat -52px -5px;
+}
+.left-title .left-title-keepCancel{
+	float: right;
+	margin-right: 65px;
+}
+.left-title-btn{
+    border: none;
+    width: 55px; 
+    padding: 0 10px;
+    height: 22px;
+    line-height: 21px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 12px;
+    border: 1px solid #bfbfbf;
+}
+.left-title-keepCancel .left-btn-cancel{
+	background-color: #eeeeee;
+  color: #696969;
+}
+.left-title-keepCancel .left-btn-keep{
+	background-color: #054c9c;
+	color: #fff;
+	margin-left: 5px;
+}
+.left .left-content{
+	float: left;
+	width: 100%;
+	height: 765px;
+	border-left:3px solid #f1f1f1;
+	border-right: 3px solid #f1f1f1;
+	margin: 0 auto;
+}
+.left .left-content .left-content-page{
+	width: 815px;
+	height: 612px;
+	margin: 0 auto;
+	margin-top: 5px;
+	box-sizing: border-box;
+}
+.left-content-page .left-content-newrole{
+	width: 100%;
+	height: 163px;
+}
+.left-content-page .left-content-newrole .left-content-newrolename{
+	height: 52px;
+}
+.left-content-role1{
+	padding-left: 10px;
+}
+.left-content-role1	.left-content-createrole{
+	font-size: 14px;
+}
+.left-content-role1 .left-content-star{
+	color: red;
+	padding-left: 2px;
+}
+.left-content-input{
+		width: 100%;
+    height: 26px;
+    border: 1px solid #e5e5e5;
+    text-indent: 5px;
+    border-radius: 3px;
+    margin-top: 3px;
+    outline: none;
+}
+.left-content-page .left-content-newrole .left-content-describe{
+	height: 110px;
+	margin-top: 5px;
+}
+.left-content-describe .left-content-textarea{
+	height: 75px;
+}
+/*资产分配权限*/
+.left-content-page .left-content-permissions{
+	width: 100%;
+	height: 216px;
+	margin-top: 6px;
+}
+.left-content-title1{
+	width: 100%;
+  height: 23px;
+  line-height: 23px;
+  background: url(../imgs/contract/downtype.png) no-repeat 10px center;
+  background-color: #1f5097;
+  color: #fff;
+  font-size: 14px;
+  padding-left: 2px;
+}
+.left-content-title1>i{
+	width: 23px;
+	display: inline-block;
+}
+.left-content-role2{
+	height: 60px;
+	margin-top: 5px;
+}
+.left-content-role2 .left-content-situation{
+	height: 17px;
+	padding-left: 5px;
+	display: inline-block;
+	line-height: 17px;
+}
+.left-content-role2 .left-content-situation>i{
+	background: url(../imgs/common.png) no-repeat;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-position: -5px -32px;
+	vertical-align: middle;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.left-content-role2 .left-content-situation>i.active,.left-content-checkone span>i.active{
+	background: url(../imgs/common.png);
+	background-position:-23px -31.5px;
+}
+.left-content-checkone{
+	height: 35px;
+	border: 1px solid #e5e5e5;
+  text-indent: 5px;
+  border-radius: 3px;
+  margin-top: 2px;
+  line-height: 35px;
+  font-size: 12px;
+}
+.left-content-checkone span{
+	display: inline-block;
+	/*padding-left: 41px;*/
+	width: 80px;
+}
+.left-content-checkone span:nth-child(1){
+	padding-left: 12px;
+	width: 105px;
+}
+.left-content-checkone span:nth-child(2){
+	width: 105px;
+}
+.left-content-checkone span>i{
+	background: url(../imgs/common.png) no-repeat;
+	display: inline-block;
+	width: 12px;
+	height: 11px;
+	background-position: -5px -32px;
+	margin-right: 2px;
+	cursor: pointer;
+}
+
+.error{
+	font-size: 12px;
+	color: red;
+	padding-left: 5px;
+	display: none;
+}
+
+/*815 597*/

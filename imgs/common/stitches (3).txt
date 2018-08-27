@@ -1,0 +1,47 @@
+.fileinputImg {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.doc {
+    width: 120px;
+    height: 120px;
+    background-position: -5px -5px;
+}
+
+.exe {
+    width: 120px;
+    height: 120px;
+    background-position: -135px -5px;
+}
+
+.jpg {
+    width: 120px;
+    height: 120px;
+    background-position: -5px -135px;
+}
+
+.other {
+    width: 120px;
+    height: 120px;
+    background-position: -135px -135px;
+}
+
+.ppt {
+    width: 120px;
+    height: 120px;
+    background-position: -265px -5px;
+}
+
+.refresh {
+    width: 26px;
+    height: 26px;
+    background-position: -395px -5px;
+}
+
+.zip {
+    width: 120px;
+    height: 120px;
+    background-position: -265px -135px;
+}

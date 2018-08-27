@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>工作台</title>
+		<!-- reset -->
+		<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/compentCSS/bootstrap-select.min.css" />
+		<!-- head -->
+		<link rel="stylesheet" href="/css/head.css" type="text/css">
+        <link rel="stylesheet" href="/css/popUp.css" type="text/css">
+		<!--日程表-->
+		<link rel="stylesheet" href="/css/compentCSS/fullcalendar.css" />
+		<link rel="stylesheet" href="/css/workbench.css" type="text/css">
+
+	</head>
+
+	<body>
+
+		<div id="header">
+			<div class="w">
+				<div class="logo fl"></div>
+				<ul class="list fr">
+					<li class="help fl">
+						<span class="helpPic"></span> 帮助
+					</li>
+					<li class="manager fl">
+						<span class="managerPic"></span> 管理
+					</li>
+					<li class="notify fl">
+						<span class="notifyPic"></span> 通知
+						<div class="notify-wrap">
+							<p class="notify-wrap-up">通知
+								<button class="notify-wrap-upClear">清空</button>
+							</p>
+							<ul class="notify-list">
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+								<li class="notify-wrap-item">
+									<i></i>
+									<p>通知1</p>
+									<p class="notify-wrap-item-date">2016-12-28</p>
+								</li>
+							</ul>
+							<p class="notify-wrap-down">
+								<a href="#">更多>></a>
+							</p>
+						</div>
+					</li>
+                    <li class="pInfo fl" id="userInfo"><i class="userName" data-bind="userName"></i>
+                        <span class="userHeader"></span>
+                        <div class="userInfo-wrap">
+
+                            <div class="userInfo">
+                                <!--<img src="" alt=""  class="userHead"/>-->
+                                <span class="fl userHead"></span>
+                                <div class="userInfo-right">
+                                    <p data-bind="userName"></p>
+                                    <p><span data-bind="position"></span>&nbsp;<span data-bind="department"></span></p>
+                                </div>
+                                <div class="userInfoOperation">
+                                    <p class="userInfoOperationBox">
+                                        <input type="button" value="我的账户" class="myAccout"/>
+                                        <a id="logout" class="logout">退出</a>
+                                    </p>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="nav">
+			<div class="w">
+				<ul class="fl navUl">
+					<li class="navlist fl navlist1 navNoChangeList active">
+						<span class="navlist-img navlist-img1"></span>工作台</li>
+					<li class="navlist fl navlist2 navNoChangeList">
+						<span class="navlist-img navlist-img2"></span>事件</li>
+					<li class="navlist fl navlist3 navNoChangeList">
+						<span class="navlist-img navlist-img3"></span>资产</li>
+					<li class="navlist fl navlist4 navNoChangeList">
+						<span class="navlist-img navlist-img4"></span>合同</li>
+					<li class="navlist fl navlist5 navNoChangeList">
+						<span class="navlist-img navlist-img5"></span>项目</li>
+					<li class="navlist fl navlist6 nav-add-item1 navNoChangeList navChangeList lastNavlist">
+						<span class="navlist-img navlist-img6 "></span>供应商
+					</li>
+					<li class="navlist fl navlist7 nav-add-item2 navChangeList">
+						<span class="navlist-img navlist-img7"></span>管理
+					</li>
+				</ul>
+
+				<div id="nav-add-container">
+					<span class="nav-add"></span>
+					<div class="nav-add-wrap">
+						<div class="nav-add-overHidden">
+							<ul class="nav-add-list">
+								<li class="nav-add-item hide" id="nav-add-item1">
+									<p></p>供应商</li>
+								<li class="nav-add-item" id="nav-add-item2">
+									<p></p>报表</li>
+							</ul>
+						</div>
+						<span class="nav-add-trangle nav-add-trangleLeft"></span>
+						<span class="nav-add-trangle nav-add-trangleRight"></span>
+					</div>
+				</div>
+
+				<div class="fr nav-right-search">
+					<input type="text" class="fr searchInput">
+					<div class="dropdownDiv">
+						<span class="nav-right-selectedWord" id="">所有</span>
+						<span class="nav-right-searchpng"></span>
+						<span class="caret nav-right-caret"></span>
+					</div>
+
+
+					<div class="right-search-wrap dn">
+						<div class="right-search-container">
+							<div class="right-search-list">所有</div>
+							<div class="right-search-list">事件</div>
+							<div class="right-search-list">资产</div>
+							<div class="right-search-list">合同</div>
+							<div class="right-search-list">项目</div>
+							<div class="right-search-list">供应商</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="nav-right-newAdd fr">
+					<span></span>
+					<ul>
+						<li><i class="add-img1"></i>新建事件</li>
+						<li><i class="add-img2"></i>新建资产</li>
+						<li><i class="add-img3"></i>新建合同</li>
+						<li><i class="add-img4"></i>新建项目</li>
+						<li><i class="add-img5"></i>新建供应商</li>
+					</ul>
+				</div>
+
+				<div class="nav-right-recentRecord fr">
+					<span></span>
+					<div class="nav-right-reRecordWrap">
+						<p class="nav-right-reRecordTitle">最近访问的项</p>
+						<ul id="history"></ul>
+					</div>
+				</div>
+
+			</div>
+			<div class="moveWrap"><i class="navMove"></i></div>
+
+		</div>
+
+		<div id='container' class="w">
+			<div id="container-left" class="fl">
+				<ul class="container-left-wrap">
+					<li class="container-left-item container-left-item1 active">
+						<p></p>总览<i></i></li>
+					<!--<li class="container-left-item container-left-item2">
+						<p></p>我的关注<i></i></li>-->
+					<li class="container-left-item container-left-item3">
+						<p></p>我的日程<i></i></li>
+					<li class="container-left-item container-left-item4">
+						<p></p>我的任务<i></i></li>
+					<li class="container-left-item container-left-item5">
+						<p></p>我的信息<i></i></li>
+				</ul>
+			</div>
+
+			<div id="container-right" class="fl">
+
+				<div class="container-right-title1">
+					<span class="title-update di" id="resCountsUp"></span>
+					<p class="di fl">事件摘要<span class="fr"></span></p>
+					<ul id="eventCount">
+						<!--<li><div id="res_0"></div><p>逾期</p></li>
+						<li><div id="res_1"></div><p>处理中</p></li>
+						<li><div id="res_2"></div><p>搁置中</p></li>
+						<li><div id="res_3"></div><p>今天到期</p></li>
+						<li><div id="res_4"></div><p>未指派</p></li>-->
+					</ul>
+				</div>
+				<div class="container-right-title2 dn">
+					我的关注
+				</div>
+				<div class="container-right-title3 dn">
+					我的日程
+				</div>
+				<div class="container-right-title4 dn">
+					我的任务
+				</div>
+				<div class="container-right-title5 dn">
+					我的信息
+				</div>
+
+				<!--
+			    <div class="rightTip">
+			    <div class="rightTipRes">
+			      <span id="resCountsUp" class="res-countsData-update"></span>
+			      <ul id="res_countsData"></ul>
+			    </div>
+			  </div>
+			 -->
+
+				<!--总览-->
+				<div id="work-all">
+					<div class="container-right-eachrt container-right-eachrt1">
+						<span class="title-update di" id="upEventStatistics"></span>
+						<div id="eventStatisticsBox" style="width: 100%;height: 100%"></div>
+					</div>
+					<div class="container-right-eachrt container-right-eachrt2">
+						<span class="title-update di" id="upClassify"></span>
+						<div id="classify" style="width: 100%;height: 100%"></div>
+					</div>
+					<div class="container-right-eachrt container-right-eachrt3">
+						<span class="title-update di" id="upResource_trends"></span>
+						<div id="resource_trends" style="width: 100%;height: 100%"></div>
+					</div>
+					<div class="container-right-eachrt container-right-eachrt4">
+						<span class="fl eachrt4-title">三十天内将过期的合同</span>
+						<span class="title-update di" id="title-update"></span>
+						<!--<div id="contractInfo">
+					   <ul>
+					     <li>
+					       <span data-bind="timeGap">今天</span>：
+					       <span data-bind="contractName">合同1</span>
+					       <<span data-bind="contractDeadLine">12-12</span>止>
+					       <input type="hidden" data-bind="contractId">
+					    </li>
+					   </ul>
+					   30日内到期的合同
+					</div>-->
+						<ul id="contractInfo">
+							<li>
+								<p><span data-bind="falg"></span></p>
+								<p><span class="tips" data-bind="name"></span><input type="hidden" data-bind="id"></p>
+								<p><span data-bind="endTime"></span></p>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+
+				<!--我的关注-->
+				<div id="work-attention" class="dn">
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active">
+							<a href="#">所有</a>
+						</li>
+						<li role="presentation">
+							<a href="#">事件</a>
+						</li>
+						<li role="presentation">
+							<a href="#">资产</a>
+						</li>
+						<li role="presentation">
+							<a href="#">合同</a>
+						</li>
+						<li role="presentation">
+							<a href="#">项目</a>
+						</li>
+						<li role="presentation">
+							<a href="#">供应商</a>
+						</li>
+						<span class="allReaded">全部标记为已读</span>
+					</ul>
+					<ul class="attention-con">
+						<li class="attention-con-item">
+							<p class="attention-itemImg"></p>
+							<div>
+								<p>张工创建了一个新资产<span class="attention-item-txt">笔记本电脑</span></p>
+								<p>1天前<span>12-28  09:45</span></p>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!--我的日程-->
+				<div id="work-schedule" class="dn">
+					<div class="work-schedule-title">
+						<p>
+							<i></i>节假日
+							<i></i>休假
+							<i></i>当日
+						</p>
+						<button>回到当前日期</button>
+					</div>
+					<div class="work-schedule-body">
+
+						<div id="calendar">
+							<div class="calendar-timeClick">
+								<div class="calendar-timeClick-year">
+									<i class="calendar-timeClick-left"></i>
+									<select name="">
+										<option value="2017">2017年</option>
+										<option value="2017">2017年</option>
+										<option value="2017">2017年</option>
+										<option value="2017">2017年</option>
+										<option value="2017">2017年</option>
+										<option value="2017">2017年</option>
+										<option value="2017">2017年</option>
+									</select><i class="calendar-timeClick-right"></i>
+								</div>
+								<div class="calendar-timeClick-month">
+									<i class="calendar-timeClick-left"></i>
+									<select name="">
+										<option value="1">1月</option>
+										<option value="2">2月</option>
+										<option value="3">3月</option>
+										<option value="4">4月</option>
+										<option value="5">5月</option>
+										<option value="6">6月</option>
+										<option value="7">7月</option>
+									</select><i class="calendar-timeClick-right"></i>
+								</div>
+							</div>
+							<div class="calendar-tool-right">
+								<select class="selectpicker">
+									<option value="1">地点</option>
+								</select>
+								<select class="selectpicker">
+									<option value="1">地点</option>
+								</select>
+								<select class="selectpicker">
+									<option value="1">地点</option>
+								</select>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!--我的任务-->
+				<div id="work-task" class="dn">
+					<div class="work-task-title">所有任务</div>
+					<div class="work-task-body">
+						<div class="work-task-body-tool">
+							<button>新建任务</button>
+							<button>删除</button>
+							<button>关闭</button>
+							<button>Trigger</button>
+						</div>
+						<div class="work-task-body-title">
+							<p>任务</p>
+							<p>指派给</p>
+							<p>进度</p>
+						</div>
+						<div class="work-task-body-item">
+							<div>111</div>
+							<div>222</div>
+							<div>333</div>
+						</div>
+					</div>
+				</div>
+
+				<!--我的信息-->
+				<div id="work-message"></div>
+
+			</div>
+		</div>
+		<!-- 500错误提示框 -->
+		<div class="modal fade" id="errorBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+					</div>
+					<div class="modal-body">
+						<p class="modal-body-row"><span class="question-info" id="errorInfo"></span></p>
+					</div>
+					<div class="modal-footer">
+						<!-- <button type="button" class="btn btn-delete">删除</button> -->
+						<button type="button" class="btn btn-cancel" data-dismiss="modal">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jquery -->
+		<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="/js/transparency.min.js"></script>
+		<script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+    	<script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+		<script type="text/javascript" src="/js/variable.js"></script>
+
+		<!--<script type="text/javascript" src="/js/compentJS/echarts.js"></script>-->
+		<script type="text/javascript" src="/js/echarts.min.js"></script>
+		<script src="/js/compentJS/moment.min.js"></script>
+		<script src="/js/compentJS/fullcalendar.js"></script>
+		<script src="/js/compentJS/zh-cn.js"></script>
+		<script src="/js/compentJS/jquery.cookie.js"></script>
+		<!--302error-->
+    	<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+    	<script type="text/javascript" src="/js/dashboard.js"></script>
+		<script type="text/javascript" src="/js/workbench.js"></script>
+		<script type="text/javascript" src="/js/tips.js"></script>
+		<script type="text/javascript" src="/js/head.js"></script>
+
+		<script>
+			//arr 按时间有序排列  给节假日添加背景色
+			function changeColor(arr) {
+				var idx_arr = 0;
+				var all_day = $('#calendar').find('.fc-day.fc-widget-content');
+				for(var idx = 0; idx < all_day.length; idx++) {
+					var curr_td = all_day.eq(idx);
+					if(curr_td.attr("data-date") == arr[idx_arr]) {
+						curr_td.addClass('vacation');
+						curr_td.append('<ul class="everyEvent"><li class="tixing">提醒<i>1</i></li><li class="tixing">任务<i>2</i></li><li class="tixing">休假<i>2</i></li></ul>')
+						idx_arr++;
+					}
+				}
+			}
+
+			$(function() {
+
+				$('#calendar').fullCalendar({
+					firstDay: 0, //第一天为周日
+					header: {
+						left: ' ',
+						center: ' title',
+						right: ' '
+					},
+					viewRender: function(view, element) {
+						var arr = ['2017-01-03', '2017-01-05', '2017-01-10'];
+						changeColor(arr);
+					}
+
+				});
+
+				console.log($('.fc-center h2').html());
+
+			})
+		</script>
+
+	</body>
+
+</html>

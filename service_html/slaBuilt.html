@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>sla添加</title>
+		<!-- reset -->
+		<link rel="stylesheet" type="text/css" href="/css/resetCSS/normalize.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/bootstrap-select.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/compentCSS/fileinput.min.css">
+		<!-- tree -->
+		<link rel="stylesheet" type="text/css" href="/tree/ui.dynatree.css">
+		<!-- scroll -->
+		<link rel="stylesheet" href="/css/compentCSS/jquery.mCustomScrollbar.css">
+		<!-- head -->
+		<link rel="stylesheet" href="/css/head.css" type="text/css">
+		<!-- zTree -->
+  		<link rel="stylesheet" href="/css/compentCSS/zTreeStyle.css">
+		<!-- scroll -->
+		<link rel="stylesheet" href="/css/compentCSS/jquery.mCustomScrollbar.css">
+		<link rel="stylesheet" href="/css/popUp.css" type="text/css">
+		<link rel="stylesheet" href="/css/compentCSS/zTreeStyle.css">
+		<!-- 添加 -->
+		<link rel="stylesheet" href="/css/assetAdd.css" />
+		<link rel="stylesheet" href="/css/assetAddform.css" />
+		<link rel="stylesheet" href="/css/slaBuilt.css" type="text/css">
+	</head>
+
+	<body>
+
+
+	<div id="header">
+		<div class="w">
+			<div class="logo fl"></div>
+			<ul class="list fr">
+				<li class="help fl">
+					<span class="helpPic"></span>
+					帮助</li>
+				<li class="manager fl">
+					<span class="managerPic"></span>
+					管理</li>
+				<li class="notify fl">
+					<span class="notifyPic"></span>
+					通知
+					<div class="notify-wrap">
+						<p class="notify-wrap-up">通知
+							<button class="notify-wrap-upClear">清空</button>
+						</p>
+						<ul class="notify-list">
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+							<li class="notify-wrap-item">
+								<i></i><p>通知1</p>
+								<p class="notify-wrap-item-date">2016-12-28</p>
+							</li>
+						</ul>
+						<p class="notify-wrap-down">
+							<a href="#">更多>></a>
+						</p>
+					</div>
+				</li>
+                <li class="pInfo fl" id="userInfo"><i class="userName" data-bind="userName"></i>
+                    <span class="userHeader"></span>
+                    <div class="userInfo-wrap">
+
+                        <div class="userInfo">
+                            <!--<img src="" alt=""  class="userHead"/>-->
+                            <span class="fl userHead"></span>
+                            <div class="userInfo-right">
+                                <p data-bind="userName"></p>
+                                <p><span data-bind="position"></span>&nbsp;<span data-bind="department"></span></p>
+                            </div>
+                            <div class="userInfoOperation">
+                                <p class="userInfoOperationBox">
+                                    <input type="button" value="我的账户" class="myAccout"/>
+                                    <a id="logout" class="logout">退出</a>
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="nav" class="facilitator">
+
+
+		<div class="w">
+			<ul class="fl">
+				<li class="navlist fl navlist1 navNoChangeList now">
+					<span class="navlist-img navlist-img1 active"></span>工作台</li>
+				<li class="navlist fl navlist2 navNoChangeList">
+					<span class="navlist-img navlist-img2"></span>工单</li>
+
+				<li class="navlist fl navlist3 navNoChangeList">
+					<span class="navlist-img navlist-img4"></span>合同</li>
+				<li class="navlist fl navlist4 navNoChangeList">
+					<span class="navlist-img navlist-img3"></span>客户</li>
+
+				<li class="navlist fl navlist5 nav-add-item1 navNoChangeList navChangeList lastNavlist active">
+					<span class="navlist-img navlist-img6 "></span>管理
+				</li>
+				<!--<li class="navlist fl navlist7 nav-add-item2 navChangeList">
+					<span class="navlist-img navlist-img7"></span>报表
+				</li>-->
+			</ul>
+
+
+			<div id="nav-add-container">
+				<span class="nav-add"></span>
+				<div class="nav-add-wrap">
+					<div class="nav-add-overHidden">
+						<ul class="nav-add-list">
+							<li class="nav-add-item hide" id="nav-add-item1">
+								<p></p>供应商</li>
+							<li class="nav-add-item" id="nav-add-item2">
+								<p></p>报表</li>
+						</ul>
+					</div>
+					<span class="nav-add-trangle nav-add-trangleLeft"></span>
+					<span class="nav-add-trangle nav-add-trangleRight"></span>
+				</div>
+			</div>
+
+			<div class="fr nav-right-search">
+				<input type="text"  class="fr">
+				<div class="dropdownDiv">
+					<span class="nav-right-selectedWord" id="">所有</span>
+					<span class="nav-right-searchpng"></span>
+					<span class="caret nav-right-caret"></span>
+				</div>
+
+				<div class="right-search-wrap dn">
+					<div class="right-search-container">
+							<div class="right-search-list">所有</div>
+							<div class="right-search-list">工单</div>
+							<div class="right-search-list">合同</div>
+							<div class="right-search-list">客户</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav-right-newAdd fr dn">
+				<span></span>
+				<ul>
+					<li><a href="assetAdd.html"><span></span>新建资产</a></li>
+					<li><a href="newContract.html"><span></span>新建合同</a></li>
+					<li><a href="#"><span></span>供应商</a></li>
+					<li><a href="#"><span></span>项目</a></li>
+					<li>问题变更</li>
+				</ul>
+			</div>
+
+			<div class="nav-right-recentRecord fr dn">
+				<span></span>
+				<div class="nav-right-reRecordWrap">
+					<p class="nav-right-reRecordTitle">最近访问的项</p>
+					<ul id="history"></ul>
+				</div>
+			</div>
+
+
+		</div>
+		<div class="moveWrap"><i class="navMove"></i></div>
+
+	</div>
+
+
+		<div id='container' class="w slaBuilt">
+			<div id="container-right" class="fr">
+				<div class="container-right-infoWrap ">
+					<div class="sla-left">
+						<div class="sla-leftTop">
+							<div class="fl backBox" onClick="javascript :history.back(-1);">
+								<i class="backIcon"></i><span class="backText">返回</span>
+							</div>
+							<div class="fr">
+								<button class='cancel'onClick="javascript :history.back(-1);">取消</button>
+								<button class='save' id="slaSave">保存</button>
+							</div>
+						</div>
+
+                    <!--sla策略-->
+                    <div class="builtContent" id="slaDetailInfo">
+                        <form id="slaForm" method="post" enctype="multipart/form-data">
+                            <input type="hidden" id="slaUpdateFlag">
+							<div class="content-title">
+								<i class="caret"></i><span>SLA策略</span>
+							</div>
+							<!--上-->
+							<div class="content-row1">
+								<div class="content-row1-left fl">
+                                    <input type="hidden" data-bind="id" name="sla_id" id="sla_id"/>
+									<p class="content-row1-word centerCon-txt"><span class="di">标题</span><span class="centerCon-start di">*</span><span class="error slaNameErr di"></span></p>
+									<p><input type="text" data-bind="agreement_name" id="slaTitle" name="agreement_name" class="title-input"/></p>
+									<p class="content-row1-word centerCon-txt">SLA描述</p>
+									<p><textarea data-bind="agreement_describe" name="agreement_describe" id="slaDescribe" rows="" cols="" class="slaTextarea"></textarea></p>
+								</div>
+								<div class="content-row1-right fl">
+									<p class="content-row1-word centerCon-txt">标识</p>
+									<div class="selectedBox" id="boxChoose">
+										<div class="boxContent">
+                                            <input type="hidden" data-bind="LOGO" id="serviceVal" name="LOGO" value="1"/>
+											<i class="selectedLogo" data-bind="logoPai" id="changeLogo"></i>
+											<p class="selectedWord" data-bind="boxPaiText" id="boxPaiText"></p>
+										</div>
+
+										<b class="caret selectedBoxCaret" ></b>
+										<!--点击选择框-->
+										<div class="optionalBox" id="optionalBox">
+											<div class="optionalOne">
+												<p>方案一</p>
+												<ul>
+													<li id="kingPai">
+														<div class="jinpaiBox">
+															<i class="jinpai"></i>
+															<p><i class="check-mark"></i><span>金牌</span></p>
+														</div>
+													</li>
+													<li id="silverPai">
+														<div class="yinpaiBox">
+															<i class="yinpai"></i>
+															<p><i class="check-mark"></i><span>银牌</span></p>
+														</div>
+													</li>
+													<li id="copperPai">
+														<div class="tongpaiBox">
+															<i class="tongpai"></i>
+															<p><i class="check-mark"></i><span>铜牌</span></p>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="optionalTwo">
+												<p>方案二</p>
+												<ul>
+													<li id="onePai">
+														<div class="oneBox">
+															<i class="one"></i>
+															<p><i class="check-mark"></i><span>第一</span></p>
+														</div>
+													</li>
+													<li id="twoPai">
+														<div class="twoBox">
+															<i class="two"></i>
+															<p><i class="check-mark"></i><span>第二</span></p>
+														</div>
+													</li>
+													<li id="threePai">
+														<div class="threeBox">
+															<i class="three"></i>
+															<p><i class="check-mark"></i><span>第三</span></p>
+														</div>
+													</li>
+												</ul>
+											</div>
+											<div class="optionalThree">
+												<p>方案三</p>
+												<ul class="last">
+													<li id="highPai">
+														<div class="highBox">
+															<i class="high"></i>
+															<p><i class="check-mark"></i><span>高</span></p>
+														</div>
+													</li>
+													<li id="middlePai">
+														<div class="middleBox">
+															<i class="middle"></i>
+															<p><i class="check-mark"></i><span>中</span></p>
+														</div>
+													</li>
+													<li id="lowPai">
+														<div class="lowBox">
+															<i class="low"></i>
+															<p><i class="check-mark"></i><span>低</span></p>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--中-->
+							<div class="content-row2">
+								<p class="content-row2-word centerCon-txt"><span class="di">SLA策略</span><span class="centerCon-start di">*</span>&nbsp;&nbsp;<span class="di">针对工单的服务级别，设定对应的服务级别目标</span><span class="error slaTimeErr di"></span></p>
+								<div class="content-row2-table">
+									<ul class="titleUl">
+										<li class="content-cell-1"><span>服务级别</span></li>
+										<li class="content-cell-2"><span>在如下时效内响应</span></li>
+										<li class="content-cell-3"><span>在如下时效内解决</span></li>
+										<li class="content-cell-4"><span>服务时间类型</span></li>
+									</ul>
+									<ul class="urgentUl">
+										<li class="content-cell-1"><span>紧急</span><input type="hidden"  name="urgentName" value="紧急"/>
+                                            <input type="hidden" data-bind="urgentId" name="urgentId">
+                                        </li>
+										<li id="urgentRespond" class="content-cell-2">
+											<input type="text" name="urgentRespondText" data-bind="urgentRespondText" class="slaTableInput"/>
+											<select name="urgentRespond" id="urgentRespondId" class="slaTableTime selectpicker">
+												<option data-bind="resource_urgentRespond_name" class="timeData"></option>
+											</select>
+										</li>
+										<li id="urgentFinish" class="content-cell-3">
+											<input type="text" name="urgentFinishText" data-bind="urgentFinishText" class="slaTableInput"/>
+											<select name="urgentFinish" id="urgentFinishId" class="slaTableTime selectpicker">
+												<option data-bind="resource_urgentFinish_name" class="timeData"></option>
+											</select>
+										</li>
+										<li class="content-cell-4" id="urgentType">
+											<select name="urgentType" id="urgentTypeId" class="slaTableType selectpicker">
+												<option data-bind="resource_urgentType_name" class="timeTypeData"></option>
+											</select>
+										</li>
+									</ul>
+									<ul class="highUl">
+										<li class="content-cell-1"><span>高</span><input type="hidden" name="highName" value="高"/>
+                                            <input type="hidden" data-bind="highId" name="highId">
+                                        </li>
+										<li id="highRespond" class="content-cell-2">
+											<input type="text" name="highRespondText" data-bind="highRespondText" class="slaTableInput"/>
+											<select name="highRespond" id="highRespondId" class="slaTableTime selectpicker">
+												<option data-bind="resource_highRespond_name" class="timeData"></option>
+											</select>
+										</li>
+										<li id="highFinish" class="content-cell-3">
+											<input type="text" name="highFinishText" data-bind="highFinishText" class="slaTableInput"/>
+											<select name="highFinish" id="highFinishId" class="slaTableTime selectpicker">
+												<option data-bind="resource_highFinish_name" class="timeData"></option>
+											</select>
+										</li>
+										<li class="content-cell-4" class="content-cell-4" id="highType">
+
+											<select name="highType" id="highTypeId" class="slaTableType selectpicker">
+												<option data-bind="resource_highType_name" class="timeTypeData"></option>
+											</select>
+										</li>
+									</ul>
+									<ul class="middleUl">
+										<li class="content-cell-1"><span>中</span><input type="hidden" name="middleName" value="中"/>
+                                            <input type="hidden" data-bind="middleId" name="middleId">
+                                        </li>
+										<li id="middleRespond" class="content-cell-2">
+											<input type="text" name="middleRespondText" data-bind="middleRespondText" class="slaTableInput"/>
+											<select name="middleRespond" id="middleRespondId" class="slaTableTime selectpicker">
+												<option data-bind="resource_middleRespond_name" class="timeData"></option>
+											</select>
+										</li>
+										<li id="middleFinish" class="content-cell-3">
+											<input type="text" name="middleFinishText" data-bind="middleFinishText" class="slaTableInput "/>
+											<select name="middleFinish" id="middleFinishId" class="slaTableTime selectpicker">
+												<option data-bind="resource_middleFinish_name" class="timeData"></option>
+											</select>
+										</li>
+										<li class="content-cell-4" id="middleType">
+
+											<select name="middleType" id="middleTypeId" class="slaTableType selectpicker">
+												<option data-bind="resource_middleType_name" class="timeTypeData"></option>
+											</select>
+										</li>
+									</ul>
+									<ul class="lowUl">
+										<li class="content-cell-1"><span>低</span><input type="hidden" name="lowName" value="低"/>
+                                            <input type="hidden" data-bind="lowId" name="lowId">
+                                        </li>
+										<li id="lowRespond" class="content-cell-2">
+											<input type="text" name="lowRespondText" data-bind="lowRespondText" class="slaTableInput "/>
+											<select name="lowRespond" id="lowRespondId" class="slaTableTime selectpicker">
+												<option data-bind="resource_lowRespond_name" class="timeData"></option>
+											</select>
+										</li>
+										<li id="lowFinish" class="content-cell-3">
+											<input type="text" name="lowFinishText" data-bind="lowFinishText" class="slaTableInput"/>
+											<select name="lowFinish" id="lowFinishId" class="slaTableTime selectpicker">
+												<option data-bind="resource_lowFinish_name" class="timeData"></option>
+											</select>
+										</li>
+										<li class="content-cell-4" id="lowType">
+											<select name="lowType" id="lowTypeId" class="slaTableType selectpicker">
+												<option data-bind="resource_lowType_name" class="timeTypeData"></option>
+											</select>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!--下-->
+							<div class="content-row3" id="fileArea">
+								 <p class="centerCon4-p6" id="slaFile">
+				                	<span class="centerCon-txt content-row2-word">添加文件&nbsp;&nbsp;（文件应小于15M，目前仅支持&nbsp;jpg、png、gif、pdf、ppt、pptx、xls、xlsx、doc、docx、txt、zip、rar）</span>
+				                	   <!-- data-overwrite-initial="false" data-min-file-count="2"class="file"-->
+                				</p>
+                				<!--相关说明-->
+
+								<div class="fileInputInfo dn" id="fileNameArea">
+									<ul>
+										<li><i class="jpeg"></i><span>解决方案.jpeg</span></li>
+										<li><i class="doc"></i><span>解决方案.doc</span></li>
+										<li><i class="zip"></i><span>压缩文件</span></li>
+										<li><i class="other"></i><span>其他类型文件</span></li>
+										<li><i class="exe"></i><span>解决方案.exe</span></li>
+										<li><i class="ppt"></i><span>解决方案.ppt</span></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+						<input type="hidden" name="attachment" id="slaFileHelpId">
+						<input id="slaFileInput" name="input[]" type="file" multiple class="file">
+						<input id="file_help_id" type="hidden">
+            <input id="file_help_flag" type="hidden">
+                    </div>
+                </div>
+					<!--右侧内容-->
+					<div class="sla-right">
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		  <!-- 500错误提示框 -->
+  <div class="modal fade" id="errorBtn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="closeImg fr">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true" class=" closeImg fr">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <p class="modal-body-row"><span class="question-info" id="errorInfo"></span></p>
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-delete">删除</button> -->
+              <button type="button" class="btn btn-cancel" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+      </div>
+  </div>
+
+		<p class="successTip" id="tipMsg"></p>
+
+		<!-- jquery  -->
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="/js/transparency.min.js"></script>
+
+	<!-- bootstrap -->
+	<script type="text/javascript" src='/js/compentJS/bootstrap.min.js'></script>
+	<script type="text/javascript" src="/js/compentJS/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="/js/compentJS/fileinput.min.js"></script>
+	<script type="text/javascript" src="/js/compentJS/zh.js"></script>
+	<!-- tree -->
+	<script type="text/javascript" src="/tree/jquery-ui.custom.js"></script>
+	<script type="text/javascript" src="/tree/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/tree/jquery.dynatree.js"></script>
+	<!-- 部门，分类下拉树 -->
+	<script type="text/javascript" src="/js/compentJS/jquery.ztree.core.js"></script>
+	<script type="text/javascript" src="/js/compentJS/zTree.js"></script>
+	<!-- scroll -->
+	<script type="text/javascript" src="/js/compentJS/jquery.mCustomScrollbar.js"></script>
+	<script type="text/javascript" src="/js/variable.js"></script>
+	<!-- head -->
+	<script type='text/javascript' src="../js/serviceHead.js"></script>
+
+	<!-- checkInput -->
+	<script type="text/javascript" src="/js/checkRule.js"></script>
+	<!-- 文件上传 -->
+    <script type="text/javascript" src="/js/compentJS/fileUpload.js"></script>
+
+	<!-- ajax提交表单 -->
+	<script type="text/javascript" src="/js/jquery.form.js"></script>
+    <script type="text/javascript" src="/js/slaBuilt.js"></script>
+
+
+	<!--302error-->
+	<script type="text/javascript" src="/js/compentJS/errorInfo.js"></script>
+	<!-- tips -->
+	<script type="text/javascript" src="/js/tips.js"></script>
+
+		<script>
+			$('.selectpicker').selectpicker({
+                size: 6
+            });
+            $('.selectpicker').selectpicker('refresh');
+            $("#print .modal-body-reqCon").mCustomScrollbar({
+                setHeight: 330,
+                theme: "3d-dark"
+            });
+			$(".allContract").mCustomScrollbar({
+				theme: "3d-dark"
+			});
+			$("div.modal-body-bottom,div.event-session-leftDown").mCustomScrollbar({
+				theme: "3d-dark"
+			});
+/* 			$("#slaFileInput").fileinput({
+			language: 'zh', //设置语言
+	        uploadUrl:'resourceAddHelp/uploadFile', // you must set a valid URL here else you will get an error
+	        allowedFileExtensions : ['jpg', 'png', 'gif','pdf','ppt','pptx','xls','xlsx', 'doc','docx','txt','zip','rar'],
+	        showUpload:false,
+	        showRemove:false,
+	        overwriteInitial: false,
+	        uploadExtraData:function () {
+	               var obj = {};
+	               var id = $("#file_help_id").val();
+	               var flag = $("#file_help_flag").val();
+	               obj.id = id;
+	               obj.flag = flag;
+	               return obj;
+	        },
+	        uploadAsync:false,
+	        maxFileSize: 15360, //15M  15360
+//	        maxFileCount: 5,
+	        dropZoneTitle:"拖放文件",
+	        msgFilesTooMany:"文件数量太多",
+	        msgInvalidFileExtension:"不支持该文件类型",
+	        msgSizeTooLarge:"文件过大",
+	        enctype: 'multipart/form-data',
+						validateInitialCount:true,
+						allowedPreviewTypes: ['image'],
+						browseClass: "btn btn-primary", //按钮样式
+						previewFileIcon: '<i class="fileinputImg"></i>',
+						previewFileIconSettings: {
+		                        'docx': '<i class="fileinputImg docx"></i>',
+		                        'xlsx': '<i class="fileinputImg xlsx"></i>',
+		                        'pptx': '<i class="fileinputImg pptx"></i>',
+		                        'jpg': '<i class="fileinputImg jpg"></i>',
+		                        'pdf': '<i class="fileinputImg pdf"></i>',
+		                        'zip': '<i class="fileinputImg zip"></i>'
+		                    }
+			}); */
+		       $("#slaFileInput").fileinput({
+		            language: 'zh', //设置语言
+		            uploadUrl: 'resourceAddHelp/uploadFile', // you must set a valid URL here else you will get an error
+		            allowedFileExtensions: ['jpg', 'png', 'gif','pdf','ppt','pptx','xls','xlsx', 'doc','docx','txt','zip','rar'],//jpeg,doc,zip,rar,exe,ppt
+		            showUpload: false,//是否显示上传按钮
+		            showRemove: false,//是否显示删除按钮
+		          //  showCaption: true,//是否显示输入框
+		          //  showPreview:true,
+		          //  showCancel:true,
+		          //  minImageWidth: 50, //图片的最小宽度
+		                //minImageHeight: 50,//图片的最小高度
+		                //maxImageWidth: 1000,//图片的最大宽度
+		                //maxImageHeight: 1000,//图片的最大高度
+		            overwriteInitial: false,
+		            uploadExtraData:function () {
+		                var obj = {};
+		                var id = $("#file_help_id").val();
+		                var flag = $("#file_help_flag").val();
+		                obj.id = id;
+		                obj.flag = flag;
+		                return obj;
+		            },
+		            uploadAsync: false,
+		            maxFileSize: 15360, //15M  15360
+		            dropZoneTitle: "拖放文件",
+		            msgFilesTooMany: "文件数量太多",
+		            msgInvalidFileExtension: "不支持该文件类型",
+		            msgSizeTooLarge: "文件过大",
+		            enctype: 'multipart/form-data',
+		            validateInitialCount:true,
+		            allowedPreviewTypes: ['image'],
+		            browseClass: "btn btn-primary", //按钮样式
+		            previewFileIcon: '<i class="fileinputImg"></i>',
+		            previewFileIconSettings: {
+		                            'docx': '<i class="fileinputImg docx"></i>',
+		                            'xlsx': '<i class="fileinputImg xlsx"></i>',
+		                            'pptx': '<i class="fileinputImg pptx"></i>',
+		                            'jpg': '<i class="fileinputImg jpg"></i>',
+		                            'pdf': '<i class="fileinputImg pdf"></i>',
+		                            'zip': '<i class="fileinputImg zip"></i>',
+		                            'rar': '<i class="fileinputImg zip"></i>',
+                    				'txt':'<i class="fileinputImg other"></i>'
+		                        },
+		      });
+/* 			$("#file-1").on("fileuploaded", function(event, data, previewId, index) {
+				//alert("上传成功!");
+
+			}); */
+	        //slugCallback: function(result) {
+	        //return filename.replace('(', '_').replace(']', '_');
+
+//		});
+		</script>
+	</body>
+
+</html>

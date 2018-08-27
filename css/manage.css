@@ -1,0 +1,114 @@
+body {
+	font-size: 16px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.w {
+	width: 1232px;
+	margin: 0 auto;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.dn {
+	display: none;
+}
+
+.di {
+	display: inline-block;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+#container{
+    height: calc(100vh - 150px);
+    min-height: 360px;
+	margin-bottom: 20px;
+    background: #fff;
+	box-shadow: 0 0px 20px #dedddc;
+	padding:35px 120px 0 120px;
+	
+	
+}
+#container .companyManage,
+#container .powerManage,
+#container .patrolTask,
+#container .mySetting{
+	display: inline-block;
+	width:394px;
+	margin:35px 0;
+	
+}
+#container .companyManage i,
+#container .powerManage i,
+#container .patrolTask i,
+#container .mySetting i{
+	display: inline-block;
+	width:28px;
+	height:28px;
+	margin-right:20px;
+	background:url('../imgs/manage/manage.png') no-repeat;
+	vertical-align: top;
+}
+#container .companyManage i{
+	 background-position: -65px -61px;
+}
+#container .powerManage i{
+	background-position: -93px -5px;
+}
+#container .patrolTask i{
+	 background-position: -103px -43px;
+}
+#container .mySetting i{
+	background-position: -5px -81px;
+}
+#container .companyManage,
+#container .patrolTask{
+	margin-right:200px;
+}
+#container .manageRight {
+	display: inline-block;
+}
+#container .manageRight .manageTitle{
+	font-size: 16px;
+	color:#1f5097;
+	margin-bottom:20px;
+}
+#container .manageRight .manageTitle a{
+	text-decoration: none;
+}
+#container .manageRight .manageRightBottom{
+	font-size: 14px;
+}
+
+#container .manageRight .manageRightBottom a {
+	text-decoration: none;
+	color:#7e7e7e;
+}
+#container .manageRight .manageLine{
+	margin:0 8px;
+}
+

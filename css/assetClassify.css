@@ -1,0 +1,254 @@
+body {
+  font-size: 16px; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+.w {
+  width: 1232px;
+  margin: 0 auto; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.dn {
+  display: none; }
+
+.di {
+  display: inline-block; }
+
+.hide {
+  display: none; }
+
+.show {
+  display: block; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.sprite {
+  background-image: url(../imgs/asset/asset.png);
+  background-repeat: no-repeat; }
+
+.sprite-add {
+  width: 12px;
+  height: 12px;
+  background-position: -2px -2px; }
+
+.sprite-ascClick {
+  width: 30px;
+  height: 25px;
+  background-position: -18px -2px; }
+
+.sprite-ascNoClick {
+  width: 30px;
+  height: 25px;
+  background-position: -52px -2px; }
+
+.sprite-back {
+  width: 6px;
+  height: 13px;
+  background-position: -86px -2px; }
+
+.sprite-btnLeftClick {
+  width: 8px;
+  height: 10px;
+  background-position: -96px -2px; }
+
+.sprite-btnLeftNoClick {
+  width: 8px;
+  height: 10px;
+  background-position: -108px -2px; }
+
+.sprite-btnRightNoClick {
+  width: 8px;
+  height: 10px;
+  background-position: -120px -2px; }
+
+.sprite-btnRightClick {
+  width: 8px;
+  height: 10px;
+  background-position: -132px -2px; }
+
+.sprite-check {
+  width: 11px;
+  height: 11px;
+  background-position: -96px -16px; }
+
+.sprite-checked {
+  width: 11px;
+  height: 11px;
+  background-position: -111px -16px; }
+
+.sprite-desClick {
+  width: 31px;
+  height: 25px;
+  background-position: -2px -31px; }
+
+.sprite-desNoClick {
+  width: 31px;
+  height: 25px;
+  background-position: -37px -31px; }
+
+.sprite-drapDown {
+  width: 7px;
+  height: 4px;
+  background-position: -126px -16px; }
+
+.sprite-icon1 {
+  width: 18px;
+  height: 60px;
+  background-position: -126px -24px; }
+
+.sprite-icon1-hover {
+  width: 18px;
+  height: 60px;
+  background-position: -148px -2px; }
+
+.sprite-icon2 {
+  width: 18px;
+  height: 60px;
+  background-position: -2px -66px; }
+
+.sprite-icon2-hover {
+  width: 18px;
+  height: 60px;
+  background-position: -24px -66px; }
+
+.sprite-icon3 {
+  width: 18px;
+  height: 60px;
+  background-position: -46px -66px; }
+
+.sprite-icon3-hover {
+  width: 18px;
+  height: 60px;
+  background-position: -68px -66px; }
+
+.sprite-icon4 {
+  width: 18px;
+  height: 60px;
+  background-position: -90px -66px; }
+
+.sprite-icon4-hover {
+  width: 18px;
+  height: 60px;
+  background-position: -148px -66px; }
+
+.sprite-import {
+  width: 19px;
+  height: 16px;
+  background-position: -112px -88px; }
+
+.sprite-leftClick {
+  width: 18px;
+  height: 18px;
+  background-position: -2px -130px; }
+
+.sprite-leftNotClick {
+  width: 18px;
+  height: 18px;
+  background-position: -24px -130px; }
+
+.sprite-out {
+  width: 18px;
+  height: 16px;
+  background-position: -46px -130px; }
+
+.sprite-rightChange {
+  width: 3px;
+  height: 6px;
+  background-position: -112px -66px; }
+
+.sprite-rightClick_03 {
+  width: 18px;
+  height: 18px;
+  background-position: -68px -130px; }
+
+.sprite-rightNoClick {
+  width: 18px;
+  height: 18px;
+  background-position: -90px -130px; }
+
+.sprite-search {
+  width: 14px;
+  height: 14px;
+  background-position: -112px -130px; }
+
+.sprite-staChange {
+  width: 6px;
+  height: 3px;
+  background-position: -130px -130px; }
+
+.sprite-staChange-hover {
+  width: 6px;
+  height: 3px;
+  background-position: -140px -130px; }
+
+.sprite-titleDown {
+  width: 7px;
+  height: 4px;
+  background-position: -150px -130px; }
+
+.sprite-update {
+  width: 23px;
+  height: 23px;
+  background-position: -130px -138px; }
+
+.di {
+  display: inline-block; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+#container {
+  box-shadow: 0 0 10px #ccc;
+  height: 1046px; }
+
+#left {
+  width: 222px;
+  height: 100%;
+  background-color: #1f5097; }
+
+#right {
+  width: 989px;
+  height: 1037px;
+  margin: 10px 0 0 10px; }
+  #right .rightTitle {
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #e5e5e5;
+    font-size: 16px;
+    color: #696969;
+    text-align: center; }
+    #right .rightTitle .right-addAsset {
+      float: right;
+      margin: 7px 30px 0 0;
+      width: 75px;
+      height: 21px;
+      line-height: 21px;
+      text-align: center;
+      background-color: #054c9c;
+      color: #fff;
+      font-size: 12px;
+      border: none;
+      border-radius: 3px; }
+
+.btn-group {
+  vertical-align: baseline; }
+
+p {
+  margin: 0; }
+
+.table {
+  margin-bottom: 0; }
+
+/*# sourceMappingURL=assetClassify.css.map */

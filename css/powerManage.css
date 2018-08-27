@@ -1,0 +1,642 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+p{
+	margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+ul,ol{
+  list-style: none;
+}
+body{
+	color:#696969;
+}
+
+#container {
+  margin-bottom: 20px;
+  background: #f1f1f1;
+  box-shadow: 0 0px 20px #dedddc;
+  font-size: 0;
+  height: auto;
+  min-height: calc(100vh - 150px);
+  position: relative;
+}
+#container:after{
+	display: table;
+	content: '';
+	clear:both;
+}
+.w .left,.w .right{
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: top;
+}
+.clearfix{zoom: 1}/*IE的专用属性，针对老版本的IE浏览器而写的，为了兼容*/
+.clearfix:after{/*伪对象选择符-在这个对象被浏览器选然后添加一定的内容*/
+	content: ".";/*添加内容卸载这个属性的后面，这个属性是专门配合伪对象滴，必须写，就算值为空也要写*/
+	display: block;
+	visibility: hidden;/*类似于display：none；只不过还是占据一定的物理空间*/
+	height: 0;/*将添加的内容高度设置为0，消除其占位*/
+	clear: both;/*将添加进去的内容作为清除浮动的对象，实现外围容器中有内容存在。因此可以自动判定高度，解决塌陷*/
+}
+
+/*左侧*/
+.w>.left{
+  width: 188px;
+  min-height: 354px;
+  background-color: #1f4f97;
+  color: white;
+  text-align: left;
+  padding: 10px 0;
+  /* float:left; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.w>.left *{
+    color: white;
+}
+.left li a{
+    text-decoration: none;
+}
+.left ul li.left-title{
+  background-color: #1f4f97;
+  font-size: 16px;
+  cursor: default;
+}
+.left-title a{
+  cursor: default;
+}
+.left li{
+  text-indent: 48px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.left li.left-title{
+	text-indent: 24px;
+}
+.left li.left-title p i{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+	margin-right: 5px;
+	background:url('../imgs/manage/manage.png') no-repeat -65px -33px;
+}
+.left li.left-item:hover{
+	  background-color: #4f6fa1;
+    color: #fff;
+}
+.left li.left-item.active{
+  background-color: #0a3367;
+
+}
+.left li.left-item.active p{
+	color: #fe7070;
+}
+
+/*右侧*/
+.w>.right{
+  width: 1024px;
+  margin:0 10px 10px 198px;
+}
+.right-title{
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+	text-align: center;
+	margin: 10px 0 10px 0;
+	font-size: 16px;
+	color: #696969;
+	border: 1px solid #e5e5e5;
+	background: #fff;
+	padding-left:15px;
+}
+.right-content{
+	padding: 10px 29px 18px 29px;
+	min-height: 270px;
+	background:#fff;
+	border: 1px solid #e5e5e5;
+}
+.right-title>i,.right-title>.back{
+  float: left;
+  cursor: pointer;
+}
+.right-title>i,.right-title>.back span{
+	margin-left:3px;
+	font-size: 12px;
+}
+.right-title>i,.right-title>.back i{
+		display: inline-block;
+	  width: 6px;
+    height: 13px;
+    vertical-align: middle;
+    background: url(../imgs/contract/contract.png) no-repeat -52px -5px;
+}
+
+.right-title::after{
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+
+/*角色管理部分*/
+.manage-list-body,.manage-list-title,.right-title{
+  cursor: default;
+}
+.manage-list-title{
+  margin-bottom: 14px;
+}
+.right-content1{
+  /*padding: 0 30px 20px;*/
+}
+.manage-list-title>span{
+  display: inline-block;
+  /*height: 44px;*/
+  /*line-height: 44px;*/
+  vertical-align: middle;
+}
+/*.manage-list-title>button{
+  height: 25px;
+  padding: 0 14px;
+  border-radius: 3px;
+  background-color: #054c9c;
+  color: #fff;
+  border: none;
+  margin-right: 16px;
+  margin-top: 14px;
+  font-size: 12px;
+}*/
+
+.manage-list-body{
+  border: 1px solid rgb(191,191,191);
+}
+.manage-list-body li{
+  border-bottom: 1px solid rgb(191,191,191);
+  font-size: 0;
+}
+.manage-list-body li:last-child{
+  border-bottom: none;
+}
+
+.manage-list-body li:hover{
+  background-color: rgb(171, 209, 255);
+  cursor: pointer;
+}
+.manage-list-body li>div{
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: top;
+  width: auto;
+}
+.manage-list-body li>div:nth-child(2){
+  width: 620px;
+  padding-right: 10px;
+}
+.manage-list-body li>div:nth-child(3){
+  width: 220px;
+  padding-top: 27px;
+  margin-left: 35px;
+}
+
+.manage-list-body li>div::after{
+  content: " ";
+  display: block;
+  clear: both;
+}
+.manage-list-body li i.headPic{
+  float: left;
+  margin: 7px 10px 7px 10px;
+  width: 60px;
+  height: 60px;
+  background: url(../imgs/header/header.png) no-repeat -272px -5px;
+}
+.manage-list-body .adminer{
+  padding: 10px 0 4px;
+}
+.manage-list-body .adminer-description{
+  word-wrap: break-word;
+  word-break: break-all;
+  font-size: 12px;
+  display: inline-block;
+  width: 100%;
+}
+.manage-list-body .admin-descrip-option{
+  float: right;
+  width: 120px;
+  height: 100%;
+}
+.admin-descrip-operate>div{
+  display: inline-block;
+  /*width: 70px;
+  margin-right: 10px;*/
+  cursor: pointer;
+}
+.admin-descrip-operate>div>*{
+  vertical-align: middle;
+}
+.admin-descrip-operate i{
+  display: inline-block;
+}
+
+.admin-descrip-role{
+	width: 90px;
+}
+.admin-descrip-edit,.admin-descrip-delete{
+	width: 60px;
+}
+.right-content-title-btn{
+		padding:2px 7px;
+    border-radius: 6px;
+    background-color: #054c9c;
+    color: #fff;
+    border: none;
+    margin-left:25px;
+    font-size: 12px;
+}
+.right-content-title-middle{
+	/* margin-left: 138px;*/
+	 position: relative;
+}
+.right-content-title-middle input{
+		width: 210px;
+    height: 25px;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    color: #9c9c9c;
+    text-indent: 10px;
+    outline: none;
+}
+.right-content-title-middle i{
+    display: inline-block;
+    width: 31px;
+    height: 25px;
+    background:url(../imgs/contract/contract.png) no-repeat -188px -177px;
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    top: 0;
+}
+.right-content-table{
+    min-height: 316px;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5;
+}
+.right-content-title{
+	margin-bottom:14px;
+}
+.right-table-title,
+.right-table-body-item{
+	height:44px;
+	line-height: 44px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.right-table-title-item,
+.right-table-body-item{
+	width:134px;
+	text-align: center;
+	color: #696969;
+	font-size: 14px;
+	display: inline-block;
+}
+.userStutas.launching{
+	color:#7dcb8f;
+}
+.admin-descrip-role,
+.right-table-body-edit,
+.right-table-body-delete{
+	cursor: pointer;
+}
+.right-table-body-item1{
+	text-align: left;
+}
+/*ball小球*/
+.right2-content-ballall{
+	display: inline-block;
+	float: right;
+	margin-right: 30px;
+	margin-top: 3.5px;
+}
+.right2-content-ballcheck{
+	width:38px;
+	height:19px;
+	border-radius:19px;
+	/*border: 1px solid black;*/
+	display: inline-block;
+	line-height: 19px;
+	position: relative;
+	background: #bcbcbc;
+	line-height: 20px;
+	box-sizing: border-box;
+}
+.right2-content-background{
+	width: 17px;
+	height: 19px;
+	border-radius: 18px;
+	position: absolute;
+	display: inline-block;
+	left: 0px;
+	background: #0b3c70;
+	border: 1px solid #eceffa;
+	box-sizing: border-box;
+}
+.right2-content-ball{
+	width: 18px;
+	height: 19px;
+	border-radius: 50%;
+	border: 1px solid #eceffa;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #eceffa;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+/*.right-table-body-edit{
+	margin-right:15px;
+}*/
+.admin-descrip-role i{
+	background: url(../imgs/manage/manage.png) no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+}
+.admin-descrip-role i{
+	width: 22px;
+	height: 22px;
+	background-position: -1px -1px;
+}
+.right-table-body-edit i,
+.admin-descrip-edit>i,
+.admin-descrip-delete>i{
+	  display: inline-block;
+    width: 15px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    background:url(../imgs/common.png) no-repeat ;
+}
+.right-table-body-edit i,
+.admin-descrip-edit>i{
+	background-position:-107px -5px;
+}
+
+.admin-descrip-delete>i{
+	background-position:-132px -5px;
+}
+
+/*角色分配弹窗*/
+.modal{
+	top:-300px;
+}
+#Roleassignment .modal-dialog{
+	width: 472px;
+	min-height: 176px;
+}
+.modal-header{
+	padding-left: 15px;
+	height: 32px;
+	line-height: 32px;
+	color: #696969;
+	border-bottom: 1px dashed #bfbfbf;
+}
+.modal-body{
+	width: 100%;
+}
+.mCSB_scrollTools .mCSB_buttonUp{
+	background-position: 0 0;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer{
+	background-color: #FFFFFF;
+	border: none;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer{
+	box-shadow: none;
+	-webkit-border-radius:0;
+	border-radius: 0;
+}
+.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	background-color: #cbd3df;
+	box-shadow: none;
+  width: 9px;
+  margin: 0;
+}
+.modal-body .modal-body-ul1{
+	width:422px;
+	height:32px;
+	border: 1px solid #d0d5d5;
+	background: #ECEEF0;
+	margin: 0 auto;
+	line-height: 32px;
+	box-sizing: border-box;
+}
+.modal-body-ul1 li,
+.modal-body-ul2 li{
+	display: inline-block;
+	text-align: center;
+}
+.modal-body-ul1 li:nth-child(1){
+	width: 117px;
+	margin-left: 23px;
+}
+.modal-body-ul2 li:nth-child(1){
+	width:140px;
+}
+.modal-body-ul1 li:nth-child(2),
+.modal-body-ul2 li:nth-child(2){
+	width: 70px;
+}
+.modal-body-ul1 li:nth-child(3),
+.modal-body-ul2 li:nth-child(3){
+	width: 124px;
+}
+.modal-body	.modal-body-ul2{
+	width: 422px;
+	height:32px;
+	border-left: 1px solid #d0d5d5;
+	border-right: 1px solid #d0d5d5;
+	border-bottom: 1px solid #d0d5d5;
+	margin: 0 auto;
+	line-height: 32px;
+	box-sizing: border-box;
+}
+.modal-body-icon,.modal-body-ul2 i.active{
+	float: left;
+	background: url(../imgs/common.png);
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-top: 10px;
+	cursor: pointer;
+	margin-left: 10px;
+}
+.modal-body-icon{
+	background-position: -5px -32px;
+}
+.modal-body-ul2 i.active{
+	background-position:-23px -31.5px;
+}
+.modal-body-ul2	.modal-body-color{
+	color: #8cbc94;
+}
+.modal-footer{
+	border: none;
+}
+.modal-footer .save-quit{
+	margin-bottom: 10px;
+	text-align: center;
+}
+/*创建新用户弹窗样式*/
+#createNewUserModal .bootstrap-select,#ChangeAssignments .bootstrap-select{
+	width: 208px;
+}
+#createNewUserModal	button.btn-default,#ChangeAssignments	button.btn-default{
+	height: 27px;
+}
+#createNewUserModal .modal-dialog .modal-body-content,#ChangeAssignments .modal-dialog .modal-body-content{
+	height: 136px;
+}
+.modal-body-item .modal-body-powername{
+	width: 208px;
+	height: 136px;
+	border-radius: 3px;
+	border: 1px solid #cdcdcd;
+	display: inline-block;
+	position: absolute;
+	left: 86px;
+	overflow: hidden;
+}
+.modal-body-powername .modal-body-powermen li{
+	line-height: 32px;
+	margin-left: 12px;
+}
+.modal-body-powermen li i,.modal-body-powermen li i.active{
+		background: url(../imgs/common.png) no-repeat;
+    display: inline-block;
+    width: 12px;
+    height: 11px;
+    background-position: -5px -32px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+.modal-body-powermen li i.active{
+	background: url(../imgs/common.png);
+  background-position: -23px -31.5px;
+} 
+/*创建新用户滚动条*/
+#createNewUserModal	#mCSB_2_scrollbar_vertical,#ChangeAssignments #mCSB_2_scrollbar_vertical{
+	width: 10px;
+}
+#createNewUserModal .mCSB_buttonUp,#createNewUserModal .mCSB_buttonDown,
+#ChangeAssignments .mCSB_buttonUp,#ChangeAssignments .mCSB_buttonDown{
+	background-color: #FFFFFF!important;
+	opacity: 1;
+	right: 1px;
+}
+#createNewUserModal .mCS-3d-thick.mCSB_scrollTools_vertical,
+#ChangeAssignments .mCS-3d-thick.mCSB_scrollTools_vertical
+{
+	box-shadow: none;
+}
+#createNewUserModal .mCSB_buttonUp,#createNewUserModal .mCSB_buttonDown,
+#ChangeAssignments .mCSB_buttonUp,#ChangeAssignments .mCSB_buttonDown{
+	background-image: url(../imgs/mCSB_buttons.png);
+	background-repeat: no-repeat;
+	display: block;
+	width:7px;
+	height: 7px;
+}
+#createNewUserModal .mCSB_buttonUp,
+#ChangeAssignments .mCSB_buttonUp{
+	background-position: -136px -16px;
+	top: 5px;
+	right: -1px;
+}
+#createNewUserModal .mCSB_buttonDown,
+#ChangeAssignments .mCSB_buttonDown{
+	background-position: -127px -16px;
+	right: -2px;
+}
+#createNewUserModal #mCSB_2_scrollbar_vertical{
+	width: 5px;
+	right: 5px;
+}
+#ChangeAssignments #mCSB_2_scrollbar_vertical{
+	width: 5px;
+	right: 0;
+}
+#ChangeAssignments .mCSB_scrollTools{
+	width: 5px;
+	right: 5px;
+}
+#createNewUserModal .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+#ChangeAssignments .mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	margin-top: -9px;
+	margin-bottom: -11px;
+	margin-right: -2px;
+	width: 5px;
+}
+/*变换新用户弹窗*/
+#ChangeAssignments .modal-dialog{
+	width: 392px;
+}
+#ChangeAssignments .modal-dialog .modal-content .modal-body .modal-body-user,#ChangeAssignments .modal-body-item1 {
+	width: 100%;
+	height: 35px;
+	padding-left: 30px;
+	font-size: 14px;
+}
+#ChangeAssignments .modal-body .modal-body-content3{
+	margin-top: 8px;
+}
+.modal-dialog .modal-content .modal-body .modal-body-user	.modal-body-username{
+	padding-left:35px;
+}
+.modal-body-item1 .modal-body-changename{
+	padding-left: 12px;
+}
+.modal-body .modal-body-content3{
+	width: 100%;
+	height: 148px;
+	border-radius: 3px;
+	position: relative;
+}
+.modal-body-content3 .modal-body-power{
+	padding-left: 30px;
+	position: absolute;
+} 
+.modal-body .modal-body-content3 .modal-body-powername{
+	width: 235px;
+	height: 136px;
+	border-radius: 3px;
+	border: 1px solid #cdcdcd;
+	display: inline-block;
+	position: absolute;
+	left: 130px;
+	overflow: hidden;
+}
+.modal-body-powername .modal-body-powermen li{
+	line-height: 32px;
+	margin-left: 12px;
+}
+.modal-body-powermen li i,.modal-body-powermen li i.active{
+		background: url(../imgs/common.png) no-repeat;
+    display: inline-block;
+    width: 12px;
+    height: 11px;
+    background-position: -5px -32px;
+    margin-right: 2px;
+    cursor: pointer;
+}
+.modal-body-powermen li i.active{
+	background: url(../imgs/common.png);
+  background-position: -23px -32px;
+}
